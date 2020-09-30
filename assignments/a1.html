@@ -1,0 +1,433 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A1: Responsive Portfolio in HTML and CSS &#8212; INF 133 Fall 2020</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Week 1 Notes" href="../notes/wk1.html" />
+    <link rel="prev" title="A0: Getting to Know You, Getting to Know Us" href="a0.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo_stacked.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">INF 133 Fall 2020</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   User Interaction Software
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Assignments
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="a0.html">
+   Assignment 0
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Assignment 1
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Lecture Notes
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notes/wk1.html">
+   Week 1
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Course Resources
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources.html">
+   Resources
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/assignments/a1.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#re-using-a-portfolio">
+     Re-using a portfolio
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assignment-details">
+   Assignment Details
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#starter-code">
+     Starter code
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#git-and-github">
+       Git and GitHub
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#requirements">
+     Requirements
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#content">
+       Content
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#responsiveness">
+       Responsiveness
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#validity">
+       Validity
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#submission">
+     Submission
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#grading">
+       Grading
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="a1-responsive-portfolio-in-html-and-css">
+<h1>A1: Responsive Portfolio in HTML and CSS<a class="headerlink" href="#a1-responsive-portfolio-in-html-and-css" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>In this assignment, you’ll make yourself a basic portfolio online. Portfolios are useful for showing potential employers the skills you’ve picked up in coursework, internships, side projects, etc.</p>
+<div class="section" id="re-using-a-portfolio">
+<h3>Re-using a portfolio<a class="headerlink" href="#re-using-a-portfolio" title="Permalink to this headline">¶</a></h3>
+<p>If you’ve made yourself a portfolio for another class or as a side project, it may fill the requirements for this assignment. It must be made from scratch; it cannot be made using a site creator like Weebly, Wix, SquareSpace, etc. It also must be responsive and pass the validation checks, and consider adding a feature or two to embrace the spirit of the assignment. Contact the course staff if you have questions about using a portfolio you’ve already made for this assignment.</p>
+</div>
+</div>
+<div class="section" id="assignment-details">
+<h2>Assignment Details<a class="headerlink" href="#assignment-details" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="starter-code">
+<h3>Starter code<a class="headerlink" href="#starter-code" title="Permalink to this headline">¶</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Watch for Updates</p>
+<p>A link to the repository will be made available soon.</p>
+</div>
+<p>A starter repository is on GitHub Classroom.</p>
+<div class="section" id="git-and-github">
+<h4>Git and GitHub<a class="headerlink" href="#git-and-github" title="Permalink to this headline">¶</a></h4>
+<p>Git is the most prevalent version control software today. <a class="reference external" href="https://github.com/">GitHub</a> is a popular hosting service for Git projects, and includes many social networking features. Git and GitHub are different products! Git is freely-available open source software, while GitHub was acquired by Microsoft for $7.5 billion in June 2018.</p>
+<p>Most Git repositories are managed with your favorite terminal. GitHub provides some <a class="reference external" href="https://try.github.io/">resources</a> for picking up Git. The <a class="reference external" href="https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf">cheatsheet</a> can be a particularly useful reference.</p>
+<p>GitHub also provides <a class="reference external" href="https://desktop.github.com/">desktop apps</a> for managing Git repositories on macOS and Windows. These have the classic advantages and disadvantages of interfaces. The desktop apps have a much shallower learning curve and make completing simple tasks easier, but lack expressivity for the more advanced Git and GitHub features. You’re welcome to choose either a desktop app or the terminal in this class.</p>
+<p>The desktop apps automatically install Git. It’s also possible to <a class="reference external" href="https://gist.github.com/derhuerst/1b15ff4652a867391f03">install Git on its own</a>, such as with the Debian package manager on Linux or via HomeBrew for Mac.</p>
+</div>
+</div>
+<div class="section" id="requirements">
+<h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h3>
+<p>There are three main categories of requirements: Content, Responsiveness, and Validity.</p>
+<div class="section" id="content">
+<h4>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h4>
+<p>The content requirements for your portfolio are intentionally flexible. We hope you embrace the assignment and make something of high enough quality to use as you search for internships or jobs.</p>
+<p>You must include basic HTML content (at least 3 of the following):</p>
+<ul class="simple">
+<li><p>At least one image, with descriptive alt attribute(s)</p></li>
+<li><p>Appropriate headings and paragraph text</p></li>
+<li><p>Links to external page(s)</p></li>
+<li><p>Multiple pages, with appropriate navigation between them</p></li>
+<li><p>Semantic HTML tags like aside or footer</p></li>
+<li><p>Adding custom icons from Google Material Icons or Font Awesome</p></li>
+</ul>
+<p>You must also include basic CSS styling (at least 2 of the following):</p>
+<ul class="simple">
+<li><p>Modifying padding and margins to indent content and enhance readability</p></li>
+<li><p>Modifying link, text color, or other colors to be visually appealing, perhaps with one of the pallette creators in the Resources section.</p></li>
+<li><p>Leveraging Bootstrap CSS helpers such as image shapes and table layouts to display content in a more interesting manner</p></li>
+<li><p>Adding custom font(s) from Google fonts to add more personality (make sure to include appropriate fallbacks)</p></li>
+</ul>
+<p>Finally, you must include at least 1 more advanced feature which goes beyond modifying text and block layouts, such as:</p>
+<ul class="simple">
+<li><p>Creating a table with multiple columns and rows which can be read via a screen reader</p></li>
+<li><p>Creating a more complex page layout, such as including a sidebar or navigation bar</p></li>
+<li><p>Embedded HTML5 media, like video or audio, with fallbacks</p></li>
+<li><p>Leveraging nested selectors to specify format</p></li>
+<li><p>A contact form which leverages HTML forms</p></li>
+</ul>
+<p>We’re extremely open to other ideas. Contact the course staff if you have an idea which doesn’t fall into one of the above categories, and we’ll update the lists. Take this as an opportunity to be creative. Feel free to build off online examples which use JavaScript or HTML or CSS tags that we didn’t cover in lecture.</p>
+</div>
+<div class="section" id="responsiveness">
+<h4>Responsiveness<a class="headerlink" href="#responsiveness" title="Permalink to this headline">¶</a></h4>
+<p>Your portfolio must look good on a range of screen dimensions. Think about readability and the flow of the page on different screens, and consider what content you might want to hide or reformat in non-desktop environments. Take a look at how different pages you visit rework their content on mobile and desktop. Prior to implementing, consider sketching on paper how you envision your portfolio looking for a few different types of screens.</p>
+<p>You are not required to use Bootstrap, but it provides useful tools (e.g., the Grid System) for making responsive pages. Google Chrome and Mozilla Firefox have great tools for emulating a range of screen sizes, but both note limitations in properly emulating all devices. We’ll test your portfolios with these browser tools rather than on a range of real devices.</p>
+<p>We will evaluate responsiveness based on your portfolio’s readability, navigability, and content choices in a range of screen sizes.</p>
+</div>
+<div class="section" id="validity">
+<h4>Validity<a class="headerlink" href="#validity" title="Permalink to this headline">¶</a></h4>
+<p>The page(s) you generate must also pass three validation checks (see Resources section for links):</p>
+<ol class="simple">
+<li><p>The HTML must be well-formed, validated by W3C.</p></li>
+<li><p>The CSS must also be well-formed, validated by W3C.</p></li>
+<li><p>The page must pass accessibility guidelines, validated by AChecker and/or Wave (submit the AChecker validation, but perhaps try Wave too).</p></li>
+</ol>
+<p>The checkers vary in stringency. Aim to resolve all of the errors, but think through whether the warnings (or potential problems) are actually problems. Include separate checker files for each screen in your webpage.</p>
+<p>If your previous site fits the requirements, submit it as though you made it this quarter, but indicate in your readme.txt that you’re submitting a portfolio you made before this course. Describe what you changed to pass the validation checks and any features you’ve added to enhance your portfolio.</p>
+</div>
+</div>
+<div class="section" id="submission">
+<h3>Submission<a class="headerlink" href="#submission" title="Permalink to this headline">¶</a></h3>
+<p>Your repository should be organized as follows:</p>
+<ul class="simple">
+<li><p>An index.html file containing your webpage’s root.</p></li>
+<li><p>Any additional .html and .css files as necessary.</p></li>
+<li><p>For each validation check, include screenshot(s) in .jpg format with the matching filename: valid-html*.jpg, valid-css*.jpg, valid-accessibility*.jpg. The “*” is used to designate the page each check refers to.</p></li>
+<li><p>A readme.txt document containing:</p>
+<ul>
+<li><p>The number of assignment points you believe you have completed</p></li>
+<li><p>A list containing the basic HTML content, CSS styling, and advanced feature you included in your portfolio</p></li>
+<li><p>How long it took you to complete the assignment</p></li>
+<li><p>A list of urls of the online resources you consulted</p></li>
+<li><p>A list of classmates or other individuals you consulted</p></li>
+</ul>
+</li>
+</ul>
+<p>To submit, zip your repository and upload it to Canvas. Any late uploads are subject to the course’s late policy.</p>
+<p>If you’re proud of your portfolio, it’s pretty easy to put it online! ICS gives all students space to post portfolios or other webpages. Follow the directions <a class="reference external" href="https://www.ics.uci.edu/computing/web/personalpage.php">here</a> to get your page online. This assignment does not require you to make your portfolio public, but we encourage you to consider it.</p>
+<div class="section" id="grading">
+<h4>Grading<a class="headerlink" href="#grading" title="Permalink to this headline">¶</a></h4>
+<p>This assignment will be graded on a scale of 10 points, with the possibility of 1 bonus point, broken down as follows:</p>
+<ul class="simple">
+<li><p>Readme is complete (1 points)</p></li>
+<li><p>Includes basic HTML content (2 points)</p></li>
+<li><p>Includes basic CSS styling (1 points)</p></li>
+<li><p>Includes an advanced feature (1 point)</p></li>
+<li><p>Responsive layout (2 points)</p></li>
+<li><p>Passes three validation checks (1 points)</p></li>
+<li><p>Embracing the spirit of the assignment (2+1 points)</p></li>
+</ul>
+<p>Toward the last category, we hope you take this chance to make a portfolio you’d want to use beyond this assignment and will reward the students who embrace the opportunity the most. We therefore expect the median and mode for this category to be 1 or 2 points. A bonus point is possible for particularly exceptional portfolios. 0 points can be used in cases where the minimum specifications around content, responsiveness, and validity have been reached, but the design of the portfolio would not impress a prospective employer.</p>
+<p>Embracing the opportunity can mean adding multiple advanced features. Or it could mean following principles of good design which you may have discussed in other courses or seen on webpages you visit regularly. In either case, we will evaluate how well these additions enhance your portfolio. It’s one thing to add random videos and tables or make a single-page scrolling website. It’s another for those features to add value for a potential employer.</p>
+<p>In prior courses, you’ve been asked to follow good principles for indentation, naming variables, commenting, etc. We expect you to do the same in this course, but aim to avoid being draconian in our enforcement of these principles. Egregiously poor formatting, completely uncommented code, etc. may incur a small penalty (e.g., -1 point), but we expect this to be rarely applied.</p>
+<p>Finally, note that the grading only evaluates the code written to generate your portfolio and how it appears visually. We’re not looking to evaluate how interesting your bio is or the accuracy of your project descriptions (though of course, a potential employer would!). If you find that you’re running out of time, think about whether Lorem Ipsum text or placeholder images could help. Be sure to acknowledge your sources!</p>
+<p>If you feel like you don’t have projects to add, think about the projects you have completed in recent courses. Projects can take many forms including reports, mockups, and source code. Any or all of those can be included in a portfolio. Lorem Ipsum or placeholders are also fine for the purpose of the assignment.</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./assignments"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="a0.html" title="previous page">A0: Getting to Know You, Getting to Know Us</a>
+    <a class='right-next' id="next-link" href="../notes/wk1.html" title="next page">Week 1 Notes</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Mark S. Baldwin<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>
