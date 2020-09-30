@@ -52,7 +52,7 @@ Due to the inherent difficulty of proctoring an exam remotely, for this quarter 
 
 Although we are a virtual class this quarter, my goal is to reproduce as much of the classroom experience as possible. So we will be using an online quiz tool called Socrative throughout the quarter to keep track of our progress together and have a little fun. We will also have a course Slack workspace where we can chat and learn from each other.
 
-Socrative quiz sessions will occur live during our regular meeting time every Monday. Each quiz will contain questions relating to course material, discussions, and your overall thoughts on the class. These quizzes are designed to be low-stakes and fun, but will also contribute to a participation grade for the class. The results of the quizzes will be posted here, shortly after they occur.
+Socrative quiz sessions will occur live during our regular meeting time every Tuesday. Each quiz will contain questions relating to course material, discussions, and your overall thoughts on the class. These quizzes are designed to be low-stakes and fun, but will also contribute to a participation grade for the class. The results of the quizzes will be posted here, shortly after they occur.
 
 Slack will be our primary tool for communication. You will be expected to join the class workspace and participate in informal discussions during the quarter.
 
