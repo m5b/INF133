@@ -1,0 +1,19 @@
+- file: index
+  numbered: false
+
+- part: Assignments
+  chapters:
+  - file: assignments/a0
+    title: Assignment 0
+  - file: assignments/a1
+    title: Assignment 1
+
+- part: Lecture Notes
+  chapters:
+  - file: notes/wk1
+    title: Week 1
+
+- part: Course Resources
+  chapters:
+  - file: resources
+    title: Resources
