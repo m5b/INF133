@@ -19,6 +19,7 @@ Here are the slides and link to recording for the week 0 introduction lecture:
 I have broken this lecture into 6 parts. Most videos range from 9-15 minutes and focus on specific sections of the lecture. I have used the naming convention Lx-Px (_e.g.,_ Lecture 1 - Part 1) in the videos to help with flow.
 
 <a href="../resources/10_06_20-html_accessibility.pdf" >Slides for Full Lecture</a>
+<a href="../resources/10_06_20-Assistive_Technology.pdf" >Slides for Accessibility Side Lecture</a>
 
 
 [L2-P1](https://uci.yuja.com/V/Video?v=1959569&node=7548734&a=591490276&autoplay=1): Fundamentals of Web Communication
