@@ -23,6 +23,7 @@ I have broken this lecture into 6 parts. Most videos range from 9-15 minutes and
 
 <a href="../resources/10_06_20-Assistive_Technology.pdf" >Slides for Accessibility Side Lecture</a>
 
+<a href="https://repl.it/@m5b/SatisfiedCoolDevelopers" >HTML code used in lecture</a>. Feel free to play around with it!
 
 [L2-P1](https://uci.yuja.com/V/Video?v=1959569&node=7548734&a=591490276&autoplay=1): Fundamentals of Web Communication
 
