@@ -36,6 +36,21 @@ Here are the slides and link to recording for the CSS lecture
 : Units, Advanced Selectors, and Fallbacks
 
 
+#### CSS and Responsive Design Part 1
+
+This lecture is only three parts, but each part runs a touch longer than usual.
+
+<a href="../resources/10_13_20-responsive_design.pdf" >Responsive Design Lecture Slides</a>
+
+[P1](https://uci.yuja.com/V/Video?v=2003362&node=7664090&a=1166702791&autoplay=1)
+: Introduction to Responsive Design
+
+[P2](https://uci.yuja.com/V/Video?v=2003371&node=7664121&a=314805695&autoplay=1)
+: Making a Website Responsive
+
+[P3](https://uci.yuja.com/V/Video?v=2003381&node=7664138&a=830543452&autoplay=1)
+: Working with Bootstrap
+
 ## Quiz Results
 
 TBD
