@@ -36,7 +36,7 @@ Here are the slides and link to recording for the CSS lecture
 : Units, Advanced Selectors, and Fallbacks
 
 
-#### CSS and Responsive Design Part 1
+#### Responsive Design Part 2
 
 This lecture is only three parts, but each part runs a touch longer than usual.
 
