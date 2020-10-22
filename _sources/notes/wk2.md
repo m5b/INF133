@@ -53,7 +53,5 @@ This lecture is only three parts, but each part runs a touch longer than usual.
 
 ## Quiz Results
 
-TBD
-
-### Thoughts on the Quiz
+<a href="../resources/QZ_Week_2_Quiz_Results.pdf" >Quiz Results</a>
 
