@@ -1,4 +1,4 @@
-Week 3 Notes
+Week 5 Notes
 ============================
 
 ```{note}
@@ -7,31 +7,19 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ## Lecture Materials
 
-### JavaScript Lecture
-<a href="../resources/10_23_20-javascript.pdf">JavaScript Lecture Slides</a>
+### Software and Visualization Tools Lecture
+<a href="../resources/inf133_data_viz.pdf">Software & Visualization Tools Lecture Slides</a>
 
-[P1](https://uci.yuja.com/V/Video?v=2068152&node=7812662&a=664039359&autoplay=1)
-: JavaScript Role in Web Development and History
+[P1](https://uci.yuja.com/V/Video?v=2131845&node=7971430&a=1160569993&autoplay=1)
+: Concepts of Software Tools
 
-[P2](https://uci.yuja.com/V/Video?v=2068175&node=7812706&a=1588305908&autoplay=1)
-: Writing JavaScript
+[P2](https://uci.yuja.com/V/Video?v=2132775&node=7973430&a=1950270015&autoplay=1)
+: Visualization Tools
 
-[P3](https://uci.yuja.com/V/Video?v=2068284&node=7812853&a=1601314754&autoplay=1)
-: Functions in JavaScript 
-
-### DOM Manipulation Lecture
-<a href="../resources/10_23_20-dom_package.pdf">DOM Manipulation Lecture Slides</a>
-
-[P1](https://uci.yuja.com/V/Video?v=2070144&node=7815915&a=1969521963&autoplay=1)
-: The DOM and JavaScript
-
-[P2](https://uci.yuja.com/V/Video?v=2070178&node=7815971&a=1896413555&autoplay=1)
-: The DOM and jQuery
-
-P3
-: Package Management (not ready yet)
+[P3](https://uci.yuja.com/V/Video?v=2132781&node=7973437&a=741629184&autoplay=1)
+: Vega-Lite Demo
 
 ## Quiz Results
 
-<a href="../resources/QZ_Week_3_Quiz_Results.pdf" >Quiz Results</a>
+No quiz this week.
 
