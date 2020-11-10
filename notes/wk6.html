@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Week 2 Notes &#8212; INF 133 Fall 2020</title>
+    <title>Week 6 Notes &#8212; INF 133 Fall 2020</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -55,8 +55,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Week 3 Notes" href="wk3.html" />
-    <link rel="prev" title="Week 1 Notes" href="wk1.html" />
+    <link rel="next" title="Final Project" href="../final.html" />
+    <link rel="prev" title="Week 5 Notes" href="wk5.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -134,8 +134,8 @@
    Week 1
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="wk2.html">
    Week 2
   </a>
  </li>
@@ -154,8 +154,8 @@
    Week 5
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wk6.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Week 6
   </a>
  </li>
@@ -225,7 +225,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/notes/wk2.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/notes/wk6.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -261,21 +261,14 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#assignment-lectures">
-     Assignment Lectures
+    <a class="reference internal nav-link" href="#ajax-fetch-and-promises">
+     AJAX, Fetch, and Promises
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#css-and-responsive-design-part-1">
-       CSS and Responsive Design Part 1
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#responsive-design-part-2">
-       Responsive Design Part 2
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#server-side-development">
+     Server Side Development
+    </a>
    </li>
   </ul>
  </li>
@@ -295,53 +288,26 @@
         
               <div>
                 
-  <div class="section" id="week-2-notes">
-<h1>Week 2 Notes<a class="headerlink" href="#week-2-notes" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="week-6-notes">
+<h1>Week 6 Notes<a class="headerlink" href="#week-6-notes" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Keep an eye weekly pages as they might be updated throughout the week.</p>
 </div>
 <div class="section" id="lecture-materials">
 <h2>Lecture Materials<a class="headerlink" href="#lecture-materials" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="assignment-lectures">
-<h3>Assignment Lectures<a class="headerlink" href="#assignment-lectures" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="css-and-responsive-design-part-1">
-<h4>CSS and Responsive Design Part 1<a class="headerlink" href="#css-and-responsive-design-part-1" title="Permalink to this headline">¶</a></h4>
-<p>I have broken this lecture into 5 parts. Most videos range from 7-17 minutes and focus on specific sections of the lecture. I have used the naming convention Px (<em>e.g.,</em> Part 1) in the videos to help with flow.</p>
-<p>Here are the slides and link to recording for the CSS lecture</p>
-<p><a href="../resources/10_12_20-css.pdf" >CSS Lecture Slides</a></p>
-<p><a href="https://repl.it/@m5b/inf133-css-demo" >HTML and CSS code used in lecture</a>. Feel free to play around with it!</p>
-<dl class="simple myst">
-<dt><a class="reference external" href="https://uci.yuja.com/V/Video?v=1995814&amp;node=7645821&amp;a=1900928025&amp;autoplay=1">P1</a></dt><dd><p>Overview of CSS</p>
-</dd>
-<dt><a class="reference external" href="https://uci.yuja.com/V/Video?v=1995819&amp;node=7645838&amp;a=784471644&amp;autoplay=1">P2</a></dt><dd><p>CSS Demo 1</p>
-</dd>
-<dt><a class="reference external" href="https://uci.yuja.com/V/Video?v=1995874&amp;node=7645962&amp;a=1149934946&amp;autoplay=1">P3</a></dt><dd><p>CSS Rules and Positioning</p>
-</dd>
-<dt><a class="reference external" href="https://uci.yuja.com/V/Video?v=1995878&amp;node=7645971&amp;a=1850507655&amp;autoplay=1">P4</a></dt><dd><p>Demo 2</p>
-</dd>
-<dt><a class="reference external" href="https://uci.yuja.com/V/Video?v=1995905&amp;node=7646035&amp;a=1813997364&amp;autoplay=1">P5</a></dt><dd><p>Units, Advanced Selectors, and Fallbacks</p>
-</dd>
-</dl>
+<div class="section" id="ajax-fetch-and-promises">
+<h3>AJAX, Fetch, and Promises<a class="headerlink" href="#ajax-fetch-and-promises" title="Permalink to this headline">¶</a></h3>
+<p>Will release on Wednesday</p>
 </div>
-<div class="section" id="responsive-design-part-2">
-<h4>Responsive Design Part 2<a class="headerlink" href="#responsive-design-part-2" title="Permalink to this headline">¶</a></h4>
-<p>This lecture is only three parts, but each part runs a touch longer than usual.</p>
-<p><a href="../resources/10_13_20-responsive_design.pdf" >Responsive Design Lecture Slides</a></p>
-<dl class="simple myst">
-<dt><a class="reference external" href="https://uci.yuja.com/V/Video?v=2003362&amp;node=7664090&amp;a=1166702791&amp;autoplay=1">P1</a></dt><dd><p>Introduction to Responsive Design</p>
-</dd>
-<dt><a class="reference external" href="https://uci.yuja.com/V/Video?v=2003371&amp;node=7664121&amp;a=314805695&amp;autoplay=1">P2</a></dt><dd><p>Making a Website Responsive</p>
-</dd>
-<dt><a class="reference external" href="https://uci.yuja.com/V/Video?v=2003381&amp;node=7664138&amp;a=830543452&amp;autoplay=1">P3</a></dt><dd><p>Working with Bootstrap</p>
-</dd>
-</dl>
-</div>
+<div class="section" id="server-side-development">
+<h3>Server Side Development<a class="headerlink" href="#server-side-development" title="Permalink to this headline">¶</a></h3>
+<p>Will release on Thursday</p>
 </div>
 </div>
 <div class="section" id="quiz-results">
 <h2>Quiz Results<a class="headerlink" href="#quiz-results" title="Permalink to this headline">¶</a></h2>
-<p><a href="../resources/QZ_Week_2_Quiz_Results.pdf" >Quiz Results</a></p>
+<p><a href="../resources/QZ_Week_6_Quiz_Results.pdf" >Quiz Results</a></p>
 </div>
 </div>
 
@@ -373,8 +339,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="wk1.html" title="previous page">Week 1 Notes</a>
-    <a class='right-next' id="next-link" href="wk3.html" title="next page">Week 3 Notes</a>
+    <a class='left-prev' id="prev-link" href="wk5.html" title="previous page">Week 5 Notes</a>
+    <a class='right-next' id="next-link" href="../final.html" title="next page">Final Project</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
