@@ -21,6 +21,8 @@ If you did not attend the live setup session for a3, and you are having trouble 
 
 ### AJAX, Fetch, and Promises
 
+<a href="../resources/ajax_fetch_promises.pdf">Lecture Slides</a>
+
 [P1](https://uci.yuja.com/V/Video?v=2196135&node=8098244&a=77145746&autoplay=1)
 
 : HTTP, URLs, and AJAX
