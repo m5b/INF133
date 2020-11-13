@@ -1,0 +1,294 @@
+09:43:45	 From  Mohra Arsala : Getting lots of ‘gyp ERR!’ Statements when npm install is finished for the client directory, but it says it has installed the packages
+09:44:34	 From  Archita Ganesh : what’s the difference between package.json and package-lock.json
+09:45:05	 From  Shannon Hoang : I am in the same boat as Mohra ^_^ ;;
+09:45:27	 From  Juan Samuel Jr. Ramirez : I had to use sudo before the line to get my install to occur
+09:46:08	 From  Tiffany Yujie Kong : im getting gyp ERR and gyp verb types errors too
+09:46:13	 From  Chenyuan Zhang : same
+09:46:29	 From  Tiffany Yujie Kong : windows
+09:46:32	 From  Brynn Suzanne Dunbeck : I got the same ERR (windows)
+09:46:33	 From  Ryan La : I used sudo for installing angular
+09:47:57	 From  Rava Rahbari : On Mac, when I run npm install in client and server respectively, I get a notification about vulnerabilities, is that something worrisome?
+09:48:31	 From  Justin Noah Yi : are these warnings okay?npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142npm WARN deprecated har-validator@5.1.5: this library is no longer supported(windows)
+09:49:11	 From  Shannon Hoang : hello everyone, did you find the package install for webserver to be much shorter than client? i just want to check :”)
+09:49:12	 From  Mohra Arsala : I still get gyp ERR! when I use sudo npm install
+09:49:31	 From  Alexis Ivan Padilla : When I installed npm on client I got: npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.9 (node_modules\fsevents): Is this normal?
+09:49:35	 From  Mohra Arsala : Yeah web server was a lot shorter for me
+09:49:50	 From  Shannon Hoang : Thank you Mohra <3
+09:50:17	 From  Alexis Ivan Padilla : (Windows)
+09:50:39	 From  Matthew Zhou : windows os. Is the python2 not found an issue?
+09:50:45	 From  Mohra Arsala : Getting the gyp errors on Mac when running npm install in client
+09:50:58	 From  Ryan La : same
+09:51:20	 From  Mohra Arsala : Yeah no errors on web server
+09:51:28	 From  Ryan La : Is it constantly updating the errors in the npm install client?
+09:51:33	 From  Ryan La : (Mac)
+09:51:58	 From  Ryan La : Are you allowed to share screen professor?
+09:52:06	 From  Jason Han : ^
+09:52:22	 From  Ryan La : Yes please
+09:52:35	 From  Tiffany Yujie Kong : should I be concerned about "gyp verb `which` failed" type statements when doing npm install on webserver?
+09:53:21	 From  Mohra Arsala : yeah
+09:54:08	 From  Brian Matthew Cantwell : good morning
+09:54:21	 From  Alexis Ivan Padilla : I used to have that, but now the list is much shorter.
+09:54:39	 From  Alexis Ivan Padilla : I've installed node 10.19.0
+09:54:40	 From  Ryan La : Was that issue for when installing angular?
+09:55:39	 From  Alexis Ivan Padilla : I also removed the latest python so that it recognized 2
+09:58:12	 From  Tiffany Yujie Kong : im on windows
+09:58:29	 From  Tyler Kento Matsunami   to   Mark S. Baldwin(Privately) : getting a system cannot find the path specified when running npm install
+09:58:36	 From  Tiffany Yujie Kong : sorry I meant the client directory 
+09:58:49	 From  Ryan La : I think a lot of ppl have issues on the client directory
+10:01:29	 From  Mohra Arsala : Npm audit fix took away the errors
+10:01:34	 From  Mohra Arsala : Just left with warnings now
+10:02:19	 From  Tyler Kento Matsunami   to   Mark S. Baldwin(Privately) : jk got it to work I think
+10:02:36	 From  Alexis Ivan Padilla : I've tried that but run I ran ng serve it gave me a bunch of errors
+10:03:12	 From  Tyler Kento Matsunami : is npm install taking anybody else like.. rlly long to run?
+10:03:52	 From  Jaime Leal : For the client side yeah tyler
+10:03:58	 From  Jaime Leal : But it eventually finishede
+10:04:06	 From  Ryan La : Did anyone receive this error when doing npm install in client for mac
+10:04:09	 From  Tiffany Yujie Kong : will the gyp ERR and gyp verb which failed affect the continuation of the project?
+10:04:12	 From  Jaime Leal : On the server side, it was quick
+10:04:13	 From  Tyler Kento Matsunami : ahh okie okie, ty! good to see im not alone lmao
+10:05:01	 From  Ryan La : Is anyone on Mac right now?
+10:05:16	 From  Tyler Kento Matsunami : ahh it just finished
+10:05:19	 From  Tyler Kento Matsunami : yeaa it was taking minutes
+10:05:28	 From  Tyler Kento Matsunami : but it said build failed ahh
+10:05:29	 From  Ryan La : Im receiving different errors on mac
+10:05:38	 From  Tyler Kento Matsunami : https://gyazo.com/21416ed4bf713a1e0f9c6b211851dd42
+10:06:08	 From  Brynn Suzanne Dunbeck : The npm audit fix took away the errors for me, but i'm left with a lot of warnings (windows)
+10:06:17	 From  Jason Wang : Should we try launching the webserver or ng serve to see what a successful launch looks like? I was able to run ng serve fine even with all the errors so I'm not sure if all the errors actually affect it.
+10:06:55	 From  Felix Pichetdara Khon : my errors say something about typescript
+10:07:02	 From  Felix Pichetdara Khon : npm ERR! While resolving: client@0.0.0npm ERR! Found: typescript@3.9.7npm ERR! node_modules/typescriptnpm ERR!   dev typescript@"^3.1.6" from the root project
+10:07:42	 From  Juan Samuel Jr. Ramirez : when I was on my windows I hit enter and it went to the next step
+10:07:49	 From  Ryan La : ../src/libsass/src/ast.hpp:1614:25: warning: loop variable 'numerator' of type
+      'const std::__1::basic_string<char>' creates a copy from type 'const
+      std::__1::basic_string<char>' [-Wrange-loop-analysis]
+        for (const auto numerator : numerators)
+                        ^
+../src/libsass/src/ast.hpp:1614:14: note: use reference type 'const
+      std::__1::basic_string<char> &' to prevent copying
+        for (const auto numerator : numerators)
+             ^~~~~~~~~~~~~~~~~~~~~~
+                        &
+../src/libsass/src/ast.hpp:1616:25: warning: loop variable 'denominator' of type
+      'const std::__1::basic_string<char>' creates a copy from type 'const
+      std::__1::basic_string<char>' [-Wrange-loop-analysis]
+        for (const auto denominator : denominators)
+                        ^
+../src/libsass/src/ast.hpp:1616:14: note: use reference type 'const
+      std::__1::basic_string<char> &' to prevent copying
+        for (const auto denominator : denominators)
+10:07:59	 From  Ryan La : Im receiving this on mac
+10:08:23	 From  Ashley Teves : I got those too but it still worked fine for me later
+10:08:27	 From  Ryan La : In client folder
+10:08:39	 From  Ryan La : yessir
+10:08:56	 From  Ryan La : Did you let it keep on running? It was running in a loop for me @Ashley
+10:09:00	 From  Ryan La : No changes
+10:09:06	 From  Ashley Teves : Yeah it just took a long time to finish
+10:09:13	 From  Ashley Teves : Prob a few min
+10:09:46	 From  Ryan La : Ok I will try letting it run for a bit
+10:10:17	 From  Ryan La : It felt weird seeing the same two warning appearing
+10:10:28	 From  Tyler Kento Matsunami : ahh npm audit fix didn't work :(
+10:10:52	 From  Matthew Zhou : I just finished reinstalling nodejs
+10:10:59	 From  Tyler Kento Matsunami : npm ERR! This is an error with npm itself. Please report this error at:npm ERR!     <https://npm.community>
+10:11:01	 From  Juan Samuel Jr. Ramirez : gonna be a fun time for everyone who didn’t come to this
+10:11:02	 From  Matthew Zhou : problem is it requires a reboot
+10:11:47	 From  Tyler Kento Matsunami : @matthew for the audit fix?
+10:12:30	 From  Ryan La : @Ashley ok it is completed downloading, did you receive any errors after?
+10:13:54	 From  Ashley Teves : Hm I dont really remember what I got I think I got warnings that mention something about audit but I ignored them
+10:14:03	 From  Tiffany Yujie Kong : what does npm audit do?
+10:15:02	 From  Brynn Suzanne Dunbeck : After npm audit I got those same warnings
+10:15:47	 From  Matthew Zhou : do you run install again after audit?
+10:15:57	 From  Stephanie Shine Kim : nope
+10:15:57	 From  Mohra Arsala : yes
+10:15:58	 From  Tong Ge : not yet
+10:15:59	 From  Tiffany Yujie Kong : yes
+10:16:01	 From  Brian Matthew Cantwell : no
+10:16:02	 From  Rava Rahbari : yes
+10:16:19	 From  Matthew Zhou : also do you run audit on both folders?
+10:17:29	 From  Mohra Arsala : Running into issues with ng serve —open in client , whenever everyone else gets to that point
+10:18:02	 From  Alexis Ivan Padilla : So all of that is fine?
+10:18:24	 From  Justin Noah Yi : npm audit hasn't fixed any of my errors (windows_
+10:18:42	 From  Mohra Arsala : Npm audit or npm audit fix?
+10:18:48	 From  Justin Noah Yi : :o
+10:19:48	 From  Justin Noah Yi : thank you Mohra!
+10:20:00	 From  Mohra Arsala : no problem! :)
+10:24:02	 From  Ryan La : Did anything happen when you guys ran npm start in web server folder
+10:24:12	 From  Avineesh Kompella : you're on mute professor
+10:25:05	 From  Mohra Arsala : Yeah I think the server is just running and two lines were outputted @ryan
+10:25:33	 From  Chenyuan Zhang : it just says something like node bin for me and then it gets stuck doing a batch job
+10:25:40	 From  Ryan La : Did you see anything about localhost:8888
+10:25:42	 From  Tyler Kento Matsunami : I should be okay after running npm audit fix no?
+10:25:50	 From  Ryan La : @chenyuan
+10:25:56	 From  Chenyuan Zhang : no D :
+10:25:58	 From  Jason Han : already scared how hard A4 will be 
+10:25:58	 From  Jason Han : lmao
+10:25:58	 From  Jason Wang : @Chenyuan same here
+10:25:59	 From  Mohra Arsala : I didn’t see anything about localhost either
+10:26:01	 From  Ryan La : Ok I think we are on the same page
+10:26:04	 From  Ryan La : Thanks!
+10:26:24	 From  Chenyuan Zhang : oh ok yay!
+10:26:46	 From  Tong Ge : yes
+10:27:13	 From  Tyler Kento Matsunami : do I need to make those files before running npm install?
+10:27:14	 From  Ryan La : Did ng serve --open do anything for you guys
+10:27:19	 From  Tyler Kento Matsunami : i forgot to add them first Lo
+10:27:24	 From  Tyler Kento Matsunami : :o
+10:27:25	 From  Mohra Arsala : Yeah it failed for me @ryan
+10:27:41	 From  Jaime Leal : I did npm start in the web server but nothing opened up in my browser
+10:27:53	 From  Ryan La : Yeah I get . Schema validation failed with the following errors:
+10:27:56	 From  Ryan La : @Mohra
+10:27:58	 From  Ryan La : Did you get that too
+10:28:03	 From  Mohra Arsala : Yeah I got that too
+10:28:14	 From  Ryan La : Ok
+10:28:14	 From  Justin Noah Yi : in whch folder do we run npm start?
+10:28:20	 From  Ashley Teves : It should open up when u launch client as well as webserver
+10:28:20	 From  Mohra Arsala : webserver
+10:28:57	 From  Matthew Zhou : I got a npm err
+10:28:58	 From  Tyler Kento Matsunami : yea!
+10:29:04	 From  Jaime Leal : I get the same thing the prof has rn
+10:29:09	 From  Mohra Arsala : same
+10:29:11	 From  Tyler Kento Matsunami : okie nice, thanks!
+10:29:17	 From  Brynn Suzanne Dunbeck : same
+10:29:21	 From  Tong Ge : yeah got the same error
+10:29:27	 From  Jason Wang : same here
+10:29:43	 From  Matthew Zhou : I got a syntax error 
+10:29:45	 From  Ryan La : What did you receive when you did localhost:8888 @mohra
+10:30:22	 From  Juan Samuel Jr. Ramirez : I tried creating the client secret file in sublime text but it says permission denied
+10:30:49	 From  Matthew Zhou : anyone get syntax error?
+10:30:50	 From  Tianxiong Wu : I got error with localhost:8888 but I have the webpage with localhost:4200
+10:30:50	 From  Mohra Arsala : Same thing as the professor @ryan
+10:31:04	 From  Ashley Teves : Did u already go to ur Spotify account to change the redirect URI
+10:31:19	 From  Ashley Teves : @ professor
+10:31:28	 From  Jason Wang : I actually didn't get the text at the bottom, just the two lines of text ending with node ./bin/www
+10:31:48	 From  Mohra Arsala : You have to go to localhost:8888 in your browser to get that text @jason
+10:31:57	 From  Jason Wang : oh I see. Thank!
+10:32:14	 From  Mohra Arsala : yeah
+10:32:33	 From  Matthew Zhou : i don't have that issue i have a different one
+10:33:16	 From  Alexis Ivan Padilla : That happens when you do audit fix. I reversed it and got a different set of errors.
+10:33:29	 From  Matthew Zhou : did you create a file in the webserver already?
+10:33:41	 From  Alexis Ivan Padilla : No
+10:33:46	 From  Chenyuan Zhang : no
+10:33:47	 From  Ryan La : @tianxiong I received the red text similar to him
+10:33:47	 From  Ashley Teves : I was able to see the website launch
+10:33:51	 From  Jason Wang : same here
+10:33:57	 From  Ashley Teves : On mac
+10:34:04	 From  Tiffany Yujie Kong : i was also able to get the website to launch (windows)
+10:34:13	 From  Tiffany Yujie Kong : even though i had the gyp errors 
+10:34:15	 From  Ryan La : @Ashley did you do anything different to get the website to work?
+10:34:17	 From  Jason Wang : I was able to launch and login (windows)
+10:35:01	 From  Ashley Teves : Which part isnt working for u @ryan
+10:35:07	 From  Ryan La : Ng serve
+10:35:16	 From  Ryan La : In the client folder @ ashley
+10:35:49	 From  Tyler Kento Matsunami : yeaa im getting ng serve error too
+10:35:50	 From  Ashley Teves : Hmm I didnt see any errors when running the client folder
+10:36:07	 From  Ashley Teves : And I didnt really make any changes
+10:36:24	 From  Tyler Kento Matsunami : the same one prof baldwin has on his screen
+10:37:47	 From  Ryan La : Hmmm, yeah im unsure. I also followed all the steps but im stuck where professor Baldwin is at currently @Ashley
+10:38:52	 From  Tong Ge : how do you get out of the webserver/app.js:23:3 ?
+10:39:04	 From  Justin Noah Yi : try cd ..
+10:39:12	 From  Ashley Teves : Did u do audit to urs ryan
+10:39:20	 From  Ryan La : Yeah I did
+10:39:37	 From  Ashley Teves : Oh thats the part I didnt do Im thinking that prob made a diff
+10:40:35	 From  Jason Wang : I also didn't run an audit fix on my client folder and ng serve worked fine
+10:40:35	 From  Tyler Kento Matsunami : ^ahh you were able to run npm install with no error?
+10:40:45	 From  Jason Wang : but I still have the errors
+10:40:51	 From  Tyler Kento Matsunami : ohp
+10:40:52	 From  Jason Wang : during the npm install
+10:40:54	 From  Jason Wang : *
+10:41:51	 From  Ryan La : I think I received error before and after running npm audit fix
+10:42:25	 From  Juan Samuel Jr. Ramirez : when I run the webserver it reads webserver@0.0.0, assuming that’s incorrect? (Mac OS terminal)
+10:42:44	 From  Ashley Teves : Thats what I see too
+10:43:20	 From  Ryan La : Thats what I received for the web server @juan
+10:44:33	 From  Mohra Arsala : I got it to work! Don’t do npm audit fix and ignore the gyp errors
+10:45:11	 From  Archita Ganesh : yay!!
+10:45:28	 From  Ryan La : How did you get it to work professor ?!
+10:45:30	 From  Jaime Leal : I did npm install again on both web server and client but still couldn’t get it to work :/
+10:45:34	 From  Tyler Kento Matsunami : so people who run audit fix should redo the install?
+10:45:47	 From  Tyler Kento Matsunami : *ran
+10:45:55	 From  Jason Wang : I think @Ashley mentioned it first
+10:46:01	 From  Chenyuan Zhang : how do we reinstall it?
+10:46:10	 From  Ryan La : Yeah do we reinstall?
+10:46:10	 From  Ashley Teves : I actually am in gryffindoor aye
+10:47:10	 From  Matthew Zhou : i have a syntax error and I am not sure why
+10:47:29	 From  Matthew Zhou : in the routes folder
+10:47:30	 From  Jaime Leal : Im just gonna reclone the repository again and not do npm audit fix tbh
+10:47:36	 From  Matthew Zhou : it says I have an unexpected token
+10:47:43	 From  Chenyuan Zhang : same Jaime
+10:47:52	 From  Mohra Arsala : Yeah that’s what I did
+10:47:54	 From  Ben Smith : How's it going professor :)
+10:48:02	 From  Ben Smith : Yeah
+10:48:07	 From  Ben Smith : I was teaching a lesson
+10:48:23	 From  Avineesh Kompella : that's my co-worker :)
+10:48:28	 From  Ben Smith : hi avi
+10:48:31	 From  Avineesh Kompella : hi ben
+10:48:54	 From  Matthew Zhou : in the webserver/routes/index
+10:49:10	 From  Matthew Zhou : i just finished making the secret json and token json
+10:49:14	 From  Matthew Zhou : and called npm start
+10:49:22	 From  Matthew Zhou : yeah
+10:49:28	 From  Matthew Zhou : nop
+10:49:59	 From  Yuichi Okuhama : how do I reclone this again..?
+10:50:00	 From  Ryan La : So don’t run npm audit fix on anything?
+10:50:19	 From  Matthew Zhou : yes
+10:50:22	 From  Ben Smith : oof
+10:50:35	 From  Ben Smith : Windows with web dev makes npm so much harder :/
+10:50:37	 From  Chenyuan Zhang : I just deleted the folder and redownloaded the GitHub folder
+10:52:11	 From  Ben Smith : Oh yeah you are on windows
+10:52:16	 From  Ben Smith : I didn't even realize that
+10:52:25	 From  Brian Matthew Cantwell : this is why ICS45c and 46 use VMs
+10:52:38	 From  Ben Smith : Are you using Windows Subsystem for Linux for installing stuff on Windows?
+10:52:44	 From  Ben Smith : for npm etc
+10:53:03	 From  Ben Smith : Gotcha yeah
+10:53:12	 From  Ben Smith : Once WSL IS installed its much easier
+10:53:24	 From  Ben Smith : but installing it is not so fun sometimes if you don't know your way around a terminal
+10:54:04	 From  Tyler Kento Matsunami : so i should get a mac ? :D
+10:54:20	 From  Ben Smith : If you have windows, I'd recommend installing Windows Subsystem for Linux
+10:54:30	 From  Ben Smith : It's a bit weird to wrap your head around, but makes web dev SO much easier
+10:54:58	 From  Ben Smith : I think doing web development on Windows is 100% doable if you use WSL
+10:55:08	 From  Shreya Kapoor : Hi Professor, my client is compiling, but when clicking on login on the page, the localhost:8888/login shows up as an error. Is that normal?
+10:55:32	 From  Jaime Leal : Got it working after recloning and not doing npm audit fix!
+10:55:43	 From  Ryan La : IT WORKED
+10:55:46	 From  Matthew Zhou : it seems I cant run it
+10:55:52	 From  Matthew Zhou : even with the changes
+10:55:59	 From  Matthew Zhou : yep
+10:56:03	 From  Ryan La : But clicking login doesn’t work as well
+10:56:06	 From  Shreya Kapoor : Which was the redirect? (sorry if that is a dumb q)
+10:56:13	 From  Jaime Leal : My fans on my Mac are going crazy though lol
+10:56:34	 From  Matthew Zhou : should I just delete my repository and reclone a new one without npm audit fix?
+10:56:43	 From  Ben Smith : If you're running anything from npm @Jaime then yeah that's normal
+10:57:01	 From  Chenyuan Zhang : mine doesn't look the same as the professor's, but the webpage at least loaded
+10:57:01	 From  Ben Smith : My MacBook pro always spins up fans like crazy when I start a local server
+10:57:20	 From  Ben Smith : @Chenyuan the styling will probably look slightly different, but should generally look somewhat similar
+10:58:20	 From  Chenyuan Zhang : hmmm ok
+10:58:31	 From  Ben Smith : Does it look at least somewhat similar?
+10:58:35	 From  Ben Smith : Or does it look very different
+10:58:35	 From  Jaime Leal : Probably depends on your browser?
+10:58:38	 From  Tianxiong Wu   to   Mark S. Baldwin(Privately) : Is it normal that my local angular version is different from the global one?
+10:58:50	 From  Ben Smith : Like is the content on the page the same, as in do you see all of the same text even if it looks different
+10:59:01	 From  Shreya Kapoor : I did that part, should I maybe regenerate my client secret?
+10:59:05	 From  Chenyuan Zhang : it has the look of when styling doesn't load if that makes sense
+10:59:09	 From  Alexis Ivan Padilla : Nope still got the errors
+10:59:10	 From  Ryan La : Still didn’t work with the login
+10:59:12	 From  Ryan La : ^
+10:59:20	 From  Chenyuan Zhang : it's just the html it looks like
+10:59:31	 From  Ben Smith : Pop open your developer tools @Chenyuan
+10:59:43	 From  Ben Smith : Should be CTRL-Shift-I or CMD-Option-I for windows or mac
+10:59:54	 From  Ben Smith : Check the "Console" tab and see if there are any yellow warnings or red errors
+11:00:48	 From  Tiffany Yujie Kong : thank you for the office hours today professor :))
+11:01:11	 From  Chenyuan Zhang : oh it says bootstrap failed to load
+11:01:16	 From  Ben Smith : There's your issue
+11:01:34	 From  Ryan La : Wait are we suppose to update our client id and client secret in the .json file?
+11:01:36	 From  Ben Smith : What's the exact error? you can PM me in zoom chat if you want
+11:01:51	 From  Ben Smith : HACKED
+11:01:54	 From  Jaime Leal : Prof can you show your localhost to compare?
+11:04:03	 From  Tyler Kento Matsunami : should i be seeing anything after i run npm start?
+11:04:08	 From  Tyler Kento Matsunami : im stuck on this screen
+11:04:09	 From  Tyler Kento Matsunami : https://gyazo.com/d50236b45d57cb1305d7c32b7217e60f
+11:04:15	 From  Jaime Leal : After you do that
+11:04:20	 From  Jaime Leal : Run the client side command
+11:04:22	 From  Ryan La : OK works
+11:04:28	 From  Jaime Leal : And that should open the localhost
+11:04:36	 From  Tyler Kento Matsunami : ahhh okay okay thank u
+11:04:42	 From  Ryan La : You have to update your client id and key and make sure you run the server in webserver
+11:04:49	 From  Tyler Kento Matsunami : ohh ok! thanks
+11:04:50	 From  Tyler Kento Matsunami : wowowow
+11:04:57	 From  Ryan La : If you are having trouble with getting the login to work
+11:05:38	 From  Ryan La : Thanks professor!
+11:06:00	 From  Jason Han : will you upload lectures about angular or fetch?
+11:06:37	 From  Matthew Zhou : im still doing this
