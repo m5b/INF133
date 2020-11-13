@@ -41,7 +41,9 @@ If you did not attend the live setup session for a3, and you are having trouble 
 
 ### Server Side Development
 
-Will release on Thursday
+<a href="../resources/server-side-development.pdf">Lecture Slides</a>
+
+[Lecture Video](https://uci.yuja.com/V/Video?v=2197082&node=8099775&a=335493948&autoplay=1)
 
 ## Quiz Results
 
