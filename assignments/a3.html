@@ -475,6 +475,10 @@ npm start</p>
 <p>The first time you push the “login” button in the top-right corner of the Spotify browser, you will be redirected to Spotify to authenticate and authorize access to your app. The OAuth flow between the Spotify server and the webserver has been implemented for you. That means that once you authenticate and authorize access, you can query the webserver to make API requests on your behalf. The webserver will also handle refreshing the access token when it expires. Hooray!</p>
 <p><img alt="connect to spotify" src="../_images/a3_authorization.png" /></p>
 <p>However, in order to make API requests, you will need to add some functionality to the Spotify Service (<strong><code class="docutils literal notranslate"><span class="pre">services/spotify.service.ts</span></code></strong>). First, update the <strong><code class="docutils literal notranslate"><span class="pre">sendRequestToExpress</span></code></strong> function in the Spotify service to ask the Express webserver to make an API request to Spotify at the endpoint passed in. The endpoints should then return the appropriate data type for each API call. You will be able to test your function by building out the pages in the assignment.</p>
+<div class="admonition-helper-clip admonition">
+<p class="admonition-title">Helper Clip</p>
+<p><a class="reference external" href="https://uci.yuja.com/V/Video?v=2217829&amp;node=8137718&amp;a=885575268&amp;autoplay=1">Watch a quick overview on sendRequestToExpress</a></p>
+</div>
 </div>
 <div class="section" id="part-2-spotify-browser-home-page-5-points">
 <h5>Part 2: Spotify Browser Home Page (5 points)<a class="headerlink" href="#part-2-spotify-browser-home-page-5-points" title="Permalink to this headline">¶</a></h5>
