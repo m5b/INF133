@@ -1,0 +1,598 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A4: Sleep Tracker in Ionic &#8212; INF 133 Fall 2020</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Week 1 Notes" href="../notes/wk1.html" />
+    <link rel="prev" title="A3: Spotify Browser in Angular" href="a3.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo_stacked.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">INF 133 Fall 2020</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   User Interaction Software
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Assignments
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="a0.html">
+   Assignment 0
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="a1.html">
+   Assignment 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="a2.html">
+   Assignment 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="a3.html">
+   Assignment 3
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Assignment 4
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Lecture Notes
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notes/wk1.html">
+   Week 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notes/wk2.html">
+   Week 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notes/wk3.html">
+   Week 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notes/wk4.html">
+   Week 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notes/wk5.html">
+   Week 5
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notes/wk6.html">
+   Week 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notes/wk7.html">
+   Week 7
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Final Project
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../final.html">
+   Project Requirements
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Course Resources
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources.html">
+   Resources
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/assignments/a4.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assignment-details">
+   Assignment Details
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#starter-code">
+     Starter code
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#repository-structure">
+       Repository Structure
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#setting-up-your-workspace">
+       Setting up your Workspace
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#running-the-app">
+       Running the App
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#using-another-framework">
+       Using another framework
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#requirements">
+     Requirements
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#log-overnight-sleep">
+       Log Overnight Sleep
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#log-sleepiness-during-the-day">
+       Log Sleepiness During the Day
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#view-logged-data">
+       View Logged Data
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#backing-up-logged-data">
+       Backing Up Logged Data
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#additional-firebase-suggestions">
+         Additional Firebase suggestions
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#readme">
+       Readme
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#recommendations">
+       Recommendations
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#submitting">
+       Submitting
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#grading">
+       Grading
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="a4-sleep-tracker-in-ionic">
+<h1>A4: Sleep Tracker in Ionic<a class="headerlink" href="#a4-sleep-tracker-in-ionic" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>In this assignment, you’ll demonstrate your ability to make a mobile app by developing a tool for tracking sleep and sleepiness in Ionic. There are <a class="reference external" href="https://thewirecutter.com/reviews/best-sleep-tracking-app/">many sleep tracking apps</a> in the Apple App and Google Play Stores. You will implement a few of the common features.</p>
+</div>
+<div class="section" id="assignment-details">
+<h2>Assignment Details<a class="headerlink" href="#assignment-details" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="starter-code">
+<h3>Starter code<a class="headerlink" href="#starter-code" title="Permalink to this headline">¶</a></h3>
+<p>A <a class="reference external" href="https://classroom.github.com/a/2y86tP6C">starter repository</a> is on GitHub Classroom.</p>
+<div class="section" id="repository-structure">
+<h4>Repository Structure<a class="headerlink" href="#repository-structure" title="Permalink to this headline">¶</a></h4>
+<p>The repository contains a large number files. The repository contains a <strong><code class="docutils literal notranslate"><span class="pre">sleeptracker</span></code></strong> folder with starter code for the assignment. Most of the files are generated by Ionic when creating a new (blank) project. However, a few files have been added to ease the ability to start making a sleep tracking app. <strong>These files can be edited, and you are not required to use them</strong>. You can also start over and create a new Ionic project from scratch by running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ionic</span> <span class="n">start</span> 
+</pre></div>
+</div>
+<p>from the command line. You may want to add variables and functions to these files, or create new subclasses. They are:</p>
+<ul class="simple">
+<li><p>Three classes in the data folder: <strong><code class="docutils literal notranslate"><span class="pre">sleep-data</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">overnight-sleep-data</span></code></strong>, and <strong><code class="docutils literal notranslate"><span class="pre">stanford-sleepiness-data</span></code></strong>. These files provide some data structures for logging sleep data, with the latter two being subclasses of the first. Subclassing enables the two types of logged data to be displayed together (or not, as you see fit for your design).</p></li>
+<li><p>One service in the <strong><code class="docutils literal notranslate"><span class="pre">services</span></code></strong> folder: <strong><code class="docutils literal notranslate"><span class="pre">sleep.service</span></code></strong>. This service provides static variables for storing the logged data and a method for loading default (fake) data.</p></li>
+</ul>
+<p>You will likely want to create additional components, pages, or services to build your app. Running the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ionic</span> <span class="n">generate</span> <span class="p">[</span><span class="n">filename</span><span class="p">]</span> 
+</pre></div>
+</div>
+<p>will generate skeleton code for these files(<a class="reference external" href="https://ionicframework.com/docs/cli/generate/">documentation here</a>). The decision on how many pages, components, etc. to add and what they contain is up to you.</p>
+<p>There is also a <strong><code class="docutils literal notranslate"><span class="pre">readme.txt</span></code></strong> file in the root folder. The readme is more important to this assignment than to previous ones, as it is required to include justifications of your design choices. More on this a little further down.</p>
+</div>
+<div class="section" id="setting-up-your-workspace">
+<h4>Setting up your Workspace<a class="headerlink" href="#setting-up-your-workspace" title="Permalink to this headline">¶</a></h4>
+<p>Some of the packages/libraries depend on newer versions of Node JS.</p>
+<p>Check what version of Node JS you have installed with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">node</span> <span class="o">--</span><span class="n">version</span><span class="o">.</span> 
+</pre></div>
+</div>
+<p>If you installed Node JS before this class, make sure you’ve updated to at least 10, such as with nvm or downloading the latest version from the node website. If your version of Node worked for A3, you should not need to update. But it’s worth checking the version number if you’re encountering issues.</p>
+<p>To run the Ionic app, you will need to install Ionic through npm. To do this, you will install the <a class="reference external" href="https://ionicframework.com/docs/intro/installation/">Ionic Command Line Interface (CLI)</a> globally with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">npm</span> <span class="n">install</span> <span class="o">-</span><span class="n">g</span> <span class="n">ionic</span>
+</pre></div>
+</div>
+<p>The Ionic project is already set up in the <strong><code class="docutils literal notranslate"><span class="pre">sleeptracker</span></code></strong> folder, but the CLI is necessary to run the project. We will use the Ionic 4 in this course.</p>
+<p>You may want to install Cordova as well, as it’s useful for some optional features:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">install</span> <span class="o">-</span><span class="n">g</span> <span class="n">cordova</span>
+</pre></div>
+</div>
+<p>You will also need to install the dependencies for the Ionic app. These dependencies are defined in each project’s respective <strong><code class="docutils literal notranslate"><span class="pre">package.json</span></code></strong> files. cd into the <strong><code class="docutils literal notranslate"><span class="pre">sleeptracker</span></code></strong> folder and install the dependencies with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">install</span>
+</pre></div>
+</div>
+<p>When installing, if you run into issues which contain messages similar to “permission denied”, try changing <a class="reference external" href="https://github.com/angular/angular-cli/issues/6848#issuecomment-386120663">the permissions of the node_modules directory</a>. If you are still having trouble, ask on Slack or talk to the course staff. It’s important to try to get the setup working sooner rather than later, even if you do not plan on working on the assignment until close to the deadline.</p>
+</div>
+<div class="section" id="running-the-app">
+<h4>Running the App<a class="headerlink" href="#running-the-app" title="Permalink to this headline">¶</a></h4>
+<p>To run the Ionic app, cd into the <strong><code class="docutils literal notranslate"><span class="pre">sleeptracker</span></code></strong> folder and run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ionic</span> <span class="n">lab</span> 
+</pre></div>
+</div>
+<p>This will start the app at</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">localhost</span><span class="p">:</span><span class="mi">8200</span>
+</pre></div>
+</div>
+<p>You can also run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ionic</span> <span class="n">serve</span> 
+</pre></div>
+</div>
+<p>instead of <strong><code class="docutils literal notranslate"><span class="pre">ionic</span> <span class="pre">lab</span></code></strong> as it will also run the app in the browser. However, <strong><code class="docutils literal notranslate"><span class="pre">ionic</span> <span class="pre">lab</span></code></strong> is recommended because Ionic will then replicate what the app would look like on iOS and Android. Be sure the dependencies have been installed first via:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">install</span>
+</pre></div>
+</div>
+<p>Any code changes will be automatically reloaded.</p>
+</div>
+<div class="section" id="using-another-framework">
+<h4>Using another framework<a class="headerlink" href="#using-another-framework" title="Permalink to this headline">¶</a></h4>
+<p>As with the previous assignment, it is an option to use another framework such as React Native to complete this assignment in order to pick up a new skill. <strong>While this is again an option, you are required to get approval from the course staff prior to pursuing this option</strong>. We expect to only allow grant approval for students who have used Angular, React, or another framework already.</p>
+<p>Should you choose to use another framework, it is done with the understanding that the course staff will not support you in learning the framework or debugging your code. The course staff will not be more lenient in grading or give any extra credit for using something not covered in the course. You are required to complete the same assignment, which will likely mean adapting the provided starter code to the new framework. Should you choose this path, you are on your own. Godspeed!</p>
+<p>Please include in your <strong><code class="docutils literal notranslate"><span class="pre">readme.txt</span></code></strong> any information we would need in order to run your code.</p>
+</div>
+</div>
+<div class="section" id="requirements">
+<h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h3>
+<p>Your sleep tracker app is required to have the following features:</p>
+<ul class="simple">
+<li><p>The ability to log overnight sleep.</p></li>
+<li><p>The ability to log sleepiness during the day.</p></li>
+<li><p>The ability to view these two categories of logged data.</p></li>
+<li><p>One of the following:</p>
+<ul>
+<li><p>Using a native resource of the device.</p>
+<ul>
+<li><p>Storing data locally or in a database.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>It is up to you to decide exactly how your app implements these features. You will be evaluated on inclusion of these features as well as how well your app follows <a class="reference external" href="https://inf133-fa20.markbaldw.in/resources/mobile_sass.pdf">good principles of mobile design</a>.</p>
+<div class="section" id="log-overnight-sleep">
+<h4>Log Overnight Sleep<a class="headerlink" href="#log-overnight-sleep" title="Permalink to this headline">¶</a></h4>
+<p>Your app must allow someone to log the sleep they had overnight. At minimum, this means allowing a person to log what time they went to bed and when they woke up. It’s up to you to decide how to support this logging, with the goal of aligning with good principles of mobile design. As you go about deciding how to support logging, think about how someone might use your app (feel free to identify a particular user or type of user, such as college students). Do they start the log when they go to sleep, or log their full night’s sleep in the morning? Will a particular input field make logging easier? Are there other things a person might want to log about their sleep?</p>
+<p>The data file <strong><code class="docutils literal notranslate"><span class="pre">overnight-sleep-data.ts</span></code></strong> provides a starting point for logging this data. The fields can be changed, additional fields can be added, and helper methods can be added. So long as the questions of when someone went to bed and when they woke up can be logged and viewed in your app, you can change the fields however you wish. You can assume that a person logs overnight sleep only once per day.</p>
+<p>All data logged will be cleared when the app is restarted (such as when a change to the code is made). This is expected and allowed for this assignment, though the “storing data” option will allow data to persist when the app is restarted.</p>
+</div>
+<div class="section" id="log-sleepiness-during-the-day">
+<h4>Log Sleepiness During the Day<a class="headerlink" href="#log-sleepiness-during-the-day" title="Permalink to this headline">¶</a></h4>
+<p>Your app must allow someone to log how sleepy they feel throughout the day according to the <a class="reference external" href="https://web.stanford.edu/~dement/sss.html">Stanford Sleepiness Scale</a>. At minimum, this means allowing a person to log how they felt on the scale’s 1-7 rating system and when they felt this way. Again, it’s up to you to decide how to log this data. Consider whether there are other things a person may want to log alongside their sleepiness. A person may log sleepiness more than once a day–in the morning before and after coffee, for example. This might impact how you support implementing the scale.</p>
+<p>Sleepiness throughout the day is often logged through Experience Sampling, a method in which someone is asked to log information about how they are feeling or what they are doing at multiple points over time. Technology can help facilitate experience sampling by providing a digital diary to log with. Technology can reduce the burden even further by sending notifications when it is time to journal.</p>
+<p>The data file <strong><code class="docutils literal notranslate"><span class="pre">stanford-sleepiness-data.ts</span></code></strong> provides a starting point, but you may change the fields or add new ones as you wish.</p>
+<p>Again, all data logged will be cleared when the app is restarted (such as when a change to the code is made). This is expected and allowed for this assignment.</p>
+</div>
+<div class="section" id="view-logged-data">
+<h4>View Logged Data<a class="headerlink" href="#view-logged-data" title="Permalink to this headline">¶</a></h4>
+<p>Your app must allow someone to view the overnight sleep and sleepiness data they have logged. These two types of data can be viewed together or separately. It is up to you to decide how the data should be presented. So long as a person’s Overnight and Sleepiness data is visible in your app, you will get credit for the completion portion of this feature.</p>
+</div>
+<div class="section" id="backing-up-logged-data">
+<h4>Backing Up Logged Data<a class="headerlink" href="#backing-up-logged-data" title="Permalink to this headline">¶</a></h4>
+<p>Initially, all data logged would be cleared when the app is restarted (such as when a change to the code is made). For this option, you must back up all data a person logs to either a Firebase database or to local storage. When a person re-opens the app, all of the data they previously logged should be visible. When a person logs a new record, it must be saved to this storage.</p>
+<p>You may structure your storage however you like, so long as both overnight sleep and sleepiness logs can be saved and retrieved.</p>
+<p>Ionic Storage is likely easier than using Firebase, as Ionic has a built-in library to support it. However, we will not discuss it extensively in lecture as databases serve a wider set of use cases (e.g., sharing data between devices, persistent backup in the case of a device or app malfunction).</p>
+<div class="section" id="additional-firebase-suggestions">
+<h5>Additional Firebase suggestions<a class="headerlink" href="#additional-firebase-suggestions" title="Permalink to this headline">¶</a></h5>
+<p>With Firebase, one challenge is that Firebase expects a JSON object rather than a TypeScript class. You will need to write helper functions to export a class to a JSON object and re-import it. You may want to change the name of the collection in the starter code or create multiple collections for different types of data.</p>
+<p>As described in lecture, set your Firebase database’s permissions to be readable by everyone on the web (this is generally a bad practice, of course). You may also assume that there is only one user of the app (e.g., you do not need to support authentication).</p>
+</div>
+</div>
+<div class="section" id="readme">
+<h4>Readme<a class="headerlink" href="#readme" title="Permalink to this headline">¶</a></h4>
+<p>Please update your readme.txt with how long the assignment took, who or what online resources you consulted with, any bonus features you added, and anything else we should know. If the assignment was completed in a pair, the readme should list names/emails/ids of both students. Only one submission needs to be made, however.</p>
+<p>The readme for this assignment is critical, as it provides you an opportunity to explain why you made your design choices for each feature. Office hours are a great opportunity to get feedback on your design choices, and your assignment will be in part evaluated on how well they align with good principles of mobile design. If you ran out of time or struggled to implement something, feel free to use the readme to describe what you intended to implement or what you struggled with.</p>
+</div>
+<div class="section" id="recommendations">
+<h4>Recommendations<a class="headerlink" href="#recommendations" title="Permalink to this headline">¶</a></h4>
+<p>There are a lot of different ways of fulfilling the requirements of this assignment. Though fulfilling the requirements is potentially doable with the lecture material, creating an effective mobile design will likely require reading Ionic’s documentation to understand the different components available and how to work with them. We therefore recommend that you build up your assignment over time. Complete the requirements first with buttons, inputs, items, and lists on a single page of the app. Once the required features have been achieved, you can begin exploring modals and multiple pages.</p>
+<p>Make sure you are looking at the documentation for Angular, as the syntax differs slightly for React and other platforms.</p>
+<p>We discussed four major principles of good mobile design in lecture:</p>
+<ol class="simple">
+<li><p>A useful initial view</p></li>
+<li><p>The “uh-oh” button</p></li>
+<li><p>Error prevention</p></li>
+<li><p>Follow platform conventions(<a class="reference external" href="https://material.io/design/guidelines-overview/">Android</a>)(<a class="reference external" href="https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/">iOS</a>)</p></li>
+</ol>
+<p>These principles are by no means exhaustive, but provide a good foundation for thinking through the design of your app. Feel free to pick a single platform to prioritize (and specify which in your readme). Your app will also be evaluated on whether the app would impress a new user in your target audience (specified in your readme). Impressing the target audience can be either aesthetic or functional–e.g., by changing the app’s styling or adding additional features. Some examples of styling would be making good use of a range of Ionic components or updating the style of widgets to create a consistent design aesthetic. Some examples of additional technical features would be the ability to edit and delete previous logs and updating storage accordingly or leveraging features from multiple native device libraries. Looking at what features other sleep tracker apps implement and how they are designed can help inform these choices.</p>
+<p>We have not explicitly covered good principles for visual design in this class. Platform conventions offer some recommendations about visual design, such as using a concise set of colors and ensuring legible fonts. We expect that, at minimum, your app edits Ionic’s global styling variables and customizes the appearance of some components.</p>
+<p>A few other things you may encounter during development (list may grow):</p>
+<ul class="simple">
+<li><p>By default, all new components, services, etc. made with <strong><code class="docutils literal notranslate"><span class="pre">ionic</span> <span class="pre">generate</span> <span class="pre">[componentname]</span></code></strong> will be added to the app folder. The files can be moved around to other folders (such as the data folder used in the starter code). But you may have to adjust imports and routing files to import them correctly.</p></li>
+<li><p>If you add new pages, the module file <strong><code class="docutils literal notranslate"><span class="pre">app.module.ts</span></code></strong> may need to be changed. In general, any page added programmatically, such as for a Modal, needs to be added as an <strong><code class="docutils literal notranslate"><span class="pre">entryComponent</span></code></strong>.</p></li>
+</ul>
+</div>
+<div class="section" id="submitting">
+<h4>Submitting<a class="headerlink" href="#submitting" title="Permalink to this headline">¶</a></h4>
+<p>To submit, zip your repository and upload it to Canvas. Any late uploads are subject to the course’s late policy.</p>
+</div>
+<div class="section" id="grading">
+<h4>Grading<a class="headerlink" href="#grading" title="Permalink to this headline">¶</a></h4>
+<p>This assignment will be graded on a scale of 15 points, broken down as follows:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The ability to log overnight sleep (2 point)
+The ability to log sleepiness during the day (2 point)
+The ability to view these two categories of logged data (2 point)
+	Backing up logged data (2 points)
+Following good principles of mobile design (3 points)
+Creating a compelling app (3 points)
+A readme which explains how these features were implemented and their design rationale (1 point)
+</pre></div>
+</div>
+<p>Similar to the spirit of the assignment portion in A1, we will give one point of extra credit to the most compelling apps submitted (about 10% of submissions). The maximum grade for this assignment is therefore 16/15.</p>
+<p>In prior courses, you’ve been asked to follow good principles for indentation, naming variables, commenting, etc. We expect you to do the same in this course, but aim to avoid being draconian in our enforcement of these principles. Egregiously poor formatting, completely uncommented code, etc. may incur a small penalty (e.g., -1 point), but we expect this to be rarely applied.</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./assignments"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="a3.html" title="previous page">A3: Spotify Browser in Angular</a>
+    <a class='right-next' id="next-link" href="../notes/wk1.html" title="next page">Week 1 Notes</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Mark S. Baldwin<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
