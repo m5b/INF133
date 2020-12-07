@@ -462,11 +462,7 @@
 <li><p>The ability to view these two categories of logged data.</p></li>
 <li><p>One of the following:</p>
 <ul>
-<li><p>Using a native resource of the device.</p>
-<ul>
 <li><p>Storing data locally or in a database.</p></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -492,7 +488,7 @@
 <h4>Backing Up Logged Data<a class="headerlink" href="#backing-up-logged-data" title="Permalink to this headline">¶</a></h4>
 <p>Initially, all data logged would be cleared when the app is restarted (such as when a change to the code is made). For this option, you must back up all data a person logs to either a Firebase database or to local storage. When a person re-opens the app, all of the data they previously logged should be visible. When a person logs a new record, it must be saved to this storage.</p>
 <p>You may structure your storage however you like, so long as both overnight sleep and sleepiness logs can be saved and retrieved.</p>
-<p>Ionic Storage is likely easier than using Firebase, as Ionic has a built-in library to support it. However, we will not discuss it extensively in lecture as databases serve a wider set of use cases (e.g., sharing data between devices, persistent backup in the case of a device or app malfunction).</p>
+<p><a class="reference external" href="https://ionicframework.com/docs/building/storage">Ionic Storage</a> is likely easier than using Firebase, as Ionic has a built-in library to support it. However, we will not discuss it extensively in lecture as databases serve a wider set of use cases (e.g., sharing data between devices, persistent backup in the case of a device or app malfunction).</p>
 <div class="section" id="additional-firebase-suggestions">
 <h5>Additional Firebase suggestions<a class="headerlink" href="#additional-firebase-suggestions" title="Permalink to this headline">¶</a></h5>
 <p>With Firebase, one challenge is that Firebase expects a JSON object rather than a TypeScript class. You will need to write helper functions to export a class to a JSON object and re-import it. You may want to change the name of the collection in the starter code or create multiple collections for different types of data.</p>
