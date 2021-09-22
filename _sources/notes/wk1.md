@@ -9,19 +9,18 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 Here are the slides and link to recording for the week 0 introduction lecture:
 
-<a href="../resources/10_01_20-introduction_history.pdf" >Introduction and History Slides</a>
+<a href="../resources/introduction_history.pdf" >Introduction and History Slides</a>
 
-[Introduction Lecture Recording](https://uci.yuja.com/V/Video?v=1925597&node=7402830&a=1555212815&autoplay=1)
 ### Assignment Lectures
 
 #### HTML and Accessibility
 
 I have broken this lecture into 6 parts. Most videos range from 9-15 minutes and focus on specific sections of the lecture. I have used the naming convention Lx-Px (_e.g.,_ Lecture 1 - Part 1) in the videos to help with flow.
 
-<a href="../resources/10_06_20-html_accessibility.pdf" >Slides for Full Lecture</a>
+<a href="../resources/html_accessibility.pdf" >Slides for Full Lecture</a>
 
 
-<a href="../resources/10_06_20-Assistive_Technology.pdf" >Slides for Accessibility Side Lecture</a>
+<a href="../resources/Assistive_Technology.pdf" >Slides for Accessibility Side Lecture</a>
 
 <a href="https://repl.it/@m5b/SatisfiedCoolDevelopers" >HTML code used in lecture</a>. Feel free to play around with it!
 
@@ -43,8 +42,5 @@ You can also view the full video here:
 
 ## Quiz Results
 
-<a href="../resources/QZ_Week_1_Quiz_Results.pdf" >Quiz Results</a>
+Quiz results will be posted by end of day Friday.
 
-### Thoughts on the Quiz
-
-Overall, a good start. I know the questions went slowly for many of you, so we will try to move a little quicker in the future. Everyone performed well on the questions this week, so I don't have much more to add for this week. However, in the coming weeks, I will use this space to provide more feedback around some of the questions that I think need more explanation.

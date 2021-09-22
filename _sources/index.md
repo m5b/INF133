@@ -3,9 +3,9 @@ User Interaction Software
 
 ## Course Overview
 
-Welcome to INF 133: User Interaction Software. Here you will find all learning materials for the course. Assignment descriptions, lecture notes, references, and other learning related information will be located here.
+Welcome to INF 133: User Interaction Software. Here you will find all learning materials for the course including: assignment descriptions, lecture recordings, lecture notes, references to external material, and quiz results.
 
-As we are virtual remote this quarter, we wanted to simplify access to learning materials for you. We are using the Jupyter Book format because it provides a rich format for sharing, viewing, and consuming technical information. In the upper right side of this website you will find a link that allows you to download the entire book in Markdown or PDF format. Feel free to use this feature if you need an offline copy of course materials. I will be updating this website frequently as we work our way through the class. So be sure to check back at least once a week. However, when major updates do occur, an announcement will be sent to the class mailing list.
+This website is built with Jupyter Book because it provides a rich format for sharing, viewing, and consuming technical information. In the upper right side of this website you will find a link that allows you to download the entire book in Markdown or PDF format. Feel free to use this feature if you need an offline copy of course materials. I will be updating this website frequently as we work our way through the class. So be sure to check back at least once a week. However, when major updates do occur, an announcement will be sent to the class mailing list.
 
 ### Course Description
 
@@ -13,6 +13,7 @@ From the catalog:
 
 > Introduction to human-computer interaction programming. Emphasis on current tools, standards, methodologies for implementing effective interaction designs. Widget toolkits, Web interface programming, geo-spatial and map interfaces, mobile phone interfaces.
 		
+
 In practice, every instructor takes a slightly different bend to these topics. I focus on covering modern technologies for web and mobile development and how device capabilities can impact interface design and software architecture.
 		
 ### Learning Objectives
@@ -32,7 +33,7 @@ Given the rapid changes in web and mobile development, any materials relying on 
 
 ### Assignments
 
-Assignment details will be posted as the quarter progresses. When a new assignment overview page is posted, the corresponding assignment title below will be updated with a link to the assignment page. You will also see a link to the page appear in the navigation bar to the left.
+Assignment details will be posted as the quarter progresses. When a new assignment overview page is posted a link to the page will appear in the navigation bar to the left.
 
 ```{note}
 For a breakdown of grade percentages and due dates please see the Canvas course page.
@@ -43,22 +44,15 @@ For a breakdown of grade percentages and due dates please see the Canvas course 
 * A2: Runkeeper Tweet Report in JavaScript and TypeScript
 * A3: Spotify Browser using a Web Framework 
 * A4: Sleep Tracker 
+* A5: Alternative Interaction
 
 ### Exams
 
-Due to the inherent difficulty of proctoring an exam remotely, for this quarter we will be replacing midterm and final exams with a course project. For the midterm you will be asked to write a short proposal that describes the project you intend to complete for the final. The final project must be built using a mixture of the tools and techniques you will learn throughout the quarter. This project will be the only partnered project allowed for the quarter. I will be providing more details about the final project in the coming weeks
+Due to the inherent difficulty of proctoring an exam remotely, and our need to support some remote students, for this quarter we will not have midterm and final exams. Instead, you will complete one additional assignment (A5, required to pass the course) that will require you to bring together the learning objectives for the course. This assignment will be the only (optionally) partnered project allowed for the quarter. 
 
 ### Participation
 
-Although we are a virtual class this quarter, my goal is to reproduce as much of the classroom experience as possible. So we will be using an online quiz tool called Socrative throughout the quarter to keep track of our progress together and have a little fun. We will also have a course Slack workspace where we can chat and learn from each other.
-
-Socrative quiz sessions will occur live during our regular meeting time every Tuesday. Each quiz will contain questions relating to course material, discussions, and your overall thoughts on the class. These quizzes are designed to be low-stakes and fun, but will also contribute to a participation grade for the class. The results of the quizzes will be posted here, shortly after they occur.
-
-Slack will be our primary tool for communication. You will be expected to join the class workspace and participate in informal discussions during the quarter.
-
-### Lecture Notes
-
-As we move through each week, I will be adding notes from both my prerecorded lectures (available on Canvas) and discussions that we have with each other. New lecture note pages will be posted every Monday morning. The topics we will be discussing each week are listed in the next section. The content of these lectures is modeled closely after the version of INF 133 taught by Professor Daniel Epstein. 
+As we are supporting remote and in-person learning this quarter, participation grades will be based on your individual activity across the various platforms used in the class. To earn full participation credit, you must complete all of the Socrative quiz sessions and demonstrate engagement with the class in some capacity. Engagement can occur through discussion during in-person class time or helpful activity in the class communication tool, Zulip.
 
 ## Schedule
 
