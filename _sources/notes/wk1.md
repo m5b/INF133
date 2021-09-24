@@ -38,7 +38,7 @@ I have broken this lecture into 6 parts. Most videos range from 9-15 minutes and
 
 You can also view the full video here:
 
-[L1-Full](https://uci.yuja.com/V/Video?v=1959428&node=7548329&a=1752462787&autoplay=1): Full Lecture
+[L2-Full](https://uci.yuja.com/V/Video?v=1959428&node=7548329&a=1752462787&autoplay=1): Full Lecture
 
 ## Quiz Results
 
