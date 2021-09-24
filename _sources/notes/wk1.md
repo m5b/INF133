@@ -9,7 +9,8 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 Here are the slides and link to recording for the week 0 introduction lecture:
 
-Coming soon!
+
+<a href="../resources/9_24_21-introduction_history.pdf" >Slides for Introduction Lecture</a>
 
 ### Assignment Lectures
 
