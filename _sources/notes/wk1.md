@@ -12,6 +12,9 @@ Here are the slides and link to recording for the week 0 introduction lecture:
 
 <a href="../resources/9_24_21-introduction_history.pdf" >Slides for Introduction Lecture</a>
 
+
+[Introduction Lecture Recording](https://uci.yuja.com/V/Video?v=3699981&node=12636978&a=1999454130&autoplay=1)
+
 ### Assignment Lectures
 
 #### HTML and Accessibility
