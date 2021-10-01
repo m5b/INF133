@@ -15,6 +15,9 @@ Here are the slides and link to recording for the week 0 introduction lecture:
 
 [Introduction Lecture Recording](https://uci.yuja.com/V/Video?v=3699981&node=12636978&a=1999454130&autoplay=1)
 
+[Friday Discussion Recording](https://uci.zoom.us/rec/share/YXtf3AzLtV8JGjG24HFngOjugZ0CDeQjGyYY3azGTJGtMw6am56z1RjB96umfjrv.KvwiJsInmxeNEhZT
+)
+
 ### Assignment Lectures
 
 #### HTML and Accessibility
