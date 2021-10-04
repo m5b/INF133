@@ -21,7 +21,7 @@ Because there is no required reading for this course, we've assembled a list of 
 ### Validation tools
 * [W3C HTML](https://validator.w3.org/)
 * [W3C CSS](https://jigsaw.w3.org/css-validator/)
-* [AChecker for web accessibility](https://achecker.ca/checker/index.php)
+* [AChecker for web accessibility](https://achecker.achecks.ca/checker/index.php)
 * [WAVE for web accessibility](http://wave.webaim.org/)
 
 ### Editors

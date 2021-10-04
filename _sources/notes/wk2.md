@@ -16,7 +16,7 @@ I have broken this lecture into 5 parts. Most videos range from 7-17 minutes and
 
 Here are the slides and link to recording for the CSS lecture
 
-<a href="../resources/10_12_20-css.pdf" >CSS Lecture Slides</a>
+<a href="../resources/10_4_21-css.pdf" >CSS Lecture Slides</a>
 
 <a href="https://repl.it/@m5b/inf133-css-demo" >HTML and CSS code used in lecture</a>. Feel free to play around with it!
 
@@ -40,7 +40,7 @@ Here are the slides and link to recording for the CSS lecture
 
 This lecture is only three parts, but each part runs a touch longer than usual.
 
-<a href="../resources/10_13_20-responsive_design.pdf" >Responsive Design Lecture Slides</a>
+<a href="../resources/10_4_21-responsive_design.pdf" >Responsive Design Lecture Slides</a>
 
 [P1](https://uci.yuja.com/V/Video?v=2003362&node=7664090&a=1166702791&autoplay=1)
 : Introduction to Responsive Design
@@ -53,5 +53,5 @@ This lecture is only three parts, but each part runs a touch longer than usual.
 
 ## Quiz Results
 
-<a href="../resources/QZ_Week_2_Quiz_Results.pdf" >Quiz Results</a>
+<!--<a href="../resources/QZ_Week_2_Quiz_Results.pdf" >Quiz Results</a>//-->
 
