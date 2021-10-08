@@ -265,8 +265,8 @@
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#user-written-tweets-1-point">
-         User-written tweets (1 point)
+        <a class="reference internal nav-link" href="#user-written-tweets-2-points">
+         User-written tweets (2 points)
         </a>
        </li>
       </ul>
@@ -277,13 +277,13 @@
       </a>
       <ul class="nav section-nav flex-column">
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#determining-activity-type-and-distance-2-points">
-         Determining activity type and distance (2 points)
+        <a class="reference internal nav-link" href="#determining-activity-type-and-distance-3-points">
+         Determining activity type and distance (3 points)
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#graphing-activities-by-distance-2-points">
-         Graphing activities by distance (2 points)
+        <a class="reference internal nav-link" href="#graphing-activities-by-distance-3-points">
+         Graphing activities by distance (3 points)
         </a>
        </li>
       </ul>
@@ -294,13 +294,13 @@
       </a>
       <ul class="nav section-nav flex-column">
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#implementing-the-search-box-1-point">
-         Implementing the search box (1 point)
+        <a class="reference internal nav-link" href="#implementing-the-search-box-2-points">
+         Implementing the search box (2 points)
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#populating-the-table-2-points">
-         Populating the table (2 points)
+        <a class="reference internal nav-link" href="#populating-the-table-3-points">
+         Populating the table (3 points)
         </a>
        </li>
       </ul>
@@ -350,7 +350,7 @@
 <h2>Assignment Details<a class="headerlink" href="#assignment-details" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="starter-code">
 <h3>Starter code<a class="headerlink" href="#starter-code" title="Permalink to this headline">¶</a></h3>
-<p>A <a class="reference external" href="https://classroom.github.com/a/vhdQjc0W">starter repository</a> is on GitHub Classroom.</p>
+<p>A <a class="reference external" href="https://classroom.github.com/a/RoO3UAhE">starter repository</a> is on GitHub Classroom.</p>
 <div class="section" id="repository-structure">
 <h4>Repository Structure<a class="headerlink" href="#repository-structure" title="Permalink to this headline">¶</a></h4>
 <p>The repository contains 14 files (excluding the <strong><code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></strong>, which specifies what files should not be committed). You will edit some of them in this assignment, but not all.</p>
@@ -439,8 +439,8 @@
 <p>You may arrive at slightly different percentages depending on the exact rules you create, and we will not evaluate whether your rules pull exactly the same numbers that ours did. That said, about 95% of RunKeeper Tweets in the Epstein et al. research paper dataset were of completed events. Your numbers will deviate from the percentages in the research paper, but probably not by much (+/- 5%).</p>
 <p>Format all percentages with exactly two decimal places. The header of <strong><code class="docutils literal notranslate"><span class="pre">index.html</span></code></strong> loads the <a class="reference external" href="http://mathjs.org/">Math.js</a> library from a Content Delivery Network (CDN). You may find the <a class="reference external" href="http://mathjs.org/docs/reference/functions/format.html">.format()</a> function in mathjs useful for formatting percentages.</p>
 </div>
-<div class="section" id="user-written-tweets-1-point">
-<h5>User-written tweets (1 point)<a class="headerlink" href="#user-written-tweets-1-point" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="user-written-tweets-2-points">
+<h5>User-written tweets (2 points)<a class="headerlink" href="#user-written-tweets-2-points" title="Permalink to this headline">¶</a></h5>
 <p>Some of the Tweets in each category also contain text written by the user. These tweets all follow a similar structure. Look through the text of the tweets in the dataset to devise programmatic rules for identifying whether it contains user-written text. You can add those rules to the <strong><code class="docutils literal notranslate"><span class="pre">written</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">writtenText</span></code></strong> getter functions in <strong><code class="docutils literal notranslate"><span class="pre">tweet.ts</span></code></strong>. To determine this, you will need to strip out the <strong><code class="docutils literal notranslate"><span class="pre">#RunKeeper</span></code></strong> hashtag and the tweet link. After that, you’ll notice a phrase or two used in many of the tweets. That phrase (or phrases) was likely not written by each of thousands of people, but rather was provided as a default text string by RunKeeper itself.</p>
 <p>About 25% of the completed event Tweets in the Epstein et al. paper included any written text. Again, you may arrive at a slightly different percentage. Format your percentage to two decimal places.</p>
 </div>
@@ -448,8 +448,8 @@
 <div class="section" id="part-2-identifying-the-most-popular-activities-activities-js">
 <h4>Part 2: Identifying the Most Popular Activities (activities.js)<a class="headerlink" href="#part-2-identifying-the-most-popular-activities-activities-js" title="Permalink to this headline">¶</a></h4>
 <p>In this part, you will help a researcher understand the activities people are logging in RunKeeper by identifying the types of activities and distances in the completed tweets and visualizing how distance varies by activity type and day of the week. Use JQuery methods to programmatically edit the spans for each question and <a class="reference external" href="https://vega.github.io/vega-lite/">Vega-Lite</a> to create graphs.</p>
-<div class="section" id="determining-activity-type-and-distance-2-points">
-<h5>Determining activity type and distance (2 points)<a class="headerlink" href="#determining-activity-type-and-distance-2-points" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="determining-activity-type-and-distance-3-points">
+<h5>Determining activity type and distance (3 points)<a class="headerlink" href="#determining-activity-type-and-distance-3-points" title="Permalink to this headline">¶</a></h5>
 <p>First, update the getters for <strong><code class="docutils literal notranslate"><span class="pre">activityType</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">distance</span></code></strong> in <strong><code class="docutils literal notranslate"><span class="pre">tweet.ts</span></code></strong>. <strong><code class="docutils literal notranslate"><span class="pre">activityType</span></code></strong> is the kind of physical activity that the person is performing in the tweet (running, skiing, biking, etc.). Distance is how long in Miles the physical activity was performed.</p>
 <p>Note that these values only have to be identified for completed tweets, which follow a fairly rigid format. Syntax for <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a> is beyond the scope of this class, but may be helpful for calculating these values. <strong><code class="docutils literal notranslate"><span class="pre">indexOf</span></code></strong> or <strong><code class="docutils literal notranslate"><span class="pre">search</span></code></strong> should also be sufficient.</p>
 <p>Because RunKeeper is used all around the world, some distances will be expressed in Miles and others in Kilometers. Convert them all to Miles. You might typically use a library to help with this (Math.js has some helper functions). However, our setup for TypeScript makes importing libraries challenging, so approximating is fine (e.g., 1 mi = 1.609 km). You’ll make more use of libraries in future assignments.</p>
@@ -457,8 +457,8 @@
 <p>Some of the activity types logged, such as Yoga, are better expressed with time durations rather than distances. Each of the three most frequently-logged activity types should be distance-based, so you do not need to parse the time duration activity types.</p>
 <p>Once you have determined the activity type and distance of each completed tweet, edit <strong><code class="docutils literal notranslate"><span class="pre">activities.js</span></code></strong> to update the spans for the most frequent types of activity, longest and shortest activity types, and whether the longest activities tend to be on weekdays or weekends. You can average across activities when evaluating length on weekdays versus weekends.</p>
 </div>
-<div class="section" id="graphing-activities-by-distance-2-points">
-<h5>Graphing activities by distance (2 points)<a class="headerlink" href="#graphing-activities-by-distance-2-points" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="graphing-activities-by-distance-3-points">
+<h5>Graphing activities by distance (3 points)<a class="headerlink" href="#graphing-activities-by-distance-3-points" title="Permalink to this headline">¶</a></h5>
 <p>Once <strong><code class="docutils literal notranslate"><span class="pre">activityType</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">distance</span></code></strong> are calculated, they should be plotted with Vega-Lite by editing the <strong><code class="docutils literal notranslate"><span class="pre">activities.js</span></code></strong> file. You will make three plots in total:</p>
 <ul class="simple">
 <li><p>A plot of how many of each type of activity exists in the dataset. The specification of a potential visualization appears in <strong><code class="docutils literal notranslate"><span class="pre">activities.js</span></code></strong>.</p></li>
@@ -474,12 +474,12 @@
 <div class="section" id="part-3-adding-a-text-search-interface-description-js">
 <h4>Part 3: Adding a Text Search Interface (description.js)<a class="headerlink" href="#part-3-adding-a-text-search-interface-description-js" title="Permalink to this headline">¶</a></h4>
 <p>In this part, you will implement a “search” interface for running tweets which allows a researcher to look through the tweets and their corresponding RunKeeper activities. To do so, you will add an event handler and filters to the <strong><code class="docutils literal notranslate"><span class="pre">descriptions.js</span></code></strong> file.</p>
-<div class="section" id="implementing-the-search-box-1-point">
-<h5>Implementing the search box (1 point)<a class="headerlink" href="#implementing-the-search-box-1-point" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="implementing-the-search-box-2-points">
+<h5>Implementing the search box (2 points)<a class="headerlink" href="#implementing-the-search-box-2-points" title="Permalink to this headline">¶</a></h5>
 <p>Update the table with the tweet number, activity type. The <strong><code class="docutils literal notranslate"><span class="pre">searchCount</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">searchText</span></code></strong> spans should also update as a researcher types in the search box. Your code should check the search box and update the table after every character is entered into the box.</p>
 </div>
-<div class="section" id="populating-the-table-2-points">
-<h5>Populating the table (2 points)<a class="headerlink" href="#populating-the-table-2-points" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="populating-the-table-3-points">
+<h5>Populating the table (3 points)<a class="headerlink" href="#populating-the-table-3-points" title="Permalink to this headline">¶</a></h5>
 <p>As the person adds or removes a character from their search, the rows of the table should update. Your code should also clear the table when the search text is an empty string.</p>
 <p>The links in the Tweet should also be clickable to allow the researcher to explore the data more. To parse these, use similar strategies to how you parsed the type of activity and identified the tweet category. The <strong><code class="docutils literal notranslate"><span class="pre">getHTMLTableRow()</span></code></strong> function in the tweet TypeScript class is a good place to parse the tweets and generate clickable links.</p>
 <p><img alt="table search example" src="../_images/a2_search.gif" /></p>
@@ -501,13 +501,13 @@
 </div>
 <div class="section" id="grading">
 <h4>Grading<a class="headerlink" href="#grading" title="Permalink to this headline">¶</a></h4>
-<p>This assignment will be graded on a scale of 10 points, broken down as follows:</p>
+<p>This assignment will be graded on a scale of 15 points, broken down as follows:</p>
 <ul class="simple">
-<li><p>Summarizing tweets (3 points)</p></li>
-<li><p>Identifying the most popular activities (4 points)</p></li>
-<li><p>Adding a text search interface (3 points)</p></li>
+<li><p>Summarizing tweets (4 points)</p></li>
+<li><p>Identifying the most popular activities (6 points)</p></li>
+<li><p>Adding a text search interface (5 points)</p></li>
 </ul>
-<p>If you successfully complete a bonus feature, you will earn 1 point of extra credit. The maximum grade for this assignment is therefore 11/10.</p>
+<p>If you successfully complete a bonus feature, you will earn 1 point of extra credit. The maximum grade for this assignment is therefore 16/15.</p>
 <p>In prior courses, you’ve been asked to follow good principles for indentation, naming variables, commenting, etc. We expect you to do the same in this course, but aim to avoid being draconian in our enforcement of these principles. Egregiously poor formatting, completely uncommented code, etc. may incur a small penalty (e.g., -1 point), but we expect this to be rarely applied.</p>
 <p>As stated previously, we will not grade on whether the spans with values created in the report contain the exact same values as our calculations. We are just looking for them to be in the correct “ballpark” and will spend more energy evaluating the interactive portions of the report.</p>
 </div>
