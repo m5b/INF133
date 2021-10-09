@@ -7,6 +7,9 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ## Lecture Materials
 
+
+[Friday Discussion Recording](https://uci.zoom.us/rec/share/xnnd-T5mumoOl6tMnD3L1mEkDYWtlJ_B_cx-P6UxBa_XnxqavwON5XLwi1FKh49c.3WIzuEhgvwNaTXwC?startTime=1633719716000)
+
 ### Assignment Lectures
 
 
