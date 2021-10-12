@@ -8,7 +8,7 @@ Keep an eye weekly pages as they might be updated throughout the week.
 ## Lecture Materials
 
 ### Software and Visualization Tools Lecture
-<a href="../resources/10_11_21-_data_viz.pdf">Software & Visualization Tools Lecture Slides</a>
+<a href="../resources/10_11_21-data_viz.pdf">Software & Visualization Tools Lecture Slides</a>
 
 [P1](https://uci.yuja.com/V/Video?v=2131845&node=7971430&a=1160569993&autoplay=1)
 : Concepts of Software Tools
