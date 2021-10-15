@@ -7,6 +7,12 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ## Lecture Materials
 
+[Friday Discussion Recording]()
+
+<a href="../resources/10_15_21-vegalite_recap.pdf">Friday Discussion Slides</a>
+
+<a href="../resources/10_15_21-vegalitedemo.zip">Friday Discussion Completed VegaLite Demo</a>
+
 ## Assignment Lectures
 
 #### JavaScript Lecture
