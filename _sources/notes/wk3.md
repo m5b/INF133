@@ -7,7 +7,7 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ## Lecture Materials
 
-[Friday Discussion Recording]()
+[Friday Discussion Recording](https://uci.zoom.us/rec/share/JZ3r8wlf7r1Y4zIc7TV3oxdHs_HQNH5FVYAyJ1D55slkTqZg-lDmR25Bu8enXPj_.KQLc88c33rJy8NDb)
 
 <a href="../resources/10_15_21-vegalite_recap.pdf">Friday Discussion Slides</a>
 
