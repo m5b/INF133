@@ -7,6 +7,10 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ## Lecture Materials
 
+[Friday Discussion Recording](https://uci.zoom.us/rec/share/IDAZEX3DoadgupPp968KC5NXrPZRX8_3EB52lEaLSmzTqgRuxx1xABXBqNLXqw0z.xOhsbdAFeSCEK6i4?startTime=1634932796000)
+
+### Assignment Lectures
+
 ### Software and Visualization Tools Lecture
 <a href="../resources/10_11_21-data_viz.pdf">Software & Visualization Tools Lecture Slides</a>
 
