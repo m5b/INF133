@@ -7,45 +7,19 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ## Lecture Materials
 
-### Live Discussion for Final Project
+### Angular Components
 
-[Discussion/Q&A Video](https://uci.yuja.com/V/Video?v=2177222&node=8060980&a=1957618760&autoplay=1)
+<a href="../resources/angular_components.pdf">Lecture Slides</a>
 
-### Live Setup and Debugging for A3
+[P1](https://uci.yuja.com/V/Video?v=2222749&node=8146599&a=289681399&autoplay=1)
+: Angular Introduction
 
-If you did not attend the live setup session for a3, and you are having trouble with getting your localhosts and Spotify connections working, you may want to watch this video. It's long and fairly boring, so I suggest skimming through the chat logs to see if you recognize any of the issues we discussed and then jumping to that point of the video.
+[P2](https://uci.yuja.com/V/Video?v=2222800&node=8146705&a=1283932812&autoplay=1)
+: Angular Demo, Components, and Bindings
 
-<a href="../resources/a3_zoom_chatlog.txt">Chat Log</a>
+[P3](https://uci.yuja.com/V/Video?v=2222831&node=8146756&a=23135665&autoplay=1)
+: Angular Bindings Demo and Wrap Up
 
-[Live Zoom Recording](https://uci.yuja.com/V/Video?v=2196383&node=8098601&a=781967523&autoplay=1)
+### Separation in Angular & Understanding Human Performance
 
-### AJAX, Fetch, and Promises
-
-<a href="../resources/ajax_fetch_promises.pdf">Lecture Slides</a>
-
-[P1](https://uci.yuja.com/V/Video?v=2196135&node=8098244&a=77145746&autoplay=1)
-
-: HTTP, URLs, and AJAX
-
-[P2](https://uci.yuja.com/V/Video?v=2196273&node=8098426&a=566162798&autoplay=1)
-
-: AJAX, Fetch, and Promises
-
-[P3](https://uci.yuja.com/V/Video?v=2196301&node=8098459&a=1520798121&autoplay=1)
-
-: Promises and Demo
-
-[P4](https://uci.yuja.com/V/Video?v=2196326&node=8098496&a=1803308632&autoplay=1)
-
-: Fetch and Twitter Demo
-
-### Server Side Development
-
-<a href="../resources/server-side-development.pdf">Lecture Slides</a>
-
-[Lecture Video](https://uci.yuja.com/V/Video?v=2197082&node=8099775&a=335493948&autoplay=1)
-
-## Quiz Results
-
-<a href="../resources/QZ_Week_6_Quiz_Results.pdf" >Quiz Results</a>
-
+I will be recording an update version of this lecture for Fall 21. I should have it posted by end of week 5.
