@@ -10,6 +10,9 @@ Keep an eye weekly pages as they might be updated throughout the week.
 [Friday Discussion Recording](https://uci.zoom.us/rec/share/vnOTpso4ioSp03JdXjLGZIUls_Rwohm7SP5QdAlC7mSp9UGuGbvIk-PV9pa3ADAh.gDgtaoreRxAxLTfQ)
 
 
+<a href="../resources/ang-demo-complete.zip">Angular Demo Solution</a>
+
+
 ### AJAX, Fetch, and Promises
 
 <a href="../resources/ajax_fetch_promises.pdf">Lecture Slides</a>
