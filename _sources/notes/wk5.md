@@ -7,6 +7,8 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ## Lecture Materials
 
+[Friday Discussion Recording](https://uci.zoom.us/rec/share/vnOTpso4ioSp03JdXjLGZIUls_Rwohm7SP5QdAlC7mSp9UGuGbvIk-PV9pa3ADAh.gDgtaoreRxAxLTfQ)
+
 
 ### AJAX, Fetch, and Promises
 
