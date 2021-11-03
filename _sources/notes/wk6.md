@@ -22,4 +22,7 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ### Separation in Angular & Understanding Human Performance
 
-I will be recording an update version of this lecture for Fall 21. I should have it posted by end of week 5.
+<a href="../resources/11_2_21-angular_separation.pdf">Lecture Slides</a>
+
+
+[Full Lecture](https://uci.zoom.us/recording/detail?meeting_id=%2Bd%2BEJ4b2SzmsyOi%2Bm%2FcWDg%3D%3D)
