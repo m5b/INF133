@@ -25,4 +25,4 @@ Keep an eye weekly pages as they might be updated throughout the week.
 <a href="../resources/11_2_21-angular_separation.pdf">Lecture Slides</a>
 
 
-[Full Lecture](https://uci.zoom.us/recording/detail?meeting_id=%2Bd%2BEJ4b2SzmsyOi%2Bm%2FcWDg%3D%3D)
+[Full Lecture](https://uci.zoom.us/rec/share/P4_6oMfwNSchLPi1-9Lpl3zsScKXhme0Y080vhsvC5c7VNuuUbAHRmXKCUs2BL0B.rgdiKHRONNa6zhSP)
