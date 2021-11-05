@@ -7,6 +7,8 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ## Lecture Materials
 
+[Friday Discussion Recording](https://uci.zoom.us/rec/share/iyn4X-ibMCe84WAZ5YRU04TRtV7ZAotNrVkc0cxjGCJm47rKkOtp3W4d2TtBFgvn.7mFRwoGcoCryfuGl)
+
 ### Angular Components
 
 <a href="../resources/angular_components.pdf">Lecture Slides</a>
