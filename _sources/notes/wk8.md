@@ -7,23 +7,19 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ## Lecture Materials
 
-### Mobile Design Principles
+### Device Resources and Sensors
 
-<a href="../resources/mobile_sass.pdf">Lecture Slides</a>
+Recording live on 11/16. Links and slides will be posted after class.
 
-[P1](https://uci.yuja.com/V/Video?v=2261363&node=8223287&a=459181389&autoplay=1)
-: Mobile Design Principles
+### Databases and Local Storage
 
-[P2](https://uci.yuja.com/V/Video?v=2261370&node=8223297&a=2044660190&autoplay=1)
-: iOS and Android Human Interface Guidelines
+<a href="../resources/databases_local-storage.pdf">Lecture Slides</a>
 
-[P3](https://uci.yuja.com/V/Video?v=2261412&node=8223356&a=1426344076&autoplay=1)
-: CSS Preprocessors and Sass
+[P1: Local Storage](https://uci.yuja.com/V/Video?v=2319170&node=8355473&a=1511514112&autoplay=1)
 
-[P4](https://uci.yuja.com/V/Video?v=2261430&node=8223378&a=644984161&autoplay=1)
-: Sass Demo
+[P2: Relational and Non-Relational Databases](https://uci.yuja.com/V/Video?v=2319229&node=8355590&a=975540151&autoplay=1)
 
-## Quiz Results
+[P3: Firebase, Ionic, and Angular](https://uci.yuja.com/V/Video?v=2319303&node=8355710&a=1787972263&autoplay=1)
 
-No quiz holiday yay.
+[P4: Ionic Storage Usage Strategies](https://uci.yuja.com/V/Video?v=2328971&node=8382259&a=304603934&autoplay=1)
 
