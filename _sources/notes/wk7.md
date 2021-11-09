@@ -11,6 +11,8 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 Recording live on 11/9. Check back after lecture for link and slides.
 
+<a href="../resources/11_9_21_hybrid_native.pdf">Lecture Slides</a>
+
 ### Ionic Components
 
 <a href="../resources/ionic_components.pdf">Lecture Slides</a>
