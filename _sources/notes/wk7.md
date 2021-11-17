@@ -9,9 +9,9 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ### Hybrid and Native Architectures
 
-Recording live on 11/9. Check back after lecture for link and slides.
-
 <a href="../resources/11_9_21_hybrid_native.pdf">Lecture Slides</a>
+
+[Full Lecture](https://uci.zoom.us/rec/share/whf9CnJ0nLcq-VP9ioR62XPSnHgB1eO22Ep4S6_hm5KaNEdVoBrQbDxDaqAV-O3g.D396bQjBrBIOYbSm?startTime=1636500894000)
 
 ### Ionic Components
 

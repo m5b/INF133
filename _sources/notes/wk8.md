@@ -9,7 +9,9 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ### Device Resources and Sensors
 
-Recording live on 11/16. Links and slides will be posted after class.
+<a href="../resources/11_16_21-device_resources.pdf">Lecture Slides</a>
+
+[Full Lecture](https://uci.zoom.us/rec/share/a81DUwICO0sc7dkqNRRnelPLkLF5Z44SDxFtFNaMvTF-5bp8IiqE9x0Gwy9yfZFH.xxt35sEub7zfVUij)
 
 ### Databases and Local Storage
 
