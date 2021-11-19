@@ -7,6 +7,10 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ## Lecture Materials
 
+[Friday Discussion Recording - Lecture](https://uci.zoom.us/rec/share/-AUbOSJhTXBqDx0I5wVXEWPVT8Ktlx1wSjaucRA97G62rNYb3EbHHWxoLPCFfh71.RC15fXG3tLWEKVMB?startTime=1637352307000)
+
+[Friday Discussion Recording - A5 Introduction](https://uci.zoom.us/rec/share/rBrVjl1ktywYtYmPkqqqt7Tfc4S6gST7WOra9ia28qvhgggSc_AqZxj112bPYcr2.ZBKvpR_mDJAYX1un?startTime=1637354271000)
+
 ### Device Resources and Sensors
 
 <a href="../resources/11_16_21-device_resources.pdf">Lecture Slides</a>
