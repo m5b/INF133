@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A5: &#8212; INF 133 Fall 2021</title>
+    <title>A5: Alternative Interaction &#8212; INF 133 Fall 2021</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -54,6 +54,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Week 1 Notes" href="../notes/wk1.html" />
+    <link rel="prev" title="A4: Sleep Tracker in Ionic" href="a4.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -95,7 +97,7 @@
   Assignments
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="a0.html">
    Assignment 0
@@ -119,6 +121,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="a4.html">
    Assignment 4
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Assignment 5
   </a>
  </li>
 </ul>
@@ -276,11 +283,6 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#running-the-app">
-       Running the App
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#using-another-framework">
        Using another framework
       </a>
@@ -293,36 +295,19 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#log-overnight-sleep">
-       Log Overnight Sleep
+      <a class="reference internal nav-link" href="#web-app">
+       Web App
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#log-sleepiness-during-the-day">
-       Log Sleepiness During the Day
+      <a class="reference internal nav-link" href="#basic-gestures">
+       Basic Gestures
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#view-logged-data">
-       View Logged Data
+      <a class="reference internal nav-link" href="#custom-gestures">
+       Custom Gestures
       </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#option-1-using-a-native-device-resource">
-       Option 1: Using a Native Device Resource
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#option-2-backing-up-logged-data">
-       Option 2: Backing Up Logged Data
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#additional-firebase-suggestions">
-         Additional Firebase suggestions
-        </a>
-       </li>
-      </ul>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#readme">
@@ -332,11 +317,6 @@
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#demo">
        Demo
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#recommendations">
-       Recommendations
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
@@ -364,192 +344,108 @@
         
               <div>
                 
-  <div class="section" id="a5">
-<h1>A5:<a class="headerlink" href="#a5" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p>Steps:</p>
-<ul>
-<li><p>install handtrack</p></li>
-<li><p>install interactjs v 1.9.18, later version are not working with angular</p></li>
-</ul>
-</li>
-</ul>
+  <div class="section" id="a5-alternative-interaction">
+<h1>A5: Alternative Interaction<a class="headerlink" href="#a5-alternative-interaction" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>In this assignment, you’ll demonstrate your ability to make a mobile app by developing a tool for tracking sleep and sleepiness in Ionic. There are <a class="reference external" href="https://thewirecutter.com/reviews/best-sleep-tracking-app/">many sleep tracking apps</a> in the Apple App and Google Play Stores. You will implement a few of the common features.</p>
+<p>In this assignment, you will apply what you have learned about user interface development principles to build an app that makes use of an alternative form of interaction. Typical interactions with a user interface occur through mouse, keyboard, or touch input and visual output. These interactions work for most people, but certainly not all people. We talked about the importance of making these traditional interactions <em>accessible</em> at the beginning of the quarter, but even a fully accessible user interface can present challenges to some people. Alternative interactions that target different modalities (e.g., speech, gestures, or sonification) can expand the ways we can use software, leading to a more inclusive digital ecosystem.</p>
+<p>This assignment will be a little bit different than what you are used so far in this class. Rather than provide you with the scaffolding of an existing project, the interface that you build will be up to you. The starter code for this project will provide you with one alternative form of interaction, but it will be up to you to decide how to use it.</p>
+<p>This assignment may be completed in pairs (exactly two students enrolled in the class) or individually. You may choose your own partner or use Zulip to help find one. There is no grade benefit or penalty to completing the assignment individually.</p>
 </div>
 <div class="section" id="assignment-details">
 <h2>Assignment Details<a class="headerlink" href="#assignment-details" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="starter-code">
 <h3>Starter code<a class="headerlink" href="#starter-code" title="Permalink to this headline">¶</a></h3>
-<p>A <a class="reference external" href="https://classroom.github.com/a/iKqMPPBW">starter repository</a> is on GitHub Classroom.</p>
+<p>A <a class="reference external" href="https://classroom.github.com/a/qZT_NgOZ">starter repository</a> is on GitHub Classroom.</p>
 <div class="section" id="repository-structure">
 <h4>Repository Structure<a class="headerlink" href="#repository-structure" title="Permalink to this headline">¶</a></h4>
-<p>The repository contains a large number files. The repository contains a <strong><code class="docutils literal notranslate"><span class="pre">sleeptracker</span></code></strong> folder with starter code for the assignment. Most of the files are generated by Ionic when creating a new (blank) project. However, a few files have been added to ease the ability to start making a sleep tracking app. <strong>These files can be edited, and you are not required to use them</strong>. You can also start over and create a new Ionic project from scratch by running:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ionic</span> <span class="n">start</span> 
+<p>The repository contains a fairly standard Angular web framework project. It contains a home page and one custom component that enables gestural control through a hand tracking library called <a class="reference external" href="https://victordibia.com/handtrack.js">Handtrack.js</a>. Handtrack.js is a library built on top of the machine learning platform <a class="reference external" href="https://www.tensorflow.org/js">TensorFlow</a>. We have abstracted most of the complexity with Handtrack.js into a component that emits hand gesture events detected from a webcam.</p>
+<p><strong>You are free to edit all files to support your program, and you are not required to use them</strong>. You can also start over and create a new project from scratch and integrate Handtrack.js however you like. To get started with the starter repository, you will first need to run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">install</span>
 </pre></div>
 </div>
 <p>from the command line. You may want to add variables and functions to these files, or create new subclasses. They are:</p>
 <ul class="simple">
-<li><p>Three classes in the data folder: <strong><code class="docutils literal notranslate"><span class="pre">sleep-data</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">overnight-sleep-data</span></code></strong>, and <strong><code class="docutils literal notranslate"><span class="pre">stanford-sleepiness-data</span></code></strong>. These files provide some data structures for logging sleep data, with the latter two being subclasses of the first. Subclassing enables the two types of logged data to be displayed together (or not, as you see fit for your design).</p></li>
-<li><p>One service in the <strong><code class="docutils literal notranslate"><span class="pre">services</span></code></strong> folder: <strong><code class="docutils literal notranslate"><span class="pre">sleep.service</span></code></strong>. This service provides static variables for storing the logged data and a method for loading default (fake) data.</p></li>
+<li><p>One class in the app folder: <strong><code class="docutils literal notranslate"><span class="pre">PredictionEvent</span></code></strong>. This class contains the data that is emitted when a hand pose is detected. It currently only supports a single string description of a gesture. You may decide that you want to emit additional information, like coordinates of the gesture, if so then you will want to add them to this class.</p></li>
+<li><p>One component in the <strong><code class="docutils literal notranslate"><span class="pre">app</span></code></strong> folder: <strong><code class="docutils literal notranslate"><span class="pre">handtracker</span></code></strong>. This component is responsible for importing the Handtrack.js library, configuring a basic model, running the hand detection logic, and managing the camera.</p></li>
+<li><p>One component in the <strong><code class="docutils literal notranslate"><span class="pre">app</span></code></strong> folder: <strong><code class="docutils literal notranslate"><span class="pre">home-page</span></code></strong>. This component is demonstrates how to integrate the <strong><code class="docutils literal notranslate"><span class="pre">handtracker</span></code></strong> component into a basic Angular page, and capture gesture events.</p></li>
 </ul>
-<p>You will likely want to create additional components, pages, or services to build your app. Running the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ionic</span> <span class="n">generate</span> <span class="p">[</span><span class="n">filename</span><span class="p">]</span> 
-</pre></div>
-</div>
-<p>will generate skeleton code for these files(<a class="reference external" href="https://ionicframework.com/docs/cli/generate/">documentation here</a>). The decision on how many pages, components, etc. to add and what they contain is up to you.</p>
-<p>There is also a <strong><code class="docutils literal notranslate"><span class="pre">readme.txt</span></code></strong> file in the root folder. The readme is more important to this assignment than to previous ones, as it is required to include justifications of your design choices. More on this a little further down.</p>
+<p>If you plan on building upon the start repository, you will likely want to create additional components, pages, or services to build your app using <strong><code class="docutils literal notranslate"><span class="pre">ng</span> <span class="pre">generate</span></code></strong>. You should be familiar with these commands by now, so we will not cover them in anymore detail here.</p>
 </div>
 <div class="section" id="setting-up-your-workspace">
 <h4>Setting up your Workspace<a class="headerlink" href="#setting-up-your-workspace" title="Permalink to this headline">¶</a></h4>
-<p>Some of the packages/libraries depend on newer versions of Node JS.</p>
-<p>Check what version of Node JS you have installed with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">node</span> <span class="o">--</span><span class="n">version</span><span class="o">.</span> 
+<p>The workspace for the starter repository will be identical to the workspace you set up for <a class="reference internal" href="a3.html"><span class="doc std std-doc">A3</span></a>. Once you have installed the required modules, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ng</span> <span class="n">serve</span> <span class="o">--</span><span class="nb">open</span>
 </pre></div>
 </div>
-<p>If you installed Node JS before this class, make sure you’ve updated to at least 10, such as with nvm or downloading the latest version from the node website. If your version of Node worked for A3, you should not need to update. But it’s worth checking the version number if you’re encountering issues.</p>
-<p>To run the Ionic app, you will need to install Ionic through npm. To do this, you will install the <a class="reference external" href="https://ionicframework.com/docs/intro/installation/">Ionic Command Line Interface (CLI)</a> globally with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">npm</span> <span class="n">install</span> <span class="o">-</span><span class="n">g</span> <span class="nd">@ionic</span><span class="o">/</span><span class="n">cli</span>
-</pre></div>
-</div>
-<p>The Ionic project is already set up in the <strong><code class="docutils literal notranslate"><span class="pre">sleeptracker</span></code></strong> folder, but the CLI is necessary to run the project. You will also need to install the dependencies for the Ionic app. These dependencies are defined in each project’s respective <strong><code class="docutils literal notranslate"><span class="pre">package.json</span></code></strong> files. cd into the <strong><code class="docutils literal notranslate"><span class="pre">sleeptracker</span></code></strong> folder and install the dependencies with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">npm</span> <span class="n">install</span>
-</pre></div>
-</div>
-<p>When installing, if you run into issues which contain messages similar to “permission denied”, try changing <a class="reference external" href="https://github.com/angular/angular-cli/issues/6848#issuecomment-386120663">the permissions of the node_modules directory</a>. If you are still having trouble, ask on Zulip or talk to the course staff. It’s important to try to get the setup working sooner rather than later, even if you do not plan on working on the assignment until close to the deadline.</p>
-</div>
-<div class="section" id="running-the-app">
-<h4>Running the App<a class="headerlink" href="#running-the-app" title="Permalink to this headline">¶</a></h4>
-<p>To run the Ionic app, cd into the <strong><code class="docutils literal notranslate"><span class="pre">sleeptracker</span></code></strong> folder and run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ionic</span> <span class="n">lab</span> 
-</pre></div>
-</div>
-<p>This will start the app at</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">localhost</span><span class="p">:</span><span class="mi">8200</span>
-</pre></div>
-</div>
-<p>You can also run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ionic</span> <span class="n">serve</span> 
-</pre></div>
-</div>
-<p>instead of <strong><code class="docutils literal notranslate"><span class="pre">ionic</span> <span class="pre">lab</span></code></strong> as it will also run the app in the browser. However, <strong><code class="docutils literal notranslate"><span class="pre">ionic</span> <span class="pre">lab</span></code></strong> is recommended because Ionic will then replicate what the app would look like on iOS and Android. Be sure the dependencies have been installed first via:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">install</span>
-</pre></div>
-</div>
-<p>Any code changes will be automatically reloaded.</p>
+<p>This will load up the basic user interface we have created to get you started:</p>
+<p><img alt="handtrack demo" src="../_images/handtrack_demo.png" /></p>
 </div>
 <div class="section" id="using-another-framework">
 <h4>Using another framework<a class="headerlink" href="#using-another-framework" title="Permalink to this headline">¶</a></h4>
-<p>As with the previous assignment, it is an option to use another framework such as React Native to complete this assignment in order to pick up a new skill. <strong>While this is again an option, you are required to get approval from the course staff prior to pursuing this option</strong>. We expect to only allow grant approval for students who have used Angular, React, or another framework already.</p>
-<p>Should you choose to use another framework, it is done with the understanding that the course staff will not support you in learning the framework or debugging your code. The course staff will not be more lenient in grading or give any extra credit for using something not covered in the course. You are required to complete the same assignment, which will likely mean adapting the provided starter code to the new framework. Should you choose this path, you are on your own. Godspeed!</p>
+<p>As with previous assignments, it is an option to use another framework such as React Native to complete this assignment in order to pick up a new skill. <strong>While this is again an option, you are required to get approval from the course staff prior to pursuing this option</strong>. We expect to only allow grant approval for students who have used Angular, React, or another framework already.</p>
+<p>Should you choose to use another framework, it is done with the understanding that the course staff will not support you in learning the framework or debugging your code. The course staff will not be more lenient in grading or give any extra credit for using something not covered in the course. You are required to complete the same assignment, which will likely mean adapting the provided starter code to the new framework. Should you choose this path, you are on your own.</p>
 <p>Please include in your <strong><code class="docutils literal notranslate"><span class="pre">readme.txt</span></code></strong> any information we would need in order to run your code.</p>
 </div>
 </div>
 <div class="section" id="requirements">
 <h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h3>
-<p>Your sleep tracker app is required to have the following features:</p>
+<p>Your final submission is required to have the following features:</p>
 <ul class="simple">
-<li><p>The ability to log overnight sleep.</p></li>
-<li><p>The ability to log sleepiness during the day.</p></li>
-<li><p>The ability to view these two categories of logged data.</p></li>
-<li><p>One of the following:</p>
-<ul>
-<li><p>Using a native resource of the device.</p></li>
-<li><p>Storing data locally or in a database.</p></li>
+<li><p>A web app</p></li>
+<li><p>The ability to control your app with basic gestures</p></li>
+<li><p>The ability to control your app with custom gestures</p></li>
 </ul>
-</li>
-</ul>
-<p>It is up to you to decide exactly how your app implements these features. You will be evaluated on inclusion of these features as well as how well your app follows <a class="reference external" href="https://inf133.markbaldw.in/resources/mobile_sass.pdf">good principles of mobile design</a>.</p>
-<div class="section" id="log-overnight-sleep">
-<h4>Log Overnight Sleep<a class="headerlink" href="#log-overnight-sleep" title="Permalink to this headline">¶</a></h4>
-<p>Your app must allow someone to log the sleep they had overnight. At minimum, this means allowing a person to log what time they went to bed and when they woke up. It’s up to you to decide how to support this logging, with the goal of aligning with good principles of mobile design. As you go about deciding how to support logging, think about how someone might use your app (feel free to identify a particular user or type of user, such as college students). Do they start the log when they go to sleep, or log their full night’s sleep in the morning? Will a particular input field make logging easier? Are there other things a person might want to log about their sleep?</p>
-<p>The data file <strong><code class="docutils literal notranslate"><span class="pre">overnight-sleep-data.ts</span></code></strong> provides a starting point for logging this data. The fields can be changed, additional fields can be added, and helper methods can be added. So long as the questions of when someone went to bed and when they woke up can be logged and viewed in your app, you can change the fields however you wish. You can assume that a person logs overnight sleep only once per day.</p>
-<p>All data logged will be cleared when the app is restarted (such as when a change to the code is made). This is expected and allowed for this assignment, though the “storing data” option will allow data to persist when the app is restarted.</p>
+<p>It is up to you to decide exactly what your app does and how it implements these requirements. You will be evaluated on inclusion of these gestures as well as how well your app adheres to the user interfaces principles we have covered throughout the quarter.</p>
+<div class="section" id="web-app">
+<h4>Web App<a class="headerlink" href="#web-app" title="Permalink to this headline">¶</a></h4>
+<p>You will create a web app using either Angular or HTML/CSS/JS (or another framework, see above). What you create for your web app is entirely up to you, but it should serve some purpose. You might, for example, decide to create a simple shopping site that allows a user to browse through unique handmade goods. Your app does not have to be feature complete, but it should be representative of the topics we have covered throughout the quarter (e.g., accessible, responsive, good user experience). We are looking to see an app that is roughly on par with the work you have completed in assignments 1-4. So a good rule of thumb for determining the feature set of your app is to compare it to the functionality that you enabled in those assignments.</p>
+<p>If you are unsure about what to create, you are welcome to adapt any of your previous work in this class for this assignment. However, if you do, you must extend it in some new and interesting way. So for example, if you choose to build on your work in assignment 4, we would expect to see that you either added a new page or reworked the overall layout and design. Feel free to reach out to course staff to get feedback on your plan.</p>
 </div>
-<div class="section" id="log-sleepiness-during-the-day">
-<h4>Log Sleepiness During the Day<a class="headerlink" href="#log-sleepiness-during-the-day" title="Permalink to this headline">¶</a></h4>
-<p>Your app must allow someone to log how sleepy they feel throughout the day according to the <a class="reference external" href="https://en.wikipedia.org/wiki/Stanford_Sleepiness_Scale">Stanford Sleepiness Scale</a>. At minimum, this means allowing a person to log how they felt on the scale’s 1-7 rating system and when they felt this way. Again, it’s up to you to decide how to log this data. Consider whether there are other things a person may want to log alongside their sleepiness. A person may log sleepiness more than once a day–in the morning before and after coffee, for example. This might impact how you support implementing the scale.</p>
-<p>Sleepiness throughout the day is often logged through Experience Sampling, a method in which someone is asked to log information about how they are feeling or what they are doing at multiple points over time. Technology can help facilitate experience sampling by providing a digital diary to log with. Technology can reduce the burden even further by sending notifications when it is time to journal.</p>
-<p>The data file <strong><code class="docutils literal notranslate"><span class="pre">stanford-sleepiness-data.ts</span></code></strong> provides a starting point, but you may change the fields or add new ones as you wish.</p>
-<p>Again, all data logged will be cleared when the app is restarted (such as when a change to the code is made). This is expected and allowed for this assignment.</p>
-</div>
-<div class="section" id="view-logged-data">
-<h4>View Logged Data<a class="headerlink" href="#view-logged-data" title="Permalink to this headline">¶</a></h4>
-<p>Your app must allow someone to view the overnight sleep and sleepiness data they have logged. These two types of data can be viewed together or separately. It is up to you to decide how the data should be presented. So long as a person’s Overnight and Sleepiness data is visible in your app, you will get credit for the completion portion of this feature.</p>
-</div>
-<div class="section" id="option-1-using-a-native-device-resource">
-<h4>Option 1: Using a Native Device Resource<a class="headerlink" href="#option-1-using-a-native-device-resource" title="Permalink to this headline">¶</a></h4>
-<p>You must add a feature which uses a native device resource. The added feature must change the app’s experience for a user in a meaningful way. It is not sufficient to read a device’s manufacturer and present it back, for example, because that does not change how a user would log or view their sleep. Please contact the course staff if you have any question about what would or would not qualify as a feature.</p>
-<p>Ionic supports a long list of native device resources. However, some of these are in Cordova, while others are in Capacitor. We recommend sticking to Official, Capacitor plugins. Ionic also supports Premier plugins designed for enterprise applications; do not look into those in this assignment. Each Ionic resource provides instruction on how it should be installed. Make sure you are using the correct version of a plugin.</p>
-<p>Native resources require installation on your device (or an emulator, depending on the feature). Ionic provides installation guides for iOS and for Android. These installations can be tricky, so if you plan to select this option we strongly recommend trying to install the app on your device early. If you’re having trouble, online resources could be useful to getting set up. We may be able to help in office hours, but these processes are notoriously fickle. You can also complete this option using just an emulator, if you support native resources which the emulator can provide (like notifications).</p>
-<p>Your native device resource must go beyond reading and displaying a value to actually enhancing the experience of the app. It would, for example, be insufficient to display a “Hello, World!” toast message in response to an interaction or display the accelerometer value on screen. A few suggestions which enhance the experience of the app:</p>
+<div class="section" id="basic-gestures">
+<h4>Basic Gestures<a class="headerlink" href="#basic-gestures" title="Permalink to this headline">¶</a></h4>
+<p>Your app must make use of <em>at least five</em> of the common gestures that have already been created in the starter code:</p>
 <ul class="simple">
-<li><p>Send notifications or vibrate the device to remind someone when it is time to journal their sleepiness (a <a class="reference external" href="https://dl.acm.org/citation.cfm?id=2466140">well-studied method</a> for reducing the burden of logging).</p></li>
-<li><p>Approximate how restful someone’s overnight sleep is by measuring how much the accelerometer value varies while they sleep.</p></li>
-<li><p>Use the social sharing plugin to allow a person to text their friend or significant other with how much they slept.</p></li>
+<li><p>Open Hand</p></li>
+<li><p>Two Open Hands</p></li>
+<li><p>Closed Hand</p></li>
+<li><p>Two Closed Hands</p></li>
+<li><p>Hand Pointing</p></li>
+<li><p>Two Hands Pointing</p></li>
+<li><p>Hand Pinching</p></li>
+<li><p>Two Hands Pinching</p></li>
 </ul>
-<p>Debugging native features can be challenging because console statements are not visible on a device. One option is to use bindings to display variables or debugging messages on the screen.</p>
-<p>If you choose this option, your demo video must show your solution running on either an emulator or a native device (e.g., an iPhone or Android phone). You may leverage the browser for debugging (e.g., with ionic serve or ionic lab), but part of the goal for this option is to get experience deploying on a device. The discussion slides and recording can help assist with setup.</p>
+<p>How you use these gestures will depend on the app that you decide to build. For example, in a music player app you might bind the <strong><code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Hand</span></code></strong> gesture event to a pause playback function. You are free to assign a gesture to any action that you want, but your reasoning should make sense.</p>
 </div>
-<div class="section" id="option-2-backing-up-logged-data">
-<h4>Option 2: Backing Up Logged Data<a class="headerlink" href="#option-2-backing-up-logged-data" title="Permalink to this headline">¶</a></h4>
-<p>Initially, all data logged would be cleared when the app is restarted (such as when a change to the code is made). For this option, you must back up all data a person logs to either a Firebase database or to local storage. When a person re-opens the app, all of the data they previously logged should be visible. When a person logs a new record, it must be saved to this storage.</p>
-<p>You may structure your storage however you like, so long as both overnight sleep and sleepiness logs can be saved and retrieved.</p>
-<p><a class="reference external" href="https://capacitorjs.com/docs/apis/storage">Capacitor Storage</a> is likely easier than using Firebase, as Ionic has a built-in library to support it. However, we will not discuss it extensively in lecture as databases serve a wider set of use cases (e.g., sharing data between devices, persistent backup in the case of a device or app malfunction).</p>
-<p>If you choose this option, you can develop entirely in the browser and record your demo video from the browser. You do not need to run your app on an emulator or native device, but you are welcome to do so if you would like to get experience with deployment.</p>
-<div class="section" id="additional-firebase-suggestions">
-<h5>Additional Firebase suggestions<a class="headerlink" href="#additional-firebase-suggestions" title="Permalink to this headline">¶</a></h5>
-<p>With Firebase, one challenge is that Firebase expects a JSON object rather than a TypeScript class. You will need to write helper functions to export a class to a JSON object and re-import it. You may want to change the name of the collection in the starter code or create multiple collections for different types of data.</p>
-<p>As described in lecture, set your Firebase database’s permissions to be readable by everyone on the web (this is generally a bad practice, of course). You may also assume that there is only one user of the app (e.g., you do not need to support authentication).</p>
-</div>
+<div class="section" id="custom-gestures">
+<h4>Custom Gestures<a class="headerlink" href="#custom-gestures" title="Permalink to this headline">¶</a></h4>
+<p>In addition to the basic gestures that have been provided to you in the starter code, you must implement <em>at least two</em> new gestures and use them in your app. There are a couple of ways to think about creating new gestures. You will notice that the basic gesture set does not accommodate mixed gestures. So, one approach to creating a new gesture might be to mix one open and one closed hand, for example. You will also notice that in the <strong><code class="docutils literal notranslate"><span class="pre">runDetection</span></code></strong> method of the <strong><code class="docutils literal notranslate"><span class="pre">handtracker</span></code></strong> component, a console.log output is commented out. If you uncomment this log output and view the data, you will notice that it is possible to access positional data along with each detected hand gesture. With a little bit of math you should be able to detect if a hand is ‘swiping’ in a particular direction.</p>
+<p>Once again, the type of custom gestures you implement is up to you. So think about what types of gestures would clearly map to a particular function in your app and see what you can come up with!</p>
 </div>
 <div class="section" id="readme">
 <h4>Readme<a class="headerlink" href="#readme" title="Permalink to this headline">¶</a></h4>
 <p>Please update your readme.txt with how long the assignment took, who or what online resources you consulted with, any bonus features you added, and anything else we should know. If the assignment was completed in a pair, the readme should list names/emails/ids of both students. Only one submission needs to be made, however.</p>
-<p>The readme for this assignment is critical, as it provides you an opportunity to explain why you made your design choices for each feature. Office hours are a great opportunity to get feedback on your design choices, and your assignment will be in part evaluated on how well they align with good principles of mobile design. If you ran out of time or struggled to implement something, feel free to use the readme to describe what you intended to implement or what you struggled with.</p>
+<p>The readme for this assignment is critical, as it provides you an opportunity to explain why you made your design choices for each gesture. <em>We expect to see some thought applied here.</em> Your gestures should not just be randome associations with app function so that you can complete the assignment! Office hours are a great opportunity to get feedback on your design choices, and your assignment will be in part evaluated on how well they align with good principles of design. If you ran out of time or struggled to implement something, feel free to use the readme to describe what you intended to implement or what you struggled with.</p>
 </div>
 <div class="section" id="demo">
 <h4>Demo<a class="headerlink" href="#demo" title="Permalink to this headline">¶</a></h4>
-<p>Please record a demo video (demo.mp4 or a different file extension) which shows the demo features of your app: the ability to log overnight sleep, the ability to log sleepiness, the ability to view these two categories of data, and evidence of your native device resource or data backup. For your native device resource, you must show the use of that resource on either an emulator or a physical device. For the data backup, you can refresh your page to demonstrate data persistence. If you need, you can annotate the timestamps within the video where you demonstrate different features in your readme.txt.</p>
-<p>We would prefer a single video walking through each of the different parts of your app, but you may instead find it useful to make separate videos for different parts. If you do record multiple videos, give each a descriptive file name (like demo_sleepiness.mp4). This video does not need to be polished. It is intended to help us understand the interface you have designed or developed and how it operates, but it’s not intended to be a marketing pitch. We expect most videos can be 1 minute or less.</p>
-</div>
-<div class="section" id="recommendations">
-<h4>Recommendations<a class="headerlink" href="#recommendations" title="Permalink to this headline">¶</a></h4>
-<p>There are a lot of different ways of fulfilling the requirements of this assignment. Though fulfilling the requirements is potentially doable with the lecture material, creating an effective mobile design will likely require reading Ionic’s documentation to understand the different components available and how to work with them. We therefore recommend that you build up your assignment over time. Complete the requirements first with buttons, inputs, items, and lists on a single page of the app. Once the required features have been achieved, you can begin exploring modals and multiple pages.</p>
-<p>Make sure you are looking at the documentation for Angular, as the syntax differs slightly for React and other platforms.</p>
-<p>We discussed four major principles of good mobile design in lecture:</p>
-<ol class="simple">
-<li><p>A useful initial view</p></li>
-<li><p>The “uh-oh” button</p></li>
-<li><p>Error prevention</p></li>
-<li><p>Follow platform conventions(<a class="reference external" href="https://material.io/design/guidelines-overview/">Android</a>)(<a class="reference external" href="https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/">iOS</a>)</p></li>
-</ol>
-<p>These principles are by no means exhaustive, but provide a good foundation for thinking through the design of your app. Feel free to pick a single platform to prioritize (and specify which in your readme). Your app will also be evaluated on whether the app would impress a new user in your target audience (specified in your readme). Impressing the target audience can be either aesthetic or functional–e.g., by changing the app’s styling or adding additional features. Some examples of styling would be making good use of a range of Ionic components or updating the style of widgets to create a consistent design aesthetic. Some examples of additional technical features would be the ability to edit and delete previous logs and updating storage accordingly or leveraging features from multiple native device libraries. Looking at what features other sleep tracker apps implement and how they are designed can help inform these choices.</p>
-<p>We have not explicitly covered good principles for visual design in this class. Platform conventions offer some recommendations about visual design, such as using a concise set of colors and ensuring legible fonts. We expect that, at minimum, your app edits Ionic’s global styling variables and customizes the appearance of some components.</p>
-<p>A few other things you may encounter during development (list may grow):</p>
-<ul class="simple">
-<li><p>By default, all new components, services, etc. made with <strong><code class="docutils literal notranslate"><span class="pre">ionic</span> <span class="pre">generate</span> <span class="pre">[componentname]</span></code></strong> will be added to the app folder. The files can be moved around to other folders (such as the data folder used in the starter code). But you may have to adjust imports and routing files to import them correctly.</p></li>
-<li><p>If you add new pages, the module file <strong><code class="docutils literal notranslate"><span class="pre">app.module.ts</span></code></strong> may need to be changed. In general, any page added programmatically, such as for a Modal, needs to be added as an <strong><code class="docutils literal notranslate"><span class="pre">entryComponent</span></code></strong>.</p></li>
-</ul>
+<p>Please record a demo video (demo.mp4 or a different file extension) which shows the demo features of your app: what your app does, and how each basic and custom gesture controls your app. This video does not need to be polished. It is intended to help us understand the interface you have designed or developed and how it operates, but it’s not intended to be a marketing pitch. Since you are making use of a webcam in this video, you might consider using your phone to record as you use gestures to control your app. We expect most videos can be 1 minute or less.</p>
 </div>
 <div class="section" id="submitting">
 <h4>Submitting<a class="headerlink" href="#submitting" title="Permalink to this headline">¶</a></h4>
-<p>To submit, zip your repository and upload it to Canvas. As with A3, your project is probably quite large; please remove the node_modules folder prior to zipping. As discussed in lecture, the advantage of using npm is that we can reference your package.json and package_lock.json to download the same packages and libraries that you used on your computer.</p>
+<p>To submit, zip your repository and upload it to Canvas. As with A3 and A4, your project might get quite large. So if you do use Angular, please remove the node_modules folder prior to zipping.</p>
 </div>
 <div class="section" id="grading">
 <h4>Grading<a class="headerlink" href="#grading" title="Permalink to this headline">¶</a></h4>
 <p>This assignment will be graded on a scale of 20 points, broken down as follows:</p>
 <ul class="simple">
-<li><p>The ability to log overnight sleep (3 point)</p></li>
-<li><p>The ability to log sleepiness during the day (3 point)</p></li>
-<li><p>The ability to view these two categories of logged data (3 point)</p></li>
-<li><p>Either using a native device or backing up logged data (3 points)</p></li>
-<li><p>Following good principles of mobile design (3 points)</p></li>
-<li><p>Creating a compelling app (3 points)</p></li>
+<li><p>A functional web app (7 point)</p></li>
+<li><p>The ability to control the web app with basic gestures (5 points, 1 per gesture)</p></li>
+<li><p>The ability to control the web app with custom gestures (2 points)</p></li>
+<li><p>Following good principles of UI design (2 points)</p></li>
+<li><p>Creating a compelling app (2 points)</p></li>
 <li><p>A readme and demo video which explains how these features were implemented and their design rationale (2 point)</p></li>
 </ul>
-<p>You can receive up to 1 extra credit point for implementing both a native device and backing up logged data. We will additionally give one point of extra credit to the most compelling apps submitted (about 10% of submissions). Apps can be compelling through developing complex technical features, being well-designed, or a mix of both (we will demo some examples during discussion). The maximum grade for this assignment is therefore 22/20.</p>
 <p>In prior courses, you’ve been asked to follow good principles for indentation, naming variables, commenting, etc. We expect you to do the same in this course, but aim to avoid being draconian in our enforcement of these principles. Egregiously poor formatting, completely uncommented code, etc. may incur a small penalty (e.g., -1 point), but we expect this to be rarely applied.</p>
 </div>
 </div>
@@ -584,6 +480,8 @@
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="a4.html" title="previous page">A4: Sleep Tracker in Ionic</a>
+    <a class='right-next' id="next-link" href="../notes/wk1.html" title="next page">Week 1 Notes</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
