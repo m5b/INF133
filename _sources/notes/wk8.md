@@ -11,6 +11,8 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 [Friday Discussion Recording - A5 Introduction](https://uci.zoom.us/rec/share/rBrVjl1ktywYtYmPkqqqt7Tfc4S6gST7WOra9ia28qvhgggSc_AqZxj112bPYcr2.ZBKvpR_mDJAYX1un?startTime=1637354271000)
 
+[Lecture Slides](../resources/11_19_21-human_performance.pdf)
+
 ### Device Resources and Sensors
 
 <a href="../resources/11_16_21-device_resources.pdf">Lecture Slides</a>
