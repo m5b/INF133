@@ -5,9 +5,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Final Project &#8212; INF 133 Fall 2021</title>
+    <title>Final Project &#8212; INF 133 Fall 2022</title>
     
-  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -19,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -34,19 +31,19 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -54,14 +51,17 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
 
-
-
+    <!-- Google Analytics -->
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -70,126 +70,60 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="index.html">
-  
-  <img src="_static/logo_stacked.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">INF 133 Fall 2021</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo_stacked.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">INF 133 Fall 2022</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="index.html">
    User Interaction Software
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Assignments
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="assignments/a0.html">
    Assignment 0
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="assignments/a1.html">
-   Assignment 1
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="assignments/a2.html">
-   Assignment 2
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="assignments/a3.html">
-   Assignment 3
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="assignments/a4.html">
-   Assignment 4
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="assignments/a5.html">
-   Assignment 5
-  </a>
- </li>
 </ul>
-<p class="caption collapsible-parent">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Lecture Notes
+  Weekly Notes
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="notes/wk1.html">
-   Week 1
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="notes/wk2.html">
-   Week 2
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="notes/wk3.html">
-   Week 3
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="notes/wk4.html">
-   Week 4
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="notes/wk5.html">
-   Week 5
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="notes/wk6.html">
-   Week 6
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="notes/wk7.html">
-   Week 7
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="notes/wk8.html">
-   Week 8
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="notes/wk9.html">
-   Week 9
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="notes/wk10.html">
-   Week 10
+   Week 1 Notes
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Course Resources
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="resources.html">
    Resources
@@ -197,6 +131,7 @@
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -212,21 +147,21 @@
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
@@ -244,27 +179,27 @@
     </div>
 </div>
 
-        <!-- Source interaction buttons -->
+            <!-- Source interaction buttons -->
 
+            <!-- Full screen (wrap in <a> to have style consistency -->
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
-        <!-- Launch buttons -->
+            <!-- Launch buttons -->
 
-    </div>
-
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
         </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#overview">
    Overview
@@ -298,8 +233,8 @@
  </li>
 </ul>
 
-        </nav>
-        
+            </nav>
+        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -307,7 +242,7 @@
         
               <div>
                 
-  <div class="section" id="final-project">
+  <div class="tex2jax_ignore mathjax_ignore section" id="final-project">
 <h1>Final Project<a class="headerlink" href="#final-project" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
@@ -321,22 +256,16 @@
 <div class="section" id="part-1-10-points">
 <h3>Part 1 (10 points)<a class="headerlink" href="#part-1-10-points" title="Permalink to this headline">¶</a></h3>
 <p>By now, you should have a good sense of how to write a project overview and requirements document because you have already interpreted and executed two! We will be looking for a document that is roughly equivalent to the overviews for assignments 1 and 2 (as well as 3 and 4 when they are released). Your document must consist of the following sections:</p>
-<dl class="simple myst">
-<dt>Overview</dt><dd><p>A high level description of your project. A sufficient overview should be able to convey the project’s purpose in one 3-5 sentence paragraph. You should describe at a high level what you intend to build (<em>e.g.</em>, a tweet analysis application), what technologies your project will be used (<em>e.g.</em>, JavaScript, TypeScript, and Web), and its purpose (<em>e.g.</em>, to help researchers analyze tweets).</p>
-</dd>
-<dt>Requirements</dt><dd><p>A low level detailed overview of the features you intend to implement. The requirements section is where you will need to focus most of your attention for this part of the final project. You must be specific enough so that if you were to hand off your requirements to a classmate, they would be able to build your project. You must also ensure that your requirements are sufficient enough to equal the work of at least two of the assignments given in this course.</p>
-</dd>
-<dt>Team</dt><dd><p>The names and roles of each member in your group. If you decide to form a group, a good approach to managing your project is to assign responsibilities to each member. So for example:</p>
-</dd>
-<dd><p><strong>Mark</strong>: Write all the HTML/CSS required for the project.</p>
-</dd>
-<dd><p><strong>Cass</strong>: Write the Tweet API using jQuery and JavaScript.</p>
-</dd>
-<dd><p><strong>Yang</strong>: Design and implement the data store for all user generated data.</p>
-</dd>
-<dd><p>If you choose not to work in a group, you must still complete this section and assign all roles to yourself. The roles you assign to each member must be distributed equally and feature at least one coding skill developed during this course.</p>
-</dd>
-</dl>
+<p>Overview
+: A high level description of your project. A sufficient overview should be able to convey the project’s purpose in one 3-5 sentence paragraph. You should describe at a high level what you intend to build (<em>e.g.</em>, a tweet analysis application), what technologies your project will be used (<em>e.g.</em>, JavaScript, TypeScript, and Web), and its purpose (<em>e.g.</em>, to help researchers analyze tweets).</p>
+<p>Requirements
+: A low level detailed overview of the features you intend to implement. The requirements section is where you will need to focus most of your attention for this part of the final project. You must be specific enough so that if you were to hand off your requirements to a classmate, they would be able to build your project. You must also ensure that your requirements are sufficient enough to equal the work of at least two of the assignments given in this course.</p>
+<p>Team
+: The names and roles of each member in your group. If you decide to form a group, a good approach to managing your project is to assign responsibilities to each member. So for example:
+: <strong>Mark</strong>: Write all the HTML/CSS required for the project.
+: <strong>Cass</strong>: Write the Tweet API using jQuery and JavaScript.
+: <strong>Yang</strong>: Design and implement the data store for all user generated data.</p>
+<p>: If you choose not to work in a group, you must still complete this section and assign all roles to yourself. The roles you assign to each member must be distributed equally and feature at least one coding skill developed during this course.</p>
 <div class="section" id="grading">
 <h4>Grading<a class="headerlink" href="#grading" title="Permalink to this headline">¶</a></h4>
 <p>It will be very difficult for you to not receive full credit for this part of the assignment! If we do not believe you have planned a project with sufficient requirements, then we will ask you to revise your project plan. However, it might take a few days to a week to receive this feedback, so you are encouraged to aim high rather than try to target the minimum amount of work.</p>
@@ -350,16 +279,14 @@
 <div class="section" id="id1">
 <h4>Grading<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <p>The majority of your grade will be based on whether or not you completed the “core” requirements listed in your project requirements document.</p>
-<dl class="simple myst">
-<dt>Requirements (20 points)</dt><dd><p>Does the program fulfill the requirements agreed upon by the client (your Professor and TA’s). Requirements will be assessed on implementation (does it exist) and functionality (does it work).</p>
-</dd>
-<dt>Validity (5 points)</dt><dd><p>Does the project adhere to the principles taught in class for creating responsive and accessible user interfaces. Assessment of this portion of the grade will depend on your project, but a good rule of thumb is to make sure that you have considered users who might not necessarily interact with an interface in the same way that you do.</p>
-</dd>
-<dt>Documentation (5 points)</dt><dd><p>Does the project provide sufficient documentation. Your code should be well commented so that we can understand what purpose it serves in your project. Your README should clearly explain how to run your project. And when run, the functionality of your project should be clear and intuitive.</p>
-</dd>
-<dt>Bonus (2 points)</dt><dd><p>Extra Credit. Does the project introduce additional requirements or otherwise implement novel or interesting features. If you have added to your project in ways that you consider above and beyond your project requirements document, you may request a bonus assessment by describing what you have done in your README.</p>
-</dd>
-</dl>
+<p>Requirements (20 points)
+: Does the program fulfill the requirements agreed upon by the client (your Professor and TA’s). Requirements will be assessed on implementation (does it exist) and functionality (does it work).</p>
+<p>Validity (5 points)
+: Does the project adhere to the principles taught in class for creating responsive and accessible user interfaces. Assessment of this portion of the grade will depend on your project, but a good rule of thumb is to make sure that you have considered users who might not necessarily interact with an interface in the same way that you do.</p>
+<p>Documentation (5 points)
+: Does the project provide sufficient documentation. Your code should be well commented so that we can understand what purpose it serves in your project. Your README should clearly explain how to run your project. And when run, the functionality of your project should be clear and intuitive.</p>
+<p>Bonus (2 points)
+: Extra Credit. Does the project introduce additional requirements or otherwise implement novel or interesting features. If you have added to your project in ways that you consider above and beyond your project requirements document, you may request a bonus assessment by describing what you have done in your README.</p>
 <p>In total you will be able to receive 42/40 points for this final project. Your final submission should include all materials described in Part 2, zipped and uploaded to the Canvas submission page.</p>
 </div>
 </div>
@@ -388,21 +315,20 @@
 
               </div>
               
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+        
         </div>
     </div>
-    
-    
-    <div class='prev-next-bottom'>
-        
-
-    </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
           By Mark S. Baldwin<br/>
         
-            &copy; Copyright 2021.<br/>
+            &copy; Copyright 2022.<br/>
       </p>
     </div>
   </footer>
@@ -411,11 +337,8 @@
 
       </div>
     </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-    
-  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
-
-
-    
   </body>
 </html>
