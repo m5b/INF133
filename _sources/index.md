@@ -52,7 +52,7 @@ Due to the inherent difficulty of proctoring an exam remotely, and our need to s
 
 ### Participation
 
-Participation grades will be based on your individual activity across the various platforms used in the class. To earn full participation credit, you must complete all of the Socrative quiz sessions and demonstrate engagement with the class in some capacity. Engagement can occur through discussion during in-person class time or helpful activity in the class communication tool, Zulip.
+Participation grades will be based on your individual activity across the various platforms used in the class. To earn full participation credit, you must complete all of the Socrative quiz sessions (taken during lecture) and demonstrate engagement with the class in some capacity. Engagement can occur through discussion during in-person class time, regular attendance at your assigned discussion section, and helpful activity in the class communication tool, Zulip.
 
 ## Schedule
 
