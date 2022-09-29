@@ -22,3 +22,8 @@ Here are the slides and link to recording for the week 0 introduction lecture:
 
 [HTML and Accessibility Lecture Recording](https://uci.yuja.com/V/Video?v=6050313&node=27043199&a=563914261&autoplay=1)
 
+### Thursday
+
+<a href="../resources/9_29_22-css.pdf" >Slides for Lecture</a>
+
+Lecture recording will post on Friday
