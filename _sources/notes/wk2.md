@@ -7,7 +7,6 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ## Lecture Materials
 
-
 ### Tuesday
 
 <a href="../resources/10_04_22-responsive_design.pdf" >Slides for Responsive Design Lecture</a>
@@ -18,6 +17,14 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ### Thursday
 
-Slides post on Thursday before class
+```{note}
+Professor out sick, watch pre-recorded lectures
+```
 
-Lecture Recording posts on Friday
+<a href="../resources/10_06_22-javascript.pdf" >Slides for Javascript Lecture</a>
+
+
+Lectures
+: [Javascript Part 1](https://uci.yuja.com/V/Video?v=2068152&node=7812662&a=664039359&autoplay=1)
+: [Javascript Part 2](https://uci.yuja.com/V/Video?v=2068175&node=7812706&a=1588305908&autoplay=1)
+: [Javascript Part 3](https://uci.yuja.com/V/Video?v=2068284&node=7812853&a=1601314754&autoplay=1)
