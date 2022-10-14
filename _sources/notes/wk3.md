@@ -16,5 +16,8 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ### Thursday
 
-Materials drop Friday 10/14
+<a href="../resources/10_13_22-npm_typescript.pdf" >Slides for DOM Lecture</a>
+
+[Lecture](https://uci.yuja.com/V/Video?v=6161280&node=27447927&a=631105483&autoplay=1)
+
 

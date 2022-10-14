@@ -17,10 +17,19 @@ Here are the slides and link to recording for the week 0 introduction lecture:
 
 ### Tuesday
 
+
 <a href="../resources/9_27_22-html_accessibility.pdf" >Slides for Introduction Lecture</a>
 
 
 [HTML and Accessibility Lecture Recording](https://uci.yuja.com/V/Video?v=6050313&node=27043199&a=563914261&autoplay=1)
+
+`````{admonition} Update 10/14
+:class: warning
+
+This lecture was carried into week 2, but was not recorded. Here is the recording from 2020 for those who missed class or would like to review.
+
+[Full Accessibility Lecture](https://uci.yuja.com/V/Video?v=1959428&node=7548329&a=1752462787&autoplay=1)
+`````
 
 ### Thursday
 
