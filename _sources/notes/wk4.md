@@ -13,8 +13,6 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 [Lecture Recording](https://uci.yuja.com/V/Video?v=6186069&node=27577703&a=544358547&autoplay=1)
 
-Recording posted Wednesday
-
 ### Thursday
 
 Today's class was a QA on A2, so there are no lectures slides.
