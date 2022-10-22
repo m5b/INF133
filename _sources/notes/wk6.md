@@ -7,24 +7,10 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ## Lecture Materials
 
-[Friday Discussion Recording](https://uci.zoom.us/rec/share/iyn4X-ibMCe84WAZ5YRU04TRtV7ZAotNrVkc0cxjGCJm47rKkOtp3W4d2TtBFgvn.7mFRwoGcoCryfuGl)
+### Tuesday
 
-### Angular Components
+Lecture recording will post on Wednesday
 
-<a href="../resources/angular_components.pdf">Lecture Slides</a>
+### Thursday
 
-[P1](https://uci.yuja.com/V/Video?v=2222749&node=8146599&a=289681399&autoplay=1)
-: Angular Introduction
-
-[P2](https://uci.yuja.com/V/Video?v=2222800&node=8146705&a=1283932812&autoplay=1)
-: Angular Demo, Components, and Bindings
-
-[P3](https://uci.yuja.com/V/Video?v=2222831&node=8146756&a=23135665&autoplay=1)
-: Angular Bindings Demo and Wrap Up
-
-### Separation in Angular & Understanding Human Performance
-
-<a href="../resources/11_2_21-angular_separation.pdf">Lecture Slides</a>
-
-
-[Full Lecture](https://uci.zoom.us/rec/share/P4_6oMfwNSchLPi1-9Lpl3zsScKXhme0Y080vhsvC5c7VNuuUbAHRmXKCUs2BL0B.rgdiKHRONNa6zhSP)
+Lecture recording will post on Friday
