@@ -1,4 +1,4 @@
-Week 5 Notes
+Week 4 Notes
 ============================
 
 ```{note}
@@ -7,35 +7,16 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ## Lecture Materials
 
-[Friday Discussion Recording](https://uci.zoom.us/rec/share/vnOTpso4ioSp03JdXjLGZIUls_Rwohm7SP5QdAlC7mSp9UGuGbvIk-PV9pa3ADAh.gDgtaoreRxAxLTfQ)
+### Tuesday
 
+<a href="../resources/10_18_22-data_viz.pdf" >Slides for Data Viz Lecture</a>
 
-<a href="../resources/ang-demo-complete.zip">Angular Demo Solution</a>
+[Lecture Recording](https://uci.yuja.com/V/Video?v=6186069&node=27577703&a=544358547&autoplay=1)
 
+### Thursday
 
-### AJAX, Fetch, and Promises
+Today's class was a QA on A2, so there are no lectures slides.
 
-<a href="../resources/ajax_fetch_promises.pdf">Lecture Slides</a>
+[Lecture Recording](https://uci.yuja.com/V/Video?v=6199703&node=27632557&a=905861751&autoplay=1)
 
-[P1](https://uci.yuja.com/V/Video?v=2196135&node=8098244&a=77145746&autoplay=1)
-
-: HTTP, URLs, and AJAX
-
-[P2](https://uci.yuja.com/V/Video?v=2196273&node=8098426&a=566162798&autoplay=1)
-
-: AJAX, Fetch, and Promises
-
-[P3](https://uci.yuja.com/V/Video?v=2196301&node=8098459&a=1520798121&autoplay=1)
-
-: Promises and Demo
-
-[P4](https://uci.yuja.com/V/Video?v=2196326&node=8098496&a=1803308632&autoplay=1)
-
-: Fetch and Twitter Demo
-
-### Server Side Development
-
-<a href="../resources/server-side-development.pdf">Lecture Slides</a>
-
-[Lecture Video](https://uci.yuja.com/V/Video?v=2197082&node=8099775&a=335493948&autoplay=1)
 
