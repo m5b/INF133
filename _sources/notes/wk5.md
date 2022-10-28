@@ -16,4 +16,6 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ### Thursday
 
-Lecture recording will post on Friday
+<a href="../resources/10_27_22-server-side-development.pdf" >Slides for Lecture</a>
+
+[Lecture Recording](https://uci.yuja.com/V/Video?v=6239255&node=27772046&a=197536159&autoplay=1)
