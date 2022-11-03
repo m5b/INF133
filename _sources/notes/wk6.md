@@ -9,7 +9,9 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ### Tuesday
 
-Lecture recording will post on Wednesday
+<a href="../resources/11_1_22-components_angular.pdf" >Slides for Lecture</a>
+
+[Lecture Recording](https://uci.yuja.com/V/Video?v=6264057&node=27901363&a=274643882&autoplay=1)
 
 ### Thursday
 
