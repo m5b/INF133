@@ -15,4 +15,6 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ### Thursday
 
-Lecture recording will post on Friday
+<a href="../resources/11_3_22-angular_separation.pdf" >Slides for Lecture</a>
+
+[Lecture Recording](https://uci.yuja.com/V/Video?v=6277934&node=27992223&a=133970947&autoplay=1)
