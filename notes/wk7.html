@@ -5,9 +5,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Week 7 Notes &#8212; INF 133 Fall 2021</title>
+    <title>Week 7 Notes &#8212; INF 133 Fall 2022</title>
     
-  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -19,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -34,19 +31,19 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -56,14 +53,17 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Week 8 Notes" href="wk8.html" />
     <link rel="prev" title="Week 6 Notes" href="wk6.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
 
-
-
+    <!-- Google Analytics -->
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -72,32 +72,36 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../index.html">
-  
-  <img src="../_static/logo_stacked.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">INF 133 Fall 2021</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo_stacked.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">INF 133 Fall 2022</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../index.html">
    User Interaction Software
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Assignments
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../assignments/a0.html">
    Assignment 0
@@ -123,75 +127,60 @@
    Assignment 4
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../assignments/a5.html">
-   Assignment 5
-  </a>
- </li>
 </ul>
-<p class="caption collapsible-parent">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Lecture Notes
+  Weekly Notes
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="wk1.html">
-   Week 1
+   Week 1 Notes
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wk2.html">
-   Week 2
+   Week 2 Notes
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wk3.html">
-   Week 3
+   Week 3 Notes
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wk4.html">
-   Week 4
+   Week 4 Notes
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wk5.html">
-   Week 5
+   Week 5 Notes
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wk6.html">
-   Week 6
+   Week 6 Notes
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Week 7
+   Week 7 Notes
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wk8.html">
-   Week 8
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wk9.html">
-   Week 9
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wk10.html">
-   Week 10
+   Week 8 Notes
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Course Resources
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../resources.html">
    Resources
@@ -199,6 +188,7 @@
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -214,21 +204,21 @@
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
@@ -246,53 +236,48 @@
     </div>
 </div>
 
-        <!-- Source interaction buttons -->
+            <!-- Source interaction buttons -->
 
+            <!-- Full screen (wrap in <a> to have style consistency -->
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
-        <!-- Launch buttons -->
+            <!-- Launch buttons -->
 
-    </div>
-
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
         </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lecture-materials">
    Lecture Materials
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hybrid-and-native-architectures">
-     Hybrid and Native Architectures
+    <a class="reference internal nav-link" href="#tuesday">
+     Tuesday
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ionic-components">
-     Ionic Components
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mobile-design-principles">
-     Mobile Design Principles
+    <a class="reference internal nav-link" href="#thursday">
+     Thursday
     </a>
    </li>
   </ul>
  </li>
 </ul>
 
-        </nav>
-        
+            </nav>
+        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -300,7 +285,7 @@
         
               <div>
                 
-  <div class="section" id="week-7-notes">
+  <div class="tex2jax_ignore mathjax_ignore section" id="week-7-notes">
 <h1>Week 7 Notes<a class="headerlink" href="#week-7-notes" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -308,29 +293,15 @@
 </div>
 <div class="section" id="lecture-materials">
 <h2>Lecture Materials<a class="headerlink" href="#lecture-materials" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="hybrid-and-native-architectures">
-<h3>Hybrid and Native Architectures<a class="headerlink" href="#hybrid-and-native-architectures" title="Permalink to this headline">¶</a></h3>
-<p><a href="../resources/11_9_21_hybrid_native.pdf">Lecture Slides</a></p>
-<p><a class="reference external" href="https://uci.zoom.us/rec/share/whf9CnJ0nLcq-VP9ioR62XPSnHgB1eO22Ep4S6_hm5KaNEdVoBrQbDxDaqAV-O3g.D396bQjBrBIOYbSm?startTime=1636500894000">Full Lecture</a></p>
+<div class="section" id="tuesday">
+<h3>Tuesday<a class="headerlink" href="#tuesday" title="Permalink to this headline">¶</a></h3>
+<p><a href="../resources/11_8_22-human_performance.pdf" >Slides for Lecture</a></p>
+<p><a class="reference external" href="https://uci.yuja.com/V/Video?v=6300874&amp;node=28065396&amp;a=39520867&amp;autoplay=1">Lecture Recording</a></p>
 </div>
-<div class="section" id="ionic-components">
-<h3>Ionic Components<a class="headerlink" href="#ionic-components" title="Permalink to this headline">¶</a></h3>
-<p><a href="../resources/ionic_components.pdf">Lecture Slides</a></p>
-<p><a class="reference external" href="https://uci.yuja.com/V/Video?v=2314208&amp;node=8341909&amp;a=1026105599&amp;autoplay=1">Full Lecture</a></p>
-</div>
-<div class="section" id="mobile-design-principles">
-<h3>Mobile Design Principles<a class="headerlink" href="#mobile-design-principles" title="Permalink to this headline">¶</a></h3>
-<p><a href="../resources/mobile_sass.pdf">Lecture Slides</a></p>
-<dl class="simple myst">
-<dt><a class="reference external" href="https://uci.yuja.com/V/Video?v=2261363&amp;node=8223287&amp;a=459181389&amp;autoplay=1">P1</a></dt><dd><p>Mobile Design Principles</p>
-</dd>
-<dt><a class="reference external" href="https://uci.yuja.com/V/Video?v=2261370&amp;node=8223297&amp;a=2044660190&amp;autoplay=1">P2</a></dt><dd><p>iOS and Android Human Interface Guidelines</p>
-</dd>
-<dt><a class="reference external" href="https://uci.yuja.com/V/Video?v=2261412&amp;node=8223356&amp;a=1426344076&amp;autoplay=1">P3</a></dt><dd><p>CSS Preprocessors and Sass</p>
-</dd>
-<dt><a class="reference external" href="https://uci.yuja.com/V/Video?v=2261430&amp;node=8223378&amp;a=644984161&amp;autoplay=1">P4</a></dt><dd><p>Sass Demo</p>
-</dd>
-</dl>
+<div class="section" id="thursday">
+<h3>Thursday<a class="headerlink" href="#thursday" title="Permalink to this headline">¶</a></h3>
+<p><a href="../resources/11_8_22-human_performance.pdf" >Slides for Lecture</a></p>
+<p><a class="reference external" href="https://uci.yuja.com/V/Video?v=6312699&amp;node=28099770&amp;a=342207196&amp;autoplay=1">Lecture Recording</a></p>
 </div>
 </div>
 </div>
@@ -357,23 +328,34 @@
 
               </div>
               
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="wk6.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Week 6 Notes</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="wk8.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Week 8 Notes</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
         </div>
     </div>
-    
-    
-    <div class='prev-next-bottom'>
-        
-    <a class='left-prev' id="prev-link" href="wk6.html" title="previous page">Week 6 Notes</a>
-    <a class='right-next' id="next-link" href="wk8.html" title="next page">Week 8 Notes</a>
-
-    </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
           By Mark S. Baldwin<br/>
         
-            &copy; Copyright 2021.<br/>
+            &copy; Copyright 2022.<br/>
       </p>
     </div>
   </footer>
@@ -382,11 +364,8 @@
 
       </div>
     </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-    
-  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
-
-
-    
   </body>
 </html>
