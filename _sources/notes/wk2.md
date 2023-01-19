@@ -1,4 +1,4 @@
-Week 2 Notes
+Week 1 Notes
 ============================
 
 ```{note}
@@ -7,24 +7,20 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ## Lecture Materials
 
-### Tuesday
+Here are the slides and recording links for week 2:
 
-<a href="../resources/10_04_22-responsive_design.pdf" >Slides for Responsive Design Lecture</a>
+### Monday
 
-[Lecture](https://uci.yuja.com/V/Video?v=6105001&node=27250080&a=841741976&autoplay=1)
-
-[Bootstrap Lecture](https://uci.yuja.com/V/Video?v=2003381&node=7664138&a=830543452&autoplay=1) (Discussed in class. Recording from 2020.)
-
-### Thursday
-
-```{note}
-Professor out sick, watch pre-recorded lectures
-```
-
-<a href="../resources/10_06_22-javascript.pdf" >Slides for Javascript Lecture</a>
+No class for MLK Day.
 
 
-Lectures
-: [Javascript Part 1](https://uci.yuja.com/V/Video?v=2068152&node=7812662&a=664039359&autoplay=1)
-: [Javascript Part 2](https://uci.yuja.com/V/Video?v=2068175&node=7812706&a=1588305908&autoplay=1)
-: [Javascript Part 3](https://uci.yuja.com/V/Video?v=2068284&node=7812853&a=1601314754&autoplay=1)
+### Wednesday
+
+[Lecture Recording](https://uci.yuja.com/V/Video?v=7150096&node=30331556&a=43021691&autoplay=1)
+
+<a href="../resources/01_18_23-inclusive-responsive-design.pdf" >Slides for Lecture</a>
+
+### Friday
+
+Will be released by 5 PM on 1/20.
+
