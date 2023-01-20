@@ -24,3 +24,4 @@ No class for MLK Day.
 
 Will be released by 5 PM on 1/20.
 
+<a href="../resources/01_20_23-semantic-responsive-demo.pdf" >Slides for Lecture</a>
