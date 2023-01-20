@@ -22,6 +22,6 @@ No class for MLK Day.
 
 ### Friday
 
-Will be released by 5 PM on 1/20.
+[Lecture Recording](https://urldefense.com/v3/__https://uci.zoom.us/rec/share/1axDvZo3US-0z6nYG-yIn6cQOY1SQzsZOfKngMbREa_owN4wx3bvlFyOVA42YANL.VMAEC2uh5XQ9hSvq__;!!CzAuKJ42GuquVTTmVmPViYEvSg!JsNFzgDDLXNXVDkHt5JJqrPxDsTZDnimkMwYbCIJFrSYSoEw5lRNNpMsY4QX0BzBxPy73hTsBj3-LI0Jmg$)
 
 <a href="../resources/01_20_23-semantic-responsive-demo.pdf" >Slides for Lecture</a>
