@@ -7,17 +7,21 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ## Lecture Materials
 
-### Tuesday
+Here are the slides and recording links for week 3:
 
-<a href="../resources/10_11_22-dom.pdf" >Slides for DOM Lecture</a>
+### Monday
 
-[Lecture](https://uci.yuja.com/V/Video?v=6144835&node=27392838&a=441108735&autoplay=1)
+[Lecture Recording]()
 
-
-### Thursday
-
-<a href="../resources/10_13_22-npm_typescript.pdf" >Slides for DOM Lecture</a>
-
-[Lecture](https://uci.yuja.com/V/Video?v=6161280&node=27447927&a=631105483&autoplay=1)
+<a href="../resources/01_23_23_data_viz.pdf" >Slides for Lecture</a>
 
 
+### Wednesday
+
+[Lecture Recording]()
+
+Coming Soon
+
+### Friday
+
+Coming Soon

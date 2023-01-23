@@ -1,4 +1,4 @@
-Week 1 Notes
+Week 2 Notes
 ============================
 
 ```{note}
