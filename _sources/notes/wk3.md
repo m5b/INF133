@@ -20,7 +20,7 @@ Here are the slides and recording links for week 3:
 
 [Lecture Recording]()
 
-Coming Soon
+<a href="../resources/01_25_23_data_viz_2_and_JS.pdf" >Slides for Lecture</a>
 
 ### Friday
 
