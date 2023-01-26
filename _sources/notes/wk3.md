@@ -18,7 +18,7 @@ Here are the slides and recording links for week 3:
 
 ### Wednesday
 
-[Lecture Recording]()
+[Lecture Recording](https://uci.yuja.com/V/Video?v=7201161&node=30652720&a=80081446&autoplay=1)
 
 <a href="../resources/01_25_23_data_viz_2_and_JS.pdf" >Slides for Lecture</a>
 
