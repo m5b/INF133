@@ -7,16 +7,19 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ## Lecture Materials
 
-### Tuesday
+Here are the slides and recording links for week 4:
 
-<a href="../resources/10_18_22-data_viz.pdf" >Slides for Data Viz Lecture</a>
+### Monday
 
-[Lecture Recording](https://uci.yuja.com/V/Video?v=6186069&node=27577703&a=544358547&autoplay=1)
+[Lecture Recording]()
 
-### Thursday
-
-Today's class was a QA on A2, so there are no lectures slides.
-
-[Lecture Recording](https://uci.yuja.com/V/Video?v=6199703&node=27632557&a=905861751&autoplay=1)
+<a href="../resources/01_30_23_jquery_adv_javascript.pdf" >Slides for Lecture</a>
 
 
+### Wednesday
+
+Coming Soon 
+
+### Friday
+ 
+Coming Soon 
