@@ -24,4 +24,4 @@ Here are the slides and recording links for week 3:
 
 ### Friday
 
-Coming Soon
+[Lecture Recording](https://uci.zoom.us/rec/share/JqN4SmLGFIPCIBMhj1JibiHP024u_7KPnffXp1ZLNYgblV3xk-ddjyMsbH6rSe_7.-PN6lJmJ8FDf3U7r?startTime=1674852627000)
