@@ -18,7 +18,7 @@ Here are the slides and recording links for week 4:
 
 ### Wednesday
 
-Coming Soon 
+<a href="../resources/02_01_23-ajax_fetch_promises.pdf" >Slides for Lecture</a>
 
 ### Friday
  
