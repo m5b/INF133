@@ -18,6 +18,8 @@ Here are the slides and recording links for week 4:
 
 ### Wednesday
 
+[Lecture Recording](https://uci.yuja.com/V/Video?v=7247032&node=30849884&a=125130061&autoplay=1)
+
 <a href="../resources/02_01_23-ajax_fetch_promises.pdf" >Slides for Lecture</a>
 
 ### Friday
