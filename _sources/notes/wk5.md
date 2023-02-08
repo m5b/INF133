@@ -18,3 +18,4 @@ Here are the slides and recording links for week 5:
 
 ### Wednesday
 
+<a href="../resources/2_8_23-angular_components.pdf" >Slides for Lecture</a>
