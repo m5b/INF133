@@ -18,6 +18,10 @@ Here are the slides and recording links for week 6:
 
 ### Wednesday
 
+No Class
 
 ### Friday
 
+[Lecture Recording](https://uci.zoom.us/rec/share/gZdSz8eTLzRJude77RD6kDDA5wTPOXm9XimeAwdiBknlgnjkgnHxBdME6fqHeZBY.pLYs67q6ObyaqC0B?startTime=1676667505000)
+
+<a href="../resources/02_17_23-hybrid_native.pdf" >Slides for Lecture</a>
