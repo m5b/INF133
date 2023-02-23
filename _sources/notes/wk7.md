@@ -7,14 +7,20 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ## Lecture Materials
 
-### Tuesday
+Here are the slides and recording links for week 7:
 
-<a href="../resources/11_8_22-human_performance.pdf" >Slides for Lecture</a>
+### Monday
 
-[Lecture Recording](https://uci.yuja.com/V/Video?v=6300874&node=28065396&a=39520867&autoplay=1)
+No Class for President's Day Holiday
 
-### Thursday
 
-<a href="../resources/11_10_22-hybrid_native.pdf" >Slides for Lecture</a>
+### Wednesday
 
-[Lecture Recording](https://uci.yuja.com/V/Video?v=6312699&node=28099770&a=342207196&autoplay=1)
+[Lecture Recording]()
+
+<a href="../resources/02_22_23-human_performance.pdf" >Slides for Lecture</a>
+
+
+### Friday
+
+Coming Soon
