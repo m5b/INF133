@@ -16,11 +16,13 @@ No Class for President's Day Holiday
 
 ### Wednesday
 
-[Lecture Recording]()
+[Lecture Recording](https://uci.yuja.com/V/Video?v=7394073&node=31717148&a=131126751&autoplay=1)
 
 <a href="../resources/02_22_23-human_performance.pdf" >Slides for Lecture</a>
 
 
 ### Friday
 
-Coming Soon
+[Lecture Recording](https://uci.zoom.us/rec/share/vnMN7G_ND1czHDqckiysbFtadJkLnQn01gqJbS06LETDGNp6rYz5EIedp4kMWmuv.ocGCjAAFXe6wI0qj?startTime=1677271136000)
+
+<a href="../resources/02_24_23-ionic_components.pdf" >Slides for Lecture</a>
