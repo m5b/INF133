@@ -21,7 +21,10 @@ Here are the slides and recording links for week 8:
 
 ### Friday
 
-Live class was used to introduce Assignment 5.
+Live class was used to discuss SCSS and introduce Assignment 5.
+
+[Lecture Recording](https://uci.zoom.us/rec/share/4zhAJkqm7SWtZa1yqzSYFMBwGN0YT0imW4Bdrd2pRioKstoUCV_Lx_yvhljHuFz8.OntwP7FECeYP2HBf?startTime=1677877151000)
+
 
 The remaining topics planned for today can be viewed through the following recordings:
 
