@@ -19,7 +19,9 @@ The lecture recording is from the fall 2022 INF 133 course. Professor forgot to 
 
 ### Wednesday
 
-coming soon
+[Lecture Recording](https://uci.yuja.com/V/Video?v=7471010&node=32044504&a=110896810&autoplay=1)
+
+<a href="../resources/03_08_23-beyondweb.pdf" >Slides for Lecture</a>
 
 ### Friday
 
