@@ -46,22 +46,17 @@ For a breakdown of grade percentages and due dates please see the Canvas course 
 * A4: Sleep Tracker for Mobile
 * Final Project
 
-### Exams
-
-Due to the inherent difficulty of proctoring an exam remotely, and our need to support some remote students, for this quarter we will not have midterm and final exams. Instead, you will complete one additional assignment (Final Project, required to pass the course) that will require you to bring together the learning objectives for the course. 
-
 ### Participation
 
-Participation grades will be based on your individual activity across the various activities and tools used in the course. To earn full participation credit, you must complete all of the Socrative quiz sessions (taken during lecture) and demonstrate engagement with the class in some capacity. Engagement can occur through discussion during in-person class time, regular attendance in class and at your assigned discussion section, and helpful activity in the class communication tool, Zulip. A participation rubric is available in the Assignments section on the Canvas course page.
+Participation grades will be based on your individual activity across the various activities and tools used in the course. To earn full participation credit, you must complete all of the Socrative quiz sessions (taken during lecture) and demonstrate engagement with the class in some capacity. Engagement can occur through discussion during in-person class time, regular attendance in class and at your assigned discussion section, and helpful activity in the class communication tool, Slack. A participation rubric is available in the Assignments section on the Canvas course page and in the course Syllabus.
 
 #### Attendance
 
-There will be times where you are unable to attend class. You might be sick, travelling, or simply exhausted. Missing a few classes throughout the quarter is understandable. All we ask is that you inform us _before_ class that you are unable to attend. To request an absence, simply send a message to the **`Attendance Bot`** in Zulip. A brief explanation will suffice. There is no need to provide evidence of your reason! NOTE: You will still need to make up the quiz (see next section)!
+There will be times where you are unable to attend class. You might be sick, travelling, or simply exhausted. Missing a few classes throughout the quarter is understandable. All we ask is that you inform us _before_ class that you are unable to attend via Slack DM. A brief explanation will suffice. There is no need to provide evidence of your reason! 
 
 #### Quizzes
 
-In-class quizzes will occur at various points througout the lecture on Monday and Wednesday. Quiz length will vary anywhere from 1 to 10 questions. Quizzes are not graded, so as long as you participate in the quiz you will earn full credit. If you miss a quiz, you can make it up by submitting a one page summary (bullet points are fine) of the topics covered in lecture directly to the professor via Zulip.
-
+In-class quizzes will occur at various points througout the lecture on Tuesday and Thursday. Quiz length will vary anywhere from 1 to 10 questions. Quizzes are not graded, so as long as you participate in the quiz you will earn full credit. If you miss a quiz, you can make it up by submitting a one page summary (bullet points are fine) of the topics covered in lecture directly to the professor via Slack.
 
 ## Schedule
 
