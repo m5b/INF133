@@ -26,4 +26,4 @@ Here are the slides and link to recording for the week 0 introduction lecture:
 
 ### Thursday
 
-Materials will post before class
+<a href="../resources/10-05-23-css_responsive_design.pdf" >Slides for Lecture</a>
