@@ -26,4 +26,5 @@ Here are the slides and link to recording for the week 0 introduction lecture:
 
 ### Thursday
 
+[Lecture Recording](https://uci.yuja.com/V/Video?v=8832044&node=38186834&a=55763271&autoplay=1)
 <a href="../resources/10-05-23-css_responsive_design.pdf" >Slides for Lecture</a>
