@@ -25,3 +25,5 @@ Here are the slides and link to recording for the week 0 introduction lecture:
 [Lecture Recording]()
 
 <a href="../resources/10-12-23-dom.pdf" >Slides for Lecture</a>
+
+<a href="../resources/dom.zip" >Demo Code</a>
