@@ -16,7 +16,7 @@ Here are the slides and link to recording for the week 0 introduction lecture:
 
 [Lecture Recording]()
 
-<a href="../resources/" >Slides for Lecture</a>
+<a href="../resources/10-17-23-data_visualization.pdf" >Slides for Lecture</a>
 
 
 
