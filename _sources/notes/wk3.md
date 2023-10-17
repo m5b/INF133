@@ -7,21 +7,19 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ## Lecture Materials
 
-Here are the slides and recording links for week 3:
-
-### Monday
-
-[Lecture Recording](https://uci.yuja.com/V/Video?v=7186411&node=30556872&a=130411761&autoplay=1)
-
-<a href="../resources/01_23_23_data_viz.pdf" >Slides for Lecture</a>
+Here are the slides and link to recording for the week 0 introduction lecture:
 
 
-### Wednesday
 
-[Lecture Recording](https://uci.yuja.com/V/Video?v=7201161&node=30652720&a=80081446&autoplay=1)
 
-<a href="../resources/01_25_23_data_viz_2_and_JS.pdf" >Slides for Lecture</a>
+### Tuesday
 
-### Friday
+[Lecture Recording]()
 
-[Lecture Recording](https://uci.zoom.us/rec/share/JqN4SmLGFIPCIBMhj1JibiHP024u_7KPnffXp1ZLNYgblV3xk-ddjyMsbH6rSe_7.-PN6lJmJ8FDf3U7r?startTime=1674852627000)
+<a href="../resources/" >Slides for Lecture</a>
+
+
+
+### Thursday
+
+Coming Soon
