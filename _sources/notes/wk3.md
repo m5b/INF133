@@ -7,10 +7,6 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ## Lecture Materials
 
-Here are the slides and link to recording for the week 0 introduction lecture:
-
-
-
 
 ### Tuesday
 
@@ -31,3 +27,8 @@ Here is a recording of the lecture from the previous instance of this class:
 [Lecture Recording](https://uci.yuja.com/V/Video?v=8917459&node=38531873&a=48999326&autoplay=1)
 
 <a href="../resources/10_19_23-npm_typescript.pdf" >Slides for Lecture</a>
+
+
+```{note}
+The recording for Thursday includes a walkthrough of assignment 2. Please review.
+```
