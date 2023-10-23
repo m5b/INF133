@@ -29,3 +29,5 @@ BUT
 Here is a recording of the lecture from the previous instance of this class:
 
 [Lecture Recording](https://uci.yuja.com/V/Video?v=8917459&node=38531873&a=48999326&autoplay=1)
+
+<a href="../resources/10_19_23-npm_typescript.pdf" >Slides for Lecture</a>
