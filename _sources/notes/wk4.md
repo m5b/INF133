@@ -18,6 +18,8 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ### Thursday
 
-[Lecture Recording]()
+[Lecture Recording](https://uci.yuja.com/V/Video?v=8963323&node=38723523&a=210508322&autoplay=1)
 
 <a href="../resources/10-26-23-ajax.pdf" >Slides for Lecture</a>
+
+<a href="../resources/adv-javascript-fetch-demo.zip" >Advanced JS and Fetch Demo</a>
