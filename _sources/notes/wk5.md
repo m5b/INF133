@@ -20,4 +20,6 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ### Thursday
 
-coming soon
+[Lecture Recording]()
+
+<a href="../resources/11-2-23-angular_components.pdf" >Slides for Lecture</a>
