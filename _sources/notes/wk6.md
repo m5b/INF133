@@ -19,4 +19,4 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ### Thursday
 
-coming soon
+<a href="../resources/11_9_23-human_performance.pdf" >Slides for Lecture</a>
