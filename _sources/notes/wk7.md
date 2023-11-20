@@ -18,7 +18,9 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ### Thursday
 
-[Lecture Recording]()
+[Lecture Recording](https://uci.yuja.com/V/Video?v=9151531&node=39224828&a=111424805&autoplay=1)
 
 <a href="../resources/11_16_23-ionic_components.pdf" >Slides for Lecture</a>
 
+
+<a href="../resources/11_16_23-ionic_components.zip" >Ionic Components Demo Code</a>
