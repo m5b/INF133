@@ -7,22 +7,14 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ## Lecture Materials
 
-Here are the slides and recording links for week 9:
 
-### Monday
-```{note}
-The lecture recording is from the fall 2022 INF 133 course. Professor forgot to record.
-```
-[Lecture Recording](https://uci.yuja.com/V/Video?v=7468758&node=32037396&a=151209972&autoplay=1)
+### Tuesday
 
-<a href="../resources/03_06_23-alternative-interaction.pdf" >Slides for Lecture</a>
+[Lecture Recording]()
 
-### Wednesday
+<a href="../resources/" >Slides for Lecture</a>
 
-[Lecture Recording](https://uci.yuja.com/V/Video?v=7471010&node=32044504&a=110896810&autoplay=1)
 
-<a href="../resources/03_08_23-beyondweb.pdf" >Slides for Lecture</a>
+### Thursday
 
-### Friday
-
-coming soon
+No Class! Professor is out of town.
