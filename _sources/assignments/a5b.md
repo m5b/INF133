@@ -1,4 +1,4 @@
-A5: Option B
+A: Option B
 ============================
 
 ## Overview

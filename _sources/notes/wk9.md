@@ -1,4 +1,4 @@
-Week 9 Notes
+Week 10 Notes
 ============================
 
 ```{note}
@@ -10,9 +10,9 @@ Keep an eye weekly pages as they might be updated throughout the week.
 
 ### Tuesday
 
-[Lecture Recording](https://uci.yuja.com/V/Video?v=9209043&node=39437002&a=705195&autoplay=1)
+[Lecture Recording]()
 
-<a href="../resources/11-28-23-alternative_interaction.pdf" >Slides for Lecture</a>
+<a href="../resources/12_05_23-beyond_web_mobile.pdf" >Slides for Lecture</a>
 
 
 ### Thursday
