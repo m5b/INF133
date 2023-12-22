@@ -20,10 +20,86 @@
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<!-- Font awesome is used by several plugins -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" referrerpolicy="no-referrer"></script>
+	<style>
+/* Overlay styles */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 9999;
+    }
+
+    .chat-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 24px;
+      color: red;
+      padding: 10px 10px;
+      display: flex;
+      align-items: center;
+    }
+ .chat-input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between; /* Distribute items across the container */
+    padding: 0 10px; /* Add padding to the sides */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+  }
+
+  .chat-input input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+		font-size: 18px;
+    border-radius: 20px;
+    outline: none;
+    margin-right: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .chat-input button {
+    padding: 10px 25px;
+		margin: 0px 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    flex-shrink: 0;
+    box-sizing: border-box;
+  }
+  </style>
 	</head>
 
 	<body>
 
+  <div class="overlay" id="overlay">
+    <button class="chat-button" id="toggleChat">
+			<i class="fas fa-comment-alt"></i>
+    </button>
+    <div class="chat-input" id="chatInput">
+      <input id="question" type="text" placeholder="Type your question here...">
+      <button id="sendQuestion">Send</button>
+    </div>
+  </div>
 		<div class="reveal">
 
 			<!-- Any section element inside of this container is displayed as a slide -->
@@ -452,7 +528,6 @@ Reveal.on( 'customevent', function() {
 				</section>
 
 			</div>
-
 		</div>
 
 		<script src="dist/reveal.js"></script>
@@ -462,14 +537,16 @@ Reveal.on( 'customevent', function() {
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
 		<script>
-
 			// Also available as an ES module, see:
 			// https://revealjs.com/initialization/
 			Reveal.initialize({
 				multiplex: {
-					secret:	'17031108407725232071',
-					id: 'aa16bbd0f1a25984',
-					url: 'https://reveal-multiplex.glitch.me'
+					secret:	'',
+					id: 'e8b5a2eb41738b5e01d6a54061b7f0b6362c02b0d3f364a18bfcb7cd0e8761ff',
+					url: 'https://markbaldw.in:9001',
+					questionId: 'sendQuestion',
+					inputId: 'question',
+					//url: 'https://reveal-multiplex.glitch.me'
 				},
 				controls: true,
 				progress: true,
@@ -479,14 +556,38 @@ Reveal.on( 'customevent', function() {
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ],
 				dependencies: [
-					{ src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
-					{ src: 'https://reveal-multiplex.glitch.me/master.js', async: true },
+					{ src: 'https://markbaldw.in:9001/socket.io/socket.io.js', async: true },
+					{ src: 'https://markbaldw.in:9001/client.js', async: true },
 
 					// and if you want speaker notes
-					{ src: 'https://unpkg.com/reveal-notes-server/client.js', async: true }
+					//{ src: 'https://unpkg.com/reveal-notes-server/client.js', async: true }
 				]
 			});
+    
+			// Toggle chat input visibility
+		
+    const toggleChat = document.getElementById('toggleChat');
+    const chatInput = document.getElementById('chatInput');
+    const sendButton = document.getElementById('sendQuestion');
+		toggleQuestionBar();
+    toggleChat.addEventListener('click', () => {
+			const question = document.getElementById('question');
+			question.value = "";
+			toggleQuestionBar();
+    });
 
+		sendButton.addEventListener('click', () => {
+			toggleQuestionBar();
+		});
+
+		function toggleQuestionBar(){
+      chatInput.style.display = chatInput.style.display === 'none' ? 'flex' : 'none';
+			if (chatInput.style.display == 'none'){
+				overlay.style.backgroundColor = 'transparent';
+			}else{
+				overlay.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+			}
+		}
 		</script>
 
 	</body>
