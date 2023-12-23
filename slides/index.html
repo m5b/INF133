@@ -106,16 +106,37 @@
 		</div>
 	</div>
 	<div class="reveal">
-
 		<!-- Any section element inside of this container is displayed as a slide -->
-		<div class="slides">
-			<section data-markdown>
-				<textarea id="slidecontent" data-template>
-					
-				</textarea>
-			</section>
+		<div class="slides" id="slidecontent">
+			<section data-external=""></section>
 		</div>
 	</div>
+	<script>
+		// Function to parse URL parameters
+		function getParameterByName(name, url) {
+		  if (!url) url = window.location.href;
+		  name = name.replace(/[\[\]]/g, '\\$&');
+		  var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+			  results = regex.exec(url);
+		  if (!results) return null;
+		  if (!results[2]) return '';
+		  return decodeURIComponent(results[2].replace(/\+/g, ' '));
+		}
+	  
+		// Get the value of the 'externalValue' parameter from the URL
+		var externalValue = getParameterByName('file');
+	  
+		// Select the section element
+		var sectionElement = document.querySelector('#slidecontent section');
+	  
+		// Set the value of the data-external attribute
+		if (externalValue) {
+		  sectionElement.setAttribute('data-external', externalValue);
+		} else {
+		  console.error('No externalValue parameter provided.');
+		}
+	  </script>
+
 
 	<script src="dist/reveal.js"></script>
 	<script src="plugin/zoom/zoom.js"></script>
@@ -146,6 +167,10 @@
 				{ src: 'https://markbaldw.in:9001/socket.io/socket.io.js', async: true },
 				{ src: 'https://markbaldw.in:9001/client.js', async: true },
 
+				{ src: 'plugin/external/external.js', condition: function() { 
+						return !!document.querySelector( '[data-external],[data-external-replace]' ); 
+					}
+				}, 
 				// and if you want speaker notes
 				//{ src: 'https://unpkg.com/reveal-notes-server/client.js', async: true }
 			]
@@ -174,42 +199,6 @@
 			} else {
 				overlay.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
 			}
-		}
-		// Function to parse URL parameters
-		function getParameterByName(name, url) {
-			if (!url) url = window.location.href;
-			name = name.replace(/[\[\]]/g, '\\$&');
-			var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-				results = regex.exec(url);
-			if (!results) return null;
-			if (!results[2]) return '';
-			return decodeURIComponent(results[2].replace(/\+/g, ' '));
-		}
-
-		// Get the value of the 'file' parameter from the URL
-		var fileName = getParameterByName('file');
-		console.log(fileName);
-		// Function to load and render Markdown content into the DOM
-		function loadMarkdownFile(file) {
-			fetch(file)
-				.then(response => response.text())
-				.then(data => {
-					// Convert Markdown text to HTML using marked.js
-					//var markdownContent = marked(data);
-
-					// Render the HTML content in the specified DOM element
-					document.getElementById('slidecontent').innerHTML = data;
-				})
-				.catch(error => {
-					console.error('Error fetching the file:', error);
-				});
-		}
-
-		// Load the Markdown file based on the 'file' parameter value
-		if (fileName) {
-			loadMarkdownFile(fileName);
-		} else {
-			console.error('No file parameter provided.');
 		}
 	</script>
 
