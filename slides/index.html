@@ -16,7 +16,7 @@
 
 	<link rel="stylesheet" href="dist/reset.css">
 	<link rel="stylesheet" href="dist/reveal.css">
-	<link rel="stylesheet" href="dist/theme/league.css" id="theme">
+	<link rel="stylesheet" href="dist/theme/night.css" id="theme">
 
 	<!-- Theme used for syntax highlighting of code -->
 	<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -91,6 +91,77 @@
 			flex-shrink: 0;
 			box-sizing: border-box;
 		}
+		.footer {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			/* Additional styling for the footer */
+		}
+
+		.footer img {
+			width: 100px; /* Set your desired width */
+			height: auto; /* Maintain aspect ratio */
+			/* Additional styling for the image */
+		}
+		/* Style for the image */
+		.bottom-left-image {
+			position: fixed;
+			bottom: 20px;
+			left: 20px;
+			max-width: 225px; /* Make the image responsive */
+			height: auto; /* Maintain aspect ratio */
+		}
+
+	</style>
+	<!-- Layout styles for slide content -->
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		.row {
+			display: flex;
+			/* border: 2px solid #fff;  */
+		}
+
+		/* Create two equal columns that sits next to each other */
+		.column {
+			flex: 50%;
+			padding: 10px;
+			/* border: 2px solid #fff;  */
+		}
+		.circle{
+			height: 150px;
+			width: 150px;
+			border-radius: 50%;
+			display:inline-flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.circle-overlap{
+			position:fixed;
+		}
+
+		.circle-border{
+			border: 4px solid #df4f4f;
+			border-color: #df4f4f;
+		}
+
+		.circle-full{
+			background-color: #df4f4f;
+		}
+
+		.circle-text{
+			text-align: center;
+		}
+
+		li{
+			padding-top:10px;
+		}
+		ul{
+			list-style-type:none;
+		}
 	</style>
 </head>
 
@@ -101,16 +172,18 @@
 			<i class="fas fa-comment-alt"></i>
 		</button>
 		<div class="chat-input" id="chatInput">
-			<input id="question" type="text" placeholder="Type your question here...">
+			<input id="question" type="text" placeholder="Ask a question...">
 			<button id="sendQuestion">Send</button>
+		</div>
+		<div class="footer">
 		</div>
 	</div>
 	<div class="reveal">
 		<!-- Any section element inside of this container is displayed as a slide -->
-		<div class="slides" id="slidecontent">
-			<section data-external=""></section>
+		<div class="slides" id="slidecontent" data-external="">
 		</div>
 	</div>
+			<img src="img/informatics-logo2x.png" alt="informatics department logo" class="bottom-left-image">
 	<script>
 		// Function to parse URL parameters
 		function getParameterByName(name, url) {
@@ -127,7 +200,7 @@
 		var externalValue = getParameterByName('file');
 	  
 		// Select the section element
-		var sectionElement = document.querySelector('#slidecontent section');
+		var sectionElement = document.querySelector('#slidecontent');
 	  
 		// Set the value of the data-external attribute
 		if (externalValue) {

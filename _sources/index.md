@@ -44,7 +44,10 @@ For a breakdown of grade percentages and due dates please see the Canvas course 
 * A2: Runkeeper Tweet Report in JavaScript and TypeScript
 * A3: Spotify Browser using a Web Framework 
 * A4: Sleep Tracker for Mobile
-* Final Project
+
+### Exams
+
+There will be an open book final exam that will take place during the assigned exam time for the course: Wednesday, March 20th. The exam will largely focus on non-programming related materials covered throughout the quarter.
 
 ### Participation
 
@@ -56,7 +59,7 @@ There will be times where you are unable to attend class. You might be sick, tra
 
 #### Quizzes
 
-In-class quizzes will occur at various points througout the lecture on Tuesday and Thursday. Quiz length will vary anywhere from 1 to 10 questions. Quizzes are not graded, so as long as you participate in the quiz you will earn full credit. If you miss a quiz, you can make it up by submitting a one page summary (bullet points are fine) of the topics covered in lecture directly to the professor via Slack.
+In-class quizzes will occur at various points througout the lecture every Monday. Quiz length will vary anywhere from 1 to 5 questions. Quizzes will be graded, but will be based on materials covered in lecture for that class and therefore be 'open book.' Quizzes are intended to ensure that you are actively attending and engaged in the class. As long as you earn a cummulative score of 50% on your quizzes, you will receive full credit. If you miss a quiz and notified course staff of your absence, you can make it up by submitting a one page summary of the topics covered in lecture. If you need to write a summary, reach out to Prof. Mark on Slack for guidance on how to format your summary.
 
 ## Schedule
 
@@ -65,20 +68,18 @@ The following schedule is subject to change throughout the quarter.
 ```
 ### Quarter at a Glance
 
-Week 0
-: Introduction
-
 Week 1
+: History of User Interfaces and Introduction
 : HTML
-: Accessibility
 : CSS
+: Javascript
+: Accessibility
 
 Week 2
 : Responsive Design
-: Javascript
+: DOM Manipulation
 
 Week 3
-: DOM Manipulation
 : Package Management
 : TypeScript
 : Data Visualization Tools

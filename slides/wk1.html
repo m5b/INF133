@@ -1,10 +1,578 @@
-<section data-markdown>
-    <textarea data-template>
-      ## Slide 1
-      A paragraph with some text and a [link](https://hakim.se).
-      ---
-      ## Slide 2
-      ---
-      ## Slide 3
-    </textarea>
+<section>
+  <h3>Introduction and History of User Interfaces</h3>
+  <p>
+    <small>INF 133 User Interaction Software</small>
+  </p>
+  <p>
+    <small>Week 1</small>
+  </p>
+</section>
+<section>
+  <h3>Goals for Today</h3>
+  <ul>
+    <li>Describe how society got to today's ubiquious computing</li>
+    <li>Hypothesize why web technology has become the de-facto tool for interface development</li>
+    <li>Identify course staff</li>
+    <li>Understand how the course will work this quarter</li>
+  </ul>
+</section>
+
+<section>
+  <div class="row">
+    <div class="column">
+      <h4>The Computer for the 21st Century</h4>
+      <ul style="font-size: smaller;">
+        <li>Mark Weiser, Chief Scientist at Xerox Parc</li>
+        <li>Published in Scientific American, 1991</li>
+        <li>"ubiquitous computing"</li>
+        <li>Speculative and reflective</li>
+      </ul>
+    </div>
+    <div class="column">
+      <img src="img/weiser_ubicomp.png" 
+          alt="team of people working in a ubiquitous computing room" 
+          style="max-width: 400px; height: auto;">
+    </div>
+  </div>
+</section>
+
+<section data-auto-animate>
+  <div class="row" style="display: flex; justify-content: center;">
+    <div class="column" style="display: flex; align-items: center;">
+      <span class="circle circle-full circle-overlap" data-id="circle3" style="z-index:1">3</span>
+      <!-- <span class="circle circle-full circle-overlap" data-id="circle2" style="z-index:2">3</span>
+      <span class="circle circle-full circle-overlap" data-id="circle1" style="z-index:3">3</span> -->
+      <span style="margin-left: 200px;"><h4 data-id="heading1">Three Waves of Computing</h4></span>
+    </div>
+  </div>
+</section>
+
+<section>
+<section data-auto-animate>
+  <h4 data-id="heading1">Three Waves of Computing</h4>
+  <div class="row">
+    <div class="column">
+      <span class="circle circle-full" data-id="circle1">1</span>
+      Mainframe Computing
+    </div>
+    <div class="column">
+      <span class="circle circle-border" data-id="circle2">2</span>
+      Personal Computing
+    </div>
+    <div class="column">
+      <span class="circle circle-border" data-id="circle3">3</span>
+      Ubiquitous Computing
+    </div>
+  </div>
+</section>
+<section data-auto-animate>
+  <span class="circle circle-full" style="width:100px; height:100px" data-id="circle1">1</span><h4 data-id="heading1">Mainframe Computing</h4>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Harvard Mark I</li>
+        <li>Large (55 feet wide, 8 feet high)</li>
+        <li>Expensive (enclosure alone was $50k in 1945!)</li>
+        <li>Used for calculations in the Manhattan Project</li>
+      </ul>
+    </div>
+    <div class="column">
+      <img src="img/mainframe.png" style="max-width:400px"/>
+    </div>
+  </div>
+</section>
+<section data-auto-animate>
+  <span class="circle circle-full" style="width:100px; height:100px" data-id="circle1">1</span><h4 data-id="heading1">Mainframe Computing</h4>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Batch Processing</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Write program on punch cards</li>
+        <li>Wait for computer availability</li>
+        <li>Run program (and hope it works)</li>
+        <li>Fix errors, wait turn again</li>
+        <li>Efficient use of resources, but poor interactivity</li>
+      </ul>
+    </div>
+    <div class="column">
+      <img src="img/batch_processor.png" style="max-width:400px"/>
+    </div>
+  </div>
+</section>
+<section data-auto-animate>
+  <span class="circle circle-full" style="width:100px; height:100px" data-id="circle1">1</span><h4 data-id="heading1">Mainframe Computing</h4>
+  <h5 style="font-size: smaller; padding-top:10px">Many-to-One</h5>
+  <div class="row">
+    <div class="column">
+      <img src="img/many-to-one.png" />
+    </div>
+  </div>
+</section>
+<section data-auto-animate>
+  <span class="circle circle-full" style="width:100px; height:100px" data-id="circle1">1</span><h4 data-id="heading1">Mainframe Computing</h4>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Vanneaver Bush</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Faculty at MIT</li>
+        <li>Oversaw National Defense Research Committee (the Manhattan Project)</li>
+        <li>Post-war, helped define mission of NSF:</li>
+        <ul style="font-size: x-large; list-style-type: none;">
+          <li>Federal gov funds universities</li>
+          <li>Universities do basic scientific research</li>
+          <li>Research helps economy and defense</li>
+        </ul>
+      </ul>
+    </div>
+    <div class="column">
+      <img src="img/vanneavar-bush.png" style="max-width:400px"/>
+    </div>
+  </div>
+</section>
+<section data-auto-animate>
+  <span class="circle circle-full" style="width:100px; height:100px" data-id="circle1">1</span><h4 data-id="heading1">Mainframe Computing</h4>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">As We May Think</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Published in Atlantic Monthly, July 1945</li>
+        <li>Set out to define a post-war scientific research agenda</li>
+        <li>Speculative, not reflective</li>
+      </ul>
+    </div>
+    <div class="column">
+      <img src="img/as-we-may-think.png" style="max-width:400px"/>
+    </div>
+  </div>
+</section>
+<section>
+  <h5 style="font-size: smaller">Recognize any interactions commonly used today?</h5>
+  <iframe width="800" height="400" data-src="https://www.youtube.com/embed/c539cK58ees?t=9" title="Memex animation - Vannevar Bush&#39;s diagrams made real" allowfullscreen></iframe>
+
+  <h5 style="font-size: smaller">
+    Adapted from <a href="https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/">As We May Think</a> for the ACM SIGIR Conference, 1995.</a>
+  </h5>
+</section>
+<section data-auto-animate>
+  <span class="circle circle-full" style="width:100px; height:100px" data-id="circle1">1</span><h4 data-id="heading1">Mainframe Computing</h4>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Memex Concepts</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Linking information across devices and sources</li>
+        <li>Hypertext (the foundation of the world wide web)</li>
+        <li>Pen-based annotation</li>
+      </ul>
+    </div>
+    <div class="column">
+      <img src="img/memex.png" style="max-width:400px"/>
+    </div>
+  </div>
+</section>
+<section data-auto-animate>
+  <span class="circle circle-full" style="width:100px; height:100px" data-id="circle1">1</span><h4 data-id="heading1">Mainframe Computing</h4>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Command-Line Interfaces</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Emerged in the 1960's in terminals connected to mainframe computers</li>
+        <li>Enabled real-time execution changes and debugging</li>
+      </ul>
+    </div>
+    <div class="column">
+      <img src="img/dumb-terminal.png" style="max-width:400px"/>
+    </div>
+  </div>
+</section>
+<section>
+  <h5 style="font-size: smaller">Recognize any interactions commonly used today?</h5>
+  <!-- <iframe width="800" height="400" data-src="https://dougengelbart.org/content/view/374/" title="The Mother of All Demos - Douglas Engelbart"></iframe> -->
+  <iframe width="800" height="400" src="https://www.youtube.com/embed/UhpTiWyVa6k" title="1968 &quot;Mother of All Demos&quot; with Doug Engelbart &amp; Team (1/3)  [re-mastered]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <h5 style="font-size: smaller">
+    The "oN-Line System" or NLS, aka <a href="https://dougengelbart.org/content/view/374/">The Mother of All Demos</a>
+  </h5>
+</section>
+<section data-auto-animate>
+  <span class="circle circle-full" style="width:100px; height:100px" data-id="circle1">1</span><h4 data-id="heading1">Mainframe Computing</h4>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Douglas Engelbart's NLS</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>"The Mother of All Demos" - 1968</li>
+        <li>First working hypertext system</li>
+        <li>Invention of the mouse</li>
+        <li>Simple graphics (not the first, but used in innovative new ways)</li>
+        <li>Invention of the chording keyboard</li>
+        <li>Introduced concept of remote collaboration</li>
+      </ul>
+    </div>
+    <div class="column">
+      <img src="img/englebart-demo-2.png" style="max-width:400px"/>
+    </div>
+  </div>
+</section>
+</section>
+
+<section>
+<section data-auto-animate>
+  <h4 data-id="heading1">Three Waves of Computing</h4>
+  <div class="row">
+    <div class="column">
+      <span class="circle circle-border" data-id="circle1">1</span>
+      Mainframe Computing
+    </div>
+    <div class="column">
+      <span class="circle circle-full" data-id="circle2">2</span>
+      Personal Computing
+    </div>
+    <div class="column">
+      <span class="circle circle-border" data-id="circle3">3</span>
+      Ubiquitous Computing
+    </div>
+  </div>
+</section>
+
+<section data-auto-animate>
+  <span class="circle circle-full" style="width:100px; height:100px" data-id="circle2">2</span><h4 data-id="heading1">Personal Computing</h4>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">The Personal Computer</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>First introduced by Xerox</li>
+        <li>Xerox Alto, 1973</li>
+        <ul>
+          <li>Used mouse and chording keyboard for input</li>
+        </ul>
+        <li>Xerox Star, 1981</li>
+        <li>Innovative, but commercially unsuccessful</li>
+        <li>Expensive, too few applications</li>
+      </ul>
+    </div>
+    <div class="column">
+      <img src="img/xerox-alto.png" style="max-width:400px"/>
+    </div>
+  </div>
+</section>
+<section>
+  <h5 style="font-size: smaller">Recognize any interactions commonly used today?</h5>
+  <iframe width="800" height="400" src="https://www.youtube.com/embed/ODZBL80JPqw" title="Xerox Star User Interface (1982) 2 of 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <h5 style="font-size: smaller">
+    The Xerox Star
+  </h5>
+  <aside class="notes">
+    Looking for firsts:
+
+    Desktop concept
+    Window
+    Scrolling
+    Icons
+
+    Any ideas on why this product didn’t really do well?
+
+    Slow, takes a long time to load.
+  </aside>
+</section>
+<section data-auto-animate>
+  <span class="circle circle-full" style="width:100px; height:100px" data-id="circle2">2</span><h4 data-id="heading1">Personal Computing</h4>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Xerox Star</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Software running in windows</li>
+        <li>Desktop with icons for navigating between files and programs</li>
+        <li>Super slow!</li>
+      </ul>
+    </div>
+    <div class="column">
+      <img src="img/xerox-star-ui.png" style="max-width:400px"/>
+    </div>
+  </div>
+</section>
+<section data-auto-animate>
+  <span class="circle circle-full" style="width:100px; height:100px" data-id="circle2">2</span><h4 data-id="heading1">Personal Computing</h4>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Apple Macintosh</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Introduced in 1984</li>
+        <li>Incredibly successful!</li>
+        <li>Affordable by comparison, intuitive, easy to use</li>
+      </ul>
+    </div>
+    <div class="column">
+      <img src="img/macintosh.png" style="max-width:400px"/>
+    </div>
+  </div>
+</section>
+<section data-auto-animate>
+  <span class="circle circle-full" style="width:100px; height:100px" data-id="circle2">2</span><h4 data-id="heading1">Personal Computing</h4>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Windows 1.0</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Introduced in 1985</li>
+        <li>Looked like "windows" but not a true desktop environment...yet</li>
+      </ul>
+    </div>
+    <div class="column">
+      <img src="img/windows-1.0.png" style="max-width:400px"/>
+    </div>
+  </div>
+</section>
+<section data-auto-animate>
+  <span class="circle circle-full" style="width:100px; height:100px" data-id="circle2">2</span><h4 data-id="heading1">Personal Computing</h4>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Windows 3.0 & 3.1</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Released in 1990 & 1992</li>
+        <li>Full windowing environment</li>
+        <li>Added games: Solitaire, Minesweeper</li>
+        <li>(games were introduced to teach mouse skills)</li>
+      </ul>
+    </div>
+    <div class="column">
+      <img src="img/windows-games.png" style="max-width:400px"/>
+    </div>
+  </div>
+</section>
+<section data-auto-animate>
+  <span class="circle circle-full" style="width:100px; height:100px" data-id="circle2">2</span><h4 data-id="heading1">Personal Computing</h4>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">The Web Browser</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Mosaic, introduced in 1993</li>
+        <li>Mosaic was "first" graphical web browser</li>
+        <li>Started on Unix systems, but later ported to Macintosh and Windows</li>
+        <li>Microsoft released Internet Explorer in 1995</li>
+        <li>Apple didn't release a browser until 2003 (Safari)</li>
+      </ul>
+    </div>
+    <div class="column">
+      <img src="img/mosaic.png" style="max-width:400px"/>
+    </div>
+  </div>
+</section>
+<section data-auto-animate>
+  <span class="circle circle-full" style="width:100px; height:100px" data-id="circle1">2</span><h4 data-id="heading1">Personal Computing</h4>
+  <h5 style="font-size: smaller; padding-top:10px">One-to-One</h5>
+  <div class="row">
+    <div class="column">
+      <img src="img/one-to-one.png" />
+    </div>
+  </div>
+</section>
+</section>
+
+<!-- 3 Ubiquitous Computing -->
+<section>
+<section data-auto-animate>
+  <h4 data-id="heading1">Three Waves of Computing</h4>
+  <div class="row">
+    <div class="column">
+      <span class="circle circle-border" data-id="circle1">1</span>
+      Mainframe Computing
+    </div>
+    <div class="column">
+      <span class="circle circle-border" data-id="circle2">2</span>
+      Personal Computing
+    </div>
+    <div class="column">
+      <span class="circle circle-full" data-id="circle3">3</span>
+      Ubiquitous Computing
+    </div>
+  </div>
+</section>
+
+<section data-auto-animate>
+  <span class="circle circle-full" style="width:100px; height:100px" data-id="circle3">3</span><h4 data-id="heading1">Ubiquitous Computing</h4>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Weiser speculated people would interact with three types of computers:</li>
+        <ol style="font-size: large; ">
+          <li>Tabs: inch-scale devices, like post-its</li>
+          <li>Pads: foot-scale devices, like paper</li>
+          <li>Boards: yard-scale devices, like whiteboards</li>
+        </ol>
+        <li>Also speculated devices would have shared ownership</li>
+      </ul>
+      <h5 style="font-size: smaller; padding-top:20px">How does Weiser's speculation hold up today?</h5>
+    </div>
+    <div class="column">
+      <img src="img/weiser_ubicomp.png" style="max-width:400px"/>
+    </div>
+  </div>
+</section>
+<section data-auto-animate>
+  <span class="circle circle-full" style="width:100px; height:100px" data-id="circle3">3</span><h4 data-id="heading1">Ubiquitous Computing</h4>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Mostly lines up with what we use today:</li>
+        <ol style="font-size: large; ">
+          <li>Tabs: phones and watches</li>
+          <li>Pads: tablets and laptops</li>
+          <li>Boards: projectors? smart TV's?, AR/VR?</li>
+        </ol>
+        <li>Devices still have strong sense of ownership, not speculated shared ownership</li>
+      </ul>
+    </div>
+    <div class="column">
+      <img src="img/devices-today.png" style="max-width:400px"/>
+    </div>
+  </div>
+</section>
+<section data-auto-animate>
+  <span class="circle circle-full" style="width:100px; height:100px" data-id="circle1">2</span><h4 data-id="heading1">Ubiquitous Computing</h4>
+  <h5 style="font-size: smaller; padding-top:10px">One-to-Many</h5>
+  <div class="row">
+    <div class="column">
+      <img src="img/one-to-many.png" />
+    </div>
+  </div>
+</section>
+</section>
+
+<section data-auto-animate>
+  <h4 data-id="heading1">Three Waves of Computing</h4>
+  <div class="row">
+    <div class="column">
+      <span class="circle circle-full" data-id="circle1">1</span>
+      Mainframe Computing
+      <div style="min-height: 200px;">
+        <img src="img/many-to-one.png" style="max-width: 200px" />
+      </div>
+      "Many-to-One"
+    </div>
+    <div class="column">
+      <span class="circle circle-full" data-id="circle2">2</span>
+      Personal Computing
+      <div style="min-height: 200px;">
+        <img src="img/one-to-one.png"  style="max-width: 200px; padding: 30px 0 30px 0"/>
+      </div>
+      "One-to-One"
+    </div>
+    <div class="column">
+      <span class="circle circle-full" data-id="circle3">3</span>
+      Ubiquitous Computing
+      <div style="min-height: 200px;">
+        <img src="img/one-to-many.png"  style="max-width: 200px"/>
+      </div>
+      "One-to-Many"
+    </div>
+  </div>
+</section>
+
+<section>
+  <h4>Ubiquitous Computing</h4>
+  <p>Creating user interfaces for so many different types of computing devices was (and still is) complicated!</p>
+</section>
+
+<section>
+  <h4>Ubiquitous Computing</h4>
+  <div class="row">
+    <div class="column">
+      <h5 style="font-size: smaller">Desktop Computers</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Qt</li>
+        <li>Win32</li>
+        <li>Cocoa</li>
+        <li>GTK</li>
+        <li><a href="https://en.wikipedia.org/wiki/List_of_widget_toolkits">And many, many, more...</a></li>
+      </ul>
+    </div>
+    <div class="column">
+      <h5 style="font-size: smaller">Mobile and Wearable</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Windows Mobile</li>
+        <li>PalmOS -> WebOS</li>
+        <li>Android</li>
+        <li>iOS</li>
+        <li>WearOS</li>
+        <li>WatchKit</li>
+      </ul>
+    </div>
+  </div>
+  <aside class="notes">
+    As new devices emerged, each supported their own graphical toolkits...
+    
+    Ask them why this adds complication?
+
+    Answer: lots of different toolchains, languages, etc meant hard to find skilled pros to do the work.
+  </aside>
+</section>
+
+<section>
+  <h4>Ubiquitous Computing</h4>
+  <div class="row">
+    <div class="column">
+    <h4>What do all of these devices have in common?</h4>
+    </div>
+    <div class="column">
+      <img src="img/devices-today.png" style="max-width:400px"/>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h4>Ubiquitous Computing</h4>
+  <h5 style="font-size: smaller">One-to-Many, Synced over the cloud</h5>
+  <div class="row">
+    <div class="column">
+      <img src="img/cloud-devices.png" style="max-width:600px"/>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h4>Ubiquitous Computing</h4>
+  <div class="row">
+    <div class="column">
+      <h5 style="font-size: smaller">Sharing Data over the Internet</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Use <strong>HTTP</strong> requests to send and receive data (an early feature of JavaScript)</li>
+        <li>Render that data with <strong>HTML</strong></li>
+        <li>Style it, or shape its 'view' with <strong>CSS</strong></li>
+      </ul>
+    </div>
+    <div class="column">
+      <img src="img/cloud-devices.png" style="max-width:400px"/>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h4>Ubiquitous computing is, in large part, why web tools are the current standard
+    for interface development
+  </h4>
+</section>
+
+<section>
+  <h4>Ubiquitous Computing</h4>
+  <div class="row">
+    <div class="column">
+      <h5 style="font-size: smaller">Web Tools for the User Interface</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Nearly every platform needs to communicate with a cloud system</li>
+        <li>Most need a web browser so people can access sites</li>
+        <li>Shared programming language and development environment</li>
+        <li>enables efficient work</li>
+        <li>Developers can write once, deploy to many platforms</li>
+        <li>Hopefully customize style and functionality to the device</li>
+        <li>Other reasons?</li>
+      </ul>
+    </div>
+    <div class="column">
+      TODO: create image with different web tool logos (include tauri, electron)
+    </div>
+  </div>
+</section>
+
+<section data-background-iframe="https://inf133.markbaldw.in" data-background-interactive>
+    <div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+      <h2>Iframe Backgrounds</h2>
+      <p>Since reveal.js runs on the web, you can easily embed other web content. Try interacting with the page in the background.</p>
+    </div>
 </section>

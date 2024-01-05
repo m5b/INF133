@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Draggable Divs</title>
+  <style>
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* Prevent scrollbars */
+    }
+
+    .moveable {
+      width: 100px;
+      height: 100px;
+      background-color: #3498db;
+      color: white;
+      text-align: center;
+      line-height: 100px;
+      position: absolute;
+      cursor: grab;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Example moveable divs -->
+  <div class="moveable" id="div1">Drag me!</div>
+  <div class="moveable" id="div2">Move me too!</div>
+
+  <script>
+    // Function to make elements with class 'moveable' draggable
+    function makeElementsDraggable() {
+      const elements = document.querySelectorAll('.moveable');
+
+      elements.forEach(element => {
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        element.addEventListener('mousedown', e => {
+          isDragging = true;
+          offsetX = e.clientX - element.getBoundingClientRect().left;
+          offsetY = e.clientY - element.getBoundingClientRect().top;
+          element.style.cursor = 'grabbing';
+        });
+
+        document.addEventListener('mousemove', e => {
+          if (isDragging) {
+            const x = e.clientX - offsetX;
+            const y = e.clientY - offsetY;
+
+            element.style.left = `${x}px`;
+            element.style.top = `${y}px`;
+          }
+        });
+
+        document.addEventListener('mouseup', () => {
+          isDragging = false;
+          element.style.cursor = 'grab';
+        });
+      });
+    }
+
+    // Call the function when the page loads
+    window.onload = makeElementsDraggable;
+  </script>
+</body>
+</html>
