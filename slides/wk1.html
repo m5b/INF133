@@ -631,3 +631,406 @@
     </div>
     <div class="fragment"></div> 
 </section>
+
+<section>
+  <h4>IN4MTX 133: User Interaction Software</h4>
+    <h5 style="font-size: smaller">Ready?</h5>
+    <div class="row">
+      <div class="column">
+        <ol style="font-size: x-large;">
+          <li class="fragment">TODO: Link to demo code</li>
+        </ol>
+      </div>
+      <div class="column">
+        <span class="fragment">TODO: insert QR code image</span>
+      </div>
+    </div>
+</section>
+
+<section data-auto-animate>
+  <h4 data-id="title">Web Communication</h4>
+    <h5 class="fragment" data-fragment-index="1" data-id="wiki-url" style="font-size: medium">https://en.wikipedia.org/wiki/Donald_Bren_School_of_Information_and_Computer_Sciences</h5>
+    <div class="row">
+      <div class="column">
+        <img class="fragment" data-fragment-index="2" src="img/wiki-dbh.png" style="max-width:400px"/>
+      </div>
+      <div class="column">
+        <div class="fragment" data-fragment-index="4" style="font-size: small; display:flex; justify-content: center;align-content: center; flex-direction: column; min-height: 100%;">
+          <p>REQUEST <span class="arrow right"></span></p>
+          <p><span class="arrow left"></span> RESPONSE</p>
+        </div>
+      </div>
+      <div class="column">
+        <img class="fragment" data-fragment-index="3" src="img/server-files.png" style="max-width:400px"/>
+      </div>
+    </div>
+</section>
+
+<section data-auto-animate>
+  <h4 data-id="title">Uniform Resource Locator</h4>
+    <h5 data-id="wiki-url" style="font-size: medium"><span class="fragment highlight-current-red"  data-fragment-index="1">https://</span><span class="fragment highlight-current-red"  data-fragment-index="2">en.wikipedia.org/</span><span class="fragment highlight-current-red"  data-fragment-index="3">wiki/Donald_Bren_School_of_Information_and_Computer_Sciences</span></h5>
+    <div class="row">
+      <div class="column fragment" data-fragment-index="1" style="font-size: medium; border: 2px solid white; border-radius: 10px; padding: 10px; margin:5px">
+        <span>Protocol</span>
+        <p>How to handle the information</p>
+      </div>
+      <div class="column fragment" data-fragment-index="2" style="font-size: medium; border: 2px solid white; border-radius: 10px; padding: 10px; margin:5px">
+        <span>Host</span>
+        <p>Who has the information</p>
+      </div>
+      <div class="column fragment" data-fragment-index="3" style="font-size: medium; border: 2px solid white; border-radius: 10px; padding: 10px; margin:5px">
+        <span>Resource</span>
+        <p>What information you want</p>
+      </div>
+    </div>
+</section>
+
+<section>
+  <h3>Fundamentally, the web is designed to send files around</h3>
+  <h4>These files are created using HTML</h4>
+  <h5><span style="text-decoration: underline">H</span>yper<span style="text-decoration: underline">T</span>ext <span style="text-decoration: underline">M</span>arkup <span style="text-decoration: underline">L</span>anguage</h5>
+</section>
+
+<section data-auto-animate>
+  <h5 data-id="code-title">So does a file look like on the web?</h5>
+  <pre><code data-line-numbers="2|3,7|4-6|8,14|9-13"><script type="text/template">
+    <!DOCTYPE html>
+    <-head><!-- (it's "head", the - is there due to a bug)-->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Your Page Title</title>
+    </head>
+    <html lang="en">
+      <body>
+
+      <!-- Your content goes here -->
+
+      </body>
+    </html>
+
+    </script></code></pre>
+</section>
+
+<section data-auto-animate>
+  <h5 data-id="code-title">HTML Basics</h5>
+  <pre><code data-line-numbers=""><script type="text/template">
+      <body>
+        <p>paragraph</p>
+        <a href="https://inf133.markbaldw.in">INF 133 Website</a>
+        <img src="img/pic1.png" />
+        <strong>Bold Text</strong>
+        <em>Emphasize Text</em>
+        <ul>
+          <li>an unordered list</li>
+        </ul>
+        <div>Container</div>
+      </body>
+
+    </script></code></pre>
+</section>
+
+<section>
+  <h3>There are hundreds of tags available to help structure content within a page!</h3>
+  <h4>Visit <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">https://developer.mozilla.org/en-US/docs/Web/HTML/Element</a> to learn more.</h4>
+</section>
+
+<section data-auto-animate>
+  <h5 data-id="code-title">HTML Basics: Nesting</h5>
+  <pre><code data-line-numbers=""><script type="text/template">
+    <!-- The content of a tag can contain other HTML tags -->
+    
+    <div><p>I <strong>love</strong> HTML!</p></div>
+
+    </script></code></pre>
+  
+    <div style="background-color:white; color:black; margin:100px"><p>I <strong>love</strong> HTML!</p></div>
+</section>
+
+<section data-auto-animate>
+  <h5 data-id="code-title">HTML Basics: Attributes</h5>
+  <pre><code data-line-numbers=""><script type="text/template">
+    <!-- Attributes specify options and add meaning. -->
+    <!-- Attributes are space-separated lists of names and values, usually string types. -->
+    
+    <div id="mydiv" style="background-color: white">
+      <p>I <strong>love</strong> HTML!</p>
+      <a href="https://inf133.markbaldw.in">INF 133 Website</a>
+    </div>
+
+    </script></code></pre>
+  
+    <div style="background-color:white; color:black; margin:100px"><p>I <strong>love</strong> HTML!</p>
+      <a href="https://inf133.markbaldw.in">INF 133 Website</a></div>
+</section>
+
+<section>
+  <h3>Wait...how did I make the background white?</h3>
+    <div style="background-color:white; color:black; margin:100px"><p>I <strong>love</strong> HTML!</p>
+      <a href="https://inf133.markbaldw.in">INF 133 Website</a></div>
+</section>
+
+<section data-auto-animate>
+  <h5 data-id="code-title">CSS (Cascading Style Sheets)</h5>
+  <pre><code data-line-numbers=""><script type="text/template">
+    
+    <div id="mydiv" style="background-color: lightblue">Some content</div>
+
+    </script></code></pre>
+  
+    <div style="background-color:lightblue; color:black; margin:100px"><p>I <strong>love</strong> HTML!</p>
+      <a href="https://inf133.markbaldw.in">INF 133 Website</a></div>
+</section>
+
+<section data-auto-animate>
+  <h5 data-id="code-title">CSS (Cascading Style Sheets)</h5>
+  <ul style="font-size: x-large; list-style-type: none;">
+    <li>Defines rules for styling a web page</li>
+    <li>HTML specifies semantics (how the page is structured)</li>
+    <li>CSS specifices appearance</li>
+  </ul>
+</section>
+
+<section>
+    <h4 style="font-size: smaller">Same HTML, different stylesheets</h4>
+  <div class="row">
+    <div class="column">
+      <img src="img/css-style1.png" style="max-width:300px"/>
+    </div>
+    <div class="column">
+      <img src="img/css-style2.png" style="max-width:300px"/>
+    </div>
+    <div class="column">
+      <img src="img/css-style3.png" style="max-width:300px"/>
+    </div>
+  </div>
+  <a href="https://www.csszengarden.com/">CSS Zen Garden</a>
+</section>
+
+<section>
+  <h4 data-id="code-title">CSS: So what's the value?</h4>
+  <div class="row">
+    <div class="column">
+      <h5 style="font-size: smaller;">Reusablility</h5>
+      <p style="font-size: x-large;">Apply the same style to multiple pages</p>
+    </div>
+    <div class="column">
+      <h5 style="font-size: smaller;">Modularity</h5>
+      <p style="font-size: x-large;">Include multiple stylesheets that apply to a single page</p>
+    </div>
+    <div class="column">
+      <h5 style="font-size: smaller;">Maintainability</h5>
+      <p style="font-size: x-large;">Files can be version controlled, separate from HTML structural content</p>
+    </div>
+    <div class="column">
+      <h5 style="font-size: smaller;">Management</h5>
+      <p style="font-size: x-large;">Styles can be contained in a single type of location (style sheets)</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h5 data-id="code-title">CSS Syntax</h5>
+  <pre><code data-line-numbers=""><script type="text/template">
+    selector { 
+      property: value;
+      property: value;elem
+    }
+
+    </script></code></pre>
+  
+    <ul style="font-size: x-large; list-style-type: none;">
+      <li><strong>Selectors</strong> specify which elements a <strong>rule</strong> applies to</li>
+      <li><strong>Rules</strong> specify what <em>values</em> to assign to different formatting <strong>properties</strong></li>
+      <li>One rule, many properties</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">CSS Syntax</h5>
+  <pre><code data-line-numbers="2-6|8-12|14-18"><script type="text/template">
+    /*element selector*/
+    div { /*div selector, applie properties to all divs*/
+      background-color: white;
+      font-size: small; 
+    }
+
+    /*class selector*/
+    .bg-white-small { /* style a 'type' of element*/
+      background-color: white;
+      font-size: small; 
+    }
+    
+    /*id selector*/
+    #mydiv { /* style a specific element*/
+      background-color: white;
+      font-size: small; 
+    }
+
+    </script></code></pre>
+  
+    <ul style="font-size: x-large; list-style-type: none;">
+      <li><strong>Selectors</strong> specify which elements a <strong>rule</strong> applies to</li>
+      <li><strong>Rules</strong> specify what <em>values</em> to assign to different formatting <strong>properties</strong></li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">CSS Syntax</h5>
+  <pre><code data-line-numbers=""><script type="text/template">
+    /*element selector*/
+    div { /*div selector, applie properties to all divs*/
+      background-color: white;
+      font-size: small; 
+    }
+    
+    <div>Some content</div> 
+
+    </script></code></pre>
+  
+    <ul style="font-size: x-large; list-style-type: none;">
+      <li><strong>All</strong> div elements receive style</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">CSS Syntax</h5>
+  <pre><code data-line-numbers=""><script type="text/template">
+    /*class selector*/
+    .bg-white-small { /* style a 'type' of element*/
+      background-color: white;
+      font-size: small; 
+    }
+    
+    <div class="bg-white-small">Some content</div> 
+    <span class="bg-white-small">Some inline content</span> 
+
+    </script></code></pre>
+  
+    <ul style="font-size: x-large; list-style-type: none;">
+      <li><strong>All</strong> elements with the <em>class</em> "big-white-small" receive style</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">CSS Syntax</h5>
+  <pre><code data-line-numbers=""><script type="text/template">
+    /*id selector*/
+    #mydiv { /* style a specific element*/
+      background-color: white;
+      font-size: small; 
+    }
+    
+    <div id="mydiv">Some content</div>
+
+    </script></code></pre>
+  
+    <ul style="font-size: x-large; list-style-type: none; max-width: 600px;">
+      <li><strong>Only</strong> the element with the <em>id</em> "mydiv" receives style</li>
+      <li>For all elements on a given page, the <em>id</em> attribute should be unique (like a variable)</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">CSS Syntax</h5>
+  <pre><code data-line-numbers=""><script type="text/template">
+    /*id selector*/
+    #mydiv { /* style a specific element*/
+      background-color: white;
+      font-size: small; 
+    }
+    
+    <div id="mydiv"></div>
+
+    </script></code></pre>
+  
+    <ul style="font-size: x-large; list-style-type: none;">
+      <li><strong>Selectors</strong> specify which elements a <strong>rule</strong> applies to</li>
+      <li><strong>Rules</strong> specify what <em>values</em> to assign to different formatting <strong>properties</strong></li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">Applying CSS to an HTML Page</h5>
+  <pre><code data-line-numbers=""><script type="text/template">
+    <div id="mydiv" style="background-color: lightblue">
+      Some content
+    </div>
+
+    </script></code></pre>
+    
+    <ul style="font-size: x-large; list-style-type: none;">
+      <li><strong>Inline</strong> styling.</li>
+      <li>Applies only to element where style attribute is assigned</li>
+      <li>Generally, avoid using CSS in this way</li>
+      <li>Pros/Cons?</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">Applying CSS to an HTML Page</h5>
+  <pre><code data-line-numbers="3-9"><script type="text/template">
+    <-head>
+      <style>
+        /*element selector*/
+        div { /*div selector, applie properties to all divs*/
+          background-color: white;
+          font-size: small; 
+        }
+      </style>
+    </head> 
+    <div id="mydiv" class="bg-white-small">Some content</div>
+
+    </script></code></pre>
+    
+    <ul style="font-size: x-large; list-style-type: none;">
+      <li><strong>Internal Stylesheets</strong></li>
+      <li>Added in the <em>head</em> of the HTML document</li>
+      <li>Generally, okay to use for small documents</li>
+      <li>Pros/Cons?</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">Applying CSS to an HTML Page</h5>
+  <pre><code data-line-numbers="6"><script type="text/template">
+    <-head>
+      <style>
+        ...
+      </style>
+      <link rel="stylesheet" href="style.css" />
+    </head> 
+    <div id="mydiv" class="bg-white-small">
+      Some content
+    </div>
+
+    </script></code></pre>
+    
+    <ul style="font-size: x-large; list-style-type: none;">
+      <li><strong>External Stylesheets</strong></li>
+      <li>Added in the <em>head</em> of the HTML document</li>
+      <li>The most commonly used (and useful) method</li>
+      <li>Pros/Cons?</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">CSS: So what's the value?</h5>
+  <ul style="font-size: x-large; list-style-type: none;">
+    <li></li>
+    <li></li>
+  </ul>
+</section>
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Page Title</title>
+</head>
+<body> -->
+
+  <!-- Your content goes here -->
+
+<!-- </body>
+</html> -->
