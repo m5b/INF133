@@ -563,9 +563,6 @@
         <li>Other reasons?</li>
       </ul>
     </div>
-    <div class="column">
-      TODO: create image with different web tool logos (include tauri, electron)
-    </div>
   </div>
 </section>
 
@@ -635,16 +632,6 @@
 <section>
   <h4>IN4MTX 133: User Interaction Software</h4>
     <h5 style="font-size: smaller">Ready?</h5>
-    <div class="row">
-      <div class="column">
-        <ol style="font-size: x-large;">
-          <li class="fragment">TODO: Link to demo code</li>
-        </ol>
-      </div>
-      <div class="column">
-        <span class="fragment">TODO: insert QR code image</span>
-      </div>
-    </div>
 </section>
 
 <section data-auto-animate>
@@ -764,6 +751,19 @@
 </section>
 
 <section>
+  <h5 data-id="code-title">HTML Activity</h5>
+  <ol style="font-size: x-large;">
+    <li>Open up a text editor or IDE</li>
+    <li>Create a new file called "index.html"</li>
+    <li>Copy or retype the HTML from slide 25 into index.html</li>
+    <li>Follow the link to MDN on slide 27 and study the various HTML tags</li>
+    <li>Add some content to the "body"</li>
+    <li>Save the file and view in a web browser</li>
+  </ol>
+  <h4 style="font-size:smaller; padding-top:30px">Feel free to work in pairs</h4>
+</section>
+
+<section>
   <h3>Wait...how did I make the background white?</h3>
     <div style="background-color:white; color:black; margin:100px"><p>I <strong>love</strong> HTML!</p>
       <a href="https://inf133.markbaldw.in">INF 133 Website</a></div>
@@ -773,7 +773,9 @@
   <h5 data-id="code-title">CSS (Cascading Style Sheets)</h5>
   <pre><code data-line-numbers=""><script type="text/template">
     
-    <div id="mydiv" style="background-color: lightblue">Some content</div>
+    <div id="mydiv" style="background-color: lightblue">
+      Some content
+    </div>
 
     </script></code></pre>
   
@@ -833,7 +835,7 @@
   <pre><code data-line-numbers=""><script type="text/template">
     selector { 
       property: value;
-      property: value;elem
+      property: value;
     }
 
     </script></code></pre>
@@ -995,7 +997,7 @@
   <pre><code data-line-numbers="6"><script type="text/template">
     <-head>
       <style>
-        ...
+        /* internal style */
       </style>
       <link rel="stylesheet" href="style.css" />
     </head> 
@@ -1014,12 +1016,130 @@
 </section>
 
 <section>
-  <h5 data-id="code-title">CSS: So what's the value?</h5>
+  <h5 data-id="code-title">CSS Activity</h5>
+  <ol style="font-size: x-large;">
+    <li>Return to your HTML page</li>
+    <li>Add styling to your page using <em>each</em> of the CSS structure <em>and</em> selector types we've discussed</li>
+  </ol>
+</section>
+
+<section data-auto-animate>
+  <h3 data-id="head1" style="padding-top:0px">Let's talk about introducing dynamic interaction to HTML</h3>
+</section>
+<section data-auto-animate>
+  <h3 data-id="head1" style="padding-top:100px">Dynamic interaction helps make websites feel personal</h3>
+</section>
+<section data-auto-animate>
+  <h3 data-id="head1" style="padding-top:300px">Wait...how did I make the text move?</h3>
+</section>
+
+<section data-auto-animate>
+  <h5 data-id="code-title">JavaScript</h5>
   <ul style="font-size: x-large; list-style-type: none;">
-    <li></li>
-    <li></li>
+    <li>Make pages dynamic</li>
+    <li>Make pages personalize</li>
+    <li>Make pages interact with other sources, like data storage and API's</li>
   </ul>
 </section>
+
+<section data-background-iframe="https://survey.stackoverflow.co/2023/#technology-most-popular-technologies" data-background-interactive>
+    <div class="fragment fade-out" style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+      <h2>JavaScript Popularity</h2>
+      <p>Always at the top of the list</p>
+    </div>
+    <div class="fragment"></div> 
+</section>
+
+<section data-auto-animate>
+  <h3 data-id="code-title">We'll dive into the reasons for JavaScript's popularity next week.</h3>
+  <h4>For now, let's look at some code</h4>
+</section>
+
+<section data-auto-animate>
+  <h5 data-id="code-title">JavaScript</h5>
+  <pre><code data-line-numbers="1-4|5-7"><script type="text/template">
+      <script>
+        /* Your code here */
+      </script>
+
+      /* OR */
+      <script src="script.js"></script>
+    </script></code></pre>
+    
+    <ul style="font-size: x-large; list-style-type: none;">
+      <li>Add JavaScript to a page using the "script" element</li>
+      <li>Anything written between script tages will be interpreted as code</li>
+    </ul>
+</section>
+
+<section data-auto-animate>
+  <h5 data-id="code-title">Printing in JavaScript</h5>
+  <pre><code data-line-numbers="6"><script type="text/template">
+      <script>
+        console.log("Hello World!");
+      </script>
+    </script></code></pre>
+    
+    <ul style="font-size: x-large; list-style-type: none;">
+      <li>Not visible in the browser</li>
+      <li>Visible in the JavaScript Console</li>
+      <li>For example: ctrl+shift+i</li>
+    </ul>
+</section>
+
+<section data-auto-animate>
+  <h3 data-id="code-title">JavaScript is a programming language, but for the web.</h3>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript Activity</h5>
+  <ol style="font-size: x-large;">
+    <li>Return to your HTML page</li>
+    <li>Add script tags to your page</li>
+    <li>Add a console.log message and view it in the browser console</li>
+  </ol>
+</section>
+
+<section>
+  <h5 data-id="code-title">Submit your Activity</h5>
+  <ol style="font-size: x-large;">
+    <li>When done, submit your file (or zip if you have multiple files) to Canvas.</li>
+    <li>Submission details will be given during class.</li>
+    <li>Assignment page will close at the end of class!</li>
+  </ol>
+</section>
+
+<!-- <section data-auto-animate>
+  <h5 data-id="code-title">JavaScript Syntax</h5>
+  <pre><code data-line-numbers="6"><script type="text/template">
+      foo() bar.baz
+    </script></code></pre>
+    
+    <ul style="font-size: x-large; list-style-type: none;">
+      <li>Has functions and objects</li>
+      <li>They look like Java, but act differently</li>
+    </ul>
+</section>
+
+<section data-auto-animate>
+  <h5 data-id="code-title">JavaScript</h5>
+  <pre><code data-line-numbers="6"><script type="text/template">
+      var x = 'hello';
+      console.log(typeof x);
+
+      x = 42;
+      console.log(typeof x);
+
+      var hoursSlept;
+      console.log(hoursSlept);
+    </script></code></pre>
+    
+    <ul style="font-size: x-large; list-style-type: none;">
+      <li>Variables are dynamically typed</li>
+      <li>Unassigned variales have a value of undefined</li>
+    </ul>
+</section> -->
+
 <!-- 
 <!DOCTYPE html>
 <html lang="en">

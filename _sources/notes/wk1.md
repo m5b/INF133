@@ -9,5 +9,7 @@ The weekly notes pages is where you will find links to in-class materials, inclu
 
 ## Lecture Materials
 
-Coming Soon! See you on Monday 1/8.
+### Monday
+
+[Slide Deck](http://inf133.markbaldw.in/slides/slides.html?file=wk1.html)
 
