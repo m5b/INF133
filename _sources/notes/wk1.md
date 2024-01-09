@@ -11,5 +11,9 @@ The weekly notes pages is where you will find links to in-class materials, inclu
 
 ### Monday
 
-[Slide Deck](http://inf133.markbaldw.in/slides/slides.html?file=wk1.html)
+[Live Slide Deck](http://inf133.markbaldw.in/slides/slides.html?file=wk1.html)
+
+If you prefer a printable version:
+
+[Print Slide Deck](http://inf133.markbaldw.in/slides/slides.html?file=wk1.html?print-pdf)
 
