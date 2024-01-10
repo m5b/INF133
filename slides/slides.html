@@ -40,8 +40,20 @@
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
+			justify-content: flex-start;
+			/* justify-content: space-between; */
 			z-index: 9999;
+		}
+		
+		.pause-button {
+			background: none;
+			border: none;
+			cursor: pointer;
+			font-size: 24px;
+			color: red;
+			padding: 10px 10px;
+			display: flex;
+			align-items: center;
 		}
 
 		.chat-button {
@@ -184,8 +196,11 @@
 <body>
 
 	<div class="overlay" id="overlay">
+		<button class="pause-button" id="pauseMultiplex">
+			<span id="pauseButton" class="fas fa-pause"></span>
+		</button>
 		<button class="chat-button" id="toggleChat">
-			<i class="fas fa-comment-alt"></i>
+			<span class="fas fa-comment-alt"></span>
 		</button>
 		<div class="chat-input" id="chatInput">
 			<input id="question" type="text" placeholder="Ask a question...">
@@ -243,6 +258,7 @@
 				url: 'https://markbaldw.in:9001',
 				questionId: 'sendQuestion',
 				inputId: 'question',
+				pauseId: 'pauseMultiplex',
 				//url: 'https://reveal-multiplex.glitch.me'
 			},
 			controls: true,
@@ -266,6 +282,19 @@
 			]
 		});
 
+
+
+		// Toggle pause button class
+
+		const pauseMultiplex = document.getElementById('pauseMultiplex');
+		pauseMultiplex.addEventListener('click', () => {
+			if(isPaused){
+				document.getElementById('pauseButton').classList.replace('fa-play', 'fa-pause');
+			}else{
+				document.getElementById('pauseButton').classList.replace('fa-pause', 'fa-play');
+			}
+		});
+		
 		// Toggle chat input visibility
 
 		const toggleChat = document.getElementById('toggleChat');
@@ -290,6 +319,7 @@
 				overlay.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
 			}
 		}
+
 	</script>
 
 </body>

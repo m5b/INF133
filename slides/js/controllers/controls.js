@@ -37,6 +37,7 @@ export default class Controls {
 		this.element.className = 'controls';
 		this.element.innerHTML =
 			`<button class="navigate-left" aria-label="${ rtl ? 'next slide' : 'previous slide' }"><div class="controls-arrow"></div></button>
+			<button class="navigate-pause" aria-label="pause"><div class="controls-pause"></div></button>
 			<button class="navigate-right" aria-label="${ rtl ? 'previous slide' : 'next slide' }"><div class="controls-arrow"></div></button>
 			<button class="navigate-up" aria-label="above slide"><div class="controls-arrow"></div></button>
 			<button class="navigate-down" aria-label="below slide"><div class="controls-arrow"></div></button>`;

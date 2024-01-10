@@ -308,6 +308,22 @@ $controlsArrowAngleActive: 36deg;
 		-webkit-tap-highlight-color: rgba( 0, 0, 0, 0 );
 	}
 
+	.controls-pause{
+		position: relative;
+		width: $controlArrowSize;
+		height: $controlArrowSize;
+
+		@include controlsArrowTransform( $controlsArrowAngle );
+
+		&:hover {
+			@include controlsArrowTransform( $controlsArrowAngleHover );
+		}
+		&:active {
+			@include controlsArrowTransform( $controlsArrowAngleActive );
+		}
+
+	}
+
 	.controls-arrow:before,
 	.controls-arrow:after {
 		content: '';
@@ -337,6 +353,16 @@ $controlsArrowAngleActive: 36deg;
 
 		&:active {
 			@include controlsArrowTransform( $controlsArrowAngleActive );
+		}
+	}
+	
+	.navigate-pause{
+		right: $controlArrowSize + $controlArrowSpacing*2;
+		bottom: $controlArrowSpacing + $controlArrowSize*0.5;
+		transform: translateX( -10px );
+
+		&.highlight {
+			animation: bounce-left 2s 50 both ease-out;
 		}
 	}
 
