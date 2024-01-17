@@ -13,6 +13,8 @@ The weekly notes pages is where you will find links to in-class materials, inclu
 
 [Live Slide Deck](http://inf133.markbaldw.in/slides/slides.html?file=wk1.html)
 
+[Lecture Recording](https://uci.yuja.com/V/Video?v=9415952&node=41107313&a=62492485&autoplay=1)
+
 If you prefer a printable version:
 
 [Print Slide Deck](http://inf133.markbaldw.in/slides/slides.html?file=wk1.html?print-pdf)

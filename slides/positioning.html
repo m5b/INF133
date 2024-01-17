@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Positioning Types</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      margin: 20px;
+    }
+
+    .container {
+      position: relative;
+      height: 200px;
+      border: 2px solid #333;
+      margin-bottom: 20px;
+    }
+
+    .static-box {
+      width: 100px;
+      height: 100px;
+      background-color: #f0f0f0;
+    }
+
+    .relative-box {
+      position: relative;
+      top: 20px;
+      left: 20px;
+      width: 100px;
+      height: 100px;
+      background-color: #66c2ff;
+    }
+
+    .absolute-box {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 100px;
+      height: 100px;
+      background-color: #ffb366;
+    }
+
+    .fixed-box {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 100px;
+      height: 100px;
+      background-color: #ff6666;
+    }
+
+    .sticky-box {
+      position: sticky;
+      top: 20px;
+      width: 100px;
+      height: 100px;
+      background-color: #99ff99;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Sticky Position</h2>
+<div class="sticky-box">Sticky</div>
+
+<h2>Static Position</h2>
+<div class="container">
+  <div class="static-box">Static</div>
+</div>
+
+
+<h2>Relative Position</h2>
+<div class="container">
+  <div class="relative-box">Relative</div>
+</div>
+
+<h2>Absolute Position</h2>
+<div class="container">
+  <div class="absolute-box">Absolute</div>
+</div>
+
+<h2>Fixed Position</h2>
+<div class="container">
+  <div class="fixed-box">Fixed</div>
+</div>
+
+</body>
+</html>

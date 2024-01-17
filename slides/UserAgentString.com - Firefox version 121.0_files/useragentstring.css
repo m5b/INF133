@@ -1,0 +1,133 @@
+  body {font: 11px verdana,arial,sans-serif;
+        margin:0px;
+        padding:0px;
+        background:#EEE;;
+       color:#000046;}
+
+
+  a:link, a:visited {text-decoration:none;color:blue;}
+  a:hover {color: blue;text-decoration:underline;}
+  li a:link {font-size:10px;}
+  li a:visited {font-size:10px;}
+
+
+ #menu  a:link,#menu  a:visited {text-decoration:none;color:#FF6600;}
+ #menu  a:hover {color: #FFAA44;text-decoration:underline;}
+
+  #seitenTitel {color:#FFFFFF;
+	    background:#324D80;
+		position:relative;
+		top:18px;
+		left:20px;
+		font-size:22px;
+		border:1px solid black;
+		padding:10px 0px;
+		width:750px;
+		margin-top:0px;
+		margin:0 auto;
+                }
+
+  #balken {background:#324D80;
+  	   position:absolute;
+  	   top:120px;
+  	   left:0px;
+           height:100px;
+           width:100%}
+
+  #kasten  {background:white;
+	   position:relative;
+	   top:20px;
+	   left:20px;
+		 min-height:450px;
+		 width:750px;
+		 border:1px solid black;
+		 margin-bottom:20px;
+		 margin:0 auto;
+           }
+
+  #content{    
+    padding:0px 20px 20px;
+  }
+  
+ h1 {background:#324D80;
+    margin:0;
+    text-align:right;
+    font-size:28px;
+    padding:10px;
+    border-bottom:1px dotted #333;
+    color:white;
+		 width:800px;
+		 border:1px solid black;
+		 margin-bottom:20px;
+		 margin:0 auto;
+    }
+  
+  
+  h2 {	
+      font-size:18px;
+      }
+      
+  h3 {
+      font-size:16px;
+      border-bottom:1px solid #ddd;
+      background:#EEE;
+      }
+      
+  h4 {margin-left:10px;
+      font-size:12px;
+      margin-bottom:0px;
+  
+      }
+
+  #dieTabelle {border:1px solid #666;border-collapse:collapse;width:100%}
+  #dieTabelle td {padding:5px;vertical-align:top;border:1px solid #666;}
+  #dieTabelle th {font-size:15px;text-align:left;padding:4px;background:#EEE;}
+  .wort {text-align:right;font-weight:bold; width:25%;}
+  #uas_textfeld {width:100%; height:50px; border:1px solid #DDD;}
+
+  .button {border:1px solid #DDD;}
+
+  .uaIcon {border:none;margin:2px 5px 0px 2px;vertical-align:bottom;}
+
+  #menu {padding:20px 20px 0px;}
+
+  #menu a:link,#menu a:visited {font-weight:bold;}
+  #menu a:hover {text-decoration:none;}
+
+  .menu1-level1-act a {color:#FFAA44;border-bottom:1px dotted #FFAA44}
+  
+  #strich { height:16px;
+  	    border-bottom:1px solid #ddd;}
+
+  #unterMenu
+           {
+           /*display:none;*/
+  	   position:relative;
+  	   top:0px;
+  	   left:0px;
+           border:0px solid black;
+           }
+           
+  #auswahl{width:100%;}         
+  #auswahl td{padding:4px;}
+  #unterMenu h2 {color:white;
+                 font-size:14px;
+                 margin-top:0px;
+                 }
+
+  #unterMenu a:link, #unterMenu a:visited
+  		 {/*color:#FF6600;
+                 display:block;*/
+                 line-height:18px;
+                 }
+                 
+#unterMenu a.unterMenuName {margin-left:0px;}
+#unterMenu a.unterMenuTitel {font-size:14px;margin:5px 0px;font-weight:bold;}
+
+  .msg {font-weight:bold;color:red;margin-top:10px;}
+
+
+#google_webung_agentSeiten{
+	margin-top:40px;
+	margin-left:50px;
+}

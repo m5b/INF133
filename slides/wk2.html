@@ -1,0 +1,989 @@
+<section>
+    <h3>Semantic HTML and Responsive Design</h3>
+    <p>
+        <small>INF 133 User Interaction Software</small>
+    </p>
+    <p>
+        <small>Week 2</small>
+    </p>
+</section>
+
+<section>
+    <h3>Goals for Today</h3>
+    <h4>By the end this lecture, you should be able to...</h4>
+    <ul>
+        <li>Explain the importance of semantically meaningful markup</li>
+        <li>Describe CSS structure and fallback structure</li>
+        <li>Describe how responsive and adaptive design differ and when you might prefer one or the other</li>
+        <li>Describe the advantages and disadvantages of grid-based layouts</li>
+        <li>Generate CSS and HTML which meets web standards</li>
+    </ul>
+</section>
+
+<section>
+    <div class="row">
+        <div class="column">
+            <h4>Semantic HTML</h4>
+            <ul style="font-size: smaller;">
+                <li>"Semantics" refers to code that describes its purpose</li>
+                <li>In HTML, some elements have semantic meaning, some do not</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h5 data-id="code-title">Semantic HTML</h5>
+    <div class="row">
+        <div class="column" style="max-width: 70%;">
+            <pre><code data-line-numbers="" style="font-size: smaller">
+<div style="font-size: 18px;">
+    Heading 1
+</div> 
+<h1 style="font-size: 18px;">
+    Heading 1
+</h1> 
+
+            </code></pre>
+        </div>
+        <div class="column" style="display: flex; align-items: center;">
+            <div style="width:100%">
+                <div style="font-size: 18px; font-weight: bold; display: block;">Heading 1</div>
+
+                <h1 style="font-size: 18px; display: inline-block">Heading 1</h1>
+            </div>
+        </div>
+    </div>
+
+    <h5>For example, what's the difference?</h5>
+</section>
+
+<section>
+    <h4>Semantic HTML</h4>
+    <div class="row">
+        <div class="column">
+            <ul style="font-size: smaller;">
+                <li>HTML contains many semantic elements!</li>
+                <li>Traditionally content focused (before CSS)</li>
+                <li>HTML 5 introduced structural semantic elements</li>
+            </ul>
+        </div>
+        <div class="column" style="border-color: grey; border-width: 3px; border-style:solid;">
+            <div style="background-color: aqua; color:black; width: 100%; height: 100%; font-size: large;">
+                <div class="row" style="height: 50px; display: flex; align-items: center;">
+                    <span style="width:100%; display: inline-block;">&lt;header&gt;</span>
+                </div>
+                <div class="row" style="height: 70%;">
+                    <div class="column" style="background-color: yellow;">
+                        &lt;nav&gt;
+                    </div>
+                    <div class="column" style="background-color: lightgreen;">
+                        &lt;article&gt;
+                    </div>
+                    <div class="column" style="background-color: orange;">
+                        &lt;aside&gt;
+                    </div>
+                </div>
+                <div class="row" style="height: 50px; display: flex; align-items: center;">
+                    <span style="width:100%; display: inline-block;">&lt;footer&gt;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h5 data-id="code-title">Semantic HTML</h5>
+    <pre><code data-line-numbers="2,11|4-10|13,24|14-18|20-23|26-41|29-32|34-40|43-46|48-50|52-54|56|58|62-64"><script type="text/template">
+<header>
+    <h1>This is a Heading 1 (h1)</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <article>
+        <h2>Article Title (h2)</h2>
+        <p>This is a paragraph inside an article.</p>
+        <time datetime="2024-01-15">Published on January 15, 2024</time>
+    </article>
+
+    <aside>
+        <h3>Aside Section (h3)</h3>
+        <p>This is additional content related to the main content.</p>
+    </aside>
+</section>
+
+<main>
+    <p>Main content of the page goes here.</p>
+
+    <figure>
+        <img src="example.jpg" alt="Example Image">
+        <figcaption>Figure Caption</figcaption>
+    </figure>
+
+    <section>
+        <h2>Additional Section (h2)</h2>
+        <article>
+            <h3>Sub-article Title (h3)</h3>
+            <p>This is a sub-article with its own content.</p>
+        </article>
+    </section>
+</main>
+
+<details>
+    <summary>Details</summary>
+    <p>Additional details or information can be hidden here.</p>
+</details>
+
+<blockquote>
+    <p>This is a blockquote.</p>
+</blockquote>
+
+<address>
+    <p>Contact us at <a href="mailto:info@example.com">info@example.com</a></p>
+</address>
+
+<mark>This text is marked for reference.</mark>
+
+<progress value="50" max="100">50%</progress>
+
+<hr>
+
+<footer>
+    <p>This is the footer of the page.</p>
+</footer>
+
+</script></code></pre>
+
+    <a href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics#semantic_elements"
+        style="font-size: small;">More on Semantics in HTML</a>
+</section>
+
+<!-- <section data-background-iframe="https://inf133.markbaldw.in/slides/semantic.html" data-background-interactive> -->
+<section data-background-iframe="semantic.html">
+    <div class="fragment fade-out"
+        style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+        <h2>Semantic HTML</h2>
+        <p>Demo page using all semantic html elements</p>
+        <p><a href="semantic.html" _target="blank">View the source</a></p>
+    </div>
+    <div class="fragment"></div>
+</section>
+
+<section>
+    <h5 data-id="code-title">Semantic HTML</h5>
+    <pre><code data-line-numbers="" style="font-size:smaller"><script type="text/template">
+
+<img src="harvard_mark1.png" 
+     alt="The hardvard mark 1 with three operators standing nearby" />
+
+</script></code></pre>
+
+    <h5>Some elements need additional meaning</h5>
+    <p>What is the 'alt' attribute doing here?</p>
+</section>
+
+<section>
+    <div class="row">
+        <div class="column">
+            <h4>Alt Text Guidelines</h4>
+            <ul style="font-size: smaller;">
+                <li>Always include an <code style="color:palevioletred">alt</code> attribute, even if it's empty</li>
+                <li>Describe the information, not the picture</li>
+                <li>Active images and images with information require descriptive alt text</li>
+                <li>Decorative images should have empty alt text</li>
+                <li>Be succinct, avoid being redundant with surrounding text</li>
+                <li><a href="https://webaim.org/techniques/alttext/">https://webaim.org/techniques/alttext/</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section data-auto-animate>
+    <h5 style="font-size: smaller">Which alt text would best describe this image of Vannevar Bush?</h5>
+    <div class="row">
+        <div class="column" style="padding-top:50px; width: 70%;">
+            <pre><code data-line-numbers="|2" style="font-size:smaller"><script type="text/template">
+<img src="vannevar-bush.png" alt="Vannevar Bush" />
+
+<img src="vannevar-bush.png" alt="A picture of Vannevar Bush" />
+
+<img src="vannevar-bush.png" 
+     alt="A picture of Vannevar Bush, writer of As We May Think" />
+</script></code></pre>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img src="img/vanneavar-bush.png" style="width:200px" />
+        </div>
+    </div>
+</section>
+
+<section data-background-iframe="https://wave.webaim.org/">
+    <div
+        style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left; z-index: 1;">
+        <h2>Accessibility Validators</h2>
+        <p>Can over-report problems, so think through whether something is an actual accessiblity issue</p>
+        <p><a href="https://wave.webaim.org/" style="z-index: 2;" target="_blank">Wave Tool</a></p>
+    </div>
+</section>
+
+<section data-background-iframe="https://achecks.org/achecker/">
+    <div
+        style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+        <h2>Accessibility Validators</h2>
+        <p>As long as you are reasonable in A1, you will be fine.</p>
+        <p><a href="https://achecks.org/achecker/" style="z-index: 2;" target="_blank">Achecker</a></p>
+    </div>
+</section>
+
+<section data-background-iframe="/img/a11y-uci.png">
+    <div
+        style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+        <h2>Accessibility Basics</h2>
+        <p>UCI has a wonderful knowledge resource!</p>
+        <p><a href="https://it.studentlife.uci.edu/accessibility/basics/index.php" style="z-index: 2;"
+                target="_blank">UCI's Accessibility Basics</a></p>
+    </div>
+</section>
+
+<section>
+    <div class="row">
+        <div class="column">
+            <h4>Semantics for Structure, CSS for Style</h4>
+            <ul style="font-size: smaller; list-style-type: none;">
+                <li>CSS allows HTML to be aligned, positioned, sized, styled, and adds some light interactivity</li>
+                <li>Far too many selectors to cover here!</li>
+                <li>Visit <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">MDN</a> for examples, tutorials,
+                    and demo playground.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h5 data-id="code-title">Some Basic CSS Examples</h5>
+    <pre><code data-line-numbers=""><script type="text/template">
+<style>
+    p{
+        color: red;
+    }
+</style>
+
+    </script></code></pre>
+
+    <div class="row">
+        <div class="column">
+            <div style="background-color: white" ;>
+                <p style="color:red">Hello World</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h5 data-id="code-title">Some Basic CSS Examples</h5>
+    <pre><code data-line-numbers=""><script type="text/template">
+<style>
+    p{
+        color: red;
+        font-size: larger;
+        font-family: serif;
+        font-weight: bold;
+    }
+</style>
+
+    </script></code></pre>
+
+    <div class="row">
+        <div class="column">
+            <div style="background-color: white; font-size: larger; font-family: serif; font-weight: bold;" ;>
+                <p style="color:red">Hello World</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h5 data-id="code-title">Some Basic CSS Examples</h5>
+    <pre><code data-line-numbers=""><script type="text/template">
+<style>
+    p{
+        ....
+    }
+
+    .borders{
+        border-width: 4px;
+        border-style: solid;
+        border-color: blue;
+    }
+
+</style>
+    </script></code></pre>
+
+    <div class="row">
+        <div class="column">
+            <div style="background-color: white; font-size: larger; font-family: serif; font-weight: bold; padding:15px 15px 15px 15px"
+                ;>
+                <div style="border-width: 4px; border-style: solid; border-color: blue; ">
+                    <p style="color:red">Hello World</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>CSS: <em>Cascading</em> Style Sheets</h3>
+</section>
+
+<section>
+    <h5 data-id="code-title">Cascading Styles</h5>
+    <pre><code data-line-numbers=""><script type="text/template">
+<style>
+    p{
+        font-family: serif;
+        font-weight: bold;
+    }
+    .big{
+        font-size: larger;
+    }
+    .red{
+        color: red;
+    }
+</style>
+
+<p class="big red">Hello World</p>
+
+    </script></code></pre>
+
+    <div class="row">
+        <div class="column" style="font-size: smaller;">
+            <div style="background-color: white; font-size: smaller; font-family: serif; font-weight: bold; padding:15px 15px 15px 15px"
+                ;>
+                <div style="border-width: 4px; border-style: solid; border-color: blue; ">
+                    <p style="color:red">Hello World</p>
+                </div>
+            </div>
+            <p>Multiple rules can apply to the same element, in a "cascade"</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h5 data-id="code-title">Cascading Styles</h5>
+    <pre><code data-line-numbers="15-17"><script type="text/template">
+<style>
+    p{
+        font-family: serif;
+        font-weight: bold;
+    }
+    .big{
+        font-size: larger;
+    }
+    .red{
+        color: red;
+    }
+</style>
+
+<div class="red"> <!-- styles all enclosed elements using red selector -->
+    <p class="big">Hello World</p> <!-- still red! -->
+</div>
+
+    </script></code></pre>
+
+    <div class="row">
+        <div class="column" style="font-size: smaller;">
+            <div style="background-color: white; font-size: smaller; font-family: serif; font-weight: bold; padding:15px 15px 15px 15px"
+                ;>
+                <div style="border-width: 4px; border-style: solid; border-color: blue; ">
+                    <p style="color:red">Hello World</p>
+                </div>
+            </div>
+            <p>CSS rules are also inherited from parent tags</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3 data-id="code-title">Cascading Styles</h3>
+    <pre><code data-line-numbers="13-21"><script type="text/template">
+<style>
+    p{
+        font-family: serif;
+        font-weight: bold;
+    }
+    .big{
+        font-size: larger;
+    }
+    .red{
+        color: red;
+    }
+    .blue{
+        color: blue;
+    }
+</style>
+
+<div class="red"> <!-- styles all enclosed elements using red selector -->
+    <p class="big blue">Hello World</p> <!-- now blue! -->
+    <p>Still red</p> 
+</div>
+
+    </script></code></pre>
+
+    <div class="row">
+        <div class="column" style="font-size: smaller;">
+            <div style="background-color: white; font-size: smaller; font-family: serif; font-weight: bold; padding:15px 15px 15px 15px"
+                ;>
+                <div style="border-width: 4px; border-style: solid; border-color: blue; ">
+                    <p style="color:blue">Hello World</p>
+                    <p style="color:red">Still red</p>
+                </div>
+            </div>
+            <p>Rules are applied in top down order, last rule always wins among peer selectors</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3 data-id="code-title">Cascade Specificity</h3>
+    <div class="row">
+        <div class="column" style="border-style: solid; border-width: 2px; border-color: white;">
+            In-line style attributes
+        </div>
+        <div class="column" style="border-style: solid; border-width: 2px; border-color: white;">
+            ID Attributes
+        </div>
+        <div class="column" style="border-style: solid; border-width: 2px; border-color: white;">
+            Classes, pseudo-classes
+        </div>
+        <div class="column" style="border-style: solid; border-width: 2px; border-color: white;">
+            Elements, pseudo-elements
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <p>More Specificity</p>
+        </div>
+        <div class="column">
+            <div style="display:flex; justify-content: center;align-content: center; min-height: 100%;">
+                <svg width="400" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Define arrowhead marker -->
+                    <defs>
+                        <marker id="right-arrowhead" markerWidth="10" markerHeight="10" refX="0" refY="4.0"
+                            orient="auto">
+                            <path d="M0,0 L0,8 L8,4 Z" fill="white" />
+                        </marker>
+                        <marker id="left-arrowhead" markerWidth="10" markerHeight="10" refX="2" refY="4.0"
+                            orient="auto">
+                            <path d="M8,0 L8,8 L0,4 Z" fill="white" />
+                        </marker>
+                    </defs>
+
+                    <line x1="5%" y1="80" x2="85%" y2="80" stroke="white" stroke-width="5"
+                        marker-start="url(#left-arrowhead)" marker-end="url(#right-arrowhead)" />
+                </svg>
+
+            </div>
+        </div>
+        <div class="column">
+            <p>Less Specificity</p>
+        </div>
+    </div>
+    <div class="row">
+        <p>CSS specificity is calculated based on which selector designates it. A good rule of thumb is that the
+            "closest to the HTML element" rule applies</p>
+    </div>
+</section>
+
+<section>
+    <h3 data-id="code-title">Positioning</h3>
+    <pre><code data-line-numbers=""><script type="text/template">
+<p> <!-- Block element-->
+    This is on a line.
+    <em>Same line.</em> <!-- Inline element-->
+    <span>This is also on the same line.</span>
+</p>
+<p>This will be on a new line</p>
+
+    </script></code></pre>
+
+    <div class="row">
+        <div class="column" style="font-size: smaller;">
+            <div style="background-color: white; color:black; font-size: medium; font-family: san-serif; padding:10px 15px 10px 15px"
+                ;>
+                <p>This is on a line.
+                    <em>Same line.</em>
+                    <span>This is also on the same line.</span>
+                </p>
+                <p>This will be on a new line.</p>
+            </div>
+            <p>HTML tags are either <strong>block elements</strong> or <strong>inline elements</strong></p>
+            <p>Don't put block elements inside inline elements!</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Positioning: box model</h3>
+    <div class="row">
+        <div class="column">
+            <h5>Box around every element</h5>
+            <ul style="font-size: smaller;">
+                <li><strong>Content</strong> contains your presentation content</li>
+                <li><strong>Padding</strong> extends content area</li>
+                <li><strong>Border</strong> extends content area</li>
+                <li><strong>Margin</strong> is intended to separate elements from neighbors</li>
+            </ul>
+        </div>
+        <div class="column" style="border-color: grey; border-width: 3px; border-style:dashed;">
+            <div class="boxmodel">
+                <div class="margin">
+                            <span>margin</span>
+                    <div class="border padding-color">
+                            <span>border</span>
+                        <div class="padding">
+                            <span>padding</span>
+                            <div class="content">content</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section>
+    <h3>Positioning: box model</h3>
+    <div class="row">
+        <div class="column">
+            <ul style="font-size: smaller;">
+                <li><strong>Content</strong> dimensions are specified with <code>width</code> and <code>height</code></li>
+                <li><strong>Padding, Border, and Margin</strong> have direction properties (e.g., <code>padding-top, margin-right, border-left</code>)</li>
+                <li><strong>Border</strong> can have <code>border-color, border-width, border-style</code></li>
+                <li><strong>Content</strong> color (e.g., <code>background-color</code> extends <em>into</em> padding</li>
+            </ul>
+        </div>
+    </div>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">More on box model at MDN</a>
+    </div>
+</section>
+
+<section>
+    <h3>Positioning: types</h3>
+    <div class="row">
+        <div class="column">
+            <ul style="font-size: smaller;">
+                <li><code>static</code> (the default)</li>
+                <li><code>relative</code> (offset from default)</li>
+                <li><code>absolute</code> (from top-left)</li>
+                <li><code>fixed</code> (absolute + floating, fixed to viewport)</li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section data-background-iframe="positioning.html">
+    <div class="fragment fade-out" style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+      <h2>Position Types Demo</h2>
+      <p>Assignment overviews and weekly notes</p>
+        <p><a href="positioning.html" _target="blank">View the source</a></p>
+    </div>
+    <div class="fragment"></div> 
+</section>
+
+<section>
+    <h3>Units</h3>
+    <div class="row">
+        <div class="column">
+            <ul style="font-size: smaller;">
+                <li>Pixels(<code>px</code>), element units (<code>em</code>), percentages (<code>%</code>), real-world units (<code>in, cm</code>)</li>
+                <li>Use relative units (<code>em, %</code>) whenever possible</li>
+                <li>Relative is good for accessibility, consistency when manually changing font sizes</li>
+                <li>Relative also works better with responsive design - change based on screen size</li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section>
+    <h3>Responsive and Adaptive Design</h3>
+</section>
+
+<section>
+    <h3>Responsive vs Adaptive</h3>
+    <div class="row">
+        <div class="column">
+            <h5>Responsive Design</h5>
+            <ul style="font-size: smaller; list-style-type: none;">
+                <li>Develop one set of HTML and CSS which changes layout depending on screen sizes</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h5>Adaptive Design</h5>
+            <ul style="font-size: smaller; list-style-type: none;">
+                <li>Develop and maintain multiple sets of code, change layout depending on device type and screen size</li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section>
+    <h3>Responsive vs Adaptive</h3>
+    <div class="row">
+        <div class="column">
+            <img src="/img/rwd-vs-adapt-example.webp" alt="animation of page flow in adaptive and responsive layouts" />
+        </div>
+    </div>
+    <a href="https://css-tricks.com/the-difference-between-responsive-and-adaptive-design/">source</a>
+    </div>
+</section>
+
+<section>
+    <h3>Responsive vs Adaptive</h3>
+    <div class="row">
+        <div class="column">
+            <h5>Responsive Design</h5>
+            <ul style="font-size: smaller; list-style-type: none;">
+                <li class="fragment fade-in" data-fragment-index="1">+ Easier to maintain one code base, future-proof</li>
+                <li class="fragment fade-in" data-fragment-index="2">- Worse performance; requires downloading entire stylesheet</li>
+                <li class="fragment fade-in" data-fragment-index="3">- Emphasis on making it "look right" rather than creating an experience</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h5>Adaptive Design</h5>
+            <ul style="font-size: smaller; list-style-type: none;">
+                <li class="fragment fade-in" data-fragment-index="1">+ Can cater experience to a device's capabilities and performance</li>
+                <li class="fragment fade-in" data-fragment-index="2">- Much more difficult to maintain separate codebases</li>
+                <li class="fragment fade-in" data-fragment-index="3">- Limits development to a few key capabilities because you have to implement for everything</li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section>
+    <h3>When in doubt, make it responsive. But sometimes you need to create the best experience</h3>
+</section>
+
+<section>
+    <h3>Adaptive Design Strategies</h3>
+    <div class="row">
+        <div class="column">
+            <h5>"Change style based on device and screen size"</h5>
+            <ul style="font-size: smaller; list-style-type: none;">
+                <li>For example: Video, a lot to load - so better to only send the max quality the target device can handle</li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section data-background-iframe="UserAgentString.com - Firefox version 121.0.html">
+    <div class="fragment fade-out" style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+      <h2>User Agent String</h2>
+      <p>Using JavaScript, it's possible to detect data about the device viewing your page</p>
+      <a href="https://useragentstring.com/" _target="blank">Test your Browser</a>
+    </div>
+</section>
+
+<section>
+    <h3>Adaptive Design Strategies</h3>
+    <div class="row">
+        <div class="column">
+            <h5>Media Queries</h5>
+            <ul style="font-size: smaller; list-style-type: none;">
+                <li>CSS directive capable of interpreting information about a target device</li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section>
+    <h3 data-id="code-title">Adaptive Design Strategies</h3>
+    <pre><code data-line-numbers="2-8|10-16"><script type="text/template">
+<style>
+    @media screen and (device-width: 375px) 
+        and (device-height: 667px) 
+        and (-webkit-device-pixel-ratio: 2){
+            /* iPhone 8-specific CSS */
+        }
+</style>
+    <!-- OR by link in head-->
+<head>
+    <link rel="stylesheet" media="screen 
+        and (device-width: 375px)
+        and (device-height: 667px) 
+        and (-webkit-device-pixel-ratio: 2)" 
+        href="iPhone8.css">
+</head>
+
+    </script></code></pre>
+
+    <div class="row">
+        <div class="column" style="font-size: smaller;">
+            <h5>Media Queries Syntax</h5>
+            <ul style="font-size:medium; list-style-type: none;">
+                <li><code class="codeblue">@media</code>: The 'type' of media</li>
+                <li><code class="codeblue">screen, print, speech, all</code>: common media types</li>
+                <li><code class="codeblue">min-width, max-width, orientation, -webkit-min-device-pixel-ratio</code>: rules to which CSS should be applied</li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Media_queries">And many more...</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Responsive Design</h3>
+</section>
+
+<section>
+    <h3>Responsive Design Strategies</h3>
+    <div class="row">
+        <div class="column">
+            <h5>1. Fluid Grids</h5>
+            <ul style="font-size: smaller; list-style-type: none;">
+                <li>Lay out content in columns whose widths can vary</li>
+                <li>Bootstrap (and other CSS toolkits) help with this; more in a bit.</li>
+            </ul>
+            <h5>2. Flexible Images</h5>
+            <ul style="font-size: smaller; list-style-type: none;">
+                <li>Let image size change based on screen layout</li>
+                <li>Put images in containers which will scale appropriately</li>
+                <li>Set (generally) <code class="codeblue">width: 100%, max-width: 100%, height: auto</code></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Responsive Design Strategies</h3>
+    <div class="row">
+        <div class="column">
+            <p>Try it! Open the following page in a new window and resize:</p>
+            <a href="simple-responsive.html" _target="blank"> Simple Responsive Demo</a>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Responsive Design Strategies</h3>
+    <div class="row">
+        <div class="column">
+            <h5>Breakpoints</h5>
+            <ul style="font-size: smaller; list-style-type: none;">
+                <li>The point at which design "breaks" and is no longer visually appealing or usable</li>
+                <li>Generally, most websites have 3-5 breakpoints</li>
+                <li>
+                    <ul>
+                        <li>Extra small (old mobile devices)</li>
+                        <li>Small (modern mobile)</li>
+                        <li>Medium (tablets)</li>
+                        <li>Large (laptop/desktop)</li>
+                        <li>Extra large (wide desktop/wall display)</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Responsive Design Strategies</h3>
+    <pre><code data-line-numbers=""><script type="text/template">
+<style>
+    @media screen and (max-width: 640px) {
+        /* small screens */
+    }
+    @media screen and (min-width: 640px) and (max-width: 1024px) {
+        /*  medium screens */
+    }
+    @media screen and (min-width: 1024px) {
+        /*  large screens */
+    }
+</style>
+
+    </script></code></pre>
+    
+    <div class="row">
+        <div class="column" style="font-size: smaller">
+            <p>Try it! Open the following page in a new window and open responsive design mode in your browser:</p>
+            <a href="simple-responsive-breakpoints.html" _target="blank"> Simple Responsive Demo with Breakpoints</a>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Responsive Design Strategies</h3>
+    <div class="row">
+        <div class="column">
+            <h5>Grid-based Layouts</h5>
+            <ul style="font-size: smaller; list-style-type: none;">
+                <li>Established tool for arranging content (print and web)</li>
+                <li>Provides a starting point for your design and layout</li>
+                <li>Familiar to people, making content is easier to follow</li>
+                <li>Ideally, keep grid line count low</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Grid System Examples</h3>
+    <div class="row">
+        <div class="column">
+            <img src="/img/grid_ex1.jpg" alt="Example of grid system in print" />
+        </div>
+        <div class="column">
+            <img src="/img/grid_ex2.jpg" alt="Example of grid system in print" />
+        </div>
+        <div class="column">
+            <img src="/img/grid_ex3.jpg" alt="Example of grid system in print" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <a href="http://printingcode.runemadsen.com/lecture-grid/">Grid System Overview</a>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>This Slide Deck!</h3>
+    <pre><code data-line-numbers=""><script type="text/template">
+<section>
+    <h3>Grid System Examples</h3>
+    <div class="row">
+        <div class="column">
+            <img src="/img/grid_ex1.jpg" alt="Example of grid system in print" />
+        </div>
+        <div class="column">
+            <img src="/img/grid_ex2.jpg" alt="Example of grid system in print" />
+        </div>
+        <div class="column">
+            <img src="/img/grid_ex3.jpg" alt="Example of grid system in print" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <a href="http://printingcode.runemadsen.com/lecture-grid/">Grid System Overview</a>
+        </div>
+    </div>
+</section>
+
+    </script></code></pre>
+    
+    <div class="row">
+        <div class="column">
+            <p>Code used on the previous slide</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Responsive Design Strategies</h3>
+    <div class="row">
+        <div class="column">
+            <h5>Grid-based Layout Terminology</h5>
+            <ul style="font-size: smaller; list-style-type: none;">
+                <li>Rows</li>
+                <li>Columns</li>
+                <li>Gutters</li>
+                <li>Padding/spacing (defined by specific elements)</li>
+            </ul>
+        </div>
+        <div class="column">
+            <img src="/img/grid-web-ex.png" alt="web example of grid system with columns and rows" />
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Responsive Design Strategies</h3>
+    <div class="row">
+        <div class="column">
+            <h5>Grid-based Frameworks</h5>
+            <ul style="font-size: smaller; list-style-type: none;">
+                <li><a href="https://getbootstrap.com">Bootstrap</a></li>
+                <li><a href="https://get.foundation/">Foundation</a></li>
+                <li><a href="https://purecss.io">Pure.css</a></li>
+                <li><a href="https://basscss.com">Basscss</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <p>There are many...here are a few of most popular.</p>
+            <p>More on Bootstrap in Discussion</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Responsive Design Strategies</h3>
+    <div class="row">
+        <div class="column">
+            <h5>Opposition to Grid-based Frameworks</h5>
+            <img src="/img/grid-similarity.png" alt="sample layouts of similarity in grid frameworks" style="max-height:300px"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column" style="font-size:medium">
+            <p>Similar looking web sites</p>
+            <p>Can stifle creativity</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Responsive Design Strategies</h3>
+    <div class="row">
+        <div class="column">
+            <h5>FlexBox</h5>
+            <ul style="font-size: smaller; list-style-type: none;">
+                <li>Popularity and increasing dependency on frameworks demonstrated need</li>
+                <li>FlexBox was added to <a href="https://www.w3.org/TR/css-flexbox-1/">CSS spec in 2018</a></li>
+                <li>For small websites, usually enough for fluid/responsive design</li>
+                <li>Some lagging support, review <a href="https://caniuse.com/flexbox">browser support</a> to make the right decision</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <p><a href="https://philipwalton.github.io/solved-by-flexbox/">More on FlexBox</a></p>
+        </div>
+    </div>
+</section>
+
+<section data-background-iframe="https://www.commarts.com/webpicks/">
+    <div class="fragment fade-out" style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+      <h2>Communication Arts</h2>
+      <p>Web picks page is a good source of inspiration!</p>
+      <p><a href="https://www.commarts.com/webpicks/">Web Picks</a></p>
+    </div>
+    <div class="fragment"></div> 
+</section>
+
+<section>
+    <h3>Goals for Today</h3>
+    <h4>By the end this lecture, you should be able to...</h4>
+    <ul>
+        <li>Explain the importance of semantically meaningful markup</li>
+        <li>Describe CSS structure and fallback structure</li>
+        <li>Describe how responsive and adaptive design differ and when you might prefer one or the other</li>
+        <li>Describe the advantages and disadvantages of grid-based layouts</li>
+        <li>Generate CSS and HTML which meets web standards</li>
+    </ul>
+</section>

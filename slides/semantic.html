@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Elements Demo</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 15px;
+        }
+
+        section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        article {
+            flex: 2;
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        aside {
+            flex: 1;
+            background-color: #eee;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        main {
+            margin-top: 20px;
+        }
+
+        figure {
+            margin: 20px 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        details {
+            margin-top: 20px;
+        }
+
+        blockquote {
+            margin-top: 20px;
+            background-color: #eee;
+            padding: 10px;
+            border-left: 3px solid #333;
+        }
+
+        address {
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        mark {
+            background-color: yellow;
+        }
+
+        progress {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>This is a Heading 1 (h1)</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <article>
+            <h2>Article Title (h2)</h2>
+            <p>This is a paragraph inside an article.</p>
+            <time datetime="2024-01-15">Published on January 15, 2024</time>
+        </article>
+
+        <aside>
+            <h3>Aside Section (h3)</h3>
+            <p>This is additional content related to the main content.</p>
+        </aside>
+    </section>
+
+    <main>
+        <p>Main content of the page goes here.</p>
+
+        <figure>
+            <img src="img/mainframe.png" alt="Example Image">
+            <figcaption>Figure: The Harvard Mark I</figcaption>
+        </figure>
+
+        <section>
+            <h2>Additional Section (h2)</h2>
+            <article>
+                <h3>Sub-article Title (h3)</h3>
+                <p>This is a sub-article with its own content.</p>
+            </article>
+        </section>
+    </main>
+
+    <details>
+        <summary>Details</summary>
+        <p>Additional details or information can be hidden here.</p>
+    </details>
+
+    <blockquote>
+        <p>This is a blockquote.</p>
+    </blockquote>
+
+    <address>
+        <p>Contact us at <a href="mailto:info@example.com">info@example.com</a></p>
+    </address>
+
+    <mark>This text is marked for reference.</mark>
+
+    <progress value="50" max="100">50%</progress>
+
+    <hr>
+
+    <footer>
+        <p>This is the footer of the page.</p>
+    </footer>
+
+</body>
+</html>
