@@ -1,48 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>A2: Runkeeper Tweet Report in JavaScript and TypeScript &#8212; INF 133 Fall 2023</title>
-    
+    <title>A2: Runkeeper Tweet Report in JavaScript and TypeScript &#8212; INF 133 Winter 2024</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -50,593 +62,339 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'assignments/a2';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="A3: Spotify Browser in Angular" href="a3.html" />
+    <link rel="next" title="Week 1 Notes" href="../notes/wk1.html" />
     <link rel="prev" title="A1: Responsive Portfolio in HTML and CSS" href="a1.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
         
       
-      
-      <img src="../_static/logo_stacked.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">INF 133 Fall 2023</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+      <div class="bd-sidebar-primary bd-sidebar">
         
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../index.html">
-                    User Interaction Software
-                </a>
-            </li>
-        </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Assignments
- </span>
-</p>
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo_stacked.png" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../_static/logo_stacked.png" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">INF 133 Winter 2024</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Assignments</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="a0.html">
-   Assignment 0
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="a1.html">
-   Assignment 1
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Assignment 2
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="a3.html">
-   Assignment 3
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="a4.html">
-   Assignment 4
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="a5.html">
-   Assignment 5
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="a0.html">Assignment 0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a1.html">Assignment 1</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Assignment 2</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Weekly Notes
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Weekly Notes</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../notes/wk1.html">
-   Week 1 Notes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../notes/wk2.html">
-   Week 2 Notes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../notes/wk3.html">
-   Week 3 Notes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../notes/wk4.html">
-   Week 4 Notes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../notes/wk5.html">
-   Week 5 Notes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../notes/wk6.html">
-   Week 6 Notes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../notes/wk7.html">
-   Week 7 Notes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../notes/wk8.html">
-   Week 8 Notes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../notes/wk9.html">
-   Week 9 Notes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../notes/wk10.html">
-   Week 10 Notes
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../notes/wk1.html">Week 1 Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notes/wk2.html">Week 2 Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notes/wk3.html">Week 3 Notes</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Course Resources
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Resources</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../resources.html">
-   Resources
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/assignments/a2.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
 
 
-          
 
 
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/assignments/a2.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
 
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#assignment-details">
-   Assignment Details
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#starter-code">
-     Starter code
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#repository-structure">
-       Repository Structure
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#setting-up-your-workspace">
-       Setting up your Workspace
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#running-the-typescript-transpiler">
-         Running the TypeScript Transpiler
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#running-live-server">
-         Running Live Server
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#requirements">
-     Requirements
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#part-1-summarizing-tweets-about-js">
-       Part 1: Summarizing Tweets (about.js)
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#tweet-dates-2-point">
-         Tweet Dates (2 point)
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#tweet-categories-3-point">
-         Tweet Categories (3 point)
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#user-written-tweets-3-points">
-         User-written tweets (3 points)
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#part-2-identifying-the-most-popular-activities-activities-js">
-       Part 2: Identifying the Most Popular Activities (activities.js)
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#determining-activity-type-and-distance-3-points">
-         Determining activity type and distance (3 points)
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#graphing-activities-by-distance-3-points">
-         Graphing activities by distance (3 points)
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#part-3-adding-a-text-search-interface-description-js">
-       Part 3: Adding a Text Search Interface (description.js)
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#implementing-the-search-box-3-points">
-         Implementing the search box (3 points)
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#populating-the-table-3-points">
-         Populating the table (3 points)
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#optional-bonus-features">
-       Optional/Bonus Features
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#submitting">
-       Submitting
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#grading">
-       Grading
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>A2: Runkeeper Tweet Report in JavaScript and TypeScript</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#assignment-details">
-   Assignment Details
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#starter-code">
-     Starter code
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#repository-structure">
-       Repository Structure
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#setting-up-your-workspace">
-       Setting up your Workspace
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#running-the-typescript-transpiler">
-         Running the TypeScript Transpiler
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#running-live-server">
-         Running Live Server
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#requirements">
-     Requirements
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#part-1-summarizing-tweets-about-js">
-       Part 1: Summarizing Tweets (about.js)
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#tweet-dates-2-point">
-         Tweet Dates (2 point)
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#tweet-categories-3-point">
-         Tweet Categories (3 point)
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#user-written-tweets-3-points">
-         User-written tweets (3 points)
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#part-2-identifying-the-most-popular-activities-activities-js">
-       Part 2: Identifying the Most Popular Activities (activities.js)
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#determining-activity-type-and-distance-3-points">
-         Determining activity type and distance (3 points)
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#graphing-activities-by-distance-3-points">
-         Graphing activities by distance (3 points)
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#part-3-adding-a-text-search-interface-description-js">
-       Part 3: Adding a Text Search Interface (description.js)
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#implementing-the-search-box-3-points">
-         Implementing the search box (3 points)
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#populating-the-table-3-points">
-         Populating the table (3 points)
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#optional-bonus-features">
-       Optional/Bonus Features
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#submitting">
-       Submitting
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#grading">
-       Grading
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>A2: Runkeeper Tweet Report in JavaScript and TypeScript</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
-                
-              <div>
-                
-  <section class="tex2jax_ignore mathjax_ignore" id="a2-runkeeper-tweet-report-in-javascript-and-typescript">
-<h1>A2: Runkeeper Tweet Report in JavaScript and TypeScript<a class="headerlink" href="#a2-runkeeper-tweet-report-in-javascript-and-typescript" title="Permalink to this headline">#</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Content is subject to change until assignment is officially launched in class!</p>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-details">Assignment Details</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starter-code">Starter code</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#repository-structure">Repository Structure</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-your-workspace">Setting up your Workspace</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-typescript-transpiler">Running the TypeScript Transpiler</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#running-live-server">Running Live Server</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">Requirements</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-summarizing-tweets-about-js">Part 1: Summarizing Tweets (about.js)</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#tweet-dates-1-point">Tweet Dates (1 point)</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#tweet-categories-1-point">Tweet Categories (1 point)</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#user-written-tweets-2-points">User-written tweets (2 points)</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-identifying-the-most-popular-activities-activities-js">Part 2: Identifying the Most Popular Activities (activities.js)</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#determining-activity-type-and-distance-3-points">Determining activity type and distance (3 points)</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-activities-by-distance-3-points">Graphing activities by distance (3 points)</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-adding-a-text-search-interface-description-js">Part 3: Adding a Text Search Interface (description.js)</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#implementing-the-search-box-2-points">Implementing the search box (2 points)</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#populating-the-table-3-points">Populating the table (3 points)</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-bonus-features">Optional/Bonus Features</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#submitting">Submitting</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#grading">Grading</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
 </div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="a2-runkeeper-tweet-report-in-javascript-and-typescript">
+<h1>A2: Runkeeper Tweet Report in JavaScript and TypeScript<a class="headerlink" href="#a2-runkeeper-tweet-report-in-javascript-and-typescript" title="Permalink to this heading">#</a></h1>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
 <p>In this assignment, you’ll use JavaScript and TypeScript to create a webpage report which helps a potential researcher understand a week’s worth of Tweets from RunKeeper, a popular running app. You’ll follow much of the methodology from one of Professor Daniel Epstein’s research papers, which looked to understand whether the content of RunKeeper tweets influences how or whether audience members respond.</p>
 <blockquote>
 <div><p>Daniel A. Epstein, Bradley H. Jacobson, Elizabeth Bales, David W. McDonald, Sean A. Munson. <a href="http://www.depstein.net/pubs/depstein_cscw15.pdf">From “Nobody Cares” to “Way to Go!”: A Design Framework for Social Sharing in Personal Informatics.</a> CSCW 2015.</p>
 </div></blockquote>
 </section>
 <section id="assignment-details">
-<h2>Assignment Details<a class="headerlink" href="#assignment-details" title="Permalink to this headline">#</a></h2>
+<h2>Assignment Details<a class="headerlink" href="#assignment-details" title="Permalink to this heading">#</a></h2>
 <section id="starter-code">
-<h3>Starter code<a class="headerlink" href="#starter-code" title="Permalink to this headline">#</a></h3>
-<p>A <a class="reference external" href="https://classroom.github.com/a/z90OfXKK">starter repository</a> is on GitHub Classroom.</p>
+<h3>Starter code<a class="headerlink" href="#starter-code" title="Permalink to this heading">#</a></h3>
+<p>A <a class="reference external" href="https://classroom.github.com/a/RKn8OrvB">starter repository</a> is on GitHub Classroom.</p>
 <section id="repository-structure">
-<h4>Repository Structure<a class="headerlink" href="#repository-structure" title="Permalink to this headline">#</a></h4>
+<h4>Repository Structure<a class="headerlink" href="#repository-structure" title="Permalink to this heading">#</a></h4>
 <p>The repository contains 14 files (excluding the <strong><code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></strong>, which specifies what files should not be committed). You will edit some of them in this assignment, but not all.</p>
 <p>The files you should not need to edit are:</p>
 <ul class="simple">
@@ -661,7 +419,7 @@ title="Print to PDF"
 <p>This assignment can be completed without writing any additional files or functions. But you may add a file or function if you want (such as to complete one of the bonus features).</p>
 </section>
 <section id="setting-up-your-workspace">
-<h4>Setting up your Workspace<a class="headerlink" href="#setting-up-your-workspace" title="Permalink to this headline">#</a></h4>
+<h4>Setting up your Workspace<a class="headerlink" href="#setting-up-your-workspace" title="Permalink to this heading">#</a></h4>
 <p>You will need to install a TypeScript transpiler. The TypeScript transpiler converts TypeScript files to equivalent JavaScript. It’s also recommended that you install a live reloader to simplify debugging.</p>
 <p>The easiest way to install these two packages is through npm, the Package Manager in Node.js. Follow these instructions to install npm: <a href="https://www.npmjs.com/get-npm">npm installation instructions</a></p>
 <p>Once npm is installed, open your favorite terminal and install the two packages for the assignment. Both are applications which run in the terminal rather than libraries, so it’s recommended that you install them with the <strong><code class="docutils literal notranslate"><span class="pre">-g</span></code></strong> (global) option.</p>
@@ -678,7 +436,7 @@ title="Print to PDF"
 </pre></div>
 </div>
 <section id="running-the-typescript-transpiler">
-<h5>Running the TypeScript Transpiler<a class="headerlink" href="#running-the-typescript-transpiler" title="Permalink to this headline">#</a></h5>
+<h5>Running the TypeScript Transpiler<a class="headerlink" href="#running-the-typescript-transpiler" title="Permalink to this heading">#</a></h5>
 <p>The typescript transpiler, <strong><code class="docutils literal notranslate"><span class="pre">tsc</span></code></strong>, takes a project configuration file as an optional argument. The configuration file is in the root folder of the repository, so run <strong><code class="docutils literal notranslate"><span class="pre">tsc</span></code></strong> from there:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tsc</span> <span class="o">--</span><span class="n">p</span> <span class="n">tsconfig</span><span class="o">.</span><span class="n">json</span> 
 </pre></div>
@@ -686,15 +444,15 @@ title="Print to PDF"
 <p>It’s also recommended that you add the <strong><code class="docutils literal notranslate"><span class="pre">--watch</span></code></strong> flag so your code automatically re-compiles. This code will create the JavaScript version of the Tweet class in <strong><code class="docutils literal notranslate"><span class="pre">js/tweet.js</span></code></strong>.</p>
 </section>
 <section id="running-live-server">
-<h5>Running Live Server<a class="headerlink" href="#running-live-server" title="Permalink to this headline">#</a></h5>
+<h5>Running Live Server<a class="headerlink" href="#running-live-server" title="Permalink to this heading">#</a></h5>
 <p>You may find the <strong><code class="docutils literal notranslate"><span class="pre">live-server</span></code></strong> package helpful, which automatically refreshes your webpage when you make changes to it. It’s not perfect, but can be a helpful resource. Run it in your terminal from the root directory with <strong><code class="docutils literal notranslate"><span class="pre">live-server</span></code></strong>.</p>
 </section>
 </section>
 </section>
 <section id="requirements">
-<h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">#</a></h3>
+<h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">#</a></h3>
 <p>There are three parts to this assignment:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Summarizing tweets on the about page.</p></li>
 <li><p>Identifying the most popular activities to the activities page.</p></li>
 <li><p>Adding a text search interface to the description page.</p></li>
@@ -704,14 +462,14 @@ title="Print to PDF"
 <p>You will not receive credit for these modifications if you edit the HTML directly or hard-code a variable to the value that the span should be set to. There are a few spans where hard-coding in <strong><code class="docutils literal notranslate"><span class="pre">activities.js</span></code></strong> is expected/allowed.</p>
 <p>We have created skeleton functions in each JavaScript file to organize your code. In each of the parts, we often suggest functions to edit. You may choose to add new functions or not use the functions we created at all, so long as you stick to the above restrictions (e.g., not hard-coding, not editing the <strong><code class="docutils literal notranslate"><span class="pre">js/tweet.js</span></code></strong> file). We are not evaluating your code on style.</p>
 <section id="part-1-summarizing-tweets-about-js">
-<h4>Part 1: Summarizing Tweets (about.js)<a class="headerlink" href="#part-1-summarizing-tweets-about-js" title="Permalink to this headline">#</a></h4>
+<h4>Part 1: Summarizing Tweets (about.js)<a class="headerlink" href="#part-1-summarizing-tweets-about-js" title="Permalink to this heading">#</a></h4>
 <p>In this part, you will provide some summary information to a researcher interested in the Tweet data. You will identify the dates of the earliest and latest Tweets in the set, how many of each category exist, and how many of the completed tweets contain written text. Use JQuery methods to programmatically edit the spans for each question.</p>
-<section id="tweet-dates-2-point">
-<h5>Tweet Dates (2 point)<a class="headerlink" href="#tweet-dates-2-point" title="Permalink to this headline">#</a></h5>
+<section id="tweet-dates-1-point">
+<h5>Tweet Dates (1 point)<a class="headerlink" href="#tweet-dates-1-point" title="Permalink to this heading">#</a></h5>
 <p>The time attribute of the Tweet class contains the date of each Tweet. Write out the Month, Day, and Year of the earliest and latest Tweet (e.g., Monday, October 14, 2019). The JavaScript function <strong><code class="docutils literal notranslate"><span class="pre">toLocaleDateString()</span></code></strong> may be helpful for formatting the dates. Edit the <strong><code class="docutils literal notranslate"><span class="pre">about.js</span></code></strong> file to find the earliest and latest tweet and update the spans.</p>
 </section>
-<section id="tweet-categories-3-point">
-<h5>Tweet Categories (3 point)<a class="headerlink" href="#tweet-categories-3-point" title="Permalink to this headline">#</a></h5>
+<section id="tweet-categories-1-point">
+<h5>Tweet Categories (1 point)<a class="headerlink" href="#tweet-categories-1-point" title="Permalink to this heading">#</a></h5>
 <p>The tweets can be divided into four categories:</p>
 <ul class="simple">
 <li><p>Completed events, where the person is Tweeting an activity they recently finished.</p></li>
@@ -723,17 +481,17 @@ title="Print to PDF"
 <p>You may arrive at slightly different percentages depending on the exact rules you create, and we will not evaluate whether your rules pull exactly the same numbers that ours did. That said, about 95% of RunKeeper Tweets in the Epstein et al. research paper dataset were of completed events. Your numbers will deviate from the percentages in the research paper, but probably not by much (+/- 5%).</p>
 <p>Format all percentages with exactly two decimal places. The header of <strong><code class="docutils literal notranslate"><span class="pre">index.html</span></code></strong> loads the <a class="reference external" href="http://mathjs.org/">Math.js</a> library from a Content Delivery Network (CDN). You may find the <a class="reference external" href="http://mathjs.org/docs/reference/functions/format.html">.format()</a> function in mathjs useful for formatting percentages.</p>
 </section>
-<section id="user-written-tweets-3-points">
-<h5>User-written tweets (3 points)<a class="headerlink" href="#user-written-tweets-3-points" title="Permalink to this headline">#</a></h5>
+<section id="user-written-tweets-2-points">
+<h5>User-written tweets (2 points)<a class="headerlink" href="#user-written-tweets-2-points" title="Permalink to this heading">#</a></h5>
 <p>Some of the Tweets in each category also contain text written by the user. These tweets all follow a similar structure. Look through the text of the tweets in the dataset to devise programmatic rules for identifying whether it contains user-written text. You can add those rules to the <strong><code class="docutils literal notranslate"><span class="pre">written</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">writtenText</span></code></strong> getter functions in <strong><code class="docutils literal notranslate"><span class="pre">tweet.ts</span></code></strong>. To determine this, you will need to strip out the <strong><code class="docutils literal notranslate"><span class="pre">#RunKeeper</span></code></strong> hashtag and the tweet link. After that, you’ll notice a phrase or two used in many of the tweets. That phrase (or phrases) was likely not written by each of thousands of people, but rather was provided as a default text string by RunKeeper itself.</p>
 <p>About 25% of the completed event Tweets in the Epstein et al. paper included any written text. Again, you may arrive at a slightly different percentage. Format your percentage to two decimal places.</p>
 </section>
 </section>
 <section id="part-2-identifying-the-most-popular-activities-activities-js">
-<h4>Part 2: Identifying the Most Popular Activities (activities.js)<a class="headerlink" href="#part-2-identifying-the-most-popular-activities-activities-js" title="Permalink to this headline">#</a></h4>
+<h4>Part 2: Identifying the Most Popular Activities (activities.js)<a class="headerlink" href="#part-2-identifying-the-most-popular-activities-activities-js" title="Permalink to this heading">#</a></h4>
 <p>In this part, you will help a researcher understand the activities people are logging in RunKeeper by identifying the types of activities and distances in the completed tweets and visualizing how distance varies by activity type and day of the week. Use JQuery methods to programmatically edit the spans for each question and <a class="reference external" href="https://vega.github.io/vega-lite/">Vega-Lite</a> to create graphs.</p>
 <section id="determining-activity-type-and-distance-3-points">
-<h5>Determining activity type and distance (3 points)<a class="headerlink" href="#determining-activity-type-and-distance-3-points" title="Permalink to this headline">#</a></h5>
+<h5>Determining activity type and distance (3 points)<a class="headerlink" href="#determining-activity-type-and-distance-3-points" title="Permalink to this heading">#</a></h5>
 <p>First, update the getters for <strong><code class="docutils literal notranslate"><span class="pre">activityType</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">distance</span></code></strong> in <strong><code class="docutils literal notranslate"><span class="pre">tweet.ts</span></code></strong>. <strong><code class="docutils literal notranslate"><span class="pre">activityType</span></code></strong> is the kind of physical activity that the person is performing in the tweet (running, skiing, biking, etc.). Distance is how long in Miles the physical activity was performed.</p>
 <p>Note that these values only have to be identified for completed tweets, which follow a fairly rigid format. Syntax for <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a> is beyond the scope of this class, but may be helpful for calculating these values. <strong><code class="docutils literal notranslate"><span class="pre">indexOf</span></code></strong> or <strong><code class="docutils literal notranslate"><span class="pre">search</span></code></strong> should also be sufficient.</p>
 <p>Because RunKeeper is used all around the world, some distances will be expressed in Miles and others in Kilometers. Convert them all to Miles. You might typically use a library to help with this (Math.js has some helper functions). However, our setup for TypeScript makes importing libraries challenging, so approximating is fine (e.g., 1 mi = 1.609 km). You’ll make more use of libraries in future assignments.</p>
@@ -742,7 +500,7 @@ title="Print to PDF"
 <p>Once you have determined the activity type and distance of each completed tweet, edit <strong><code class="docutils literal notranslate"><span class="pre">activities.js</span></code></strong> to update the spans for the most frequent types of activity, longest and shortest activity types, and whether the longest activities tend to be on weekdays or weekends. You can average across activities when evaluating length on weekdays versus weekends.</p>
 </section>
 <section id="graphing-activities-by-distance-3-points">
-<h5>Graphing activities by distance (3 points)<a class="headerlink" href="#graphing-activities-by-distance-3-points" title="Permalink to this headline">#</a></h5>
+<h5>Graphing activities by distance (3 points)<a class="headerlink" href="#graphing-activities-by-distance-3-points" title="Permalink to this heading">#</a></h5>
 <p>Once <strong><code class="docutils literal notranslate"><span class="pre">activityType</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">distance</span></code></strong> are calculated, they should be plotted with Vega-Lite by editing the <strong><code class="docutils literal notranslate"><span class="pre">activities.js</span></code></strong> file. You will make three plots in total:</p>
 <ul class="simple">
 <li><p>A plot of how many of each type of activity exists in the dataset. The specification of a potential visualization appears in <strong><code class="docutils literal notranslate"><span class="pre">activities.js</span></code></strong>.</p></li>
@@ -756,21 +514,21 @@ title="Print to PDF"
 </section>
 </section>
 <section id="part-3-adding-a-text-search-interface-description-js">
-<h4>Part 3: Adding a Text Search Interface (description.js)<a class="headerlink" href="#part-3-adding-a-text-search-interface-description-js" title="Permalink to this headline">#</a></h4>
+<h4>Part 3: Adding a Text Search Interface (description.js)<a class="headerlink" href="#part-3-adding-a-text-search-interface-description-js" title="Permalink to this heading">#</a></h4>
 <p>In this part, you will implement a “search” interface for running tweets which allows a researcher to look through the tweets and their corresponding RunKeeper activities. To do so, you will add an event handler and filters to the <strong><code class="docutils literal notranslate"><span class="pre">descriptions.js</span></code></strong> file.</p>
-<section id="implementing-the-search-box-3-points">
-<h5>Implementing the search box (3 points)<a class="headerlink" href="#implementing-the-search-box-3-points" title="Permalink to this headline">#</a></h5>
+<section id="implementing-the-search-box-2-points">
+<h5>Implementing the search box (2 points)<a class="headerlink" href="#implementing-the-search-box-2-points" title="Permalink to this heading">#</a></h5>
 <p>Update the table with the tweet number, activity type. The <strong><code class="docutils literal notranslate"><span class="pre">searchCount</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">searchText</span></code></strong> spans should also update as a researcher types in the search box. Your code should check the search box and update the table after every character is entered into the box.</p>
 </section>
 <section id="populating-the-table-3-points">
-<h5>Populating the table (3 points)<a class="headerlink" href="#populating-the-table-3-points" title="Permalink to this headline">#</a></h5>
+<h5>Populating the table (3 points)<a class="headerlink" href="#populating-the-table-3-points" title="Permalink to this heading">#</a></h5>
 <p>As the person adds or removes a character from their search, the rows of the table should update. Your code should also clear the table when the search text is an empty string.</p>
 <p>The links in the Tweet should also be clickable to allow the researcher to explore the data more. To parse these, use similar strategies to how you parsed the type of activity and identified the tweet category. The <strong><code class="docutils literal notranslate"><span class="pre">getHTMLTableRow()</span></code></strong> function in the tweet TypeScript class is a good place to parse the tweets and generate clickable links.</p>
 <p><img alt="table search example" src="../_images/a2_search.gif" /></p>
 </section>
 </section>
 <section id="optional-bonus-features">
-<h4>Optional/Bonus Features<a class="headerlink" href="#optional-bonus-features" title="Permalink to this headline">#</a></h4>
+<h4>Optional/Bonus Features<a class="headerlink" href="#optional-bonus-features" title="Permalink to this heading">#</a></h4>
 <p>The three parts of the assignment create a basic report tool. There are many ways of extending this tool, and we can offer one point of extra credit for implementing one extension. We’ve enumerated some potential extensions:</p>
 <ul class="simple">
 <li><p>Rather than alternating between two visualizations, using Vega-lite’s <a class="reference external" href="https://vega.github.io/vega-lite/tutorials/streaming.html">streaming data</a> or <a class="reference external" href="https://vega.github.io/vega-lite/docs/selection.html">interactive charts</a> to dynamically change one chart when the aggregate button is pressed.</p></li>
@@ -778,18 +536,18 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="submitting">
-<h4>Submitting<a class="headerlink" href="#submitting" title="Permalink to this headline">#</a></h4>
+<h4>Submitting<a class="headerlink" href="#submitting" title="Permalink to this heading">#</a></h4>
 <p>To submit, zip your repository and upload it to Canvas. Any late uploads are subject to the course’s late policy.</p>
 <p>Please update your readme.txt with how long the assignment took, who or what online resources you consulted with, any bonus features you added, and anything else we should know.</p>
 <p>From your repository, we will transpile your Tweet class in the <strong><code class="docutils literal notranslate"><span class="pre">ts/tweets.ts</span></code></strong> file into <strong><code class="docutils literal notranslate"><span class="pre">js/tweets.js</span></code></strong>. <strong>We will therefore not grade any edits you made to this JavaScript file</strong>. Be sure you are coding in only the TypeScript file for this class. We may provide a different set of tweets by editing the (<strong><code class="docutils literal notranslate"><span class="pre">js/get_saved_tweets.ts</span></code></strong>) as well.</p>
 </section>
 <section id="grading">
-<h4>Grading<a class="headerlink" href="#grading" title="Permalink to this headline">#</a></h4>
+<h4>Grading<a class="headerlink" href="#grading" title="Permalink to this heading">#</a></h4>
 <p>This assignment will be graded on a scale of 20 points, broken down as follows:</p>
 <ul class="simple">
-<li><p>Summarizing tweets (8 points)</p></li>
-<li><p>Identifying the most popular activities (6 points)</p></li>
-<li><p>Adding a text search interface (6 points)</p></li>
+<li><p>Summarizing tweets (6 points)</p></li>
+<li><p>Identifying the most popular activities (7 points)</p></li>
+<li><p>Adding a text search interface (7 points)</p></li>
 </ul>
 <p>If you successfully complete a bonus feature, you will earn 1 point of extra credit. The maximum grade for this assignment is therefore 21/20.</p>
 <p>In prior courses, you’ve been asked to follow good principles for indentation, naming variables, commenting, etc. We expect you to do the same in this course, but aim to avoid being draconian in our enforcement of these principles. Egregiously poor formatting, completely uncommented code, etc. may incur a small penalty (e.g., -1 point), but we expect this to be rarely applied.</p>
@@ -811,7 +569,7 @@ title="Print to PDF"
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./assignments"
         },
         predefinedOutput: true
@@ -819,50 +577,137 @@ title="Print to PDF"
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="a1.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">A1: Responsive Portfolio in HTML and CSS</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="a3.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">A3: Spotify Browser in Angular</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Mark S. Baldwin<br/>
-  
-      &copy; Copyright 2023.<br/>
-</p>
-        </footer>
-    </div>
-    
-</div>
 
-
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="a1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">A1: Responsive Portfolio in HTML and CSS</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="../notes/wk1.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Week 1 Notes</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-details">Assignment Details</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starter-code">Starter code</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#repository-structure">Repository Structure</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-your-workspace">Setting up your Workspace</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-typescript-transpiler">Running the TypeScript Transpiler</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#running-live-server">Running Live Server</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">Requirements</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-summarizing-tweets-about-js">Part 1: Summarizing Tweets (about.js)</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#tweet-dates-1-point">Tweet Dates (1 point)</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#tweet-categories-1-point">Tweet Categories (1 point)</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#user-written-tweets-2-points">User-written tweets (2 points)</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-identifying-the-most-popular-activities-activities-js">Part 2: Identifying the Most Popular Activities (activities.js)</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#determining-activity-type-and-distance-3-points">Determining activity type and distance (3 points)</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#graphing-activities-by-distance-3-points">Graphing activities by distance (3 points)</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-adding-a-text-search-interface-description-js">Part 3: Adding a Text Search Interface (description.js)</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#implementing-the-search-box-2-points">Implementing the search box (2 points)</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#populating-the-table-3-points">Populating the table (3 points)</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-bonus-features">Optional/Bonus Features</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#submitting">Submitting</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#grading">Grading</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Mark S. Baldwin
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

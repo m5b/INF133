@@ -5,30 +5,17 @@ Week 3 Notes
 Keep an eye weekly pages as they might be updated throughout the week.
 ```
 
+The weekly notes pages is where you will find links to in-class materials, including: slides, lecture recordings, and demo code. A new notes page will appear every Monday morning and will be updated with recordings on Tuesday.
+
+There will be no class this week due to the holiday. All materials to be covered in week 2 will be recorded and posted here.
+
 ## Lecture Materials
 
 
-### Tuesday
+[Slide Deck](http://inf133.markbaldw.in/slides/slides.html?file=wk3.html)
 
-[Lecture Recording](https://uci.yuja.com/V/Video?v=8904535&node=38474815&a=86584435&autoplay=1)
+[Lecture on JavaScript]()
 
-<a href="../resources/10-17-23-data_visualization.pdf" >Slides for Lecture</a>
+If you prefer a printable version:
 
-
-
-### Thursday
-
-No Class - Professor sick :(
-
-BUT
-
-Here is a recording of the lecture from the previous instance of this class:
-
-[Lecture Recording](https://uci.yuja.com/V/Video?v=8917459&node=38531873&a=48999326&autoplay=1)
-
-<a href="../resources/10_19_23-npm_typescript.pdf" >Slides for Lecture</a>
-
-
-```{note}
-The recording for Thursday includes a walkthrough of assignment 2. Please review.
-```
+[Print Slide Deck](http://inf133.markbaldw.in/slides/slides.html?file=wk3.html?print-pdf)

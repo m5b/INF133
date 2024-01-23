@@ -1,0 +1,937 @@
+<section>
+    <h3>NEED TITLE</h3>
+    <p>
+        <small>INF 133 User Interaction Software</small>
+    </p>
+    <p>
+        <small>Week 3</small>
+    </p>
+</section>
+
+<section>
+    <h3>Goals for Today</h3>
+    <h4>By the end this lecture, you should be able to...</h4>
+    <ul>
+    </ul>
+</section>
+
+<section>
+    <h3>A note on LLMs and Generative AI</h3>
+</section>
+
+<section>
+    <h3>Missing Slides from Week 2</h3>
+    <div class="row">
+        <div class="column">
+            <h4>Fallbacks!</h4>
+            <ul style="font-size: smaller;">
+                <li>Conceptually, a fallback is non-optimal, but desirable UI state</li>
+                <li>In practice, HTML and CSS provide mechanisms "fall back" on when something doesn't work</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Missing Slides from Week 2</h3>
+    <div class="row">
+        <div class="column">
+            <pre><code data-line-numbers="" style="font-size: smaller">
+p {
+    font-family: "Times New Roman", Times, serif;
+}
+
+            </code></pre>
+        </div>
+    </div>
+
+    <p>In CSS, if a font is not available on the user's system, a fallback font ensures some level of consistency</p>
+</section>
+
+<section>
+    <h3>Missing Slides from Week 2</h3>
+    <div class="row">
+        <div class="column">
+            <pre><code data-line-numbers="" style="font-size: smaller">
+<video autoplay>
+    <source src="myvideo.webm" type="video/webm" />
+    <source src="myvideo.mp4" type="video/mp4" />
+    <img src="myvideo.jpg" title="Your browser does not support the <video> tag" />
+</video>
+
+            </code></pre>
+        </div>
+    </div>
+
+    <p>In HTML, fallbacks are critical when embedding video. Always fallback to a thumbnail image when video is not available!</p>
+</section>
+
+<section>
+    <h3>Why do HTML structure and compliance matter?</h3>
+    <ul style="font-size: smaller;">
+        <li>Alt Text</li>
+        <li>Semantics</li>
+        <li>Responsiveness</li>
+        <li>Fallbacks</li>
+    </ul>
+</section>
+
+<section>
+    <h3>"The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect."</h3>
+    <div class="row">
+        <div class="column" style="text-align: right;">
+            <h5>-- Tim Berners-Lee, inventor of the World Wide Web</h5>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Inclusive Design</h3>
+    <div class="row">
+        <div class="column">
+            <h5>Web for Everyone</h5>
+            <ul style="font-size: smaller;">
+                <li>All sorts of people will use the web pages you create (you don't know!)</li>
+                <li>Following web standards ensures that everyone can access</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h5>Common disabilities that affect technology use</h5>
+            <ul style="font-size: smaller;">
+                <li>Vision (blind, low vision, colorblindness)</li>
+                <li>Auditory (deaf, hard of hearing)</li>
+                <li>Motor (arthritis, cerebral palsy, remotes, paralysis)</li>
+                <li>Cognitive (autism, dyslexia, language barriers)</li>
+                <li>and many more...</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>The technology exists, but far too often the software does not support it!</h3>
+    <div class="row">
+        <div class="column">
+            <img src="/img/braille-display.jpg" alt="braille display next to a laptop and iphone" />
+        </div>
+    </div>
+</section>
+
+<section data-background-iframe="https://webaim.org/projects/million/">
+    <div class="fragment fade-out" style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+      <h2>Accessibility of the top 1 Million home pages</h2>
+      <p>Steady improvements over the years, but far too many problems still pervade the web.</p>
+      <p><a href="https://webaim.org/projects/million/">The WebAIM Million</a></p>
+    </div>
+    <div class="fragment"></div> 
+</section>
+
+<section>
+    <h3>JavaScript</h3>
+</section>
+
+<section>
+    <h3>A Brief History of JavaScript</h3>
+    <div class="row">
+        <div class="column">
+            <ul style="font-size: smaller;">
+                <li>Originally called LiveScript</li>
+                <li>Shipped with version 2.0 of Netscape Navigator</li>
+                <li>Later renamed to JavaScript to leverage increasing popularity of Java</li>
+                <li>Programming language for the web</li>
+            </ul>
+        </div>
+        <div class="column">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Netscape_Navigator_2_Screenshot.png" alt="original home page for netscape 2" />
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>A Brief History of JavaScript</h3>
+    <div class="row">
+        <div class="column">
+            <h5>Syntactically similar to Java, but:</h5>
+            <ul style="font-size: smaller;">
+                <li>Weakly typed (implicit typing based on operation)</li>
+                <li>Dynamically typed</li>
+                <li>Interpreted, not compiled</li>
+                <li>Though...can be transpiled or 'minified'</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+  <h5 data-id="code-title">To the Code!</h5>
+  <pre><code data-line-numbers=""><script type="text/template">
+ console.log("Hello World!");
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>We last left off here...</li>
+      <li>Let's mix it up and use a .js file</li>
+      <li>Follow along now if you want, submit at end of class</li>
+    </ul>
+</section>
+
+<section>
+    <h3>JavaScript Programming</h3>
+    <div class="row">
+        <div class="column">
+            <h5></h5>
+            <ul style="font-size: smaller; list-style-type: none;">
+                <li>Return to your activity files from Week 1</li>
+                <li>In the same directory create a new file called "script.js"</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript Programming</h5>
+  <pre><code data-line-numbers="">
+    <script src="script.js"></script>
+
+    </code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>In your HTML file, add the script file to your head</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Variables</h5>
+  <pre><code data-line-numbers=""><script type="text/template">
+var x;
+console.log(typeof x);
+var x = "hello";
+console.log(typeof x);
+x = 42;
+console.log(typeof x);
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Dynamic Typing</li>
+      <li>What do you see in the console?</li>
+      <li class="fragment" data-fragment-index="1">Unassigned variables have value of 'undefined'</li>
+      <li class="fragment" data-fragment-index="1">Types change based on inference</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Types</h5>
+  <pre><code data-line-numbers=""><script type="text/template">
+console.log('40' + 2);
+console.log('40' - 4);
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Dynamic Typing</li>
+      <li>What do you see in the console?</li>
+      <li class="fragment" data-fragment-index="1">+ operator is overloaded for strings, but - operator is not.</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Types</h5>
+  <pre><code data-line-numbers=""><script type="text/template">
+var num = 10;
+var str = '10';
+
+console.log(num == str);
+console.log(num === str);
+console.log('' == 0);
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Dynamic Typing</li>
+      <li>What do you see in the console?</li>
+      <li class="fragment" data-fragment-index="1">=== "strict equality" same as == but without type conversion</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Conditionals</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+var x = 4.4;
+
+if (x > 5){
+    console.log('x is bigger than 5');
+}else if (i >= 3){
+    console.log('x is between 3 and 5');
+}else{
+    console.log('x is less than 3');
+}
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Similar to Java like languages</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Loops</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+for (var i=0; i<5; i++){
+    console.log(i);
+}
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Similar to Java like languages</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Methods</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+var className = "IN4MATX 133";
+console.log(className);
+
+className = className.toUpperCase();
+console.log(className);
+
+var sub = className.substring(1,4);
+console.log(className);
+
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Methods called using dot notation</li>
+      <li>What do you see in the console?</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Arrays</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+var letters = ['a', 'b', 'c'];
+var numbers = [1, 2, 3];
+var things = ['raindrops', 2.5, true, [5,2,9]];
+var empty = [];
+var sized = new Array(5);
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Declare similar to Java</li>
+      <li>Supports mixed types</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Arrays</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+var things = ['raindrops', 2.5, true, [5,2,9]];
+
+console.log(things[0]);
+console.log(things[3][2]);
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Access notation similar to Java</li>
+      <li>What do you see in the console?</li>
+      <li class="fragment" data-fragment-index="1">= 9</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Arrays</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+var letters = ['a', 'b', 'c'];
+console.log(letters[0]);
+letters[0] = 'z';
+console.log(letters);
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Assign notation similar to Java</li>
+      <li>What do you see in the console?</li>
+      <li class="fragment" data-fragment-index="1">['z', 'b', 'c']</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Arrays</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+var letters = ['z', 'b', 'c'];
+letters[10] = 'g';
+console.log(letters);
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Assigning out of bounds, automatically grows array</li>
+      <li>What do you see in the console?</li>
+      <li class="fragment" data-fragment-index="1">[ 'z', 'b', 'c', , , , , , , , 'g' ]</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Array Methods</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+var arr = ['i', 'n', 'f', 'x'];
+arr.push('133');
+
+console.log(arr);
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Add items to end of array</li>
+      <li>What do you see in the console?</li>
+      <li class="fragment" data-fragment-index="1">['i','n','f','x','133']</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Array Methods</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+var arr = ['i', 'n', 'f', 'x', '133'];
+arr.join('-');
+
+console.log(arr);
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Combine elements into a string</li>
+      <li>What do you see in the console?</li>
+      <li class="fragment" data-fragment-index="1">"i-n-f-x-133"</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Array Methods</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+var arr = ['i', 'n', 'f', 'x', '133'];
+var idx = arr.indexOf('x');
+
+arr.splice(idx, 1);
+
+console.log(arr);
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Get index of first occurrence</li>
+      <li>Remove 1 element starting at index</li>
+      <li>What do you see in the console?</li>
+      <li class="fragment" data-fragment-index="1">[‘i','n','f','133']</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Objects</h5>
+  <pre><code data-line-numbers="" class="language-json"><script type="text/template">
+ages = {alice:40, bob:35, charles:13}
+extensions = {‘mark':1622, 'in4matx':9937}
+num_words = {1:'one', 2:'two', 3:'three'}
+things = {num:12, dog:'woof', list:[1,2,3]}
+empty = {}
+empty = new Object(); //empty object
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>An unordered set of key and value pairs</li>
+      <li>Similar to hashmap or a dictionary in Python</li>
+      <li>Quotes around keys are optional (but good practice)</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Objects</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+var person = {
+    firstName: 'Maria',
+    lastName: 'Smith',
+    favorites: {
+        food: 'pizza',
+        numbers: [12, 42]
+    }
+};
+person.firstName = "Mark";
+console.log(person.firstName);
+console.log(person.favorites.food);
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Access object properties using dot nation</li>
+      <li>What do you see in the console?</li>
+      <li class="fragment" data-fragment-index="1"></li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Functions</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+function sayHello(name) {
+    return 'Hello, ' + name;
+}
+var msg = sayHello('Mark');
+console.log(msg);
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Similar to static methods in Java</li>
+      <li>Parameters have no type, are comma separated</li>
+      <li>Parameters are optional...try it!</li>
+      <li>What do you see in the console?</li>
+      <li class="fragment" data-fragment-index="1">"Hello, Mark"</li>
+    </ul>
+</section>
+
+<section>
+    <h3>Now for the confusing part...</h3>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Functions are Objects</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+function sayHello(name) {
+    return 'Hello, ' + name;
+}
+var helloFunc = sayHello; //reference, not called
+var msg = helloFunc();
+console.log(msg);
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Assign a function to variable, helloFunc == sayHello</li>
+      <li>What do you see in the console?</li>
+      <li class="fragment" data-fragment-index="1"></li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Functions are Objects</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+function sayHello(name) {
+    return 'Hello, ' + name;
+}
+
+var obj = {}; //new object
+obj.helloFunc = sayHello; //add function to object
+
+// or anonymous literal, more concise!
+obj.sayHello = function(name){
+    return 'Hello, ' + name;
+}
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Anonymous functions</li>
+      <li>What do you see in the console?</li>
+      <li class="fragment" data-fragment-index="1"></li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Anonymous Variables and Functions</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+function FuncName(){
+    console.log('named function');
+}
+
+function(){
+    console.log('anonymous function');
+}
+
+var myfunc = function(){
+    console.log('anonymous function assigned to variable');
+}
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Anonymous == Unnamed</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Anonymous Variables and Functions</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+var myfunc = () => {
+    console.log('anonymous arrow function assigned to variable');
+}
+// params are fine too!
+var myparamfunc = (param) => {
+    console.log('anonymous arrow function assigned to variable');
+    console.log(param);
+}
+myparamfunc('Hello!');
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Arrow functions</li>
+      <li>What do you see in the console?</li>
+      <li class="fragment" data-fragment-index="1"></li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Anonymous Variables and Functions</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+var alice = {
+    first: 'Alice',
+    last: 'Jones',
+    sayHello:()=> {
+        console.log("Hello, I'm " + this.first);
+    }
+};
+
+console.log(alice.sayHello());
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li><code>this</code> keyword</li>
+      <li><code>this</code> refers to object of method called upon</li>
+      <li><code>this</code> only preserved with arrow</li>
+      <li>What do you see in the console?</li>
+      <li class="fragment" data-fragment-index="1">"Hello, I'm Alice"</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Anonymous Variables and Functions</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+var doAtOnce = function(funcA, funcB) {
+    funcA();
+    console.log(' and ');
+    funcB();
+    console.log(' at the same time! ');
+}
+var patHead = function(name) {
+    console.log("pat your head");
+}
+var rubBelly = function(name) {
+    console.log("rub your belly");
+}
+
+doAtOnce(patHead, rubBelly);
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Since functions are objects, they can be passed like variables</li>
+      <li>What do you see in the console?</li>
+      <li class="fragment" data-fragment-index="1"></li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Anonymous Variables and Functions</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+function doLater(callback) {
+    console.log("I'm waiting a bit...");
+    console.log("Okay, time to work!");
+    callback();
+}
+function doHomework() {
+    ...
+};
+doLater(doHomework);
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Callback functions</li>
+      <li>A function this is passed to another function for it to "call back" and execute</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Special Functions: forEach</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+var array = ['a','b','c'];
+var printItem = function(item) {
+    console.log(item);
+}
+array.forEach(printItem);
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Callback function example</li>
+      <li>Foreach, iterate through an array and call a function on each array item</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Special Functions: forEach</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+var array = ['a','b','c'];
+
+array.forEach(function(item) {
+    console.log(item);
+});
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Callback function example</li>
+      <li>More common to use anonymous function</li>
+      <li>What do you see in the console?</li>
+      <li class="fragment" data-fragment-index="1">'a', 'b', 'c'</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Special Functions: map</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+var array = [1,2,3];
+
+var squared = function(n) {
+    return n*n;
+};
+
+console.log(array.map(squared)); //returns [1,4,9]
+
+//more common to do this inline:
+array.map(function(n) {
+    return n*n;
+});
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>map applies the function to each element in an array and returns a new array of
+elements returned by the function</li>
+      <li>What do you see in the console?</li>
+      <li class="fragment" data-fragment-index="1">[1,4,9]</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Special Functions: Filter</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+var array = [3,1,4,2,5];
+var isCrowd = array.filter(function(n){
+    return n >= 3;
+});
+
+console.log(isCrowd);
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>filter applies the function to each element in an array and returns a new array
+of only the elements for which the function returns true.</li>
+      <li>What do you see in the console?</li>
+      <li class="fragment" data-fragment-index="1">3, 4, 5</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript: Special Functions: Reduce</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+var array = [1,2,3,4];
+var sum = array.reduce(function(total, current) {
+    var newTotal = total + current;
+    return newTotal;
+}, 0); 
+
+console.log(sum);
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>reduce applies the function to each element in an array to update an “accumulator” value. The callback function should return the “updated” value for the accumulator.</li>
+      <li>What do you see in the console?</li>
+      <li class="fragment" data-fragment-index="1">10</li>
+    </ul>
+</section>
+
+<section>
+    <h3>Bringing it all together</h3>
+</section>
+
+<section>
+    <h3>The DOM</h3>
+    <div class="row">
+        <div class="column">
+            <h4>Document Object Model</h4>
+            <ul style="font-size: smaller;">
+                <li>Standard model for manipulating HTML elements</li>
+                <li>Browser parses your HTML and generates the DOM</li>
+                <li>JavaScript can access the DOM to modify page in real-time</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+  <h5 data-id="code-title">Editing the DOM</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+document.write("<h1>Hello World</h1>");
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>add the line of code here to your script.js file</li>
+      <li>What do you see in the browser?</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">Editing the DOM</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+var el = document.getElementById('mydiv');
+var clsArr = document.getElementsByClassName('myclass');
+var liArr = document.getElementsByTagName('li');
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Accessing elements</li>
+      <li><em>getElements</em>, plural, implies an array is returned</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">Editing the DOM</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+var cssSelector = 'header p, .title > p'; //p elems in header or with class 'title'
+
+var firstEl = document.querySelector(cssSelector);
+var allEl = document.querySelectorAll(cssSelector);
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Accessing elements</li>
+      <li>Using CSS selectors</li>
+      <li>Match <em>first</em> or <em>all</em></li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">Editing the DOM</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+var p = document.querySelector('p');
+//get text of p element
+var text = p.textContent;
+//change text of p element
+p.textContent = "Some new text";
+//get and modify HTML of element (content AND HTML)
+var html = p.innerHTML;
+//inject new html
+p.innerHTML = "Some new <strong>bold</strong> text";
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Modifying elements</li>
+      <li>Properties and functions of elements can manipulate them</li>
+    </ul>
+</section>
+
+<section>
+    <h3>Many options for editing the DOM. You get the idea!</h3>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element">Learn More</a>
+</section>
+
+<section>
+  <h5 data-id="code-title">Adding Interactivity</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+var el = document.getElementById("mydiv");
+el.addEventListener('click', callback);
+// callback is typically an anonymous function:
+el.addEventListener('click', function(){
+    console.log('clicked!');
+});
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Responding to keyboard and mouse events</li>
+      <li>'Attach' an function to 'listen' to the desired event</li>
+    </ul>
+</section>
+
+<section>
+  <h5 data-id="code-title">Adding Interactivity</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+var el = document.getElementById("mydiv");
+
+el.addEventListener('click', function(event){
+    console.log('element clicked: ', event.target);
+});
+
+    </script></code></pre>
+    
+    <ul style="list-style-type: none;">
+      <li>Callback functions are passed an optional event parameter</li>
+      <li>Useful for extracting information about the event</li>
+    </ul>
+</section>
+
+<section>
+    <h3>Event Types</h3>
+    <div class="row">
+        <div class="column">
+            <ul style="font-size: smaller; list-style-type: none;">
+                <li><code>click</code></li>
+                <li><code>dblclick</code></li>
+                <li><code>hover</code></li>
+                <li><code>focus</code></li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul style="font-size: smaller; list-style-type: none;">
+                <li><code>mouseenter</code></li>
+                <li><code>mouseleave</code></li>
+                <li><code>mousedown</code></li>
+                <li><code>keydown</code></li>
+            </ul>
+        </div>
+    </div>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/Events">And Many More</a>
+</section>
+
+<section>
+  <h5 data-id="code-title">JavaScript Activity</h5>
+  <ol style="font-size: x-large;">
+    <li>Return to your HTML and JavaScript pages</li>
+    <li>Add a div element to your HTML page with an id of "democontent"</li>
+    <li>In your JavaScript file, create a variable named "democontent" and access the DOM to assign the div element from the previous step</li>
+    <li>Use the "democontent" variable to insert the following HTML into the div:
+    <ul style="list-style-type: none;">
+        <li><code>&lt;button id="mybutton" type="button">Click Me&lt;/button></code></li>
+    </ul></li>
+    <li>Attach a 'click' event to the button and print the message 'clicked!' to the console</li>
+  </ol>
+</section>
+
+<section>
+  <h5 data-id="code-title">Submit your Activity</h5>
+  <ol style="font-size: x-large;">
+    <li>When done, submit your files (zipped) to Canvas.</li>
+    <li>Submission details will be given during class.</li>
+    <li>Assignment page will close at the end of class!</li>
+  </ol>
+</section>
+
+<section data-background-iframe="https://inf133.markbaldw.in/assignments/a2.html" data-background-interactive>
+    <div class="fragment fade-out" style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+      <h2>Assignment 2</h2>
+      <p>A slightly more complex website</p>
+    </div>
+    <div class="fragment"></div> 
+</section>
