@@ -14,7 +14,7 @@ There will be no class this week due to the holiday. All materials to be covered
 
 [Slide Deck](http://inf133.markbaldw.in/slides/slides.html?file=wk3.html)
 
-[Lecture on JavaScript]()
+[Lecture on JavaScript](https://uci.yuja.com/V/Video?v=9527669&node=41904631&a=199678614&autoplay=1)
 
 If you prefer a printable version:
 
