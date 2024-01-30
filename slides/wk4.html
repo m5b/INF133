@@ -1,0 +1,1087 @@
+<section>
+    <h3>TypeScript and Data Visualizations</h3>
+    <p>
+        <small>INF 133 User Interaction Software</small>
+    </p>
+    <p>
+        <small>Week 4</small>
+    </p>
+</section>
+
+<section>
+    <h3>Goals for Today</h3>
+    <h4>By the end this lecture, you should be able to...</h4>
+    <ul style="font-size: x-large; list-style-type: none;">
+        <li>Describe the concepts of threshold and ceiling in software tools and what tool designers should be striving to create</li>
+        <li>Explain the relative threshold and ceilings of visualization tools</li>
+        <li>Describe common visualization primitives like marks, axes, and scales</li>
+        <li>Implement simple visualizations with Vega-Lite</li>
+        <li>Explain the role of package managers in web development</li>
+        <li>Write code that follows OOP principles in TypeScript</li>
+    </ul>
+</section>
+
+<section>
+    <h3>Our discussion today is a very narrow slice of visualization. If you want more, consider taking INF 143</h3>
+</section>
+
+<section>
+  <span class="circle circle-full" style="width:100px; height:100px" data-id="circle1">1</span><h4 data-id="heading1">Mainframe Computing</h4>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Command-Line Interfaces</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Let's return to the era of mainframe computing</li>
+        <li>Programs were 'sequential'</li>
+        <li>Program prompts for input, person waits on program</li>
+      </ul>
+    </div>
+    <div class="column">
+      <img src="img/dumb-terminal.png" style="max-width:400px"/>
+    </div>
+  </div>
+</section>
+
+<section>
+    <h3>Sequential Programs</h3>
+    <div class="row">
+        <div class="column">
+            <pre><code data-line-numbers="" style="font-size: smaller">
+while true {
+    print "Prompt for Input"
+    input = read_line_of_text()
+    output = do_work()
+    print output
+}
+
+            </code></pre>
+        </div>
+    </div>
+
+    <p>Sequential programs literally modeled person as a file</p>
+</section>
+
+
+<section data-auto-animate>
+  <span class="circle circle-full" style="width:100px; height:100px" data-id="circle2">2</span><h4 data-id="heading1">Personal Computing</h4>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Event-driven Programming</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>As interaction increased in complexity...</li>
+        <li>Program waits for input</li>
+        <li>Input is queued, then acted on in order of entry</li>
+        <li>(e.g., mousedown, key press, etc)</li>
+      </ul>
+    </div>
+    <div class="column">
+      <img src="img/xerox-star-ui.png" style="max-width:400px"/>
+    </div>
+  </div>
+</section>
+
+<section>
+    <h3>Event-driven Programs</h3>
+    <div class="row">
+        <div class="column">
+            <pre><code data-line-numbers="" style="font-size: smaller">
+do {
+    e = read_event(); //<- input
+    displatch_event(e); //<- Processing
+    if (damage_exists()){
+        update_display(); //<- output
+    }
+}while (e.type != WM_QUIT);
+
+            </code></pre>
+        </div>
+    </div>
+
+    <p>Even today, all interactive software has this loop somewhere</p>
+</section>
+
+<section>
+    <h3>Example: Button</h3>
+    <div class="row">
+        <div class="column">
+            <h4>What's behind a button click?</h4>
+            <ul style="font-size: x-large; list-style-type: none;">
+                <li>Set X and Y boundaries</li>
+                <li>Check if mousedown is within boundaries</li>
+                <li>Check if mouseup is also within boundaries</li>
+                <li>If so, then raise click event</li>
+            </ul>
+        </div>
+        <div class="column" style="padding-top: 90px">
+            <button style="font-size:1em">Click Me</button>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>What if you had to program this sequence (and all the others) every time you wanted to add a button to your website?</h3>
+</section>
+
+<section>
+    <h3>Understanding Tools</h3>
+    <div class="row">
+        <div class="column">
+            <h4>We build and use tools to reduce repetitive work</h4>
+            <ul style="font-size: x-large; list-style-type: none;">
+                <li>Identify common or important practices</li>
+                <li>Package those practices in a framework or toolkit</li>
+                <li>Make it easy to follow those practices</li>
+                <li>Put focus back on building the application</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Understanding Tools</h3>
+    <div class="row">
+        <div class="column">
+            <h4>What is a user interface tool?</h4>
+            <ul style="font-size: x-large; list-style-type: none;">
+                <li>Bootstrap (make responsive design easier)</li>
+                <li>Angular, React, Svelte, and other web frameworks</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Understanding Tools</h3>
+    <div class="row">
+        <div class="column">
+            <h4>The difficulty of tool design</h4>
+            <ul style="font-size: x-large; list-style-type: none;">
+                <li>Explored in seminal paper by Myers, Hudson, and Pausch</li>
+                <li>
+                    <ol>
+                        <li>Need to understand the core practices and problems</li>
+                        <li>Tools always evolving with technology and design</li>
+                        <li>The tasks people use tools to solve change quickly, tools struggle to keep up</li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+    </div>
+<p style="font-size: small;">Brad Myers, Scott E. Hudson, and Randy Pausch. TOCHI, 2000. Past, present, and future of user interface software tools.
+    <a href=" https://doi.org/10.1145/344949.344959"> https://doi.org/10.1145/344949.344959</a></p>
+</section>
+
+<section>
+    <h3>Understanding Tools</h3>
+    <div class="row">
+        <div class="column">
+            <h4>The difficulty of tool design</h4>
+            <ul style="font-size: x-large; list-style-type: none;">
+                <li>Myers, Hudson, and Pausch - Key terms:</li>
+                <li>
+                    <ol style="font-size: x-large; list-style-type: none;">
+                        <li class="highlight">Threshold: Difficulty to learn tool</li>
+                        <li>Ceiling: How much can be achieved with tool</li>
+                        <li>Path of least resistance: Tools influence what is created</li>
+                        <li>Moving targets: Changing needs make tools obsolete</li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Understanding Tools</h3>
+    <div class="row">
+        <div class="column">
+            <h4>Threshold</h4>
+            <ul style="font-size: x-large; list-style-type: none;">
+                <li>Some tools are harder to learn</li>
+                <li>Depends on what a person knows already</li>
+                <li>Ex: A new programming language adds to threshold</li>
+                <li>Ex: Tools that leverage existing concepts, easier to pickup</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Understanding Tools</h3>
+    <div class="row">
+        <div class="column">
+            <h4>Ceiling</h4>
+            <ul style="font-size: x-large; list-style-type: none;">
+                <li>Tools restrict what's possible</li>
+                <li>Ex: Your program could do much more if it had direct access to the bits on your computing device</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Understanding Tools</h3>
+    <div class="row">
+        <div class="column">
+            <h4>Path of least resistance</h4>
+            <ul style="font-size: x-large; list-style-type: none;">
+                <li>"Linguistic Relativity"</li>
+                <li>Some thoughts in one language cannot be expressed or understood in another language (a.k.a., Sapir-Whorf Hypothesis)</li>
+                <li>In UI, our tools <em>frame</em> how we think about interaction and design (e.g., Bootstrap, Figma)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Understanding Tools</h3>
+    <div class="row">
+        <div class="column">
+            <h4>Moving targets</h4>
+            <ul style="font-size: x-large; list-style-type: none;">
+                <li>Codification eventually constrains design</li>
+                <li>Ex: Our understanding of how people interact with technology improves</li>
+                <li>Ex: New technology changes the needs of tools (e.g., AR/VR)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Understanding Tools</h3>
+    <div class="row">
+        <div class="column">
+            <h4>Threshold and ceiling</h4>
+            <ul style="font-size: x-large; list-style-type: none;">
+                <li>It's all relative; no absolute measure</li>
+                <li>In general: 
+                    <ul>
+                        <li>Tools should be <em>low threshold</em></li>
+                        <li>Tools should <strong>also</strong> be <em>high ceiling</em></li>
+                        <li>The best tools <strong>are both</strong></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Threshold and Ceiling</h3>
+    <div class="row">
+        <div class="column">
+            <img src="/img/mspaint.png" alt="screenshot of ms paint program" />
+            <h5>Microsoft Paint</h5>
+        </div>
+        <div class="column">
+            <img src="/img/photoshop.jpg" alt="screenshot of photoshop program" />
+            <h5>Adobe Photoshop</h5>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Threshold and ceiling form the basis of how we design user interfaces</h3>
+</section>
+
+<section>
+    <h3>Case Study</h3>
+    <div class="row">
+        <div class="column">
+            <h4>Visualization Tools</h4>
+            <ul style="font-size: smaller;">
+                <li>All visualization tools are governed by the same principles</li>
+                <li>Must render graphics on a display according to a set of rules</li>
+                <li>The approach taken changes threshold and ceiling</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Aside: SVG</h3>
+    <div class="row">
+        <div class="column">
+            <h4>Scalable Vector Graphics (SVG)</h4>
+            <pre><code data-line-numbers="" style="font-size: smaller">
+<svg width="100" height="100">
+<circle cx="50" cy="50" r="40" stroke="green" stroke-
+    width="4" fill="yellow" />
+</svg>
+
+            </code></pre>
+        </div>
+    </div>
+
+    <p>XML format (like HTML) for specifying graphics. Composed of primitives like lines, circles, and rectangles</p>
+</section>
+
+<section>
+    <h3>Case Study</h3>
+    <div class="row">
+        <div class="column">
+            <img src="/img/tufte.png" alt="visualization by Edward Tufte" />
+            <h5>SVG</h5>
+            <h6 style="font-size:large;">High ceiling, but high threshold</h6>
+        </div>
+        <div class="column">
+            <img src="/img/msexcel.png" alt="screenshot of microsoft excel bar chart" />
+            <h5>Microsoft Excel</h5>
+            <h6 style="font-size:large;">Low threshold, but low ceiling</h6>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Case Study</h3>
+        <h4>Visualization Tools</h4>
+    <div class="row">
+        <div class="column">
+            <h5>Charting tools</h5>
+            <ul style="font-size: large; list-style-type: none;">
+                <li>Excel, Google Charts</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h5>Declarative languages</h5>
+            <ul style="font-size: large; list-style-type: none;">
+                <li>Visualization analysis grammars(ggplot, VisQL) </li>
+                <li class="fragment highlight-red">Visualization Grammars (Protovis, D3.js, Vega-Lite)</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h5>Programming languages</h5>
+            <ul style="font-size: large; list-style-type: none;">
+                <li>SVG, Processing, OpenGL</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <span style="font-size:large">Lower threshold</span>
+        <svg width="100%" height="100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Define arrowhead marker -->
+            <defs>
+                <marker id="right-arrowhead" markerWidth="10" markerHeight="10" refX="0" refY="4.0"
+                    orient="auto">
+                    <path d="M0,0 L0,8 L8,4 Z" fill="white" />
+                </marker>
+                <marker id="left-arrowhead" markerWidth="10" markerHeight="10" refX="2" refY="4.0"
+                    orient="auto">
+                    <path d="M8,0 L8,8 L0,4 Z" fill="white" />
+                </marker>
+            </defs>
+
+            <line x1="5%" y1="80" x2="85%" y2="80" stroke="white" stroke-width="5"
+                marker-start="url(#left-arrowhead)" marker-end="url(#right-arrowhead)" />
+        </svg>
+        <span style="font-size:large">Higher ceiling</span>
+    </div>
+</section>
+
+<section>
+    <h3>Case Study</h3>
+    <div class="row">
+        <div class="column">
+            <h4>Declarative Languages</h4>
+            <ul style="font-size: smaller; list-style-type: none;">
+                <li>Programming by describing <em>what,</em> not <em>how</em></li>
+                <li>Separate specification (what) from execution (how)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Case Study</h3>
+    <h4>Declarative Languages: HTML vs. JavaScript</h4>
+    <div class="row">
+        <div class="column">
+            <pre><code data-line-numbers="" style="font-size: smaller" class="language-html">
+<main class="container">
+	<div class="row">
+		<div class="col-3">A</div>
+		<div class="col-6">B</div>
+		<div class=“col-4">C</div>
+		<div class=“col">D</div>
+		<div class="col">E</div>
+	</div>
+</main>
+
+            </code></pre>
+        <span style="font-size:large">What should be rendered, but not how</span>
+        </div>
+        <div class="column">
+            <pre><code data-line-numbers="" style="font-size: smaller" class="language-js">
+var array = ['1', 'fish', 2, 'blue'];
+array[5] = 'dog';
+array.push('2');
+array[2] = array[array.length - 1] - 4;
+array[0] = typeof array[2];
+array[4] = array.indexOf('blue');
+
+console.log(array.join('*'));
+
+            </code></pre>
+        <span style="font-size:large">Step by step</span>
+        </div>
+    </div>
+
+</section>
+
+<section>
+    <h3>Case Study</h3>
+    <h4>Why Declarative Languages?</h4>
+    <div class="row">
+        <div class="column">
+            <ul style="font-size: smaller; list-style-type: none;">
+                <li>Faster iteration, less code, lower threshold</li>
+                <li>Can be generated programmatically</li>
+                <li>Generally, easier to learn compared to imperative languages</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Case Study</h3>
+    <h4>Since SVG and JavaScript have high ceiling and threshold...</h4>
+    <div class="row">
+        <div class="column">
+            <h4>Protovis</h4>
+            <ul style="font-size: large; list-style-type: none;">
+                <li>Marks (specify how content is rendered) serve as graphical primitives</li>
+                <li>e.g., Bar (for bar chart)</li>
+                <li>Compared to Excel, high-ish ceiling, but high threshold</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h4>D3</h4>
+            <ul style="font-size: large; list-style-type: none;">
+                <li>More expressive than Protovis, no marks, similar to SVG</li>
+                <li>Add interactivity (mouse and keyboard events)</li>
+                <li>Compared to Excel, high-er ceiling, but high threshold</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Case Study</h3>
+    <h4>Vega-Lite: Lowering the Threshold</h4>
+    <h5>Goal: “create an expressive (high ceiling) yet concise (low threshold) declarative
+language for specifying visualizations”</h5>
+<p style="font-size: small;">Arvind Satyanarayan, Dominik Moritz, Kanit Wongsuphasawat, Jeffrey Heer. IEEE Vis, 2017. Vega-Lite: A Grammar of Interactive Graphics
+    <a href="https://doi.org/10.1109/TVCG.2016.2599030">https://doi.org/10.1109/TVCG.2016.2599030</a></p>
+</section>
+
+<section>
+    <h3>Case Study</h3>
+    <h4>Vega-Lite</h4>
+            <h5>Grammar of Graphics</h5>
+    <div class="row">
+        <div class="column">
+            <ul style="font-size: large; list-style-type: none;">
+                <li><strong>Data</strong>: input data to visualize</li>
+                <li><strong>Mark</strong>: Data-representative graphics</li>
+                <li><strong>Transform</strong>: filter, aggregate, bin, etc.</li>
+                <li><strong>Encoding</strong>: mapping between data and mark properties</li>
+                <li><strong>Scale</strong>: map between data values and visual values</li>
+                <li><strong>Guides</strong>: axes & legends that visualize scales</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Demo</h3>
+    <h4>Vega-Lite: Let's build a histogram</h4>
+    <p style="font-size: medium;"><a href="visualization_demo.zip">Download the linked package and follow along!</a></p>
+</section>
+
+<section>
+    <h3>Demo</h3>
+    <h4>Vega-Lite: Let's build a histogram</h4>
+    <h5>JSON file</h5>
+    <div class="row">
+        <div class="column">
+            <pre><code data-line-numbers="" style="font-size: smaller" class="language-json">
+[
+    {
+        "date": "2015/01/01", 
+        "weather": "sun", 
+        "temperature": 1.1999999999999997
+    }, 
+    {
+        "date": "2015/01/02", 
+        "weather": "fog", 
+        "temperature": 2.8
+    }, 
+    {
+        "date": "2015/01/03", 
+        "weather": "fog", 
+        "temperature": 3.35
+    }, 
+    {
+        "date": "2015/01/04", 
+        "weather": "fog", 
+        "temperature": 6.949999999999999
+    }, 
+    {
+        "date": "2015/01/05", 
+        "weather": "fog", 
+        "temperature": 10.8
+    },
+... 
+            </code></pre>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Demo</h3>
+    <h4>Vega-Lite: Let's build a histogram</h4>
+    <div class="row">
+        <div class="column">
+            <ul style="font-size: large; list-style-type: none;">
+                <li>Bin records by their temperature</li>
+                <li>Count how many records fall into each bin</li>
+                <li>Render those bins as vertical bars</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Demo</h3>
+    <h4>Vega-Lite: Let's build a histogram</h4>
+    <h5>In demo.js file</h5>
+    <div class="row">
+        <div class="column">
+            <pre><code data-line-numbers="" style="font-size: smaller" class="language-js">
+{
+    data: {url: "weather-seattle.json"},
+    mark: "tick", //<- set mark as a tick
+    encoding: {
+        x: {
+            field: "temperature", //<- Encode x according to the temperature field
+            type: "quantitative", //<- Set the type to quantitative (numerical)
+        }
+    }
+}
+
+            </code></pre>
+        <p style="font-size: medium;">Other types include: temporal (time), ordinal (ordered), and nominal (categorical)</p>   
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Demo</h3>
+    <h4>Vega-Lite: Let's build a histogram</h4>
+    <img src="/img/vega-demo-1.png" alt="bar chart demo" />
+</section>
+
+<section>
+    <h3>Demo</h3>
+    <h4>Vega-Lite: Let's build a histogram</h4>
+    <h5>In demo.js file</h5>
+    <div class="row">
+        <div class="column">
+            <pre><code data-line-numbers="9-15" style="font-size: smaller" class="language-js">
+{
+    data: {url: "weather-seattle.json"},
+    mark: "tick", 
+    encoding: {
+        x: {
+            field: "temperature", 
+            type: "quantitative", 
+            bin: true, //<- bin the data
+        },
+        y: {
+            aggregate: "count", //<- aggregate bins by counting values in each
+            type: "quantitative", //<- set the type to quantitative
+        }
+    }
+}
+
+            </code></pre>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Demo</h3>
+    <h4>Vega-Lite: Let's build a histogram</h4>
+    <img src="/img/vega-demo-3.png" height="400px" alt="bar chart demo" />
+</section>
+
+<section>
+    <h3>Demo</h3>
+    <h4>Vega-Lite: Let's build a histogram</h4>
+    <h5>In demo.js file</h5>
+    <div class="row">
+        <div class="column">
+            <pre><code data-line-numbers="4" style="font-size: smaller" class="language-js">
+{
+    data: {url: "weather-seattle.json"},
+    mark: "bar", //<- change mark to a bar
+    encoding: {
+        x: {
+            field: "temperature", 
+            type: "quantitative", 
+            bin: true, 
+        },
+        y: {
+            aggregate: "count", 
+            type: "quantitative",
+        }
+    }
+}
+
+            </code></pre>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Demo</h3>
+    <h4>Vega-Lite: Let's build a histogram</h4>
+    <img src="/img/vega-demo-4.png" height="400px"  alt="bar chart demo" />
+</section>
+
+<section>
+    <h3>Demo</h3>
+    <h4>Vega-Lite: Let's build a histogram</h4>
+    <h5>In demo.js file</h5>
+    <div class="row">
+        <div class="column">
+            <pre><code data-line-numbers="15-18" style="font-size: smaller" class="language-js">
+{
+    data: {url: "weather-seattle.json"},
+    mark: "bar",
+    encoding: {
+        x: {
+            field: "temperature", 
+            type: "quantitative", 
+            bin: true, 
+        },
+        y: {
+            aggregate: "count", 
+            type: "quantitative",
+        },
+        color: { // <- set the color to follow the weather field
+            field: "weather",
+            type: "nominal",
+        }
+    }
+}
+
+            </code></pre>
+        <p style="font-size: medium;">Sensible defaults: Vega-Lite chooses layout automatically (colors, bin width, labels, bar stacks)</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Demo</h3>
+    <h4>Vega-Lite: Let's build a histogram</h4>
+    <img src="/img/vega-demo-5.png"  height="400px" alt="bar chart demo" />
+</section>
+
+<section>
+    <h3>Demo</h3>
+    <h4>Vega-Lite: Let's build a histogram</h4>
+    <h5>In demo.js file</h5>
+    <div class="row">
+        <div class="column">
+            <pre><code data-line-numbers="19-23" style="font-size: smaller" class="language-js">
+{
+  data: {url: "weather-seattle.json"},
+  mark: "bar",
+  encoding: {
+        x: {
+            field: "temperature", 
+            type: "quantitative", 
+            bin: true, 
+        },
+        y: {
+            aggregate: "count", 
+            type: "quantitative",
+        },
+        color: { // <- set the color to follow the weather field
+            field: "weather",
+            type: "nominal",
+            scale: { // <- set a custom color scale
+                domain: ["sun","fog","drizzle", "rain","snow"],
+                range: ["#e7ba52","#c7c7c7","#aec7e8","#1f77b4","#9467bd"]
+            }
+        }
+    }
+}
+
+            </code></pre>
+        <p style="font-size: medium;">Override the sensible defaults by adding some custom colors</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Demo</h3>
+    <h4>Vega-Lite: Let's build a histogram</h4>
+    <img src="/img/vega-demo-6.png" height="400px"  alt="bar chart demo" />
+</section>
+
+<section>
+    <h3>Demo</h3>
+    <h4>Vega-Lite: Let's build a histogram</h4>
+    <h5>In demo.js file</h5>
+    <div class="row">
+        <div class="column">
+            <pre><code data-line-numbers="" style="font-size: smaller" class="language-js">
+{
+    data: {url: "weather-seattle.json"},
+    mark: "bar",
+    encoding: {
+        x: {
+            timeUnit: "month", 
+            field: "date", // <- field is a date string, but will bin and display by month
+        },
+        y: {
+            aggregate: "mean", // <- aggregate by the mean
+            field: "precipitation",
+        },
+    }
+}
+
+        </code></pre>
+        <p style="font-size: medium;">Create a new chart</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Demo</h3>
+    <h4>Vega-Lite: Let's build a histogram</h4>
+    <img src="/img/vega-demo-7.png" height="400px" alt="bar chart demo" />
+</section>
+
+<section>
+    <h3>Case Study</h3>
+    <h4>Vega-Lite</h4>
+    <h5>Sensible defaults</h5>
+    <div class="row">
+        <div class="column">
+            <ul style="font-size: large; list-style-type: none;">
+                <li>Threshold is lower</li>
+                <li>Ceiling remains the same, but defaults can be overriden</li>
+                <li>Path of least resistance: Vega-Lite visualizations look the same</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Case Study</h3>
+    <h4>Vega-Lite</h4>
+    <h5>Path of least resistance</h5>
+    <div class="row">
+        <div class="column">
+            <ul style="font-size: large; list-style-type: none;">
+                <li>Tools influence what is created</li>
+                <li>Vega-Lite defaults <em>can be</em> overwritten, but are they in practice?</li>
+                <li>Similar to widespread adoption of grid frameworks</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <h3>Tool Integration on the Web</h3>
+</section>
+
+<section>
+    <h3>Packages</h3>
+    <h4>Vega-Lite Demo</h4>
+    <h5>In index.html file</h5>
+    <div class="row">
+        <div class="column">
+            <pre><code data-line-numbers="" style="font-size: smaller" class="language-js">
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+        </code></pre>
+        <p style="font-size: medium;">Vega-Lite is added to the demo via content delivery network (CDN)</p>
+        <p style="font-size: medium;">Could also download directly and add to project</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Package Managers</h3>
+    <div class="row">
+        <div class="column">
+            <ul style="font-size: large; list-style-type: none;">
+                <li>Provide easy way to install packages</li>
+                <li>Simplify process of updating to latest version</li>
+                <li>Manage your packages dependencies</li>
+                <li>Conceptually similar to app stores, but "free"</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Package Managers</h3>
+    <h4>NPM: The Node Package Manager</h4>
+    <div class="row">
+        <div class="column">
+            <ul style="font-size: large; list-style-type: none;">
+                <li>NPM is a package manager for JavaScript</li>
+                <li>Similar to PIP for Python</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Package Managers</h3>
+    <h4>NPM concepts</h4>
+    <div class="row">
+        <div class="column">
+            <ul style="font-size: large; list-style-type: none;">
+                <li><code>package.json</code> file used to track installed packages</li>
+                <li><code>package-lock.json</code> file used to track of package versions</li>
+                <li><code>node_modules</code> folder containing all installed packages</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Package Managers</h3>
+    <h4>NPM and git</h4>
+    <div class="row">
+        <div class="column">
+            <ul style="font-size: large; list-style-type: none;">
+                <li><code>.gitignore</code> file specifies what not to commit to your repository</li>
+                <li><em>Do</em> commit <code>package-lock.json</code></li>
+                <li><em>Do not</em> commit <code>node_modules</code>, redundant as <code>package.json</code> already tracks</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Package Managers</h3>
+    <h4>Using NPM</h4>
+    <div class="row">
+        <div class="column">
+            <pre><code data-line-numbers="" style="font-size: smaller" class="language-js">
+npm install packagename //<- install packages to node_modules dir
+
+npm update //<- update to latest packages
+
+        </code></pre>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Package Managers</h3>
+    <h4>Using NPM</h4>
+    <div class="row">
+        <div class="column">
+            <pre><code data-line-numbers="" style="font-size: smaller" class="language-js">
+npm install -g typescript //<- install packages to node_modules dir
+
+        </code></pre>
+        </div>
+    </div>
+    <p style="font-size: medium;">Some packages should be installed globally. Available for use across all projects rather than for a specific one.</p>
+</section>
+
+<section>
+    <h3>TypeScript</h3>
+</section>
+
+<section>
+    <h3>TypeScript</h3>
+    <h4>Introduced by Microsoft in 2012</h4>
+    <div class="row">
+        <div class="column">
+            <ul style="font-size: large; list-style-type: none;">
+                <li>Superset of JavaScript</li>
+                <li>"Transpiles" to JavaScript</li>
+                <li>Introduces static types, type checking, and objects</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>TypeScript</h3>
+    <h4>Typing</h4>
+    <div class="row">
+        <div class="column">
+            <pre><code data-line-numbers="" style="font-size: smaller" class="language-ts">
+var courseNumber:number = 133; // <- type used in course.ts
+
+// Transpile using tsc, generates course.js
+
+var courseNumber = 133;
+
+        </code></pre>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>TypeScript</h3>
+    <h4>Typing</h4>
+    <div class="row">
+        <div class="column">
+            <pre><code data-line-numbers="" style="font-size: smaller" class="language-ts">
+var courseNumber: number = 133;
+var isCourse: boolean = true;
+var courseName: string = "Software User Interaction";
+var notSure: any = ""; //similar to JS var
+// also 'void', 'null', 'undefined'
+
+        </code></pre>
+        </div>
+    </div>
+    <p style="font-size: medium;">Pre-defined types, typing is optional</p>
+</section>
+
+<section>
+    <h3>TypeScript</h3>
+    <h4>Typing</h4>
+    <div class="row">
+        <div class="column">
+            <pre><code data-line-numbers="" style="font-size: smaller" class="language-ts">
+function area(shape: string, width: number, height: number): string{
+    var area:number = width * height;
+    return "I'm a " + shape + " of area " + area + "cm^2.";
+}
+
+var a = area(15, 15, 'square'); // will produce error since first param is not of type string
+
+        </code></pre>
+        </div>
+    </div>
+    <p style="font-size: medium;">When types applied, <code>tsc</code> will error check usage</p>
+</section>
+
+<section>
+    <h3>TypeScript</h3>
+    <h4>Classes</h4>
+    <div class="row">
+        <div class="column">
+            <pre><code data-line-numbers="" style="font-size: smaller" class="language-ts">
+class Shape {
+    area: number;
+    color: string;
+    name: string;
+    
+    constructor (name: string, width: number, height: number ) {
+        this.name = name
+        this.area = width * height;
+        this.color = "pink";
+    };
+
+    shoutout() {
+        return "I'm " + this.color + " " + this.name + " with an area of " +
+        this.area + " cm squared.";
+    }
+}
+var square = new Shape("square", 30, 30);
+
+        </code></pre>
+        </div>
+    </div>
+    <p style="font-size: medium;">Similar to Java with a constructor and methods</p>
+</section>
+
+<section>
+    <h3>TypeScript</h3>
+    <h4>Classes</h4>
+    <div class="row">
+        <div class="column">
+            <pre><code data-line-numbers="" style="font-size: smaller" class="language-ts">
+//shape.js
+var Shape = /** @class */ (function () {
+    function Shape(name, width, height) {
+    this.name = name;
+    this.area = width * height;
+    this.color = "pink";
+    };
+
+    Shape.prototype.shoutout = function () {
+    return "I'm " + this.color + " " + this.name + " with an area of
+    " + this.area + " cm squared.";
+    };
+    return Shape;
+}());
+var square = new Shape("square", 30, 30);
+
+        </code></pre>
+        </div>
+    </div>
+    <p style="font-size: medium;">Transpiled into a function with prototype methods</p>
+</section>
+
+<section>
+    <h3>TypeScript</h3>
+    <h4>tsc and tsconfig.json</h4>
+    <div class="row">
+        <div class="column">
+            <ul style="font-size: large; list-style-type: none;">
+                <li>Indicates what files or folders to transpile</li>
+                <li>Configure transpiler options</li>
+                <li>Specify what version of ECMAScript to transpile to</li>
+            </ul>
+        </div>
+    </div>
+    <p style="font-size: medium;"><code>tsc --project tsconfig.json</code></p>
+</section>
+
+<section>
+    <h3>TypeScript</h3>
+    <h4>Benefits</h4>
+    <div class="row">
+        <div class="column">
+            <h5 style="font-size:large">Type Checking</h5>
+            <ul style="font-size: large; list-style-type: none;">
+                <li>Transpiler shows warning/error before code is executed</li>
+                <li>Editor can support autocomplete</li>
+                <li>Easier to refactor code</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h5 style="font-size:large">Object-oriented</h5>
+            <ul style="font-size: large; list-style-type: none;">
+                <li>Easier to manage/maintain large codebases</li>
+                <li>Simple enough to use; leverage existing principles (Java/C++)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>TypeScript</h3>
+    <h4>Drawbacks</h4>
+    <div class="row">
+        <div class="column">
+            <ul style="font-size: large; list-style-type: none;">
+                <li>Transpiling is an extra step, slow for larger projects</li>
+                <li>Support lag for new JS libraries</li>
+                <li>Many frameworks focus on JS until stable, then add TS support</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Quiz</h3>
+</section>
