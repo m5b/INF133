@@ -14,7 +14,7 @@ There will be no class this week due to the holiday. All materials to be covered
 
 [Slide Deck](http://inf133.markbaldw.in/slides/slides.html?file=wk5.html)
 
-[Lecture Recording]()
+[Lecture Recording](https://uci.yuja.com/V/Video?v=9643708&node=42546783&a=14757402&autoplay=1)
 
 If you prefer a printable version:
 
