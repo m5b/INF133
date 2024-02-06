@@ -1,0 +1,1064 @@
+
+<section>
+    <h3>Web Frameworks</h3>
+    <p>
+        <small>INF 133 User Interaction Software</small>
+    </p>
+    <p>
+        <small>Week 5</small>
+    </p>
+</section>
+
+<section>
+    <h3>Goals for Today</h3>
+    <h4>By the end this lecture, you should be able to...</h4>
+    <ul style="font-size: x-large; list-style-type: none;">
+      <li>Explain how Angular implements the component architecture</li>
+      <li>Describe the role of an Angular component</li>
+      <li>Implement an Angular component which follows the MVC architecture</li>
+    </ul>
+</section>
+
+<section>
+  <h4 data-id="title">Web Communication</h4>
+    <h5 style="font-size: medium">https://en.wikipedia.org/wiki/Donald_Bren_School_of_Information_and_Computer_Sciences</h5>
+    <div class="row">
+      <div class="column">
+        <img src="img/wiki-dbh.png" style="max-width:400px"/>
+        Client Side
+      </div>
+      <div class="column">
+        <div style="font-size: small; display:flex; justify-content: center;align-content: center; flex-direction: column; min-height: 100%;">
+          <p>REQUEST <span class="arrow right"></span></p>
+          <p><span class="arrow left"></span> RESPONSE</p>
+        </div>
+      </div>
+      <div class="column">
+        <img src="img/server-files.png" style="max-width:400px"/>
+        Server Side
+      </div>
+    </div>
+</section>
+
+<section>
+    <h3>Most of what you have worked on so far follows this <span style="color:orange">static model</span></h3>
+    <p>When you make a change to your code, how do you check it?</p>
+</section>
+
+<section>
+  <h3>The modern web revolves around <span style="color: orange">asynchronous</span> HTTP requests.</h3>
+  <p>Nearly every modern page that you load is making thousands of HTTP requests in the background without you knowing!</p>
+</section>
+
+<section data-auto-animate>
+  <h5 data-id="code-title">Asynchronous HTTP Requests using Fetch</h5>
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+var data = fetch('http://mydomain.com/data/resource');
+
+    </script></code></pre>
+
+    <p>(as JavaScript loaded on your web page)</p>
+</section>
+
+<section data-auto-animate>
+    <h3>Using fetch to communicate between browser and server</h3>
+    <div class="row" style="margin-bottom: 10px;">
+        <div style="font-size:large; border:2px; border-color: white; border-style: dotted; padding: 10px">Browser (mydomain.com)</div>
+        <svg width="100%" height="100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Define arrowhead marker -->
+            <defs>
+                <marker id="right-arrowhead2" markerWidth="10" markerHeight="10" refX="0" refY="4.0"
+                    orient="auto">
+                    <path d="M0,0 L0,8 L8,4 Z" fill="green" />
+                </marker>
+                <marker id="left-arrowhead2" markerWidth="10" markerHeight="10" refX="2" refY="4.0"
+                    orient="auto">
+                    <path d="M8,0 L8,8 L0,4 Z" fill="green" />
+                </marker>
+            </defs>
+
+            <line x1="5%" y1="50" x2="88%" y2="50" stroke="green" stroke-width="5"
+                marker-start="url(#left-arrowhead2)" marker-end="url(#right-arrowhead2)" />
+        </svg>
+        <div style="font-size:large; border:2px; border-color: white; border-style: solid; padding: 10px; width:350px">Server (mydomain.com)</div>
+    </div>
+    <div class="row fragment" data-fragment-index="2">
+        <svg width="100%" height="100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Define arrowhead marker -->
+            <defs>
+                <marker id="right-arrowhead3" markerWidth="10" markerHeight="10" refX="0" refY="4.0"
+                    orient="auto">
+                    <path d="M0,0 L0,8 L8,4 Z" fill="green" />
+                </marker>
+                <marker id="left-arrowhead3" markerWidth="10" markerHeight="10" refX="2" refY="4.0"
+                    orient="auto">
+                    <path d="M8,0 L8,8 L0,4 Z" fill="green" />
+                </marker>
+            </defs>
+
+            <line x1="88%" y1="8" x2="88%" y2="55" stroke="green" stroke-width="5"
+                marker-start="url(#left-arrowhead3)" marker-end="url(#right-arrowhead3)" />
+        </svg>
+    </div>
+    <div class="row fragment" data-fragment-index="1">
+        <div class="fragment fade-out" data-fragment-index="2" style="font-size:large; border:2px; border-color: white; border-style: dotted; padding: 10px">Browser (mydomain.com)</div>
+        <svg class="fragment fade-out" data-fragment-index="2" width="100%" height="100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Define arrowhead marker -->
+            <defs>
+                <marker id="right-arrowhead" markerWidth="10" markerHeight="10" refX="0" refY="4.0"
+                    orient="auto">
+                    <path d="M0,0 L0,8 L8,4 Z" fill="red" />
+                </marker>
+                <marker id="left-arrowhead" markerWidth="10" markerHeight="10" refX="2" refY="4.0"
+                    orient="auto">
+                    <path d="M8,0 L8,8 L0,4 Z" fill="red" />
+                </marker>
+            </defs>
+
+            <line x1="5%" y1="50" x2="88%" y2="50" stroke="red" stroke-width="5"
+                marker-start="url(#left-arrowhead)" marker-end="url(#right-arrowhead)" />
+        </svg>
+        <div style="font-size:large; border:2px; border-color: white; border-style: solid; padding: 10px; width:350px">Server (anotherdomain.com)</div>
+    </div>
+</section>
+
+<section>
+  <h3>Browsers implement a <span style="color: orange">same-origin policy</span> to protect the data you have open in the browser.</h3>
+</section>
+
+<section>
+  <h4 data-id="title">Web Communication</h4>
+    <div class="row">
+      <div class="column">
+        <h5>Client Side</h5>
+        <ul style="font-size: x-large; list-style-type: none;">
+            <li>Runs in browser</li>
+            <li>Changes happen in real-time</li>
+            <li><strong>Cannot</strong> make HTTP requests to many APIs</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h5>Server Side</h5>
+        <ul style="font-size: x-large; list-style-type: none;">
+            <li>Runs as process on server (CLI interface)</li>
+            <li>Changes happen in response to HTTP requests</li>
+            <li><strong>Can</strong> make HTTP requests to most APIs</li>
+        </ul>
+      </div>
+    </div>
+</section>
+
+<section>
+  <h4 data-id="title">Web Communication</h4>
+  <h5>Historically client and server made use of different languages</h5>
+    <div class="row">
+      <div class="column">
+        <h5>Client Side</h5>
+        <ul style="font-size: x-large; list-style-type: none;">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h5>Server Side</h5>
+        <ul style="font-size: x-large; list-style-type: none;">
+            <li>PHP</li>
+            <li>Python</li>
+            <li>Ruby</li>
+            <li>C#</li>
+            <li>Java</li>
+        </ul>
+      </div>
+    </div>
+</section>
+
+<section>
+  <h4 data-id="title">Unified Web Development Language</h4>
+  <h5>Demand for asynchronous interactive web: <span style="color:orange">NodeJS</span></h5>
+    <div class="row">
+      <div class="column">
+        <ul style="font-size: x-large; list-style-type: none;">
+            <li>Event-driven, non-blocking I/O model</li>
+            <li>Build on Google's V8 JavaScript engine</li>
+            <li>Node Apps programmed with JavaScript, lower threshold!</li>
+            <li>Generally good for highly interactive websites</li>
+            <li>Better options for websites dependent on high computation</li>
+        </ul>
+      </div>
+    </div>
+</section>
+
+<section>
+  <h4 data-id="title">NodeJS</h4>
+  <h5>JavaScript in the client and on the server</h5>
+  
+    <div class="row">
+      <div class="column">
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+console.log("Some useful output");
+
+    </script></code></pre>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <h5>In the client</h5>
+        <ul style="font-size: x-large; list-style-type: none;">
+            <li>View debug output in browser console</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h5>On the server</h5>
+        <ul style="font-size: x-large; list-style-type: none;">
+            <li>View debug out on the command line</li>
+        </ul>
+      </div>
+    </div>
+</section>
+
+<section>
+  <h4 data-id="title">NodeJS</h4>
+  <h5>What does Node provide?</h5>
+    <div class="row">
+      <div class="column">
+        <ul style="font-size: x-large; list-style-type: none;">
+            <li>By itself, a powerful, but rudimentary server</li>
+            <li>Foundation for building complex, highly interactive websites</li>
+            <li>Ability to use <code style="color:orange">fetch</code> to query other servers (APIs), lower threshold!</li>
+        </ul>
+      </div>
+    </div>
+</section>
+
+<section>
+    <h3>Activity</h3>
+    <h4>NodeJS: Let's build a simple server</h4>
+    <p style="font-size: medium;"><a href="node_activity.zip">Download the linked package and follow along!</a></p>
+    <p style="font-size: small;">NOTE: You'll turn this in at the end of class</p>
+</section>
+
+<section>
+  <h4 data-id="title">Simple Server in NodeJS</h4>
+    <div class="row">
+      <div class="column">
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+const PORT = 8001;
+var http = require('http');
+
+var server = http.createServer(function(req,res){
+    console.log(req.method + " " + req.url);
+    res.writeHead(200);
+    res.end(req.method + " " + req.url);
+});
+
+server.listen(PORT, 'localhost', function() {
+    console.log('Server is running on port ' + PORT);
+});
+
+    </script></code></pre>
+      </div>
+    </div>
+    <p style="font-size: medium;">Open up server.js and add the code above</p>
+</section>
+
+<section>
+  <h4 data-id="title">Simple Server in NodeJS</h4>
+    <div class="row">
+      <div class="column">
+  <pre><code data-line-numbers="2|3|5-9|11-13" class="language-js"><script type="text/template">
+const PORT = 8001;
+var http = require('http');
+
+var server = http.createServer(function(req,res){
+    console.log(req.method + " " + req.url);
+    res.writeHead(200);
+    res.end(req.method + " " + req.url);
+});
+
+server.listen(PORT, 'localhost', function() {
+    console.log('Server is running on port ' + PORT);
+});
+
+    </script></code></pre>
+      </div>
+    </div>
+    <p style="font-size: medium;">Let's walk through the code</p>
+</section>
+
+<section data-auto-animate>
+  <h4 data-id="title">Uniform Resource Locator</h4>
+    <h5 data-id="wiki-url" style="font-size: medium"><span class="fragment highlight-current-red"  data-fragment-index="1">https://</span><span class="fragment highlight-current-red"  data-fragment-index="2">api.spotify.com/</span><span class="fragment highlight-current-red"  data-fragment-index="3">v1/me</span></h5>
+    <div class="row">
+      <div class="column fragment" data-fragment-index="1" style="font-size: medium; border: 2px solid white; border-radius: 10px; padding: 10px; margin:5px">
+        <span>Protocol</span>
+        <p>How to handle the information</p>
+      </div>
+      <div class="column fragment" data-fragment-index="2" style="font-size: medium; border: 2px solid white; border-radius: 10px; padding: 10px; margin:5px">
+        <span>Host</span>
+        <p>Who has the information</p>
+      </div>
+      <div class="column fragment" data-fragment-index="3" style="font-size: medium; border: 2px solid white; border-radius: 10px; padding: 10px; margin:5px">
+        <span>Resource or <strong>Endpoint</strong></span>
+        <p>What information you want</p>
+      </div>
+    </div>
+    <p style="font-size: medium;">Recall the URL overview from Week 1...</p>
+    <p style="font-size: medium;">The browser assumes you are making a <code style="color:orange">GET</code> request</p>
+    <p style="font-size: medium;">In Node, you need to specify the type of request and response!</p>
+</section>
+
+<section>
+  <h4 data-id="title">Simple Server in NodeJS</h4>
+    <div class="row">
+      <div class="column">
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+var server = http.createServer(function(req,res){
+    //output to command line
+    console.log(req.method + " " + req.url);
+    res.writeHead(200);
+    //return to browser
+    res.end(req.method + " " + req.url); 
+});
+
+    </script></code></pre>
+      </div>
+    </div>
+    <p style="font-size: medium;">When run, visiting http://localhost:8001/ will return <code>GET /</code> in the browser and on the command line</p>
+</section>
+
+<section>
+  <h4 data-id="title">HTTP Overview</h4>
+    <div class="row">
+      <div class="column">
+        <h5>HTTP Verbs</h5>
+        <ul style="font-size: x-large; list-style-type: none;">
+            <li><code style="color:orange">GET</code>: return current state of resource</li>
+            <li><code style="color:orange">POST</code>: add a new resource (e.g., record)</li>
+            <li><code style="color:orange">PUT</code>: update an existing resource to a new state</li>
+            <li><code style="color:orange">PATCH</code>: update a portion of the resource's state</li>
+            <li><code style="color:orange">DELETE</code>: remove the resource</li>
+            <li><code style="color:orange">OPTIONS</code>: return a set of methods that can be performed on resource</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h5>HTTP Responses</h5>
+        <ul style="font-size: x-large; list-style-type: none;">
+            <li><code style="color:orange">200: OK</code></li>
+            <li><code style="color:orange">201: Created</code></li>
+            <li><code style="color:orange">400: Bad request</code></li>
+            <li><code style="color:orange">403: Forbidden</code></li>
+            <li><code style="color:orange">404: Not Found</code></li>
+            <li><code style="color:orange">500: Internal server error</code></li>
+        </ul>
+      </div>
+    </div>
+</section>
+
+<section>
+    <h3>Let's Run It!</h3>
+    <p style="font-size: medium;">If you don't have Node install, this won't work for you (that's okay!)</p>
+</section>
+
+<section>
+  <h4 data-id="title">Simple Server in NodeJS</h4>
+    <div class="row">
+      <div class="column">
+  <pre><code data-line-numbers="4-5|7-12|17-27|30|31-34|36-43|44" class="language-js"><script type="text/template">
+const PORT = 8001;
+var http = require('http');
+var path = require('path');
+var fs = require('fs');
+
+// create a lookup object for common content types
+const contentTypes = {
+    html: 'text/html',
+    json: 'text/json',
+    js: 'text/javascript'
+}
+
+var server = http.createServer(function(req,res){
+    console.log(req.method + " " + req.url);
+
+    //build the path to requested file on server
+    var filePath = path.join('.', req.url);
+
+    //quick hack to demonstrate routing concept - not robust!
+    if (req.url == "/"){
+        filePath = "index.html"
+    }else if (req.url == "/people"){
+        filePath = "data.json"
+    }
+
+    console.log(filePath);
+
+    //read and process file
+    fs.readFile(filePath, function(err, content){
+        if (err){
+            res.statusCode = 404;
+            return res.end("Resource not found");
+        }
+
+        var contentType = 'text/html'; //set html as default
+        
+        // assume a file
+        var ext = path.extname(filePath);
+        contentType = contentTypes[ext.slice(1)]; //isolate extension
+
+        //set content type and send a response
+        res.setHeader('Content-Type', contentType);
+        res.end(content);
+    });
+});
+
+    </script></code></pre>
+      </div>
+    </div>
+    <p style="font-size: medium;">Add some more practical functionality...</p>
+    <p style="font-size: medium;">A webserver needs to be able to open and read files!</p>
+</section>
+
+<section>
+    <h3>Let's Run It!</h3>
+    <ul style="font-size: medium; list-style-type: none;">
+        <li>http://localhost:8001/</li>
+        <li>http://localhost:8001/nofile.html</li>
+        <li>http://localhost:8001/people</li>
+    </ul>
+    <p style="font-size: medium;"></p>
+</section>
+
+<section>
+    <h3>Now we are ready to asynchronously fetch data from a webserver</h3>
+</section>
+
+<section>
+  <h4 data-id="title">Fetching data from a NodeJS server</h4>
+    <div class="row">
+      <div class="column">
+  <pre><code data-line-numbers="2-5|7-15" class="language-js"><script type="text/template">
+document.getElementById("loadbtn").addEventListener('click', (ev)=>{
+    fetchData(uri);
+    //console.log("Missing call to fetchData function!");
+});
+
+function fetchData(uri){
+    var promise = fetch(uri);
+    promise.then(function(res){
+        return res.json();
+    }).then(function(data){
+        renderData(data);
+    });
+}
+
+    </script></code></pre>
+      </div>
+    </div>
+    <p style="font-size: medium;">Open up fetch-demo.js and add the code above</p>
+</section>
+
+<section>
+  <h4 data-id="title">Understanding Asynchronous Requests</h4>
+    <div class="row">
+      <div class="column">
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+
+var promise = fetch(uri);
+promise.then(function(res){
+    return res.json();
+}).then(function(data){
+    renderData(data);
+});
+
+    </script></code></pre>
+      </div>
+    </div>
+    <p style="font-size: large;">Fetch requests are asynchronous, so they happen simultaneously with the rest of the code</p>
+    <p style="font-size: large;">After the request is sent, the next line of code is executed <strong>without waiting for the request to finish</strong></p>
+    <p style="font-size: large;">If the request did wait, what would happen?</p>
+</section>
+
+<section>
+  <h4 data-id="title">Understanding Asynchronous Requests</h4>
+    <div class="row">
+      <div class="column">
+        <h5>Benefits of async</h5>
+        <ul style="font-size: x-large; list-style-type: none;">
+            <li>Internet communication can be unstable/inconsistent</li>
+            <li>Non-blocking async requests allow the UI to remain 'snappy'</li>
+            <li>Avoid lost interest from person using your website!</li>
+        </ul>
+      </div>
+    </div>
+</section>
+
+<section>
+  <h4 data-id="title">Understanding Asynchronous Requests</h4>
+    <div class="row">
+      <div class="column">
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+
+var promise = fetch(uri);
+promise.then(function(res){
+    return res.json();
+}).then(function(data){
+    renderData(data);
+});
+
+    </script></code></pre>
+      </div>
+    </div>
+    <p style="font-size: large;">JavaScript applies the concept of a <span style="color:orange">Promise</span> to manage async requests</p>
+    <p style="font-size: large;">Rather than the requested data, a promise is returned. You <span style="color:orange">then</span> add a callback to be fulfilled when the operation is complete</p>
+    <p style="font-size: large;">The callback function parameter will receive the fulfilled response payload</p>
+</section>
+
+<section>
+  <h4 data-id="title">Understanding Asynchronous Requests</h4>
+    <div class="row">
+      <div class="column">
+  <pre><code data-line-numbers="5|7" class="language-js"><script type="text/template">
+
+var promise = fetch(uri);
+promise.then(function(res){
+    return res.json();
+}).then(function(data){
+    renderData(data);
+});
+
+    </script></code></pre>
+      </div>
+    </div>
+    <p style="font-size: large;">The fetch API provides the <code style="color:orange">json()</code> method to help extract the data from the response</p>
+    <p style="font-size: large;">BUT! The <code style="color:orange">json()</code> method also returns a promise :)</p>
+    <p style="font-size: large;">So we use function chaining to assign a callback to the second promise, which will contain the data in its parameter</p>
+</section>
+
+<section>
+  <h4 data-id="title">Understanding Asynchronous Requests</h4>
+    <div class="row">
+      <div class="column">
+  <pre><code data-line-numbers="8-10" class="language-js"><script type="text/template">
+
+var promise = fetch(uri);
+promise.then(function(res){
+    return res.json();
+}).then(function(data){
+    renderData(data);
+}).catch(function(error){
+    console.log(error.message);
+});
+
+    </script></code></pre>
+      </div>
+    </div>
+    <p style="font-size: large;">It's always good practice to add error handling.</p>
+</section>
+
+<section>
+  <h4 data-id="title">Understanding Asynchronous Requests</h4>
+    <div class="row">
+      <div class="column">
+        <h5>Async/Await</h5>
+        <ul style="font-size: x-large; list-style-type: none;">
+            <li>Alternative mechanism to Promise/then</li>
+            <li>Streamlines the Promise/then approach:
+                <ul style="font-size: x-large; list-style-type: none;">
+                    <li>Improved readability and maintainability</li>
+                    <li>More straightforward error handling (cleaner use of try/catch)</li>
+                    <li>Debugging is simplified due to linear code execution</li>
+                    <li>Linear execution is easier to reason about</li>
+                </ul>
+            </li>
+            <li>Usage largely depends on type of asynchronous requests that your application makes, development ecosystem, and organizational preferences</li>
+        </ul>
+      </div>
+    </div>
+</section>
+
+<section>
+  <h4 data-id="title">Fetching data with Async/Await</h4>
+    <div class="row">
+      <div class="column">
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+async function fetchData(uri){
+    try{
+        const response = await fetch(uri);
+        const data = await response.json();
+        renderData(data);
+    }catch(err){
+        console.log(err);
+    }
+}
+
+    </script></code></pre>
+      </div>
+    </div>
+    <p style="font-size: medium;">Open up fetch-demo.js and replace the Promise/then version of fetchData with the code above</p>
+    <p style="font-size: medium;">Using async/await, the fetch and data processing occurs in an asynchronous function that will <span style="color:orange">await</span> the results</p>
+    <p style="font-size: medium;">Note that any function that uses <span style="color:orange">await</span> must be marked as <span style="color:orange">async</span></p>
+</section>
+
+<section>
+  <h4 data-id="title">More Fetch</h4>
+    <div class="row">
+      <div class="column">
+  <pre><code data-line-numbers="" class="language-js"><script type="text/template">
+//infers a GET request
+fetch(uri);
+
+//for a POST request
+fetch(uri, {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data-to-send)
+});
+
+    </script></code></pre>
+      </div>
+    </div>
+    <p style="font-size: medium;"><code>fetch()</code> defaults to a GET request</p>
+    <p style="font-size: medium;"><code>fetch()</code> can optionally take a second options parameter (as a JSON dictionary)</p>
+
+</section>
+
+<section>
+    <h3>Let's Review</h3>
+    <p style="font-size: large;">JavaScript, HTML, CSS, Server Side, Fetch, HTTP Verbs, and so on...</p>
+    <p style="font-size: large;">Starting to feel 'unwieldy,' yes/no?</p>
+</section>
+
+<section data-auto-animate>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Large Client Interface</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Observations?</li>
+      </ul>
+    </div>
+    <div class="column">
+      <img src="img/nyt.png" style="max-width:500px"/>
+    </div>
+  </div>
+</section>
+
+<section>
+    <h5>Generally, as scale and complexity increases, so does the need for:</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Structure and organization</li>
+        <li>Reusable UI</li>
+        <li>Modularity</li>
+      </ul>
+</section>
+
+<section data-background-iframe="https://survey.stackoverflow.co/2023/#web-frameworks-and-technologies">
+    <div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+      <h2>Many Frameworks</h2>
+      <p>(I know, Angular is not the most popular)</p>
+    </div>
+</section>
+
+<section>
+    <h5>Most Frameworks Follow a Design Pattern</h5>
+    <ul style="font-size: x-large; list-style-type: none;">
+        <li>MVC: Model, View, Controller (Angular 1)</li>
+        <li>MVVM: Model, ViewModel, View (Vue.JS)</li>
+        <li>Component Based (React, Angular 2)</li>
+    </ul>
+    <p style="font-size: medium;">There are many others, but we will look more closely at the differences next week</p>
+</section>
+
+<section data-auto-animate>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Angular's Component Architecture</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Components are assembled into a hierarchy, starting with <em>root</em></li>
+        <li>Root is the default for all Angular projects</li>
+      </ul>
+    </div>
+    <div class="column">
+  <pre><code class="language-txt"><script type="text/template">
+> npm install -g @angular/cli
+
+> ng new inf133-demo
+> cd inf133-demo
+> ng serve --open
+
+  </script></code></pre>
+    </div>
+  </div>
+</section>
+
+<section data-auto-animate>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Angular's Component Architecture</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Components include a class (app.component.ts) that holds data and logic</li>
+        <li>Components include CSS and an HTML template that represent the data as a view</li>
+      </ul>
+    </div>
+    <div class="column">
+      <img src="img/angular-base.png" style="max-width:500px"/>
+    </div>
+  </div>
+</section>
+
+<section data-auto-animate>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Angular's Component Architecture</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>The template combines HTML and Angular markup, using <em>binding</em> and <em>directives</em></li>
+        <li><em>Binding</em> connects application data to the HTML before DOM is rendered</li>
+        <li><em>Directives</em> connects application logic to the HTML before DOM is rendered</li>
+      </ul>
+    </div>
+    <div class="column">
+      <img src="img/angular-template.png" style="max-width:500px"/>
+    </div>
+  </div>
+</section>
+
+<section data-auto-animate>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Angular's Component Architecture</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>New components can be automatically generated using the <em>ng</em> tool</li>
+      </ul>
+    </div>
+    <div class="column">
+  <pre><code class="language-txt"><script type="text/template">
+> ng generate component person
+
+  </script></code></pre>
+    </div>
+  </div>
+</section>
+
+<section data-auto-animate>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Angular's Component Architecture</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Components can then be <em>imported</em> into each other</li>
+        <li>First, identify the component <em>selector</em></li>
+      </ul>
+    </div>
+    <div class="column">
+  <pre><code data-line-numbers="6" class="language-ts"><script type="text/template">
+//person.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+    selector: 'app-person',
+    standalone: true,
+    imports: [],
+    templateUrl: './person.component.html',
+    styleUrl: './person.component.scss'
+})
+export class PersonComponent {
+
+}
+
+  </script></code></pre>
+    </div>
+  </div>
+</section>
+
+<section data-auto-animate>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Angular's Component Architecture</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Then, import to desired component</li>
+      </ul>
+    </div>
+    <div class="column">
+  <pre><code data-line-numbers="5,10" class="language-ts"><script type="text/template">
+//app.component.ts
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { PersonComponent } from './person/person.component';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet, PersonComponent],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss'
+})
+export class AppComponent {
+  title = 'inf133-demo';
+}
+
+  </script></code></pre>
+    </div>
+  </div>
+</section>
+
+<section data-auto-animate>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Angular's Component Architecture</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Finally, add component to HTML template</li>
+      </ul>
+    </div>
+    <div class="column">
+  <pre><code data-line-numbers="5" class="language-html"><script type="text/template">
+//app.component.html
+<h1>Hello, {{ title }}</h1>
+<p>Congratulations! Your app is running. 🎉</p>
+<app-person></app-person>
+
+  </script></code></pre>
+    </div>
+  </div>
+</section>
+
+<section data-auto-animate>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Angular's Component Architecture</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Four types of binding</li>
+        <li>Interpolation: <code>{{ }}</code></li>
+      </ul>
+    </div>
+    <div class="column">
+  <pre><code data-line-numbers="" class="language-ts"><script type="text/template">
+//app.component.html
+<h1>Hello, {{ title }}</h1>
+
+//app.component.ts
+export class AppComponent {
+  title = 'inf133-demo';
+}
+
+  </script></code></pre>
+        <p style="font-size:medium">Surround variable with double braces</p>
+    </div>
+  </div>
+</section>
+
+<section data-auto-animate>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Angular's Component Architecture</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Four types of binding</li>
+        <li>Interpolation: <code>{{ }}</code></li>
+        <li>Property binding: <code>[ ]</code></li>
+      </ul>
+    </div>
+    <div class="column">
+  <pre><code data-line-numbers="" class="language-ts"><script type="text/template">
+//app.component.html
+<img [src]="url" />
+
+//app.component.ts
+export class AppComponent {
+  url = 'https://inf133.markbaldw.in';
+}
+
+  </script></code></pre>
+        <p style="font-size:medium">Surround attribute with single brackets, variable assigned as quoted value</p>
+    </div>
+  </div>
+</section>
+
+<section data-auto-animate>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Angular's Component Architecture</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Four types of binding</li>
+        <li>Interpolation: <code>{{ }}</code></li>
+        <li>Property binding: <code>[ ]</code></li>
+        <li>Event binding: <code>( )</code></li>
+      </ul>
+    </div>
+    <div class="column">
+  <pre><code data-line-numbers="" class="language-ts"><script type="text/template">
+//app.component.html
+<button (click)="save()">Save</button>
+
+//app.component.ts
+export class AppComponent {
+  save(){
+    //do save operation
+  }
+}
+
+  </script></code></pre>
+        <p style="font-size:medium">Surround event name with single parens, function assigned as quoted value</p>
+    </div>
+  </div>
+</section>
+
+<section data-auto-animate>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Angular's Component Architecture</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Four types of binding</li>
+        <li>Interpolation: <code>{{ }}</code></li>
+        <li>Property binding: <code>[ ]</code></li>
+        <li>Event binding: <code>( )</code></li>
+        <li>Two-way binding: <code>[( )]</code></li>
+      </ul>
+    </div>
+    <div class="column">
+  <pre><code data-line-numbers="" class="language-ts"><script type="text/template">
+//app.component.html
+<input [(ngModel)]="enteredText">
+
+//app.component.ts
+export class AppComponent {
+  enteredText = "";
+}
+
+  </script></code></pre>
+        <p style="font-size:medium">Surround event or property name with bracket and parens, vairable assigned as quoted value</p>
+    </div>
+  </div>
+</section>
+
+<section data-auto-animate>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Angular's Component Architecture</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Structural Directives</li>
+        <li>Conditionally create or dispose views: <code>NgIf</code></li>
+      </ul>
+    </div>
+    <div class="column">
+  <pre><code data-line-numbers="" class="language-ts"><script type="text/template">
+//app.component.html
+<p *ngIf="isWorking">
+  Keep up the good work!
+</p>
+
+//app.component.ts
+export class AppComponent {
+  isWorking: boolean = false;
+}
+
+  </script></code></pre>
+    </div>
+  </div>
+</section>
+
+<section data-auto-animate>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Angular's Component Architecture</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Structural Directives</li>
+        <li>Conditionally create or dispose views: <code>NgIf</code></li>
+        <li>Repeat items from a list: <code>NgFor</code></li>
+      </ul>
+    </div>
+    <div class="column">
+  <pre><code data-line-numbers="" class="language-ts"><script type="text/template">
+//app.component.html
+<ul>
+  <li *ngFor="let day of days">
+    {{day}}
+  </li>
+</ul>
+
+//app.component.ts
+export class AppComponent {
+  days = ["Sunday", 
+          "Monday", 
+          "Tuesday", 
+          "Wednesday", 
+          "Thursday", 
+          "Friday", 
+          "Saturday"];
+}
+
+  </script></code></pre>
+    </div>
+  </div>
+</section>
+
+<section data-auto-animate>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Angular's Component Architecture</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Components can specify inputs</li>
+        <li>Inputs send data from parent to child</li>
+      </ul>
+    </div>
+    <div class="column">
+  <pre><code data-line-numbers="" class="language-ts"><script type="text/template">
+//app.component.html
+<app-work status="Working"></app-work>
+
+//work.component.ts
+export class WorkComponent {
+  @Input() status:string;
+}
+
+  </script></code></pre>
+    </div>
+  </div>
+</section>
+
+<section data-auto-animate>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Angular's Component Architecture</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Components can specify outputs</li>
+        <li>Outputs send data from child to parent</li>
+      </ul>
+    </div>
+    <div class="column">
+  <pre><code data-line-numbers="" class="language-ts"><script type="text/template">
+//app.component.html
+<app-work status="Working" (workChanged)="workChangedMessage($event)"></app-work>
+
+//work.component.ts
+export class WorkComponent {
+  @Output() workChanged = new EventEmitter<string>();
+  status:string = "";
+
+  buttonClicked(){
+    this.status = "Not Working";
+    this.workChanged.emit(this.status);
+  }
+}
+
+  </script></code></pre>
+    </div>
+  </div>
+</section>
+
+<section data-auto-animate>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Angular's Component Summary</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Angular is a component based client-side framework</li>
+        <li>Data moves between template and data/logic using binding</li>
+        <li>Template views can be manipulated by directives</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<section data-auto-animate>
+  <h3>Assignment 3</h3>
+  <h4>Bring everything covered today together!</h4>
+</section>

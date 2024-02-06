@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>A2: Runkeeper Tweet Report in JavaScript and TypeScript &#8212; INF 133 Winter 2024</title>
   
@@ -19,49 +18,53 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'assignments/a2';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -79,7 +82,6 @@ const thebe_selector_output = ".output, .cell_output"
   <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -119,20 +121,15 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <header>
   
-    <div class="bd-header navbar navbar-expand-lg bd-navbar">
-    </div>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
-  </header>
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -168,7 +165,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">INF 133 Winter 2024</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Assignments</span></p>
 <ul class="current nav bd-sidenav">
@@ -182,6 +190,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../notes/wk2.html">Week 2 Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notes/wk3.html">Week 3 Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notes/wk4.html">Week 4 Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notes/wk5.html">Week 5 Notes</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Resources</span></p>
 <ul class="nav bd-sidenav">
@@ -382,21 +391,21 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="a2-runkeeper-tweet-report-in-javascript-and-typescript">
-<h1>A2: Runkeeper Tweet Report in JavaScript and TypeScript<a class="headerlink" href="#a2-runkeeper-tweet-report-in-javascript-and-typescript" title="Permalink to this heading">#</a></h1>
+<h1>A2: Runkeeper Tweet Report in JavaScript and TypeScript<a class="headerlink" href="#a2-runkeeper-tweet-report-in-javascript-and-typescript" title="Link to this heading">#</a></h1>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
 <p>In this assignment, you’ll use JavaScript and TypeScript to create a webpage report which helps a potential researcher understand a week’s worth of Tweets from RunKeeper, a popular running app. You’ll follow much of the methodology from one of Professor Daniel Epstein’s research papers, which looked to understand whether the content of RunKeeper tweets influences how or whether audience members respond.</p>
 <blockquote>
 <div><p>Daniel A. Epstein, Bradley H. Jacobson, Elizabeth Bales, David W. McDonald, Sean A. Munson. <a href="http://www.depstein.net/pubs/depstein_cscw15.pdf">From “Nobody Cares” to “Way to Go!”: A Design Framework for Social Sharing in Personal Informatics.</a> CSCW 2015.</p>
 </div></blockquote>
 </section>
 <section id="assignment-details">
-<h2>Assignment Details<a class="headerlink" href="#assignment-details" title="Permalink to this heading">#</a></h2>
+<h2>Assignment Details<a class="headerlink" href="#assignment-details" title="Link to this heading">#</a></h2>
 <section id="starter-code">
-<h3>Starter code<a class="headerlink" href="#starter-code" title="Permalink to this heading">#</a></h3>
+<h3>Starter code<a class="headerlink" href="#starter-code" title="Link to this heading">#</a></h3>
 <p>A <a class="reference external" href="https://classroom.github.com/a/RKn8OrvB">starter repository</a> is on GitHub Classroom.</p>
 <section id="repository-structure">
-<h4>Repository Structure<a class="headerlink" href="#repository-structure" title="Permalink to this heading">#</a></h4>
+<h4>Repository Structure<a class="headerlink" href="#repository-structure" title="Link to this heading">#</a></h4>
 <p>The repository contains 14 files (excluding the <strong><code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></strong>, which specifies what files should not be committed). You will edit some of them in this assignment, but not all.</p>
 <p>The files you should not need to edit are:</p>
 <ul class="simple">
@@ -421,13 +430,13 @@ document.write(`
 <p>This assignment can be completed without writing any additional files or functions. But you may add a file or function if you want (such as to complete one of the bonus features).</p>
 </section>
 <section id="working-in-pairs">
-<h4>Working in pairs<a class="headerlink" href="#working-in-pairs" title="Permalink to this heading">#</a></h4>
+<h4>Working in pairs<a class="headerlink" href="#working-in-pairs" title="Link to this heading">#</a></h4>
 <p>If you are completing the assignment in pairs, you should work in one shared GitHub repository. The easiest way to do this is to use the groups feature in the Github Classroom assignment page. Alternatively, have one person create a new repository and <a href="https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/">add the other as a collaborator</a>.</p>
 <p>The downside of working in pairs is that you open yourself up to potential issues merging one person’s code into another. Make sure you always <a href="https://help.github.com/desktop/guides/contributing-to-projects/syncing-your-branch/">update the version of the code on your computer prior to beginning work</a>. This <a href="https://gist.github.com/ccannon94/a75f1f725d33a1834dd7f5feebbc7d4b">guide</a> offers some suggestions for how to resolve potential conflicts which might arise. But more generally, we suggest that you complete this assignment via pair programming, alternating roles as drivers and navigators.</p>
 <p>If you do work in pairs, you will use the groups feature in Canvas to support your work. DO NOT create a student group. Use one of the empty groups available to you in the <code class="docutils literal notranslate"><span class="pre">a2</span> <span class="pre">groups</span></code> tab in the <code class="docutils literal notranslate"><span class="pre">People</span></code> section of Canvas.</p>
 </section>
 <section id="setting-up-your-workspace">
-<h4>Setting up your Workspace<a class="headerlink" href="#setting-up-your-workspace" title="Permalink to this heading">#</a></h4>
+<h4>Setting up your Workspace<a class="headerlink" href="#setting-up-your-workspace" title="Link to this heading">#</a></h4>
 <p>You will need to install a TypeScript transpiler. The TypeScript transpiler converts TypeScript files to equivalent JavaScript. It’s also recommended that you install a live reloader to simplify debugging.</p>
 <p>The easiest way to install these two packages is through npm, the Package Manager in Node.js. Follow these instructions to install npm: <a href="https://www.npmjs.com/get-npm">npm installation instructions</a></p>
 <p>Once npm is installed, open your favorite terminal and install the two packages for the assignment. Both are applications which run in the terminal rather than libraries, so it’s recommended that you install them with the <strong><code class="docutils literal notranslate"><span class="pre">-g</span></code></strong> (global) option.</p>
@@ -444,7 +453,7 @@ document.write(`
 </pre></div>
 </div>
 <section id="running-the-typescript-transpiler">
-<h5>Running the TypeScript Transpiler<a class="headerlink" href="#running-the-typescript-transpiler" title="Permalink to this heading">#</a></h5>
+<h5>Running the TypeScript Transpiler<a class="headerlink" href="#running-the-typescript-transpiler" title="Link to this heading">#</a></h5>
 <p>The typescript transpiler, <strong><code class="docutils literal notranslate"><span class="pre">tsc</span></code></strong>, takes a project configuration file as an optional argument. The configuration file is in the root folder of the repository, so run <strong><code class="docutils literal notranslate"><span class="pre">tsc</span></code></strong> from there:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tsc</span> <span class="o">--</span><span class="n">p</span> <span class="n">tsconfig</span><span class="o">.</span><span class="n">json</span> 
 </pre></div>
@@ -452,13 +461,13 @@ document.write(`
 <p>It’s also recommended that you add the <strong><code class="docutils literal notranslate"><span class="pre">--watch</span></code></strong> flag so your code automatically re-compiles. This code will create the JavaScript version of the Tweet class in <strong><code class="docutils literal notranslate"><span class="pre">js/tweet.js</span></code></strong>.</p>
 </section>
 <section id="running-live-server">
-<h5>Running Live Server<a class="headerlink" href="#running-live-server" title="Permalink to this heading">#</a></h5>
+<h5>Running Live Server<a class="headerlink" href="#running-live-server" title="Link to this heading">#</a></h5>
 <p>You may find the <strong><code class="docutils literal notranslate"><span class="pre">live-server</span></code></strong> package helpful, which automatically refreshes your webpage when you make changes to it. It’s not perfect, but can be a helpful resource. Run it in your terminal from the root directory with <strong><code class="docutils literal notranslate"><span class="pre">live-server</span></code></strong>.</p>
 </section>
 </section>
 </section>
 <section id="requirements">
-<h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">#</a></h3>
+<h3>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h3>
 <p>There are three parts to this assignment:</p>
 <ol class="arabic simple">
 <li><p>Summarizing tweets on the about page.</p></li>
@@ -470,14 +479,14 @@ document.write(`
 <p>You will not receive credit for these modifications if you edit the HTML directly or hard-code a variable to the value that the span should be set to. There are a few spans where hard-coding in <strong><code class="docutils literal notranslate"><span class="pre">activities.js</span></code></strong> is expected/allowed.</p>
 <p>We have created skeleton functions in each JavaScript file to organize your code. In each of the parts, we often suggest functions to edit. You may choose to add new functions or not use the functions we created at all, so long as you stick to the above restrictions (e.g., not hard-coding, not editing the <strong><code class="docutils literal notranslate"><span class="pre">js/tweet.js</span></code></strong> file). We are not evaluating your code on style.</p>
 <section id="part-1-summarizing-tweets-about-js">
-<h4>Part 1: Summarizing Tweets (about.js)<a class="headerlink" href="#part-1-summarizing-tweets-about-js" title="Permalink to this heading">#</a></h4>
+<h4>Part 1: Summarizing Tweets (about.js)<a class="headerlink" href="#part-1-summarizing-tweets-about-js" title="Link to this heading">#</a></h4>
 <p>In this part, you will provide some summary information to a researcher interested in the Tweet data. You will identify the dates of the earliest and latest Tweets in the set, how many of each category exist, and how many of the completed tweets contain written text. Use JQuery methods to programmatically edit the spans for each question.</p>
 <section id="tweet-dates-1-point">
-<h5>Tweet Dates (1 point)<a class="headerlink" href="#tweet-dates-1-point" title="Permalink to this heading">#</a></h5>
+<h5>Tweet Dates (1 point)<a class="headerlink" href="#tweet-dates-1-point" title="Link to this heading">#</a></h5>
 <p>The time attribute of the Tweet class contains the date of each Tweet. Write out the Month, Day, and Year of the earliest and latest Tweet (e.g., Monday, October 14, 2019). The JavaScript function <strong><code class="docutils literal notranslate"><span class="pre">toLocaleDateString()</span></code></strong> may be helpful for formatting the dates. Edit the <strong><code class="docutils literal notranslate"><span class="pre">about.js</span></code></strong> file to find the earliest and latest tweet and update the spans.</p>
 </section>
 <section id="tweet-categories-1-point">
-<h5>Tweet Categories (1 point)<a class="headerlink" href="#tweet-categories-1-point" title="Permalink to this heading">#</a></h5>
+<h5>Tweet Categories (1 point)<a class="headerlink" href="#tweet-categories-1-point" title="Link to this heading">#</a></h5>
 <p>The tweets can be divided into four categories:</p>
 <ul class="simple">
 <li><p>Completed events, where the person is Tweeting an activity they recently finished.</p></li>
@@ -490,16 +499,16 @@ document.write(`
 <p>Format all percentages with exactly two decimal places. The header of <strong><code class="docutils literal notranslate"><span class="pre">index.html</span></code></strong> loads the <a class="reference external" href="http://mathjs.org/">Math.js</a> library from a Content Delivery Network (CDN). You may find the <a class="reference external" href="http://mathjs.org/docs/reference/functions/format.html">.format()</a> function in mathjs useful for formatting percentages.</p>
 </section>
 <section id="user-written-tweets-2-points">
-<h5>User-written tweets (2 points)<a class="headerlink" href="#user-written-tweets-2-points" title="Permalink to this heading">#</a></h5>
+<h5>User-written tweets (2 points)<a class="headerlink" href="#user-written-tweets-2-points" title="Link to this heading">#</a></h5>
 <p>Some of the Tweets in each category also contain text written by the user. These tweets all follow a similar structure. Look through the text of the tweets in the dataset to devise programmatic rules for identifying whether it contains user-written text. You can add those rules to the <strong><code class="docutils literal notranslate"><span class="pre">written</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">writtenText</span></code></strong> getter functions in <strong><code class="docutils literal notranslate"><span class="pre">tweet.ts</span></code></strong>. To determine this, you will need to strip out the <strong><code class="docutils literal notranslate"><span class="pre">#RunKeeper</span></code></strong> hashtag and the tweet link. After that, you’ll notice a phrase or two used in many of the tweets. That phrase (or phrases) was likely not written by each of thousands of people, but rather was provided as a default text string by RunKeeper itself.</p>
 <p>About 25% of the completed event Tweets in the Epstein et al. paper included any written text. Again, you may arrive at a slightly different percentage. Format your percentage to two decimal places.</p>
 </section>
 </section>
 <section id="part-2-identifying-the-most-popular-activities-activities-js">
-<h4>Part 2: Identifying the Most Popular Activities (activities.js)<a class="headerlink" href="#part-2-identifying-the-most-popular-activities-activities-js" title="Permalink to this heading">#</a></h4>
+<h4>Part 2: Identifying the Most Popular Activities (activities.js)<a class="headerlink" href="#part-2-identifying-the-most-popular-activities-activities-js" title="Link to this heading">#</a></h4>
 <p>In this part, you will help a researcher understand the activities people are logging in RunKeeper by identifying the types of activities and distances in the completed tweets and visualizing how distance varies by activity type and day of the week. Use JQuery methods to programmatically edit the spans for each question and <a class="reference external" href="https://vega.github.io/vega-lite/">Vega-Lite</a> to create graphs.</p>
 <section id="determining-activity-type-and-distance-3-points">
-<h5>Determining activity type and distance (3 points)<a class="headerlink" href="#determining-activity-type-and-distance-3-points" title="Permalink to this heading">#</a></h5>
+<h5>Determining activity type and distance (3 points)<a class="headerlink" href="#determining-activity-type-and-distance-3-points" title="Link to this heading">#</a></h5>
 <p>First, update the getters for <strong><code class="docutils literal notranslate"><span class="pre">activityType</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">distance</span></code></strong> in <strong><code class="docutils literal notranslate"><span class="pre">tweet.ts</span></code></strong>. <strong><code class="docutils literal notranslate"><span class="pre">activityType</span></code></strong> is the kind of physical activity that the person is performing in the tweet (running, skiing, biking, etc.). Distance is how long in Miles the physical activity was performed.</p>
 <p>Note that these values only have to be identified for completed tweets, which follow a fairly rigid format. Syntax for <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a> is beyond the scope of this class, but may be helpful for calculating these values. <strong><code class="docutils literal notranslate"><span class="pre">indexOf</span></code></strong> or <strong><code class="docutils literal notranslate"><span class="pre">search</span></code></strong> should also be sufficient.</p>
 <p>Because RunKeeper is used all around the world, some distances will be expressed in Miles and others in Kilometers. Convert them all to Miles. You might typically use a library to help with this (Math.js has some helper functions). However, our setup for TypeScript makes importing libraries challenging, so approximating is fine (e.g., 1 mi = 1.609 km). You’ll make more use of libraries in future assignments.</p>
@@ -508,7 +517,7 @@ document.write(`
 <p>Once you have determined the activity type and distance of each completed tweet, edit <strong><code class="docutils literal notranslate"><span class="pre">activities.js</span></code></strong> to update the spans for the most frequent types of activity, longest and shortest activity types, and whether the longest activities tend to be on weekdays or weekends. You can average across activities when evaluating length on weekdays versus weekends.</p>
 </section>
 <section id="graphing-activities-by-distance-3-points">
-<h5>Graphing activities by distance (3 points)<a class="headerlink" href="#graphing-activities-by-distance-3-points" title="Permalink to this heading">#</a></h5>
+<h5>Graphing activities by distance (3 points)<a class="headerlink" href="#graphing-activities-by-distance-3-points" title="Link to this heading">#</a></h5>
 <p>Once <strong><code class="docutils literal notranslate"><span class="pre">activityType</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">distance</span></code></strong> are calculated, they should be plotted with Vega-Lite by editing the <strong><code class="docutils literal notranslate"><span class="pre">activities.js</span></code></strong> file. You will make three plots in total:</p>
 <ul class="simple">
 <li><p>A plot of how many of each type of activity exists in the dataset. The specification of a potential visualization appears in <strong><code class="docutils literal notranslate"><span class="pre">activities.js</span></code></strong>.</p></li>
@@ -522,21 +531,21 @@ document.write(`
 </section>
 </section>
 <section id="part-3-adding-a-text-search-interface-description-js">
-<h4>Part 3: Adding a Text Search Interface (description.js)<a class="headerlink" href="#part-3-adding-a-text-search-interface-description-js" title="Permalink to this heading">#</a></h4>
+<h4>Part 3: Adding a Text Search Interface (description.js)<a class="headerlink" href="#part-3-adding-a-text-search-interface-description-js" title="Link to this heading">#</a></h4>
 <p>In this part, you will implement a “search” interface for running tweets which allows a researcher to look through the tweets and their corresponding RunKeeper activities. To do so, you will add an event handler and filters to the <strong><code class="docutils literal notranslate"><span class="pre">descriptions.js</span></code></strong> file.</p>
 <section id="implementing-the-search-box-2-points">
-<h5>Implementing the search box (2 points)<a class="headerlink" href="#implementing-the-search-box-2-points" title="Permalink to this heading">#</a></h5>
+<h5>Implementing the search box (2 points)<a class="headerlink" href="#implementing-the-search-box-2-points" title="Link to this heading">#</a></h5>
 <p>Update the table with the tweet number, activity type. The <strong><code class="docutils literal notranslate"><span class="pre">searchCount</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">searchText</span></code></strong> spans should also update as a researcher types in the search box. Your code should check the search box and update the table after every character is entered into the box.</p>
 </section>
 <section id="populating-the-table-3-points">
-<h5>Populating the table (3 points)<a class="headerlink" href="#populating-the-table-3-points" title="Permalink to this heading">#</a></h5>
+<h5>Populating the table (3 points)<a class="headerlink" href="#populating-the-table-3-points" title="Link to this heading">#</a></h5>
 <p>As the person adds or removes a character from their search, the rows of the table should update. Your code should also clear the table when the search text is an empty string.</p>
 <p>The links in the Tweet should also be clickable to allow the researcher to explore the data more. To parse these, use similar strategies to how you parsed the type of activity and identified the tweet category. The <strong><code class="docutils literal notranslate"><span class="pre">getHTMLTableRow()</span></code></strong> function in the tweet TypeScript class is a good place to parse the tweets and generate clickable links.</p>
 <p><img alt="table search example" src="../_images/a2_search.gif" /></p>
 </section>
 </section>
 <section id="optional-bonus-features">
-<h4>Optional/Bonus Features<a class="headerlink" href="#optional-bonus-features" title="Permalink to this heading">#</a></h4>
+<h4>Optional/Bonus Features<a class="headerlink" href="#optional-bonus-features" title="Link to this heading">#</a></h4>
 <p>The three parts of the assignment create a basic report tool. There are many ways of extending this tool, and we can offer one point of extra credit for implementing one extension. We’ve enumerated some potential extensions:</p>
 <ul class="simple">
 <li><p>Rather than alternating between two visualizations, using Vega-lite’s <a class="reference external" href="https://vega.github.io/vega-lite/tutorials/streaming.html">streaming data</a> or <a class="reference external" href="https://vega.github.io/vega-lite/docs/selection.html">interactive charts</a> to dynamically change one chart when the aggregate button is pressed.</p></li>
@@ -544,13 +553,13 @@ document.write(`
 </ul>
 </section>
 <section id="submitting">
-<h4>Submitting<a class="headerlink" href="#submitting" title="Permalink to this heading">#</a></h4>
+<h4>Submitting<a class="headerlink" href="#submitting" title="Link to this heading">#</a></h4>
 <p>To submit, zip your repository and upload it to Canvas. Any late uploads are subject to the course’s late policy.</p>
 <p>Please update your readme.txt with how long the assignment took, who or what online resources you consulted with, any bonus features you added, and anything else we should know.</p>
 <p>From your repository, we will transpile your Tweet class in the <strong><code class="docutils literal notranslate"><span class="pre">ts/tweets.ts</span></code></strong> file into <strong><code class="docutils literal notranslate"><span class="pre">js/tweets.js</span></code></strong>. <strong>We will therefore not grade any edits you made to this JavaScript file</strong>. Be sure you are coding in only the TypeScript file for this class. We may provide a different set of tweets by editing the (<strong><code class="docutils literal notranslate"><span class="pre">js/get_saved_tweets.ts</span></code></strong>) as well.</p>
 </section>
 <section id="grading">
-<h4>Grading<a class="headerlink" href="#grading" title="Permalink to this heading">#</a></h4>
+<h4>Grading<a class="headerlink" href="#grading" title="Link to this heading">#</a></h4>
 <p>This assignment will be graded on a scale of 20 points, broken down as follows:</p>
 <ul class="simple">
 <li><p>Summarizing tweets (6 points)</p></li>
@@ -713,8 +722,8 @@ By Mark S. Baldwin
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
