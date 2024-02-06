@@ -35,7 +35,7 @@ npm install
 
 This will automatically install all required modules according to the **`package.json`** file included in the project. When install is complete, run:
 
-```{note}
+```{code}
 ng serve --open
 ```
 
