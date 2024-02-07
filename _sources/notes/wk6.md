@@ -5,21 +5,17 @@ Week 6 Notes
 Keep an eye weekly pages as they might be updated throughout the week.
 ```
 
+The weekly notes pages is where you will find links to in-class materials, including: slides, lecture recordings, and demo code. A new notes page will appear every Monday morning and will be updated with recordings on Tuesday.
+
 ## Lecture Materials
 
 
-### Tuesday
+[Slide Deck]()
 
-[Lecture Recording](https://uci.yuja.com/V/Video?v=9096880&node=39034470&a=189650757&autoplay=1)
+[Lecture Recording]()
 
+If you prefer a printable version:
 
-<a href="../resources/11_7_23-angular_separation.pdf" >Slides for Lecture</a>
-
-
-
-### Thursday
-
-[Lecture Recording](https://uci.yuja.com/V/Video?v=9109375&node=39086055&a=143225584&autoplay=1)
+[Print Slide Deck](http://inf133.markbaldw.in/slides/slides.html?file=wk1.html?print-pdf)
 
 
-<a href="../resources/11_9_23-human_performance.pdf" >Slides for Lecture</a>
