@@ -5,21 +5,6 @@
 - Change all events to use Arial instead of Verdana
 - Adjust office hours to bold all text (font-weight 700)
 */
-
-$heading-font: Times;
-$event-font: Arial;
-$discussion-color: purple;
-$lecture-color:royalblue;
-$officehours-color:palegreen;
-$assignment-color:saddlebrown;
-
-@mixin event($color)
-{
-  background-color: $color;
-  margin: 5px;
-  font-family: $event-font;
-}
-
 td, th {
   border-width: 1px;
   border-style: solid;
@@ -32,39 +17,40 @@ th {
 }
 
 .heading {
-  font-family: $heading-font;
+  font-family: Times;
 }
 
 .discussion {
-  background-color: $discussion-color;
+  background-color: purple;
   margin: 5px;
-  font-family: $event-font;
+  font-family: Arial;
 }
 
 .lecture {
-  background-color: $lecture-color;
+  background-color: royalblue;
   margin: 5px;
   font-family: Arial;
   color: white;
 }
 
-.officehours_ta{
-  @extend %officehours;
-}
 .officehours_baldwin {
-  @extend %taofficehours;
+  background-color: palegreen;
+  margin: 5px;
+  font-family: Arial;
 }
 
-%taofficehours {
- @include event($officehours-color);
-}
-
-%officehours {
- @include event($officehours-color);
- font-weight: 700;
+.officehours_ta {
+  background-color: palegreen;
+  margin: 5px;
+  font-family: Arial;
+  font-weight: 700;
 }
 
 #a1 {
-  @include event($assignment-color);
+  background-color: saddlebrown;
+  margin: 5px;
+  font-family: Arial;
   color: white;
 }
+
+/*# sourceMappingURL=style.css.map */

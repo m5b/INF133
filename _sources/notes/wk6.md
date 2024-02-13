@@ -12,7 +12,7 @@ The weekly notes pages is where you will find links to in-class materials, inclu
 
 [Slide Deck](http://inf133.markbaldw.in/slides/slides.html?file=wk6.html)
 
-[Lecture Recording]()
+[Lecture Recording](https://uci.yuja.com/V/Video?v=9685523&node=42741037&a=7987291&autoplay=1)
 
 If you prefer a printable version:
 
