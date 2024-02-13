@@ -10,12 +10,12 @@ The weekly notes pages is where you will find links to in-class materials, inclu
 ## Lecture Materials
 
 
-[Slide Deck]()
+[Slide Deck](http://inf133.markbaldw.in/slides/slides.html?file=wk6.html)
 
 [Lecture Recording]()
 
 If you prefer a printable version:
 
-[Print Slide Deck](http://inf133.markbaldw.in/slides/slides.html?file=wk1.html?print-pdf)
+[Print Slide Deck](http://inf133.markbaldw.in/slides/slides.html?file=wk6.html?print-pdf)
 
 

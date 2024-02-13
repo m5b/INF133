@@ -1,0 +1,49 @@
+/*TODO:
+- Turn fonts and colors into variables: heading-font, event-font, discussion-color, lecture-color, officehours-color, assignment-color.
+- Write a mixin for all events, passing in the color to use as the background, applying a 5-pixel margin, and using the event font
+- Write an extension for office hours, using it for both the officehours-baldwin and officehours-ta classes.
+- Change all events to use Arial instead of Verdana
+- Adjust office hours to bold all text (font-weight 700)
+*/
+
+td, th {
+  border-width: 1px;
+  border-style: solid;
+}
+
+th {
+  font-size: 150%;
+  padding: 5px;
+  font-family: Arial;
+}
+
+.heading {
+  font-family: Arial;
+}
+
+.discussion {
+  background-color: yellow;
+  margin: 5px;
+  font-family: Arial;
+}
+
+.lecture {
+  background-color: royalblue;
+  margin: 5px;
+  font-family: Arial;
+  color: white;
+}
+
+.officehours_ta, .officehours_baldwin {
+  background-color: palegreen;
+  margin: 5px;
+  font-family: Arial;
+  font-weight: 700;
+}
+
+#a1 {
+  background-color: saddlebrown;
+  margin: 5px;
+  font-family: Arial;
+  color: white;
+}

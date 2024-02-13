@@ -1,6 +1,49 @@
-Cover authorization (from server side dev slides)
+<!-- Cover authorization (from server side dev slides) -->
 
+<section>
+  <h3>Web Frameworks: Understanding Separation</h3>
+  <p>
+    <small>INF 133 User Interaction Software</small>
+  </p>
+  <p>
+    <small>Week 6</small>
+  </p>
+</section>
 
+<section>
+  <h3>Goals for Today</h3>
+  <h4>By the end this lecture, you should be able to...</h4>
+  <ul style="font-size: x-large; list-style-type: none;">
+    <li>Differentiate and explain the roles of Angular components, services, and classes</li>
+    <li>Implement a service in Angular</li>
+    <li>Explain and implement the different stages to authenticating via OAuth</li>
+  </ul>
+</section>
+
+<section data-auto-animate>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Large Client Interface</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Hundreds of pages and ways to navgiate between them</li>
+        <li>Repeated UI elements (many self updating)</li>
+        <li>Different content, links, images, etc., often unique to each person</li>
+      </ul>
+    </div>
+    <div class="column">
+      <img src="img/nyt.png" style="max-width:500px" />
+    </div>
+  </div>
+</section>
+
+<section>
+  <h5>Most Frameworks Follow a Design Pattern</h5>
+  <ul style="font-size: x-large; list-style-type: none;">
+    <li>MVC: Model, View, Controller (Angular 1)</li>
+    <li>MVVM: Model, ViewModel, View (Vue.JS)</li>
+    <li>Component Based (React, Angular 2)</li>
+  </ul>
+</section>
 
 <section data-auto-animate>
   <div class="row">
@@ -8,28 +51,701 @@ Cover authorization (from server side dev slides)
       <h5 style="font-size: smaller">Model View Controller</h5>
       <ul style="font-size: x-large; list-style-type: none;">
         <li>Model
-            <ul style="font-size: large; list-style-type: none;">
-                <li>Represents the data used by an app</li>
-                <li>E.g., on web: JavaScript for loading, parsing, and manipulating data</li>
-            </ul>
+          <ul style="font-size: large; list-style-type: none;">
+            <li>Represents the data used by an app</li>
+            <li>E.g., on web: JavaScript for loading, parsing, and manipulating data</li>
+          </ul>
         </li>
         <li>View
-            <ul style="font-size: large; list-style-type: none;">
-                <li>The visual interface of an app</li>
-                <li>E.g., on web: HTML and CSS</li>
-            </ul>
+          <ul style="font-size: large; list-style-type: none;">
+            <li>The visual interface of an app</li>
+            <li>E.g., on web: HTML and CSS</li>
+          </ul>
         </li>
         <li>Controller
-            <ul style="font-size: large; list-style-type: none;">
-                <li>Manages interaction between view and model</li>
-                <li>E.g., JavaScript and DOM, event handlers for widgets, etc.</li>
-            </ul>
+          <ul style="font-size: large; list-style-type: none;">
+            <li>Manages interaction between view and model</li>
+            <li>E.g., JavaScript and DOM, event handlers for widgets, etc.</li>
+          </ul>
         </li>
       </ul>
     </div>
     <div class="column" style="background-color: white;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/436px-MVC-Process.svg.png" alt="MVC diagram" style="max-width:500px"/>
-      <span style="color:black; font-size: small;"><a href="https://commons.wikimedia.org/wiki/File:MVC-Process.svg">source</a></span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/436px-MVC-Process.svg.png"
+        alt="MVC diagram" style="max-width:500px" />
+      <span style="color:black; font-size: small;"><a
+          href="https://commons.wikimedia.org/wiki/File:MVC-Process.svg">source</a></span>
     </div>
   </div>
+</section>
+
+<section data-auto-animate>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <h5 style="font-size: smaller">Component Based Architecture</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Model
+          <ul style="font-size: large; list-style-type: none;">
+            <li>Represents the data used by an app</li>
+            <li>E.g., on web: JavaScript for loading, parsing, and manipulating data</li>
+          </ul>
+        </li>
+        <li>View
+          <ul style="font-size: large; list-style-type: none;">
+            <li>The visual interface of an app</li>
+            <li>E.g., on web: HTML and CSS</li>
+          </ul>
+        </li>
+        <li>Controller
+          <ul style="font-size: large; list-style-type: none;">
+            <li>Manages interaction between view and model</li>
+            <li>E.g., JavaScript and DOM, event handlers for widgets, etc.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="column" style="background-color: white;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/436px-MVC-Process.svg.png"
+        alt="MVC diagram" style="max-width:500px" />
+      <span style="color:black; font-size: small;"><a
+          href="https://commons.wikimedia.org/wiki/File:MVC-Process.svg">source</a></span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h4 data-id="title">Architecture Comparison</h4>
+  <div class="row">
+    <div class="column">
+      <h5>MVC</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Clear separation of UI, Data, and Logic</li>
+        <li>Modular, but not self-contained</li>
+        <li>Horizontal reusability</li>
+      </ul>
+    </div>
+    <div class="column">
+      <h5>Component</h5>
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>UI, Data, Logic all exist within single component</li>
+        <li>Strong support for modulatiry, 'plug and play' design</li>
+        <li>Vertical reusability</li>
+        <li>Can increase duplicate logic</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h4 data-id="title">Angular Evolution</h4>
+  <div class="row">
+    <div class="column">
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Angular has gradually moved towards full support for component based architecture design</li>
+        <li>Still can 'bend' Angular to adopt an MVC-like pattern</li>
+        <li>Most major frameworks seem to be settling on CBA</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h4 data-id="title">Angular Evolution</h4>
+  <h5>The main goal of these patterns is to support separation of concerns and modularity.
+    Let's look at some of the ways we can (and have in a3) leverate separation in Angular.</h5>
+</section>
+
+<section>
+  <h4 data-id="title">Angular Services</h4>
+  <h5>Angular makes use of a concept called <em>Dependency Injection</em>.</h5>
+  <h5>Dependencies are any resource that a component needs. They are associated in code, then injected by Angular's
+    Application Injector.</h5>
+</section>
+
+<section>
+  <h4 data-id="title">Angular Services</h4>
+  <div class="row">
+    <div class="column">
+      <pre><code data-line-numbers="" class="language-ts"><script type="text/template">
+> ng generate service MyService
+
+    </script></code></pre>
+    </div>
+  </div>
+  <p>Anything not associated with a specific view should be turned into a service.</p>
+  <p>Services should be designed to serve a single purpose.</p>
+</section>
+
+<section>
+  <h4 data-id="title"></h4>
+  <div class="row">
+    <div class="column">
+      <pre><code data-line-numbers="" class="language-ts"><script type="text/template">
+import { Injectable } from '@angular/core'; //<-- import Injectable
+...
+
+@Injectable({
+  providedIn: 'root'; //<-- what module(s) can use this service
+})
+
+export class MyService {
+  constructor() {}
+
+  private myMethod(){}
+}
+
+    </script></code></pre>
+    </div>
+  </div>
+  <p>Make the service part of the application injector</p>
+
+</section>
+
+<section>
+  <h4 data-id="title">Angular Services</h4>
+  <div class="row">
+    <div class="column">
+      <pre><code data-line-numbers="" class="language-ts"><script type="text/template">
+import { MyService } from './services'; //<-- arbitrary project location
+
+...
+
+export class MyPage {
+  constructor(private myService: MyService) {} //<-- Injecting service
+}
+
+    </script></code></pre>
+    </div>
+  </div>
+  <p>A service can be used by a component by importing it, then injecting into constructor</p>
+
+</section>
+
+<section>
+  <h4 data-id="title">Angular Services</h4>
+  <h5>The application-wide injector ensure that only one instance of a service is created.</h5>
+  <h5>In A3, the SpotifyService class is an Angular Service.</h5>
+</section>
+
+<section>
+  <h4 data-id="title">Angular Classes</h4>
+  <h5>When you need logic that is created and disposed within your component.</h5>
+</section>
+
+<section>
+  <h4 data-id="title">Angular Classes</h4>
+  <div class="row">
+    <div class="column">
+      <pre><code data-line-numbers="" class="language-ts"><script type="text/template">
+> ng generate class MyClass
+
+    </script></code></pre>
+    </div>
+  </div>
+  <p>Like a service, just a class, but not application wide.</p>
+</section>
+
+<section>
+  <h4 data-id="title">Angular Classes</h4>
+  <div class="row">
+    <div class="column">
+      <pre><code data-line-numbers="" class="language-ts"><script type="text/template">
+import { MyClass } from './data'; //<-- arbitrary project location
+
+...
+
+export class MyPage {
+  constructor(private myClass: MyClass) {} //<-- Injecting class
+}
+
+    </script></code></pre>
+    </div>
+  </div>
+  <p>Classes can be injected into a component just like a service.</p>
+</section>
+
+<section>
+  <h4 data-id="title">Angular Classes</h4>
+  <h5>Classes should be designed to serve a single purpose.</h5>
+  <h5>In A3, data/*-data.ts files are classes.</h5>
+</section>
+
+<section>
+  <h4 data-id="title">Angular Libraries</h4>
+  <h5>Since Angular is in TypeScript, it can use any JavaScript or TypeScript library</h5>
+  <h5>Create your own libraries, or import from third-parties using npm</h5>
+</section>
+
+<section>
+  <h4 data-id="title">Using Libraries in Angular</h4>
+  <div class="row">
+    <div class="column">
+      <pre><code data-line-numbers="" class="language-ts"><script type="text/template">
+npm install chroma-js
+
+    </script></code></pre>
+    </div>
+  </div>
+  <p>Install as normal with npm</p>
+</section>
+
+<section>
+  <h4 data-id="title">Using Libraries in Angular</h4>
+  <div class="row">
+    <div class="column">
+      <pre><code data-line-numbers="" class="language-ts"><script type="text/template">
+import * as chroma from 'chroma-js' <-- Note different syntax
+
+export class ColorRama{
+  constructor(){
+    console.log(chroma('royalblue'));
+  }
+}
+
+    </script></code></pre>
+    </div>
+  </div>
+  <p>Reference imported object just like in JavaScript</p>
+</section>
+
+<section>
+  <h4 data-id="title">Authentication and Authorization</h4>
+</section>
+
+<section>
+  <h4 data-id="title">What is Authentication?</h4>
+  <ul style="font-size: x-large; list-style-type: none;">
+    <li>The process of establishing and verifying identity</li>
+    <li>Identification: who are you? (e.g., username, account number)</li>
+    <li>Authentication: prove it! (e.g., password, pin)</li>
+  </ul>
+</section>
+
+<section>
+  <h4 data-id="title">What is Authorization?</h4>
+  <ul style="font-size: x-large; list-style-type: none;">
+    <li>Once the identify is known, 'authorize' what can be accessed</li>
+    <li>One way: application assigns roles to user account. Roles provide access to certain features</li>
+    <li>Another way: application requests user to grant certain permissions.</li>
+  </ul>
+</section>
+
+<section>
+  <h4 data-id="title">Multi-factor Authentication</h4>
+  <ul style="font-size: x-large; list-style-type: none;">
+    <li>Should be a mize of things that you have or possess <em>and</em> things that you know</li>
+    <li>ATM Machine
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>ATM card (possess)</li>
+        <li>PIN (know)</li>
+      </ul>
+    </li>
+    <li>2-factor authentication via SMS
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Password (know)</li>
+        <li>Temporary code (validates that you possess your phone)</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h4 data-id="title">Sharing data on the modern web</h4>
+  <ul style="font-size: x-large; list-style-type: none;">
+    <li>Quite common today to move our data between multiple services (e.g., financial services - banks)</li>
+    <li>Most third party services are not (or do not want to be) trustworthy enough to protect your password</li>
+    <li>You might not want a third party to have full access</li>
+    <li>You might want to revoke access later</li>
+  </ul>
+</section>
+
+<section>
+  <h4 data-id="title">Oauth 2.0</h4>
+  <ul style="font-size: x-large; list-style-type: none;">
+    <li>Open Authentication</li>
+    <li>Goal: support users in granting access to third-party applications</li>
+    <li>Goal: do not require users to share their passwords with those third parties</li>
+    <li>Goal: allow users to revoke access to third parties at any time</li>
+  </ul>
+</section>
+
+<section>
+  <h4 data-id="title">Oauth 2.0 Terminology</h4>
+  <ul style="font-size: x-large; list-style-type: none;">
+    <li>Client: Third-party app wants to access resources owned by the resource owner (e.g., your checking account)</li>
+    <li>Resource owner (user): Person whose data is being accessed and stored on a <em>resource server</em></li>
+    <li>Resource server: App that stores the resources (e.g., Spotify, Mint, Google)</li>
+    <li>Authorization and Token enpoints: URIs from where a resource owner authorizes requests</li>
+  </ul>
+</section>
+
+<section>
+  <h4 data-id="title">Oauth 2.0 Terminology</h4>
+  <ul style="font-size: x-large; list-style-type: none;">
+    <li>Authorization code: A string the client uses to request access to tokens</li>
+    <li>Access token: A string the client uses to access resources (expires after some amount of time)</li>
+    <li>Refresh token: Used to exchange expired token for new access token</li>
+  </ul>
+</section>
+
+<section>
+  <h4 data-id="title">Oauth 2.0 Steps</h4>
+  <ul style="font-size: x-large; list-style-type: none;">
+    <li>Request authorization</li>
+    <li>Get access token</li>
+    <li>Make API calls</li>
+    <li>Refresh access token</li>
+  </ul>
+  <p>Let's review these using A3's Spotify auth scheme</p>
+</section>
+
+<section>
+  <h4 data-id="title">Request Authorization</h4>
+  <ul style="font-size: x-large; list-style-type: none;">
+    <li>Make a page (home component) with links to Spotify's auth endpoint</li>
+    <li>Pass arguments in the query string</li>
+    <ul style="font-size: x-large; list-style-type: none;">
+      <li>Client ID (or public ID of your app)</li>
+      <li>Response type (string type "code")</li>
+      <li>Redirect URI (where to return to)</li>
+      <li>Scope (what permissions to request)</li>
+    </ul>
+  </ul>
+</section>
+
+<section>
+  <h4 data-id="title">Request Authorization</h4>
+  <div class="row">
+    <div class="column">
+      <pre><code data-line-numbers="" class="language-ts"><script type="text/template">
+router.get('/login', function(req, res, next) {
+	var scopes = 'user-read-private user-read-email user-top-read';
+	res.redirect('https://accounts.spotify.com/authorize' +
+	  '?response_type=code' +
+	  '&client_id=' + my_client_id +
+	  (scopes ? '&scope=' + encodeURIComponent(scopes) : '') +
+	  '&redirect_uri=' + encodeURIComponent(redirect_uri));
+});
+
+    </script></code></pre>
+    </div>
+  </div>
+  <p>NOTE: These values are specified by the API provider (Spotify)</p>
+</section>
+
+<section>
+  <h4 data-id="title">Handling Authorization Response</h4>
+  <ul style="font-size: x-large; list-style-type: none;">
+    <li>Person clicks "okay" then browser redirects back to your server</li>
+    <li>The response contains additional parameters in the URL</li>
+    <li>Parameters are used to request access token</li>
+    <li>In Express, <code>code</code> can be accessed through <code>req.query</code></li>
+  </ul>
+</section>
+
+<section>
+  <h4 data-id="title">Handling Authorization Response</h4>
+  <!-- <div class="row">
+    <div class="column"> -->
+      <pre><code data-line-numbers="2-4|10-13|15-18" class="language-ts"><script type="text/template">
+router.get('/callback', function(req, res, next) {
+	var code = req.query.code || null;
+	var error = req.query.error || null;
+
+	if(error) {
+		console.error(error);
+	} else {
+		//we're probably good
+		const params = new URLSearchParams();
+		params.append('code', code); //<-- User permission code
+		params.append('redirect_uri', redirect_uri);
+		params.append('grant_type', 'authorization_code');
+
+		var headers = {
+			'Content-Type':'application/x-www-form-urlencoded',
+			'Authorization': 'Basic ' + Buffer.from(my_client_id + ':' + my_client_secret).toString('base64')
+		};
+
+		fetch('https://accounts.spotify.com/api/token', 
+      {method: 'POST', body: params, headers: headers}).then(response => {
+			if(response.ok) {
+				return response.json();
+			} else {
+				//Could be better to redirect to an error page, but we'll go back to the client.
+				res.redirect(client_uri);
+			}
+		}).then(json => {
+			access_token = json.access_token;
+			refresh_token = json.refresh_token;
+			fs.writeFile('tokens.json', JSON.stringify({access_token: access_token, refresh_token: refresh_token}), () => {
+				res.redirect(client_uri);
+			});
+		}).catch(err => console.error(err));
+	}
+});
+
+    </script></code></pre>
+    <!-- </div>
+  </div> -->
+  <p>Why POST and not GET?</p>
+</section>
+
+<section>
+  <h4 data-id="title">Get Access Token</h4>
+  <!-- <div class="row">
+    <div class="column"> -->
+      <pre><code data-line-numbers="1|20-21 | 29-33" class="language-ts"><script type="text/template">
+router.get('/callback', function(req, res, next) {
+	var code = req.query.code || null;
+	var error = req.query.error || null;
+
+	if(error) {
+		console.error(error);
+	} else {
+		//we're probably good
+		const params = new URLSearchParams();
+		params.append('code', code); //<-- User permission code
+		params.append('redirect_uri', redirect_uri);
+		params.append('grant_type', 'authorization_code');
+
+		var headers = {
+			'Content-Type':'application/x-www-form-urlencoded',
+			'Authorization': 'Basic ' + Buffer.from(my_client_id + ':' + my_client_secret).toString('base64')
+		};
+
+		fetch('https://accounts.spotify.com/api/token', 
+      {method: 'POST', body: params, headers: headers}).then(response => {
+			if(response.ok) {
+				return response.json();
+			} else {
+				//Could be better to redirect to an error page, but we'll go back to the client.
+				res.redirect(client_uri);
+			}
+		}).then(json => {
+			access_token = json.access_token;
+			refresh_token = json.refresh_token;
+			fs.writeFile('tokens.json', JSON.stringify({access_token: access_token, refresh_token: refresh_token}), () => {
+				res.redirect(client_uri);
+			});
+		}).catch(err => console.error(err));
+	}
+});
+
+    </script></code></pre>
+    <!-- </div>
+  </div> -->
+  <p>Use the response data to request an access token: trade <code>code</code> for <code>token</code></p>
+  <p>In A3, we store these tokens in a text file. DO NOT DO THIS!</p>
+</section>
+
+<section>
+  <h4 data-id="title">Use Token to Make an API Request </h4>
+  <!-- <div class="row">
+    <div class="column"> -->
+      <pre><code data-line-numbers="2-5|7" class="language-ts"><script type="text/template">
+	var headers = {
+		'Content-Type':'application/x-www-form-urlencoded',
+		'Authorization': 'Bearer ' + access_token
+	};
+
+	fetch(url, {method: 'GET', headers: headers}).then(response => {
+		if(response.ok) {
+			return response.json();
+		} else {
+			if(response.status == 401) {
+				refresh().then(() => {
+					return fetch(url, {method: 'GET', headers: headers}).then(response => {
+						if(response.ok) {
+							return response.json();
+						} else {
+							console.log(response);
+							res.status(response.status).end();
+						}
+					});
+				});
+			} else {
+				console.log("THEN");
+				console.log(response);
+				res.status(response.status).end();
+			}
+			return null;
+		}
+	}).then(json => {
+		console.log("then then");
+		res.json(json);
+	}).catch(err => {
+		console.log("Catch");
+		console.error(err);
+	});
+
+    </script></code></pre>
+    <!-- </div>
+  </div> -->
+  <p>Pass the access token in the header</p>
+  <p>Make a GET request to one of the API endpoints</p>
+  <p>url = "https://api.spotify.com/v1/me"</p>
+</section>
+
+<section>
+  <h4 data-id="title">Refreshing the Token</h4>
+  <!-- <div class="row">
+    <div class="column"> -->
+      <pre><code data-line-numbers="1|11-20|37-60" class="language-ts"><script type="text/template">
+	var headers = {
+		'Content-Type':'application/x-www-form-urlencoded',
+		'Authorization': 'Bearer ' + access_token
+	};
+
+	fetch(url, {method: 'GET', headers: headers}).then(response => {
+		if(response.ok) {
+			return response.json();
+		} else {
+			if(response.status == 401) {
+				refresh().then(() => {
+					return fetch(url, {method: 'GET', headers: headers}).then(response => {
+						if(response.ok) {
+							return response.json();
+						} else {
+							console.log(response);
+							res.status(response.status).end();
+						}
+					});
+				});
+			} else {
+				console.log("THEN");
+				console.log(response);
+				res.status(response.status).end();
+			}
+			return null;
+		}
+	}).then(json => {
+		console.log("then then");
+		res.json(json);
+	}).catch(err => {
+		console.log("Catch");
+		console.error(err);
+	});
+
+function refresh() {
+	const params = new URLSearchParams();
+	params.append('refresh_token', refresh_token); //<--Notice diff token type
+	params.append('grant_type', 'refresh_token');
+
+	var headers = {
+		'Content-Type':'application/x-www-form-urlencoded',
+		'Authorization': 'Basic ' + Buffer.from(my_client_id + ':' + my_client_secret).toString('base64')
+	};
+
+	return fetch('https://accounts.spotify.com/api/token', {method: 'POST', body: params, headers: headers}).then(response => {
+		if(response.ok) {
+			return response.json();
+		} else {
+			throw "Error refreshing token";
+		}
+	}).then(json => {
+		access_token = json.access_token;
+		refresh_token = json.refresh_token;
+		fs.writeFile('tokens.json', JSON.stringify({access_token: access_token, refresh_token: refresh_token}), () => {
+			return Promise.resolve();
+		});
+	}).catch(err => console.error(err));
+}
+
+    </script></code></pre>
+    <!-- </div>
+  </div> -->
+  <p>If token has expired, likely to receive a 401 Unauthorized response.</p>
+  <p>Why do tokens expire?</p>
+</section>
+
+<section>
+  <h4 data-id="title">SASS</h4>
+</section>
+
+<section>
+  <h4 data-id="title">Basic CSS</h4>
+      <pre><code data-line-numbers="" class=""><script type="text/template">
+selector{
+  property: value;
+  property: value;
+}
+
+    </script></code></pre>
+  <p>Selectors specify which elements a rule applies to</p>
+  <p>Rules specify what values to assign to different formatting properties</p>
+  <p>But, writing plain CSS is repetitive!</p>
+
+</section>
+
+
+
+<section>
+  <h4 data-id="title">Example: fonts</h4>
+      <pre><code data-line-numbers="" class=""><script type="text/template">
+cite > .series {
+  font-family: 'Lato', sans-serif;
+}
+cite > a {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.8em;
+}
+cite > .authors{
+  font-family: 'ChaparralPro', serif;
+  font-size: 1.1em;
+} 
+cite > .title{
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+} 
+
+    </script></code></pre>
+  <p>What if you want to switch from Lato to some other font?</p>
+  <p>What if you want to make everything larger?</p>
+  <p>To satisfy these needs, CSS complexity grows</p>
+</section>
+
+<section>
+  <h5>CSS Preprocessors</h5>
+  <ul style="font-size: x-large; list-style-type: none;">
+    <li>Let you abstract key design elements, use logic, and write less code</li>
+    <li>Three widely used ones are SASS, Less, Stylus</li>
+    <li>All pretty much do the same thing...Angular let's you choose.</li>
+  </ul>
+</section>
+
+<section>
+  <h5>CSS Preprocessor Features</h5>
+  <ul style="font-size: x-large; list-style-type: none;">
+    <li>Variables</li>
+    <li>Mixins</li>
+    <li>Nesting</li>
+    <li>Extensions</li>
+    <li>Operators</li>
+  </ul>
+</section>
+
+<section>
+    <h3>Demo</h3>
+    <h4>SASS Basics</h4>
+    <p style="font-size: medium;"><a href="sass_demo.zip">Download the linked package and follow along!</a></p>
+</section>
+
+<section>
+  <h5 data-id="code-title">SASS Activity</h5>
+  <ol style="font-size: x-large;">
+    <li>Turn fonts and colors into variables: heading-font, event-font, discussion-color, lecture-color, officehours-color, assignment-color.</li>
+    <li>Write a mixin for all events, passing in the color to use as the background, applying a 5-pixel margin, and using the event font</li>
+    <li>Write an extension for office hours, using it for both the officehours-baldwin and officehours-ta classes.</li>
+    <li>Change all events to use Arial instead of Verdana</li>
+    <li>Adjust office hours to bold all text (font-weight 700)</li>
+  </ol>
+</section>
+
+<section>
+  <h5 data-id="code-title">Submit your Activity</h5>
+  <ol style="font-size: x-large;">
+    <li>When done, submit your file (or zip if you have multiple files) to Canvas.</li>
+    <li>Submission details will be given during class.</li>
+    <li>Assignment page will close at the end of class!</li>
+  </ol>
 </section>
