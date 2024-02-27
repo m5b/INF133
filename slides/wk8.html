@@ -1,0 +1,263 @@
+<section>
+  <h3>title</h3>
+  <p>
+    <small>INF 133 User Interaction Software</small>
+  </p>
+  <p>
+    <small>Week 8</small>
+  </p>
+</section>
+
+<section>
+  <h3>Goals for Today</h3>
+  <h4>By the end this lecture, you should be able to...</h4>
+  <ul style="font-size: x-large; list-style-type: none;">
+    <li>Differentiate approaches to developing mobile interfaces</li>
+    <li>Describe the major components of Fitts’s Law</li>
+    <li>Explain how Fitts’s Law impacts how interfaces should be designed</li>
+  </ul>
+</section>
+
+<section>
+    <h3>User Interface Design</h3>
+    <h4>Ubiquitous computing</h4>
+    <p style="font-size: medium;"><a href="visualization_demo.zip">Download the linked package and follow along!</a></p>
+</section>
+
+<section data-auto-animate>
+  <span class="circle circle-full" style="width:100px; height:100px" data-id="circle3">Weiser's</span><h4 data-id="heading1">Ubiquitous Computing</h4>
+  <div class="row">
+    <div class="column" style="padding-top:50px">
+      <ul style="font-size: x-large; list-style-type: none;">
+        <li>Mostly lines up with what we use today:</li>
+        <ol style="font-size: large; ">
+          <li>Tabs: phones and watches</li>
+          <li>Pads: tablets and laptops</li>
+          <li>Boards: projectors? smart TV's?, AR/VR?</li>
+        </ol>
+      </ul>
+    </div>
+    <div class="column">
+      <img src="img/devices-today.png" style="max-width:500px"/>
+    </div>
+  </div>
+</section>
+
+<section data-auto-animate>
+  <h5>Design for Ubiquitous UI</h5>
+  <ul style="font-size: x-large; list-style-type: none; padding-bottom: 70px;">
+    <li class="">Graceful degradation vs. <span style="text-decoration: underline;">progressive enhancement</span></li>
+  </ul>
+    <h5 class="fragment">Mobile-first design</h5>
+  <aside class="notes">
+    Target the highest common denominator - the most capable
+
+    vs.
+
+    Target the lowest common, and introduce functionality as capability increases 
+
+    today, we can target prog enhance for different computing devices by taking a mobile first approach
+  </aside>
+</section>
+
+<section data-auto-animate>
+  <h5>Mobile-first Design</h5>
+  <ul style="font-size: x-large; list-style-type: none; padding-bottom: 70px;">
+    <li class="">Plan your design for mobile</li>
+    <li><em>Then</em> make your app better as screen real estate increases</li>
+    <li>Add more features</li>
+    <li>Improve navigation to those features</li>
+  </ul>
+  <aside class="notes">
+  </aside>
+</section>
+
+<section data-auto-animate>
+  <h5>Mobile-first Design</h5>
+  <ul style="font-size: x-large; list-style-type: none; padding-bottom: 70px;">
+    <li class="">What mobile design strategies have you observed?</li>
+    <li>
+        <ul style="font-size: x-large; list-style-type: none; padding-bottom: 0px;">
+            <li class="fragment">Same content, organized in order</li>
+            <li class="fragment">Stack content vertically</li>
+            <li class="fragment">Show navigation on demand</li>
+            <li class="fragment">Larger interactive targets</li>
+        </ul>
+    </li>
+  </ul>
+  <aside class="notes">
+  </aside>
+</section>
+
+<section data-auto-animate>
+  <h5>Mobile-first Design</h5>
+  <ul style="font-size: x-large; list-style-type: none; padding-bottom: 70px;">
+    <li class="">Not mobile-only!</li>
+    <li>Mobile UI to desktop creates inefficiencies</li>
+    <li>Ex. extra clicks to navigate</li>
+    <li>Ex. underutilized real estate</li>
+  </ul>
+  <aside class="notes">
+  </aside>
+</section>
+
+<section>
+    <h5>Go beyond making everything bigger! <em>Enhance</em> your design!</h5>
+</section>
+
+<section data-auto-animate>
+  <h5>Mobile-first Design</h5>
+  <ul style="font-size: x-large; list-style-type: none; padding-bottom: 70px;">
+    <li class="">Start with the experience</li>
+    <li class="">Critical factors:</li>
+    <li>
+        <ul class="fragment" style="font-size: x-large; list-style-type: none; padding-bottom: 0px;">
+            <li class="">Initial impression (boot up/start screen)</li>
+            <li class="">User interface</li>
+            <li class="">Visual design</li>
+            <li class="">Information architecture</li>
+            <li class="">Physical device and its use by the app</li>
+        </ul>
+    </li>
+  </ul>
+  <aside class="notes">
+  </aside>
+</section>
+
+<section data-auto-animate>
+  <h5>Mobile-first Design</h5>
+  <ul style="font-size: x-large; list-style-type: none; padding-bottom: 70px;">
+    <li class="">A useful initial view</li>
+    <li>
+        <ul class="" style="font-size: x-large; list-style-type: none; padding-bottom: 0px;">
+            <li class="fragment">Give users clear calls to action</li>
+            <li class="fragment">Place useful content on the homepage (not just navigation)</li>
+            <li class="fragment">Make it easy to get back home</li>
+        </ul>
+    </li>
+  </ul>
+  <aside class="notes">
+  </aside>
+</section>
+
+<section data-auto-animate>
+  <h5>Mobile-first Design</h5>
+  <ul style="font-size: x-large; list-style-type: none; padding-bottom: 70px;">
+    <li class="">Support mistakes (the "uh-oh" button)</li>
+    <li>
+        <ul class="" style="font-size: x-large; list-style-type: none; padding-bottom: 0px;">
+            <li class="fragment">Accept that buttons and functions will be pressed by mistake!</li>
+            <li class="fragment">Make 'undo' and 'redo' intuitive</li>
+            <li class="fragment">Make navigating back intuitive</li>
+        </ul>
+    </li>
+  </ul>
+  <aside class="notes">
+  </aside>
+</section>
+
+<section data-auto-animate>
+  <h5>Mobile-first Design</h5>
+  <ul style="font-size: x-large; list-style-type: none; padding-bottom: 70px;">
+    <li class="">Error prevention</li>
+    <li>
+        <ul class="" style="font-size: x-large; list-style-type: none; padding-bottom: 0px;">
+            <li class="fragment">Accept that input (especially on small devices) is difficult</li>
+            <li class="fragment">Add assistance to aid input where possible</li>
+            <li class="fragment">Add input checks (phone, credit card, etc)</li>
+            <li class="fragment">Use appropriate widgets</li>
+        </ul>
+    </li>
+  </ul>
+  <aside class="notes">
+  </aside>
+</section>
+
+<section>
+    <h5>Ultimately, adhere as closely as possible to platform conventions!</h5>
+    <p>(why?)</p>
+    <p class="fragment">Users should not have to wonder whether different words, situations, icons, or actions mean the same thing</p>
+    <p class="fragment">Users should not have to remember app-specific navigation</p>
+</section>
+
+<section data-auto-animate>
+  <h5>Mobile-first Design</h5>
+  <ul style="font-size: x-large; list-style-type: none; padding-bottom: 70px;">
+    <li class="">A useful initial view</li>
+    <li>
+        <ul class="fragment" style="font-size: x-large; list-style-type: none; padding-bottom: 0px;">
+            <li class=""></li>
+        </ul>
+    </li>
+  </ul>
+  <aside class="notes">
+  </aside>
+</section>
+
+<section>
+    <div class="" style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.8); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+      <h2>Apple Human Interface Guidelines</h2>
+      <p><a href="https://developer.apple.com/design/human-interface-guidelines/">Website</a></p>
+    </div>
+    <img src="img/apple_hig_website.png" style="max-width: 500px;"/>
+</section>
+
+<section>
+    <div class="" style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.8); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+      <h2>Google's Material Design</h2>
+      <p><a href="https://m3.material.io/">Website</a></p>
+    </div>
+    <img src="img/material-design-website.png" style="max-width: 500px;"/>
+</section>
+
+<section>
+    <h5>Designing for Human Use</h5>
+</section>
+
+<section>
+  <h5>Fitts's Law (1954)</h5>
+  <p>Psychologist Paul Fitts developed mathematical description to measure difficulty of hand to object acquisition</p>
+  <p>(switch decks!)</p>
+</section>
+
+<section>
+    <h3>Activity</h3>
+    <h4>Pair up and test your pointing skills</h4>
+    <p style="font-size: medium;"><a href="https://www.psytoolkit.org/experiment-library/fitts.html">Fitts's Law Demo</a></p>
+    <p style="font-size: small;">Run the demo, once per person in your group.</p>
+    <p style="font-size: small;">Take a screenshot of your results, submit along with some notes about how Fitts's Law might influence your design</p>
+    <p style="font-size: small;">NOTE: You'll turn this in at the end of class</p>
+</section>
+
+<!-- <section data-auto-animate>
+  <h5>Fitts's Law</h5>
+  <ul style="font-size: x-large; list-style-type: none; padding-bottom: 70px;">
+    <li class="">Models time to acquire targets in aimed movement</li>
+    <li>
+        <ul class="" style="font-size: x-large; list-style-type: none; padding-bottom: 0px;">
+            <li class="">Reaching for control in a cockpit</li>
+            <li class="">Moving across a dashboard</li>
+            <li class="">Pulling defective items from a conveyor belt</li>
+            <li class="">Clicking on icons using a mouse</li>
+        </ul>
+    </li>
+  </ul>
+  <aside class="notes">
+  </aside>
+</section>
+
+<section data-auto-animate>
+  <h5>Fitts's Law</h5>
+  <ul style="font-size: x-large; list-style-type: none; padding-bottom: 70px;">
+    <li class="">Incredibly powerful model, widely used in human factors and human interface design</li>
+    <li>
+        <ul class="" style="font-size: x-large; list-style-type: none; padding-bottom: 0px;">
+            <li class="">Holds for many circumstances (e.g., under water)</li>
+            <li class="">Allows for comparison among different experiments</li>
+            <li class="">Used to both <em>measure</em> and <em>predict</em></li>
+        </ul>
+    </li>
+  </ul>
+  <aside class="notes">
+  </aside>
+</section> -->
