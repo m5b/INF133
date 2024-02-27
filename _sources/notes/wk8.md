@@ -14,7 +14,7 @@ The weekly notes pages is where you will find links to in-class materials, inclu
 
 [Supplemental Fitts's Law Deck](http://inf133.markbaldw.in/resources/fittslaw.pdf)
 
-[Lecture Recording](http://inf133.markbaldw.in/)
+[Lecture Recording](https://uci.yuja.com/V/Video?v=9799646&node=43080299&a=193089367&autoplay=1)
 
 If you prefer a printable version:
 
