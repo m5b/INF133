@@ -12,6 +12,8 @@ The weekly notes pages is where you will find links to in-class materials, inclu
 
 [Slide Deck](http://inf133.markbaldw.in/slides/slides.html?file=wk8.html)
 
+[Supplemental Fitts's Law Deck](http://inf133.markbaldw.in/resources/fittslaw.pdf)
+
 [Lecture Recording]()
 
 If you prefer a printable version:
