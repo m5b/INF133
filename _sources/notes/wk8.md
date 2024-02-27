@@ -1,4 +1,4 @@
-Week 8 Notes 1
+Week 8 Notes
 ============================
 
 ```{note}
