@@ -1,0 +1,535 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Final Project &#8212; INF 133 Winter 2024</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'final';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo_stacked.png" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="_static/logo_stacked.png" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">INF 133 Winter 2024</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Assignments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="assignments/a0.html">Assignment 0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assignments/a1.html">Assignment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assignments/a2.html">Assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assignments/a3.html">Assignment 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assignments/a4.html">Assignment 4</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Weekly Notes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notes/wk1.html">Week 1 Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes/wk2.html">Week 2 Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes/wk3.html">Week 3 Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes/wk4.html">Week 4 Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes/wk5.html">Week 5 Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes/wk6.html">Week 6 Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes/wk7.html">Week 7 Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes/wk8.html">Week 8 Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes/wk9.html">Week 9 Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes/wk10.html">Week 10 Notes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Resources</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/final.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Final Project</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-10-points">Part 1 (10 points)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#grading">Grading</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-30-points">Part 2 (30 points)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Grading</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="final-project">
+<h1>Final Project<a class="headerlink" href="#final-project" title="Permalink to this heading">#</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
+<p>As discussed in the course overview, you will not be required to take a midterm or final exam. Rather, we will be assessing your understanding of the course material by asking you to apply what you have learned through a final project. At this point in the class you have learned how to build an accessible, responsive website and work with JavaScript, jQuery, and Vega-Lite to analyze and report on user generated data. Therefore, at a minimum your final project should build upon and extend the work you have completed for assignments 1 and 2.</p>
+<p>The final project is worth a total of 40 points, more than double what you will earn for all course assignments, which means you should target a project workload that is equal to or greater than what you have completed for any two assignments in the course. You will have roughly five and a half weeks to complete your final project, so take this into account when planning your work. To help you manage the final project alongside your remaining two assignments, you will be allowed to work in groups. Working in a group is <strong>optional</strong> and will be limited to a <strong>maximum of three</strong>.</p>
+<p>The final project will be divided into two parts. For Part 1, you will submit a 1 page project overview and requirements document and for Part 2, you will satisfy those requirements by building a software user interface project using the tools and frameworks learned throughout this course.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You are free to use web frameworks and other tools not taught in this course, but you will likely not find much help from your instructor or TA’s. So choose wisely!</p>
+</div>
+<section id="part-1-10-points">
+<h3>Part 1 (10 points)<a class="headerlink" href="#part-1-10-points" title="Permalink to this heading">#</a></h3>
+<p>By now, you should have a good sense of how to write a project overview and requirements document because you have already interpreted and executed two! We will be looking for a document that is roughly equivalent to the overviews for assignments 1 and 2 (as well as 3 and 4 when they are released). Your document must consist of the following sections:</p>
+<dl class="simple myst">
+<dt>Overview</dt><dd><p>A high level description of your project. A sufficient overview should be able to convey the project’s purpose in one 3-5 sentence paragraph. You should describe at a high level what you intend to build (<em>e.g.</em>, a tweet analysis application), what technologies your project will be used (<em>e.g.</em>, JavaScript, TypeScript, and Web), and its purpose (<em>e.g.</em>, to help researchers analyze tweets).</p>
+</dd>
+<dt>Requirements</dt><dd><p>A low level detailed overview of the features you intend to implement. The requirements section is where you will need to focus most of your attention for this part of the final project. You must be specific enough so that if you were to hand off your requirements to a classmate, they would be able to build your project. You must also ensure that your requirements are sufficient enough to equal the work of at least two of the assignments given in this course.</p>
+</dd>
+<dt>Team</dt><dd><p>The names and roles of each member in your group. If you decide to form a group, a good approach to managing your project is to assign responsibilities to each member. So for example:</p>
+</dd>
+<dd><p><strong>Mark</strong>: Write all the HTML/CSS required for the project.</p>
+</dd>
+<dd><p><strong>Cass</strong>: Write the Tweet API using jQuery and JavaScript.</p>
+</dd>
+<dd><p><strong>Yang</strong>: Design and implement the data store for all user generated data.</p>
+</dd>
+<dd><p>If you choose not to work in a group, you must still complete this section and assign all roles to yourself. The roles you assign to each member must be distributed equally and feature at least one coding skill developed during this course.</p>
+</dd>
+</dl>
+<section id="grading">
+<h4>Grading<a class="headerlink" href="#grading" title="Permalink to this heading">#</a></h4>
+<p>It will be very difficult for you to not receive full credit for this part of the assignment! If we do not believe you have planned a project with sufficient requirements, then we will ask you to revise your project plan. However, it might take a few days to a week to receive this feedback, so you are encouraged to aim high rather than try to target the minimum amount of work.</p>
+<p>A good strategy here is to divide your requirements into “core” and “bonus” sections. Your core requirements are those that you guarantee will be complete and your bonus requirements will be those that you should be able to complete by the due date.</p>
+<p>In either case, as soon as you have settled on and submitted Part 1, you should get started on your project. If we have to ask you to make multiple revisions, then you will likely lose a point off your grade for Part 1.</p>
+</section>
+</section>
+<section id="part-2-30-points">
+<h3>Part 2 (30 points)<a class="headerlink" href="#part-2-30-points" title="Permalink to this heading">#</a></h3>
+<p>For Part 2, you will execute the plan created and approved in Part 1. You will submit all files required to run your project along with a README file that details how to build and run it. You must also include all references and sources that you used to build your project. If you included code in your project from an external source (<strong>e.g.</strong>, StackOverflow, text books, sample programs, and so on), you must cite these sources in the readme as well as leave comments in your code files indicating where it was found by you or your group members.</p>
+<section id="id1">
+<h4>Grading<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<p>The majority of your grade will be based on whether or not you completed the “core” requirements listed in your project requirements document.</p>
+<dl class="simple myst">
+<dt>Requirements (20 points)</dt><dd><p>Does the program fulfill the requirements agreed upon by the client (your Professor and TA’s). Requirements will be assessed on implementation (does it exist) and functionality (does it work).</p>
+</dd>
+<dt>Validity (5 points)</dt><dd><p>Does the project adhere to the principles taught in class for creating responsive and accessible user interfaces. Assessment of this portion of the grade will depend on your project, but a good rule of thumb is to make sure that you have considered users who might not necessarily interact with an interface in the same way that you do.</p>
+</dd>
+<dt>Documentation (5 points)</dt><dd><p>Does the project provide sufficient documentation. Your code should be well commented so that we can understand what purpose it serves in your project. Your README should clearly explain how to run your project. And when run, the functionality of your project should be clear and intuitive.</p>
+</dd>
+<dt>Bonus (2 points)</dt><dd><p>Extra Credit. Does the project introduce additional requirements or otherwise implement novel or interesting features. If you have added to your project in ways that you consider above and beyond your project requirements document, you may request a bonus assessment by describing what you have done in your README.</p>
+</dd>
+</dl>
+<p>In total you will be able to receive 42/40 points for this final project. Your final submission should include all materials described in Part 2, zipped and uploaded to the Canvas submission page.</p>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-10-points">Part 1 (10 points)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#grading">Grading</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-30-points">Part 2 (30 points)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Grading</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Mark S. Baldwin
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

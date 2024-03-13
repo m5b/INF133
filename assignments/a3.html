@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>A3: Spotify Browser in Angular &#8212; INF 133 Winter 2024</title>
   
@@ -18,53 +19,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
 
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'assignments/a3';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -82,6 +79,7 @@ const thebe_selector_output = ".output, .cell_output"
   <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
+
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -121,15 +119,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <header>
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
-    </header>
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
   
+  </header>
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
       
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -165,18 +168,7 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">INF 133 Winter 2024</p>
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Assignments</span></p>
 <ul class="current nav bd-sidenav">
@@ -197,6 +189,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../notes/wk7.html">Week 7 Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notes/wk8.html">Week 8 Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notes/wk9.html">Week 9 Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notes/wk10.html">Week 10 Notes</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Resources</span></p>
 <ul class="nav bd-sidenav">
@@ -390,18 +383,18 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="a3-spotify-browser-in-angular">
-<h1>A3: Spotify Browser in Angular<a class="headerlink" href="#a3-spotify-browser-in-angular" title="Link to this heading">#</a></h1>
+<h1>A3: Spotify Browser in Angular<a class="headerlink" href="#a3-spotify-browser-in-angular" title="Permalink to this heading">#</a></h1>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
 <p>In this assignment, you’ll demonstrate your ability to (1) gather data from an API, and (2) develop a frontend interface which displays the data. You’ll use Angular to create a webpage which communicates with a backend server written in Node.js/Express to browse the music on Spotify, a popular music streaming app. The provided backend server will handle authentication via OAuth and communicate with the Spotify API, but you will have to make HTTP requests to the backend server to trigger API calls. Your page will support searching for artists, albums, and tracks and navigating between the three resources.</p>
 </section>
 <section id="assignment-details">
-<h2>Assignment Details<a class="headerlink" href="#assignment-details" title="Link to this heading">#</a></h2>
+<h2>Assignment Details<a class="headerlink" href="#assignment-details" title="Permalink to this heading">#</a></h2>
 <section id="starter-code">
-<h3>Starter code<a class="headerlink" href="#starter-code" title="Link to this heading">#</a></h3>
+<h3>Starter code<a class="headerlink" href="#starter-code" title="Permalink to this heading">#</a></h3>
 <p>A <a class="reference external" href="https://classroom.github.com/a/yjxYUpJn">starter repository</a> is on GitHub Classroom.</p>
 <section id="repository-structure">
-<h4>Repository Structure<a class="headerlink" href="#repository-structure" title="Link to this heading">#</a></h4>
+<h4>Repository Structure<a class="headerlink" href="#repository-structure" title="Permalink to this heading">#</a></h4>
 <p>The repository contains somewhere around 80 files. You will not need to edit most of them in this assignment. The repository contains two folders: <strong><code class="docutils literal notranslate"><span class="pre">webserver</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">client-starter</span></code></strong>. <strong><code class="docutils literal notranslate"><span class="pre">webserver</span></code></strong> includes the Express/Node.js backend for communicating with the Spotify API. <strong><code class="docutils literal notranslate"><span class="pre">client-starter</span></code></strong> includes the Angular frontend core for browsing music.</p>
 <p>In the backend (<strong><code class="docutils literal notranslate"><span class="pre">webserver</span></code></strong> folder), you will not need to edit any of the JavaScript files; they are provided for you. However, you do need to create two files:</p>
 <ol class="arabic simple">
@@ -421,7 +414,7 @@ document.write(`
 <p>This assignment can be completed without writing any additional files or functions. But you may find it helpful to add a file or function, such as to complete one of the bonus features.</p>
 </section>
 <section id="setting-up-your-workspace">
-<h4>Setting up your Workspace<a class="headerlink" href="#setting-up-your-workspace" title="Link to this heading">#</a></h4>
+<h4>Setting up your Workspace<a class="headerlink" href="#setting-up-your-workspace" title="Permalink to this heading">#</a></h4>
 <p>If you’re feeling unfamiliar with the command line, you might find the guides in the <a class="reference external" href="https://inf133.markbaldw.in/resources.html">resources</a> page helpful.</p>
 <p>Some of the packages/libraries depend on newer versions of Node JS. Check what version of Node JS you have installed with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">node</span> <span class="o">--</span><span class="n">version</span>
@@ -435,7 +428,7 @@ document.write(`
 <p>When installing, if you run into issues which look like “permission denied, try changing the <a class="reference external" href="https://github.com/angular/angular-cli/issues/6848#issuecomment-386120663">permissions of the node_modules directory</a>. If you are still having trouble, ask on Slack or talk to the course staff. It’s important to try to get the setup working sooner rather than later, even if you do not plan on working on the assignment until close to the deadline.</p>
 </section>
 <section id="running-the-webserver">
-<h4>Running the Webserver<a class="headerlink" href="#running-the-webserver" title="Link to this heading">#</a></h4>
+<h4>Running the Webserver<a class="headerlink" href="#running-the-webserver" title="Permalink to this heading">#</a></h4>
 <p>A Spotify Developer account is required to set up the Express webserver. Create a Spotify account or log in at <a class="reference external" href="https://developer.spotify.com/dashboard/">https://developer.spotify.com/dashboard/</a> and follow the instructions to create a client id. Name the app whatever you’d like. For the App description, enter:</p>
 <blockquote>
 <div><p>This App is used to create a music browser as part of a course assignment for IN4MATX 133, User Interface Software, at the University of California, Irvine.</p>
@@ -475,7 +468,7 @@ npm start</p>
 </div>
 </section>
 <section id="preparing-the-client">
-<h4>Preparing the client<a class="headerlink" href="#preparing-the-client" title="Link to this heading">#</a></h4>
+<h4>Preparing the client<a class="headerlink" href="#preparing-the-client" title="Permalink to this heading">#</a></h4>
 <p>For the client, you will need to install Angular through npm. To do this, you will install the <a class="reference external" href="https://cli.angular.io/">Angular Command Line Interface (CLI)</a> globally with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">install</span> <span class="o">-</span><span class="n">g</span> <span class="nd">@angular</span><span class="o">/</span><span class="n">cli</span> 
 </pre></div>
@@ -516,7 +509,7 @@ Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SS
 <p>You are now ready to run the client!</p>
 </section>
 <section id="running-the-client">
-<h4>Running the client<a class="headerlink" href="#running-the-client" title="Link to this heading">#</a></h4>
+<h4>Running the client<a class="headerlink" href="#running-the-client" title="Permalink to this heading">#</a></h4>
 <p>To run the Angular client, <strong><code class="docutils literal notranslate"><span class="pre">cd</span></code></strong> into the client folder and run:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ng</span> <span class="n">serve</span> <span class="o">--</span><span class="nb">open</span>
 </pre></div>
@@ -529,29 +522,29 @@ Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SS
 </div>
 </section>
 <section id="working-in-pairs">
-<h4>Working in pairs<a class="headerlink" href="#working-in-pairs" title="Link to this heading">#</a></h4>
+<h4>Working in pairs<a class="headerlink" href="#working-in-pairs" title="Permalink to this heading">#</a></h4>
 <p>If you are completing the assignment in pairs, you should work in one shared GitHub repository. The easiest way to do this is to have one of you create the repository and <a href="https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/">add the other as a collaborator</a>.</p>
 <p>The downside of working in pairs is that you open yourself up to potential issues merging one person’s code into another. Make sure you always <a href="https://help.github.com/desktop/guides/contributing-to-projects/syncing-your-branch/">update the version of the code on your computer prior to beginning work</a>. This <a href="https://gist.github.com/ccannon94/a75f1f725d33a1834dd7f5feebbc7d4b">guide</a> offers some suggestions for how to resolve potential conflicts which might arise. But more generally, we suggest that you complete this assignment via pair programming, alternating roles as drivers and navigators.</p>
 <p>If you do work in pairs, you will use the groups feature in Canvas to support your work. DO NOT create a student group. Use one of the empty groups available to you in the <code class="docutils literal notranslate"><span class="pre">a3</span> <span class="pre">groups</span></code> tab in the <code class="docutils literal notranslate"><span class="pre">People</span></code> section of Canvas.</p>
 </section>
 <section id="requirements">
-<h4>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h4>
+<h4>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">#</a></h4>
 <p>There are six parts to this assignment. The later parts use many of the same components, so once those are implemented the later parts become a matter of gluing them together. You can also optionally add one of a number of bonus features.</p>
 <section id="part-1-communication-with-the-webserver-2-points">
-<h5>Part 1: Communication with the Webserver (2 points)<a class="headerlink" href="#part-1-communication-with-the-webserver-2-points" title="Link to this heading">#</a></h5>
+<h5>Part 1: Communication with the Webserver (2 points)<a class="headerlink" href="#part-1-communication-with-the-webserver-2-points" title="Permalink to this heading">#</a></h5>
 <p>The first time you push the “login” button in the top-right corner of the Spotify browser, you will be redirected to Spotify to authenticate and authorize access to your app. The OAuth flow between the Spotify server and the webserver has been implemented for you. That means that once you authenticate and authorize access, you can query the webserver to make API requests on your behalf. The webserver will also handle refreshing the access token when it expires. Hooray!</p>
 <p><img alt="connect to spotify" src="../_images/a3_authorization.png" /></p>
 <p>However, in order to make API requests, you will need to add some functionality to the Spotify Service (<strong><code class="docutils literal notranslate"><span class="pre">services/spotify.service.ts</span></code></strong>). First, update the <strong><code class="docutils literal notranslate"><span class="pre">sendRequestToExpress</span></code></strong> function in the Spotify service to ask the Express webserver to make an API request to Spotify at the endpoint passed in. The endpoints should then return the appropriate data type for each API call. You will be able to test your function by building out the pages in the assignment.</p>
 </section>
 <section id="part-2-spotify-browser-home-page-5-points">
-<h5>Part 2: Spotify Browser Home Page (5 points)<a class="headerlink" href="#part-2-spotify-browser-home-page-5-points" title="Link to this heading">#</a></h5>
+<h5>Part 2: Spotify Browser Home Page (5 points)<a class="headerlink" href="#part-2-spotify-browser-home-page-5-points" title="Permalink to this heading">#</a></h5>
 <p>In this part, you will create a homepage to view some information about the logged in user’s account. You will also create search requests to the Spotify API. As you get started with Angular, it may be helpful to review the code from the demos or the lecture recordings.</p>
 <section id="populating-information-about-the-user-2-point">
-<h6>Populating Information About the User (2 point)<a class="headerlink" href="#populating-information-about-the-user-2-point" title="Link to this heading">#</a></h6>
+<h6>Populating Information About the User (2 point)<a class="headerlink" href="#populating-information-about-the-user-2-point" title="Permalink to this heading">#</a></h6>
 <p>Once API requests can be made via the Express server (Part 1), edit the <strong><code class="docutils literal notranslate"><span class="pre">about</span></code></strong> component to call the endpoint created for the “about me” page when the load info button is clicked. To do so, you will need to inject the Spotify service you just edited. The <a class="reference external" href="https://developer.spotify.com/documentation/web-api/reference/">Spotify API endpoint</a> reference describes what this endpoint and other endpoints return. Update the variables in the component’s <strong><code class="docutils literal notranslate"><span class="pre">.ts</span></code></strong> file and bind them to the appropriate places in the <strong><code class="docutils literal notranslate"><span class="pre">.html</span></code></strong> file. This will populate the left side of the home page with the logged in user’s name, profile picture, and a link to open their profile on Spotify.com.</p>
 </section>
 <section id="populating-the-search-component-3-points">
-<h6>Populating the Search Component (3 points)<a class="headerlink" href="#populating-the-search-component-3-points" title="Link to this heading">#</a></h6>
+<h6>Populating the Search Component (3 points)<a class="headerlink" href="#populating-the-search-component-3-points" title="Permalink to this heading">#</a></h6>
 <p>The right side of the page contains the <strong><code class="docutils literal notranslate"><span class="pre">search</span></code></strong> component. The search component contains an input and a select (dropdown) menu to declare what to search for. Bind the values in the component’s model to the input and select controls. Bind the search button to a function which uses the Spotify service to have Express make the API request. You can also search online to learn how to trigger a search when a user presses “enter” in the input field or changes the dropdown menu. These two features are optional–you are only required to bind the search button. For simplicity, your code can assume that any search typed in is valid (e.g., returns at least one artist/track/album).</p>
 <p>Map the response from Express into an array of the appropriate resource type–ArtistData, AlbumData, or TrackData. To do so, you will have to update the Spotify Service to create objects based on the category being searched for. Similar to the example given for parsing ProfileData, the constructor of each resource can automatically parse the dictionary values Spotify returns into an Object. For example, AlbumData loads the genres of the Album and creates an array with each of the artists on the album. Note that all three of these resource classes extend the ResourceData class, which parses some dictionary values common across all the resource types. You should not need to edit any of these four files; contact the course staff if a response parses differently than you would expect or causes an error.</p>
 <p>Once the array of resources has been created, display the search results in either a <strong><code class="docutils literal notranslate"><span class="pre">carousel</span> <span class="pre">component</span></code></strong> (for artists or albums) or a <strong><code class="docutils literal notranslate"><span class="pre">track-list</span></code></strong> component (for tracks).</p>
@@ -560,20 +553,20 @@ Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SS
 </section>
 </section>
 <section id="part-3-spotify-browser-artist-page-4-points">
-<h5>Part 3: Spotify Browser Artist Page (4 points)<a class="headerlink" href="#part-3-spotify-browser-artist-page-4-points" title="Link to this heading">#</a></h5>
+<h5>Part 3: Spotify Browser Artist Page (4 points)<a class="headerlink" href="#part-3-spotify-browser-artist-page-4-points" title="Permalink to this heading">#</a></h5>
 <p>In this part, you will create a page to view some information about a searched-for or linked-to artist. You will update the <strong><code class="docutils literal notranslate"><span class="pre">artist-page</span></code></strong> component to do this. For simplicity, you can assume the id passed via the URL is always valid (e.g., always refers to an artist which exists in the Spotify API). The artist-page includes code for retrieving the artist’s id from the URL.</p>
 <p><img alt="browse spotify" src="../_images/a3_artist.png" /></p>
 <p>Update the Artist Page to retrieve the basic information about the artist, their top tracks, their albums, and similar artists. The Express webserver has endpoints for each of these four requests. Update the component to display the information as described in the component’s template. You will re-use the <strong><code class="docutils literal notranslate"><span class="pre">track-list</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">carousel</span></code></strong> components on this page.</p>
 <p>You will again have to update endpoints in the Spotify Service to get information about an artist, their top tracks, albums, etc.</p>
 </section>
 <section id="part-4-spotify-browser-album-page-3-points">
-<h5>Part 4: Spotify Browser Album Page (3 points)<a class="headerlink" href="#part-4-spotify-browser-album-page-3-points" title="Link to this heading">#</a></h5>
+<h5>Part 4: Spotify Browser Album Page (3 points)<a class="headerlink" href="#part-4-spotify-browser-album-page-3-points" title="Permalink to this heading">#</a></h5>
 <p>In this part, you will create a page to view some information about a searched-for or lined-to album. You will update the <strong><code class="docutils literal notranslate"><span class="pre">album-page</span></code></strong> component to do this. For simplicity, you can assume the id passed via the URL is always valid (e.g., always refers to an album which exists in the Spotify API). The album-page includes code for retrieving the album’s id from the URL.</p>
 <p><img alt="artist page" src="../_images/a3_album.png" /></p>
 <p>Update the Album Page to retrieve the basic information about the album and it’s tracks. The Express webserver has endpoints for each of these two requests, which you will again need to call in the Spotify service and parse data from. Update the component to display the information as described in the component’s template. You will re-use the <strong><code class="docutils literal notranslate"><span class="pre">track-list</span></code></strong> component on this page.</p>
 </section>
 <section id="part-5-spotify-browser-track-page-3-points">
-<h5>Part 5: Spotify Browser Track page (3 points)<a class="headerlink" href="#part-5-spotify-browser-track-page-3-points" title="Link to this heading">#</a></h5>
+<h5>Part 5: Spotify Browser Track page (3 points)<a class="headerlink" href="#part-5-spotify-browser-track-page-3-points" title="Permalink to this heading">#</a></h5>
 <p>In this part, you will create a page to view some information about a searched-for or lined-to track. You will update the <strong><code class="docutils literal notranslate"><span class="pre">track-page</span></code></strong> component to do this. For simplicity, you can assume the id passed via the URL is always valid (e.g., always refers to a track which exists in the Spotify API). The track-page includes code for retrieving the track’s id from the URL.</p>
 <p><img alt="track page" src="../_images/a3_track.png" /></p>
 <p>Update the Track Page to retrieve the basic information about the track and it’s audio features. The Express webserver has endpoints for each of these two requests. Update the component to display the information as described in the component’s template.</p>
@@ -581,7 +574,7 @@ Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SS
 <p>You can edit the <strong><code class="docutils literal notranslate"><span class="pre">track-feature</span></code></strong> class to use the <a class="reference external" href="https://gka.github.io/chroma.js/">chroma library</a> to display the progress bar’s color as a mix between two values depending on it’s percent. The provided mixes between red and green. You can choose whatever colors you like, so long as differences are visually distinct. HSL blending is recommended, as it more closely models how human vision blends colors.</p>
 </section>
 <section id="part-6-spotify-browser-top-tracks-page-3-points">
-<h5>Part 6: Spotify Browser Top Tracks page (3 points)<a class="headerlink" href="#part-6-spotify-browser-top-tracks-page-3-points" title="Link to this heading">#</a></h5>
+<h5>Part 6: Spotify Browser Top Tracks page (3 points)<a class="headerlink" href="#part-6-spotify-browser-top-tracks-page-3-points" title="Permalink to this heading">#</a></h5>
 <p>By now you should have a solid grasp on how Angular works. To demonstrate your understanding, you will create your own custom page that displays the top tracks for the current user.</p>
 <p>To complete this requirement you will have to carry out the following steps:</p>
 <ol class="arabic simple">
@@ -594,7 +587,7 @@ Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SS
 </section>
 </section>
 <section id="optional-bonus-features">
-<h4>Optional/Bonus Features<a class="headerlink" href="#optional-bonus-features" title="Link to this heading">#</a></h4>
+<h4>Optional/Bonus Features<a class="headerlink" href="#optional-bonus-features" title="Permalink to this heading">#</a></h4>
 <p>The six parts of the assignment create a tool for browsing the Spotify API. There are many ways of extending this browser, and we can offer one point of extra credit for implementing an extension. We’ve enumerated some potential extensions:</p>
 <ul class="simple">
 <li><p>Moving the Express webserver to a publicly visible URL rather than running on localhost. One way of doing this would be to create a Heroku instance. Students can get a free <a class="reference external" href="https://www.heroku.com/github-students">Hobby-tier server</a> on Heroku for two years. This <a class="reference external" href="https://devcenter.heroku.com/articles/deploying-nodejs">guide</a> may be helpful for deploying your heroku app.</p></li>
@@ -604,12 +597,12 @@ Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SS
 <p>We are open to other suggestions for bonus features.</p>
 </section>
 <section id="submitting">
-<h4>Submitting<a class="headerlink" href="#submitting" title="Link to this heading">#</a></h4>
+<h4>Submitting<a class="headerlink" href="#submitting" title="Permalink to this heading">#</a></h4>
 <p>To submit, zip your repository and upload it to Canvas. Any late uploads are subject to the course’s late policy.</p>
 <p>Please update your readme.txt with how long the assignment took, who or what online resources you consulted with, any bonus features you added, and anything else we should know.</p>
 </section>
 <section id="grading">
-<h4>Grading<a class="headerlink" href="#grading" title="Link to this heading">#</a></h4>
+<h4>Grading<a class="headerlink" href="#grading" title="Permalink to this heading">#</a></h4>
 <p>This assignment will be graded on a scale of 20 points, broken down as follows:</p>
 <ul class="simple">
 <li><p>Communication with the Webserver (2 points)</p></li>
@@ -767,8 +760,8 @@ By Mark S. Baldwin
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
 
   <footer class="bd-footer">
   </footer>

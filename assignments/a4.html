@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>A4: Sleep Tracker in Ionic &#8212; INF 133 Winter 2024</title>
   
@@ -18,53 +19,49 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
 
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'assignments/a4';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -82,6 +79,7 @@ const thebe_selector_output = ".output, .cell_output"
   <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
+
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -121,15 +119,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <header>
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
-    </header>
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
   
+  </header>
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
       
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -165,18 +168,7 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">INF 133 Winter 2024</p>
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Assignments</span></p>
 <ul class="current nav bd-sidenav">
@@ -197,6 +189,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../notes/wk7.html">Week 7 Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notes/wk8.html">Week 8 Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notes/wk9.html">Week 9 Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notes/wk10.html">Week 10 Notes</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Resources</span></p>
 <ul class="nav bd-sidenav">
@@ -392,15 +385,15 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="a4-sleep-tracker-in-ionic">
-<h1>A4: Sleep Tracker in Ionic<a class="headerlink" href="#a4-sleep-tracker-in-ionic" title="Link to this heading">#</a></h1>
+<h1>A4: Sleep Tracker in Ionic<a class="headerlink" href="#a4-sleep-tracker-in-ionic" title="Permalink to this heading">#</a></h1>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
 <p>In this assignment, you’ll demonstrate your ability to make a mobile app by developing a tool for tracking sleep and sleepiness in Ionic. There are <a class="reference external" href="https://thewirecutter.com/reviews/best-sleep-tracking-app/">many sleep tracking apps</a> in the Apple App and Google Play Stores. You will implement a few of the common features.</p>
 </section>
 <section id="assignment-details">
-<h2>Assignment Details<a class="headerlink" href="#assignment-details" title="Link to this heading">#</a></h2>
+<h2>Assignment Details<a class="headerlink" href="#assignment-details" title="Permalink to this heading">#</a></h2>
 <section id="setting-up-your-workspace">
-<h3>Setting up your Workspace<a class="headerlink" href="#setting-up-your-workspace" title="Link to this heading">#</a></h3>
+<h3>Setting up your Workspace<a class="headerlink" href="#setting-up-your-workspace" title="Permalink to this heading">#</a></h3>
 <p>Some of the packages/libraries depend on newer versions of Node JS.</p>
 <p>Check what version of Node JS you have installed with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">node</span> <span class="o">--</span><span class="n">version</span><span class="o">.</span> 
@@ -413,10 +406,10 @@ document.write(`
 </div>
 </section>
 <section id="starter-code">
-<h3>Starter code<a class="headerlink" href="#starter-code" title="Link to this heading">#</a></h3>
+<h3>Starter code<a class="headerlink" href="#starter-code" title="Permalink to this heading">#</a></h3>
 <p>A <a class="reference external" href="https://classroom.github.com/a/6P5wtle-">starter repository</a> is on GitHub Classroom.</p>
 <section id="repository-structure">
-<h4>Repository Structure<a class="headerlink" href="#repository-structure" title="Link to this heading">#</a></h4>
+<h4>Repository Structure<a class="headerlink" href="#repository-structure" title="Permalink to this heading">#</a></h4>
 <p>The repository contains a <strong><code class="docutils literal notranslate"><span class="pre">services</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">data</span></code></strong> folder with support code for the assignment. These files have been added to ease the ability to start making a sleep tracking app. <strong>These files can be edited, and you are not required to use them</strong>. You may want to add variables and functions to these files, or create new subclasses. They are:</p>
 <ul class="simple">
 <li><p>Three classes in the data folder: <strong><code class="docutils literal notranslate"><span class="pre">sleep-data</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">overnight-sleep-data</span></code></strong>, and <strong><code class="docutils literal notranslate"><span class="pre">stanford-sleepiness-data</span></code></strong>. These files provide some data structures for logging sleep data, with the latter two being subclasses of the first. Subclassing enables the two types of logged data to be displayed together (or not, as you see fit for your design).</p></li>
@@ -425,7 +418,7 @@ document.write(`
 </section>
 </section>
 <section id="create-your-sleeptracker-app">
-<h3>Create your Sleeptracker App<a class="headerlink" href="#create-your-sleeptracker-app" title="Link to this heading">#</a></h3>
+<h3>Create your Sleeptracker App<a class="headerlink" href="#create-your-sleeptracker-app" title="Permalink to this heading">#</a></h3>
 <p>Once you have cloned the starter repository, you will need to create a new Ionic application. Feel free to store this app where ever you like, but if you are working with a partner you will probably want to continue to use the Github Classroom repository. So <strong><code class="docutils literal notranslate"><span class="pre">cd</span></code></strong> into the <strong><code class="docutils literal notranslate"><span class="pre">a4-sleeptracker</span></code></strong> before generating a new project. Once you have decided on a location for this assignment you will create a new Ionic project from scratch by running:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ionic</span> <span class="n">start</span> 
 </pre></div>
@@ -443,7 +436,7 @@ document.write(`
 </pre></div>
 </div>
 <section id="running-the-app">
-<h4>Running the App<a class="headerlink" href="#running-the-app" title="Link to this heading">#</a></h4>
+<h4>Running the App<a class="headerlink" href="#running-the-app" title="Permalink to this heading">#</a></h4>
 <p>To run the Ionic app, cd into the <strong><code class="docutils literal notranslate"><span class="pre">sleeptracker</span></code></strong> directory (or whatever you named your project and run:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ionic</span> <span class="n">serve</span>
 </pre></div>
@@ -460,20 +453,20 @@ document.write(`
 <p>Any code changes will be automatically reloaded.</p>
 </section>
 <section id="working-in-pairs">
-<h4>Working in pairs<a class="headerlink" href="#working-in-pairs" title="Link to this heading">#</a></h4>
+<h4>Working in pairs<a class="headerlink" href="#working-in-pairs" title="Permalink to this heading">#</a></h4>
 <p>If you are completing the assignment in pairs, you should work in one shared GitHub repository. The easiest way to do this is to have one of you create the repository and <a href="https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/">add the other as a collaborator</a>.</p>
 <p>The downside of working in pairs is that you open yourself up to potential issues merging one person’s code into another. Make sure you always <a href="https://help.github.com/desktop/guides/contributing-to-projects/syncing-your-branch/">update the version of the code on your computer prior to beginning work</a>. This <a href="https://gist.github.com/ccannon94/a75f1f725d33a1834dd7f5feebbc7d4b">guide</a> offers some suggestions for how to resolve potential conflicts which might arise. But more generally, we suggest that you complete this assignment via pair programming, alternating roles as drivers and navigators.</p>
 <p>If you do work in pairs, you will use the groups feature in Canvas to support your work. DO NOT create a student group. Use one of the empty groups available to you in the <code class="docutils literal notranslate"><span class="pre">a4</span> <span class="pre">groups</span></code> tab in the <code class="docutils literal notranslate"><span class="pre">People</span></code> section of Canvas.</p>
 </section>
 <section id="using-another-framework">
-<h4>Using another framework<a class="headerlink" href="#using-another-framework" title="Link to this heading">#</a></h4>
+<h4>Using another framework<a class="headerlink" href="#using-another-framework" title="Permalink to this heading">#</a></h4>
 <p>As with the previous assignment, it is an option to use another framework such as React Native to complete this assignment in order to pick up a new skill. <strong>While this is again an option, you are required to get approval from the course staff prior to pursuing this option</strong>. We expect to only allow grant approval for students who have used Angular, React, or another framework already.</p>
 <p>Should you choose to use another framework, it is done with the understanding that the course staff will not support you in learning the framework or debugging your code. The course staff will not be more lenient in grading or give any extra credit for using something not covered in the course. You are required to complete the same assignment, which will likely mean adapting the provided starter code to the new framework. Should you choose this path, you are on your own. Godspeed!</p>
 <p>Please include in your <strong><code class="docutils literal notranslate"><span class="pre">readme.txt</span></code></strong> any information we would need in order to run your code.</p>
 </section>
 </section>
 <section id="requirements">
-<h3>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h3>
+<h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">#</a></h3>
 <p>Your sleep tracker app is required to have the following features:</p>
 <ul class="simple">
 <li><p>The ability to log overnight sleep.</p></li>
@@ -488,24 +481,24 @@ document.write(`
 </ul>
 <p>It is up to you to decide exactly how your app implements these features. You will be evaluated on inclusion of these features as well as how well your app follows <a class="reference external" href="https://inf133.markbaldw.in/resources/mobile_sass.pdf">good principles of mobile design</a>.</p>
 <section id="log-overnight-sleep">
-<h4>Log Overnight Sleep<a class="headerlink" href="#log-overnight-sleep" title="Link to this heading">#</a></h4>
+<h4>Log Overnight Sleep<a class="headerlink" href="#log-overnight-sleep" title="Permalink to this heading">#</a></h4>
 <p>Your app must allow someone to log the sleep they had overnight. At minimum, this means allowing a person to log what time they went to bed and when they woke up. It’s up to you to decide how to support this logging, with the goal of aligning with good principles of mobile design. As you go about deciding how to support logging, think about how someone might use your app (feel free to identify a particular user or type of user, such as college students). Do they start the log when they go to sleep, or log their full night’s sleep in the morning? Will a particular input field make logging easier? Are there other things a person might want to log about their sleep?</p>
 <p>The data file <strong><code class="docutils literal notranslate"><span class="pre">overnight-sleep-data.ts</span></code></strong> provides a starting point for logging this data. The fields can be changed, additional fields can be added, and helper methods can be added. So long as the questions of when someone went to bed and when they woke up can be logged and viewed in your app, you can change the fields however you wish. You can assume that a person logs overnight sleep only once per day.</p>
 <p>All data logged will be cleared when the app is restarted (such as when a change to the code is made). This is expected and allowed for this assignment, though the “storing data” option will allow data to persist when the app is restarted.</p>
 </section>
 <section id="log-sleepiness-during-the-day">
-<h4>Log Sleepiness During the Day<a class="headerlink" href="#log-sleepiness-during-the-day" title="Link to this heading">#</a></h4>
+<h4>Log Sleepiness During the Day<a class="headerlink" href="#log-sleepiness-during-the-day" title="Permalink to this heading">#</a></h4>
 <p>Your app must allow someone to log how sleepy they feel throughout the day according to the <a class="reference external" href="https://en.wikipedia.org/wiki/Stanford_Sleepiness_Scale">Stanford Sleepiness Scale</a>. At minimum, this means allowing a person to log how they felt on the scale’s 1-7 rating system and when they felt this way. Again, it’s up to you to decide how to log this data. Consider whether there are other things a person may want to log alongside their sleepiness. A person may log sleepiness more than once a day–in the morning before and after coffee, for example. This might impact how you support implementing the scale.</p>
 <p>Sleepiness throughout the day is often logged through Experience Sampling, a method in which someone is asked to log information about how they are feeling or what they are doing at multiple points over time. Technology can help facilitate experience sampling by providing a digital diary to log with. Technology can reduce the burden even further by sending notifications when it is time to journal.</p>
 <p>The data file <strong><code class="docutils literal notranslate"><span class="pre">stanford-sleepiness-data.ts</span></code></strong> provides a starting point, but you may change the fields or add new ones as you wish.</p>
 <p>Again, all data logged will be cleared when the app is restarted (such as when a change to the code is made). This is expected and allowed for this assignment.</p>
 </section>
 <section id="view-logged-data">
-<h4>View Logged Data<a class="headerlink" href="#view-logged-data" title="Link to this heading">#</a></h4>
+<h4>View Logged Data<a class="headerlink" href="#view-logged-data" title="Permalink to this heading">#</a></h4>
 <p>Your app must allow someone to view the overnight sleep and sleepiness data they have logged. These two types of data can be viewed together or separately. It is up to you to decide how the data should be presented. So long as a person’s Overnight and Sleepiness data is visible in your app, you will get credit for the completion portion of this feature.</p>
 </section>
 <section id="option-1-using-a-native-device-resource">
-<h4>Option 1: Using a Native Device Resource<a class="headerlink" href="#option-1-using-a-native-device-resource" title="Link to this heading">#</a></h4>
+<h4>Option 1: Using a Native Device Resource<a class="headerlink" href="#option-1-using-a-native-device-resource" title="Permalink to this heading">#</a></h4>
 <p>You must add a feature which uses a native device resource. The added feature must change the app’s experience for a user in a meaningful way. It is not sufficient to read a device’s manufacturer and present it back, for example, because that does not change how a user would log or view their sleep. Please contact the course staff if you have any question about what would or would not qualify as a feature.</p>
 <p>Ionic supports a <a href="https://ionicframework.com/docs/native">long list</a> of native device resources. However, some of these are in Cordova, while others are in Capacitor. We recommend sticking to Official, Capacitor plugins. Ionic also supports Premier plugins designed for enterprise applications; do not look into those in this assignment. Each Ionic resource provides instruction on how it should be installed. Make sure you are using the correct version of a plugin.</p>
 <p>Native resources require installation on your device (or an emulator, depending on the feature). Ionic provides installation guides for <a href="https://ionicframework.com/docs/developing/ios">iOS</a> and for <a href="https://ionicframework.com/docs/developing/android">Android</a>. These installations can be tricky, so if you plan to select this option we strongly recommend trying to install the app on your device early. If you’re having trouble, online resources could be useful to getting set up. We may be able to help in office hours, but these processes are notoriously fickle. You can also complete this option using just an emulator, if you support native resources which the emulator can provide (like notifications).</p>
@@ -519,29 +512,29 @@ document.write(`
 <p>If you choose this option, your demo video must show your solution running on either an emulator or a native device (e.g., an iPhone or Android phone). You may leverage the browser for debugging (e.g., with <code class="docutils literal notranslate"><span class="pre">ionic</span> <span class="pre">serve</span></code> or <code class="docutils literal notranslate"><span class="pre">ionic</span> <span class="pre">lab</span></code>), but part of the goal for this option is to get experience deploying on a device. The discussions and lecture recordings can help assist with setup.</p>
 </section>
 <section id="option-2-backing-up-logged-data">
-<h4>Option 2: Backing Up Logged Data<a class="headerlink" href="#option-2-backing-up-logged-data" title="Link to this heading">#</a></h4>
+<h4>Option 2: Backing Up Logged Data<a class="headerlink" href="#option-2-backing-up-logged-data" title="Permalink to this heading">#</a></h4>
 <p>Initially, all data logged would be cleared when the app is restarted (such as when a change to the code is made). For this option, you must back up all data a person logs to either a Firebase database or to local storage. When a person re-opens the app, all of the data they previously logged should be visible. When a person logs a new record, it must be saved to this storage.</p>
 <p>You may structure your storage however you like, so long as both overnight sleep and sleepiness logs can be saved and retrieved.</p>
 <p><a class="reference external" href="https://capacitorjs.com/docs/apis/storage">Capacitor Storage</a> is likely easier than using Firebase, as Ionic has a built-in library to support it. However, we will not discuss it extensively in lecture as databases serve a wider set of use cases (e.g., sharing data between devices, persistent backup in the case of a device or app malfunction).</p>
 <p>If you choose this option, you can develop entirely in the browser and record your demo video from the browser. You do not need to run your app on an emulator or native device, but you are welcome to do so if you would like to get experience with deployment.</p>
 <section id="additional-firebase-suggestions">
-<h5>Additional Firebase suggestions<a class="headerlink" href="#additional-firebase-suggestions" title="Link to this heading">#</a></h5>
+<h5>Additional Firebase suggestions<a class="headerlink" href="#additional-firebase-suggestions" title="Permalink to this heading">#</a></h5>
 <p>With Firebase, one challenge is that Firebase expects a JSON object rather than a TypeScript class. You will need to write helper functions to export a class to a JSON object and re-import it. You may want to change the name of the collection in the starter code or create multiple collections for different types of data.</p>
 <p>As described in lecture, set your Firebase database’s permissions to be readable by everyone on the web (this is generally a bad practice, of course). You may also assume that there is only one user of the app (e.g., you do not need to support authentication).</p>
 </section>
 </section>
 <section id="readme">
-<h4>Readme<a class="headerlink" href="#readme" title="Link to this heading">#</a></h4>
+<h4>Readme<a class="headerlink" href="#readme" title="Permalink to this heading">#</a></h4>
 <p>Please update your readme.txt with how long the assignment took, who or what online resources you consulted with, any bonus features you added, and anything else we should know. If the assignment was completed in a pair, the readme should list names/emails/ids of both students. Only one submission needs to be made, however.</p>
 <p>The readme for this assignment is critical, as it provides you an opportunity to explain why you made your design choices for each feature. Office hours are a great opportunity to get feedback on your design choices, and your assignment will be in part evaluated on how well they align with good principles of mobile design. If you ran out of time or struggled to implement something, feel free to use the readme to describe what you intended to implement or what you struggled with.</p>
 </section>
 <section id="demo">
-<h4>Demo<a class="headerlink" href="#demo" title="Link to this heading">#</a></h4>
+<h4>Demo<a class="headerlink" href="#demo" title="Permalink to this heading">#</a></h4>
 <p>Please record a demo video (demo.mp4 or a different file extension) which shows the demo features of your app: the ability to log overnight sleep, the ability to log sleepiness, the ability to view these two categories of data, and evidence of your native device resource or data backup. For your native device resource, you must show the use of that resource on either an emulator or a physical device. For the data backup, you can refresh your page to demonstrate data persistence. If you need, you can annotate the timestamps within the video where you demonstrate different features in your readme.txt.</p>
 <p>We would prefer a single video walking through each of the different parts of your app, but you may instead find it useful to make separate videos for different parts. If you do record multiple videos, give each a descriptive file name (like demo_sleepiness.mp4). This video does not need to be polished. It is intended to help us understand the interface you have designed or developed and how it operates, but it’s not intended to be a marketing pitch. We expect most videos can be 1 minute or less.</p>
 </section>
 <section id="recommendations">
-<h4>Recommendations<a class="headerlink" href="#recommendations" title="Link to this heading">#</a></h4>
+<h4>Recommendations<a class="headerlink" href="#recommendations" title="Permalink to this heading">#</a></h4>
 <p>There are a lot of different ways of fulfilling the requirements of this assignment. Though fulfilling the requirements is potentially doable with the lecture material, creating an effective mobile design will likely require reading Ionic’s documentation to understand the different components available and how to work with them. We therefore recommend that you build up your assignment over time. Complete the requirements first with buttons, inputs, items, and lists on a single page of the app. Once the required features have been achieved, you can begin exploring modals and multiple pages.</p>
 <p>Make sure you are looking at the documentation for Angular, as the syntax differs slightly for React and other platforms.</p>
 <p>We discussed four major principles of good mobile design in lecture:</p>
@@ -560,11 +553,11 @@ document.write(`
 </ul>
 </section>
 <section id="submitting">
-<h4>Submitting<a class="headerlink" href="#submitting" title="Link to this heading">#</a></h4>
+<h4>Submitting<a class="headerlink" href="#submitting" title="Permalink to this heading">#</a></h4>
 <p>To submit, zip your repository and upload it to Canvas. As with A3, your project is probably quite large; please remove the node_modules folder prior to zipping. As discussed in lecture, the advantage of using npm is that we can reference your package.json and package_lock.json to download the same packages and libraries that you used on your computer.</p>
 </section>
 <section id="grading">
-<h4>Grading<a class="headerlink" href="#grading" title="Link to this heading">#</a></h4>
+<h4>Grading<a class="headerlink" href="#grading" title="Permalink to this heading">#</a></h4>
 <p>This assignment will be graded on a scale of 20 points, broken down as follows:</p>
 <ul class="simple">
 <li><p>The ability to log overnight sleep (3 point)</p></li>
@@ -725,8 +718,8 @@ By Mark S. Baldwin
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
 
   <footer class="bd-footer">
   </footer>
